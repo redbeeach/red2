@@ -433,7 +433,7 @@ nav ul li a:hover::after {
 .testimonials {
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(17, 24, 53, 0.6)0%, rgba(30, 49, 129, 0.8)100%), url(img/405bfafc1139264555c274b6df0fa8d7.jpg) center no-repeat fixed;
+    background: linear-gradient(135deg, rgba(17, 24, 53, 0.6)0%, rgba(30, 49, 129, 0.8)100%), url(/img/405bfafc1139264555c274b6df0fa8d7.jpg) center no-repeat fixed;
     background-size: cover;
     position: relative;
     /*images/testimonials-bg.jpg*/
