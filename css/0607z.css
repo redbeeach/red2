@@ -235,3 +235,14 @@ button {
         top: 7rem;
     }
 }
+@media screen and (max-width:41.25rem){
+    .hst-container-item .fcb-container{
+        padding-left: .625rem;
+        padding-right: .625rem;
+        margin-bottom: .375rem;
+    }
+    .hst-container-item .fcb-container > .fcb-row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

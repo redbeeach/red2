@@ -594,6 +594,7 @@ top: -2px;
 }
 
 /*sectin==================================*/
+/*bx slide======================================*/
 
 .bx-wrapper{
  margin: 0 auto;
@@ -731,7 +732,7 @@ top: -2px;
     width: 22px;
     height: 22px;
     display: inline-block;
-    background: url(img/sprites.png) no-repeat;
+    background: url(/img/sprites.png) no-repeat;
     text-indent: -9999em;
 }
 
@@ -1043,17 +1044,7 @@ top: -2px;
     }
 }
 
-@media screen and (max-width:41.25rem) and (min-width:0rem){
-    .hst-container-item .fcb-container{
-        padding-left: .625rem;
-        padding-right: .625rem;
-        margin-bottom: .375rem;
-    }
-    .hst-container-item .fcb-container > .fcb-row{
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
+
 
 /*slick video==================================*/
 
