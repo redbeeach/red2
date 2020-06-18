@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  
+    <title>Document</title>
+     <link rel="stylesheet" href="css/gasi1.css">
+    
+</head>
+<body>
+     <div class="table_layout">
+        <ul class="list">
+            <li class="table_th">
+                <div class="num dpnone">번호</div>
+                <div class="subject">제목</div>
+                <div class="date dpnone">등록일</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">1</div>
+                <div class="subject">연남점:프로젝트관리보조원 모집</div>
+                <div class="date">2020-4-24</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">4</div>
+                <div class="subject">연남점:영업지원전문가모집</div>
+                <div class="date">2020-5-5</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">3</div>
+                <div class="subject">안녕하세요홈피오픈햇어요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">2</div>
+                <div class="subject">안녕하세요홈피오픈햇어요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">1</div>
+                <div class="subject">안녕하세요홈피오픈햇어요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+        </ul>
+        <ul>
+            <li class="table_th">
+                <div class="num dpnone">번호</div>
+                <div class="subject">제목</div>
+                <div class="date dpnone">등록일</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">6</div>
+                <div class="subject">철산점:프로젝트관리보조원 모집</div>
+                <div class="date">2020-4-24</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">7</div>
+                <div class="subject">철산점:영업지원전문가모집</div>
+                <div class="date">2020-5-5</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">8</div>
+                <div class="subject">배고파요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">9</div>
+                <div class="subject">백옵파요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">10</div>
+                <div class="subject">꼬르륵거려요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+        </ul>
+        <ul>
+            <li class="table_th">
+                <div class="num dpnone">번호</div>
+                <div class="subject">제목</div>
+                <div class="date dpnone">등록일</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">11</div>
+                <div class="subject">내일이면쉰다</div>
+                <div class="date">2020-4-24</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">12</div>
+                <div class="subject">2틀쉰다%%</div>
+                <div class="date">2020-5-5</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">13</div>
+                <div class="subject">안녕하세요홈피오픈햇어요</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">14</div>
+                <div class="subject">빨리점심시간</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+            <li class="table_tr">
+                <div class="num">15</div>
+                <div class="subject">배고파숨짐</div>
+                <div class="date">2020-11-26</div>
+
+            </li>
+        </ul>
+    </div>
+
+     <div id="bottom_wrap">
+    <fieldset id="bo_sch" style="border: none">
+        <legend></legend>
+        <form name="fsearch" method="get">
+            <label for="sfl" class="sound_only">검색대상</label>
+            <select>
+                <option value="#">제목+내용</option>
+                <option value="#">japan</option>
+                <option value="#">english</option>
+            </select>
+            <label for="sfx" class="sound_only">검색어</label>
+            <input type="text" name="stx" id="sfx" size="25" maxlength="20" placeholder="검색어를 입력해주세요" class="sch_input" required>
+        </form>
+    </fieldset>
+    </div>
+    <div class="pagination">
+        <div class="page_wrap">
+            <a href="#" class="btnll">
+                <img src="images11/arrow_ll.gif" alt=""></a>
+            <a href="#" class="btnlb">
+                <img src="images11/arrow_lb.gif" alt=""></a>
+
+            <span class="btn">
+                <a href="#" class="active">1</a>
+                <a href="#" class="">2</a>
+                <a href="#" class="">3</a>
+            </span>
+
+            <a href="#" class="btnrb"><img src="images11/arrow_rb.gif" alt=""></a>
+            <a href="#" class="btnrr"><img src="images11/arrow_rr.gif" alt=""></a>
+        </div>
+    </div>
+
+     <script src="js/jquery-3.4.1.min.js"></script>
+     
+     <script>
+          $(function() {
+            var num = 0;
+            $(".btn>a").click(function() {
+                var i = $(this).index();
+                $(".btn>a").removeClass();
+                $(".btn>a").eq(i).addClass("active");
+                $("ul").removeClass();
+                $("ul").eq(i).addClass("list");
+                num = i;
+            });
+          });
+    </script>
+</body>
+</html>

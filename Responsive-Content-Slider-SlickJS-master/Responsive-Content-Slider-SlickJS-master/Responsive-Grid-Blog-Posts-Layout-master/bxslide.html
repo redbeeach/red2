@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+    .recent_posts {
+    padding: 80px 0;
+}
+
+.posts_list li {
+    width: 370px;
+}
+
+.recent_img_wrap {
+    position: relative;
+}
+
+.recent_img_wrap img {
+    width: 370px;
+    height: 500px;
+}
+
+/*
+.recent_img_wrap .post_date { position:absolute; left:20px; top:20px; width:50px; border-radius:3px; overflow:hidden; color:#fff; text-align:center; z-index:2;}
+
+.recent_img_wrap .post_date .date { background:#363636; display:block; line-height:35px; font-size:24px; font-weight:300;}
+
+.recent_img_wrap .post_date .month { background:#252525; line-height:25px; font-size:12px;font-weight:300; display:block;}
+*/
+
+.recent_img_wrap .hover_contents {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, .7);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.recent_img_wrap .hover_contents span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #fff;
+}
+
+.posts_list li:hover .hover_contents {
+    opacity: 1;
+}
+
+.post_details {
+    border-color: #f8f8f8;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 25px 30px;
+    background: #fff;
+    transition: 0.4s;
+}
+
+.post_details h4 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #555;
+}
+
+.post_details p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #8c8c8c;
+    line-height: 22px;
+    margin: 15px 0;
+}
+
+.post_details a {
+    font-size: 14px;
+    color: #d1b8f9;
+    text-decoration: none;
+}
+
+.post_details a span {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.posts_list li:hover .post_details {
+    background: #362f2d;
+    border-color: transparent;
+}
+
+.posts_list li:hover .post_details h4 {
+    color:#fff;
+}
+
+.posts_list li:hover .post_details p {
+    color: #fff;
+}
+
+.posts_list li:hover .post_details a {
+    color: #8464b6;
+}
+
+.posts_list li:hover .post_date .date {
+    background: #c7b299;
+}
+
+.posts_list li:hover .post_date .month {
+    background: #a48d72;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.controls a {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background: url(../imge/sprites.png) no-repeat;
+    text-indent: -9999em;
+}
+
+.controls a.bx-prev {
+    background-position: -194px -89px;
+}
+
+.controls a.bx-next {
+    background-position: -224px -89px;
+}
+
+.controls a.bx-prev:hover {
+    background-position: -194px -111px;
+}
+
+.controls a.bx-next:hover {
+    background-position: -224px -111px;
+}
+
+    </style>
+</head>
+<body>
+        <section class="recent_posts container">
+        <h3 class="content_tt">100종 상품 중 아무거나</h3>
+        <p class="content_desc">수의사들이 계절마다 반려견 건강에 도움되는 상품 중 70여종을 제안합니다.<br>매 월,저희가 제안하는 상품을 그대로 받으셔도 좋고 맘에 들지 않는것은 다른것으로 골라서 우리아이만을 위한 박스를 받아보세요.</p>
+
+        <ul class="posts_list">
+            <li>
+                <div class="recent_img_wrap">
+                    <img src="imge/12.jpg" alt="recent post 01" />
+
+                    <div class="hover_contents">
+                        <span><i class="fas fa-search-plus"></i></span>
+                    </div>
+                </div><!-- //recent_img_wrap -->
+
+                <div class="post_details">
+                    <h4>오리 복분자 큐브</h4>
+                    <p></p>
+                    <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                </div><!-- //post_details -->
+            </li>
+            <li>
+                <div class="recent_img_wrap">
+                    <img src="imge/100198.jpg" alt="recent post 01" />
+
+                    <div class="hover_contents">
+                        <span><i class="fas fa-search-plus"></i></span>
+                    </div>
+                </div><!-- //recent_img_wrap -->
+
+                <div class="post_details">
+                    <h4>아보카도 내추럴 조끼</h4>
+                    <p></p>
+                    <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                </div><!-- //post_details -->
+            </li>
+            <li>
+                <div class="recent_img_wrap">
+                    <img src="imge/pad.jpg" alt="recent post 01" />
+
+                    <div class="hover_contents">
+                        <span><i class="fas fa-search-plus"></i></span>
+                    </div>
+                </div><!-- //recent_img_wrap -->
+
+                <div class="post_details">
+                    <h4>블랙홀 패드</h4>
+                    <p></p>
+                    <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                </div><!-- //post_details -->
+            </li>
+            <li>
+                <div class="recent_img_wrap">
+                    <img src="imge/iziziz.jpg" alt="recent post 01" />
+
+                    <div class="hover_contents">
+                        <span><i class="fas fa-search-plus"></i></span>
+                    </div>
+                </div><!-- //recent_img_wrap -->
+
+                <div class="post_details">
+                    <h4>드라이 샴프</h4>
+                    <p></p>
+                    <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                </div><!-- //post_details -->
+            </li>
+            <li>
+                <div class="recent_img_wrap">
+                    <img src="imge/proba.jpg" alt="recent post 01" />
+
+                    <div class="hover_contents">
+                        <span><i class="fas fa-search-plus"></i></span>
+                    </div>
+                </div><!-- //recent_img_wrap -->
+
+                <div class="post_details">
+                    <h4>댕댕이 유산균</h4>
+                    <p></p>
+                    <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                </div><!-- //post_details -->
+            </li>
+            <li>
+                <div class="recent_img_wrap">
+                    <img src="imge/100165.jpg" alt="recent post 01" />
+
+                    <div class="hover_contents">
+                        <span><i class="fas fa-search-plus"></i></span>
+                    </div>
+                </div><!-- //recent_img_wrap -->
+
+                <div class="post_details">
+                    <h4>똥</h4>
+                    <p></p>
+                    <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                </div><!-- //post_details -->
+            </li>
+        </ul>
+        <p class="controls">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </p>
+
+    </section>
+    
+    <script src="jquery-3.4.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+    $(document).ready(function () {
+	    $('.posts_list').bxSlider({
+	        minSlides: 1,
+	        maxSlides: 3,
+	        moveSlides: 1,
+	        slideWidth: 370,
+	        slideMargin: 30,
+	        pager: false,
+	        nextSelector: '.recent_posts .controls .next',
+	        prevSelector: '.recent_posts .controls .prev'
+	    });
+    });
+    </script>
+</body>
+</html>

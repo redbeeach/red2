@@ -1,0 +1,786 @@
+@font-face {
+    font-family: 'assc';
+    src: url('../fonts/assc.ttf');
+}
+*{
+    font-family: 'assc';
+}
+
+.header2, .header5, .header6, a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+/*    font: inherit;*/
+    vertical-align: baseline;
+}
+.main-content-wrapper .header5, .main-content-wrapper .header6, .main-content-wrapper h1, .main-content-wrapper h2, .main-content-wrapper h3, .main-content-wrapper h4 {
+    color: #32465a;
+}
+h3 {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+}
+ol, ul {
+    list-style: none;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+body {
+    direction: ltr;
+    background: #cdcfd4;
+    
+}
+a {
+    text-decoration: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.fcbm-matchplan-allow-page-overflows .main-page-wrapper.main-page-wrapper .main-content-wrapper {
+    overflow: visible;
+}
+.main-page-wrapper .main-content-wrapper {
+    overflow: hidden;
+}
+.main-content-wrapper {
+    color: #6e7882;
+}
+.fcbm-matchplan.fcbm-matchplan {
+/*    font-family: fcbayern_sans_regular;*/
+    font-size: 16px;
+}
+.fcbm-matchplan-navigation {
+    background-color: #fff;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,.16);
+}
+.fcbm-matchplan-navigation__selection {
+    padding: 12px;
+    color: #002f6c;
+}
+.fcbm-matchplan-navigation__select-team {
+    order: 1;
+}
+.fcbm-select {
+    position: relative;
+}
+.fcbm-select__control {
+    height: 32px;
+    font-size: 16px;
+/*    font-family: fcbayern_sans_regular;*/
+    background-color: #f9f9f9;
+    cursor: pointer;
+    width: 100%;
+    min-width: auto;
+    color: #002f6c;
+    padding-right: 30px;
+}
+select {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding: .3125rem .9375rem;
+    margin: 0;
+    width: auto;
+    background: #961432;
+    color: #fff;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+.fcbm-select__arrow {
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fcbm-select__arrow-svg {
+    display: block;
+}
+svg[Attributes Style] {
+    width: 8;
+    height: 7;
+    fill: none;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+path[Attributes Style] {
+    d: path("M 4 7 L 0 0 H 8 L 4 7 Z");
+    fill: currentcolor;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+.fcbm-matchplan-navigation__select-competition {
+    order: 3;
+}
+.fcbm-matchplan-navigation__select-season {
+    order: 2;
+}
+.fcbm-matchplan-navigation__subscription-button {
+    order: 4;
+    margin-left: 24px;
+}
+.fcbm-subscription__top-button {
+    cursor: pointer;
+    background-color: rgba(0,0,0,.04);
+    border: none;
+    color: #002f6c;
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    padding: 7px;
+}
+.fcbm-subscription-button__icon {
+    margin-left: auto;
+}
+svg[Attributes Style] {
+    width: 24;
+    height: 20;
+    fill: none;
+}
+path[Attributes Style] {
+    d: path("M 12 18 C 12 11.373 6.627 6 0 6 m 7 12 a 7 7 0 0 0 -7 -7");
+    stroke: rgb(0, 47, 108);
+    stroke-width: 2;
+}
+circle[Attributes Style] {
+    cx: 1.5;
+    cy: 16.5;
+    r: 1.5;
+    fill: rgb(0, 47, 108);
+}
+path[Attributes Style] {
+    d: path("M 15 0 v 6 m -3 -3 h 6");
+    stroke: rgb(0, 47, 108);
+    stroke-width: 1.5;
+}
+.fcbm-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.fcbm-matchplan-navigation__separator {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.fcbm-matchplan-navigation__month-navigate {
+    margin-right: auto;
+}
+.fcbm-unselectable-text {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.fcbm-month-toggle {
+    padding-top: 12px;
+}
+.fcbm-month-toggle__list {
+    margin: 0;
+    margin-bottom: 1px;
+}
+.fcbm-month-toggle__list {
+    display: flex;
+}
+.fcbm-month-toggle__list-item.fcbm-month-toggle__list-item--current {
+    border-bottom: 2px solid currentColor;
+}
+.fcbm-month-toggle__list-item:not(:last-child) {
+    margin-right: 20px;
+}
+.fcbm-month-toggle__list-item {
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+}
+.fcbm-month-toggle__list-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+
+.fcbm-matchplan__matches {
+    background-color: #f8f8f9;
+    margin-bottom: 80px;
+}
+.fcbm-matchplan__headline {
+    margin: auto;
+    max-width: 80%;
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+.fcbm-matchplan__headline h3 {
+    font-size: 28px;
+}
+.fcbm-matchplan__matches-list--past {
+    border-bottom: 1px solid rgba(0,102,178,.2);
+}
+.fcbm-matchplan__month-name {
+    margin: auto;
+    max-width: 80%;
+    font-size: 20px;
+    color: #002f6c;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    padding-top: 16px;
+    border-bottom: 1px solid rgba(0,102,178,.08);
+}
+.fcbm-match {
+    margin: auto;
+    max-width: 80%;
+    padding: 12px 16px 0 16px;
+    border-bottom: 1px solid rgba(0,102,178,.08);
+}
+.fcbm-match__info {
+    display: flex;
+}
+.fcbm-match__info {
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: rgba(89,120,159,.55);
+}
+.fcbm-match__info .fcbm-match__date {
+    flex: 1 1 50%;
+}
+.fcbm-match__info .fcbm-match__competition {
+    flex: 1 1 50%;
+    text-align: right;
+    text-align: end;
+}
+.fcbm-match__competition {
+    justify-self: end;
+}
+.fcbm-match__prefix {
+    color: rgba(89,120,159,.55);
+    text-align: center;
+    height: 0;
+    transform: translateY(-16px);
+}
+.fcbm-match__result {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.fcbm-match__result .fcbm-match__team-name.fcbm-match__team-name--home {
+    margin-right: 12px;
+}
+.fcbm-match__result .fcbm-match__team-name {
+    flex: 1 1 30%;
+}
+.fcbm-match__team-name {
+    color: #002f6c;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+/*    font-family: fcbayern_sans_semi_bold;*/
+}
+.fcbm-match__scoring {
+    display: flex;
+    align-items: center;
+}
+.fcbm-match__result .fcbm-match__emblem {
+    width: 34px;
+}
+.fcbm-match__emblem-image {
+    max-width: 36px;
+}
+.fcbm-match__result .fcbm-match__score {
+    flex: 1 1 auto;
+    margin-left: 12px;
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.fcbm-match__result .fcbm-match__team-name.fcbm-match__team-name--away {
+    margin-left: 12px;
+}
+.fcbm-match__team-name--away {
+    text-align: right;
+    text-align: end;
+}
+.fcbm-match__appendix {
+    text-align: center;
+    font-size: 14px;
+    min-height: 14px;
+    margin-bottom: 16px;
+    color: rgba(89,120,159,.55);
+}
+.fcbm-match__actions {
+    height: 0;
+    text-align: end;
+}
+.fcbm-match__action-toggle {
+    display: inline-block;
+    transform: translateY(-160%);
+    width: 16px;
+    height: 16px;
+}
+.fcbm-match__action-toggle-svg {
+    pointer-events: none;
+}
+path[Attributes Style] {
+    opacity: 0.4;
+    d: path("M 5 7 L 8 10 L 11 7");
+    stroke: rgb(0, 102, 178);
+}
+rect[Attributes Style] {
+    opacity: 0.2;
+    x: 0.5;
+    y: 0.5;
+    width: 15;
+    height: 15;
+    rx: 1.5;
+    stroke: rgb(0, 102, 178);
+}
+.fcbm-match__actions-template {
+    display: none;
+}
+.fcbm-matchplan__matches-list--future {
+    background-color: #fff;
+}
+.fcbm-matchplan__actions {
+    margin: auto;
+    max-width: 80%;
+}
+.fcbm-subscription-button {
+    margin-bottom: 80px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.04);
+    border: none;
+    color: #002f6c;
+    display: flex;
+    align-items: center;
+    min-width: 288px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.fcbm-matchplan__matches-list--past .fcbm-matchplan__empty-month:last-child {
+    border-bottom: 0;
+}
+.fcbm-matchplan__empty-month {
+    margin: auto;
+    max-width: 80%;
+    padding: 45px 16px 45px 16px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,102,178,.08);
+}
+.fcbm-matchplan-navigation__month-navigate-container-stick {
+    background-image: linear-gradient(to right,#18286d,#111835);
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--header-offset-top,0);
+    z-index: 1;
+}
+.fcbm-month-toggle__link{
+    color: #000;
+}
+
+
+
+
+@media only screen and (min-width: 120rem){
+body .main-page-wrapper .main-content-wrapper {
+    margin: 0 auto;
+    max-width: 120rem;
+    background-color: #fff;
+    border-left: 1px solid #c9ccd2;
+    border-right: 1px solid #c9ccd2;
+}
+}
+@media (min-width: 1024px){
+.fcbm-matchplan-navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--header-offset-top,0);
+    z-index: 1;
+}
+    .fcbm-matchplan-navigation__selection {
+    max-width: 85.375rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .fcbm-matchplan-navigation__select-team {
+    margin-right: 8px;
+}
+    .fcbm-hide-on-breakpoint-up-medium.fcbm-hide-on-breakpoint-up-medium {
+    display: none;
+}
+    .fcbm-matchplan-navigation__select-season {
+    margin-right: 8px;
+}
+    .fcbm-month-toggle__list {
+    justify-content: center;
+}
+    .fcbm-matchplan__headline {
+    max-width: 816px;
+}
+    .fcbm-matchplan__month-name {
+    max-width: 816px;
+}
+    .fcbm-match {
+    max-width: 816px;
+}
+    .fcbm-match__team-name {
+    font-size: 16px;
+}
+    .fcbm-matchplan__actions {
+    max-width: 816px;
+}
+    .fcbm-matchplan__empty-month {
+    max-width: 816px;
+}
+    .fcbm-matchplan-navigation__month-navigate-container-stick {
+    display: none;
+}
+}
+@media (min-width: 661px){
+.fcbm-match__team-name-value-medium {
+    display: none;
+}
+}
+
+
+
+/*footer
+======================================================================*/
+    .footercontainer {
+        position: relative;
+        z-index: 1;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+ #footer {
+        flex: 0 0 auto;
+        margin-top: 30px;
+        padding: 20px 0;
+        position: relative;
+        top: 100rem;
+    }
+
+    .sub-banner {
+        position: relative;
+        
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .col-10 {
+        margin-left: 8.33333%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .-intro {
+        color: #fff;
+        align-self: center;
+    }
+
+    .-intro .-title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: .9;
+        color: #fff;
+        
+    }
+
+    .-intro .descript {
+        font-size: 14px;
+        line-height: 18px;
+        opacity: .7;
+        margin-top: 10px;
+    }
+
+    .form {
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .field {
+        border-bottom: 1px dashed #fff;
+        margin-right: 20px;
+        flex: 1 1 auto;
+    }
+
+    .field input {
+        width: 100%;
+        box-sizing: border-box;
+        border: 0;
+        padding: 0;
+        line-height: 40px;
+        height: 40px;
+        font-size: 16px;
+        color: #fff;
+        background: #111835;
+        outline: none;
+        box-shadow: inset 50px 50px #111835;
+    }
+
+    .-button button {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        -webkit-font-smoothing: subpixel-antialiased;
+        position: relative;
+        border: 0;
+        cursor: pointer;
+        padding: 0 30px;
+        display: inline-block;
+        line-height: 46px;
+        height: 44px;
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: 400;
+        overflow: hidden;
+        white-space: nowrap;
+        text-decoration: none;
+        color: #fff;
+        background: #fff;
+        color: #111835;
+    }
+
+    .-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 8px;
+        right: 8px;
+        background: #111835;
+        z-index: 0;
+    }
+
+    .-bg::before {
+        background: repeating-linear-gradient(-45deg, #fff, #fff 4px, #111835 5px, #111835 10px, #000 11px);
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+    }
+
+    #footer .-acknowled {
+        padding: 20px 0;
+/*        font-family: Bebas Neue, Helvetica;*/
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: .02em;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        opacity: .9;
+    }
+
+    .col-12 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    #footer .lower .-banner {
+/*        font-family: Bebas Neue, Helvetica;*/
+        letter-spacing: .02em;
+        -webkit-font-smoothing: antialiased;
+        align-items: center;
+        font-size: 23px;
+        color: #fe350f;
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .-tape {
+
+
+        background: repeating-linear-gradient(-45deg, #000, #000 4px, #fe350f 5px, #fe350f 10px, #000 11px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-icons a {
+        margin-right: 12px;
+        display: inline-block;
+    }
+
+    .category {
+        margin-bottom: 30px;
+    }
+
+    .category-name {
+/*        font-family: Bebas Neue, Helvetica;*/
+        letter-spacing: .02em;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .-items {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: -20px;
+    }
+
+    .-items a {
+        margin-left: 20px;
+    }
+
+    #footer .-text {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #888;
+    }
+    #footer .-text a{
+        color: inherit;
+        text-decoration: underline;
+    }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width:992px) {
+    .footercontainer {
+        max-width: 97%;
+    }
+}
+
+@media (min-width:768px) {
+    .slider {
+        margin-left: 16.66667%;
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    .col-10 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    #footer .-acknowled {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    }
+
+    .col-12 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    .lower {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    #footer .lower .-banner {
+        margin-bottom: 0;
+        display: inline-flex;
+        position: absolute;
+        transform: translateX(100%) rotate(90deg);
+        right: 0;
+        top: 0;
+        transform-origin: top left;
+        width: auto;
+    }
+
+    .-tape {
+        height: 38px;
+    }
+
+    #footer .lower .freedom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 400px;
+        text-align: right;
+        margin-bottom: -20px;
+    }
+
+
+    .itemmm {
+        position: relative;
+
+        width: 300px;
+    }
+
+    .imgbox1 {
+        padding-top: 100%;
+        position: relative;
+
+
+    }
+
+    .imgbox1 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity .5s;
+        object-fit: cover;
+    }
+
+    #footer .-end {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid hsla(0, 0%, 100%, .1);
+        padding-top: 20px;
+        margin-top: 50px;
+    }
+}

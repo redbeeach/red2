@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'assc';
+    src: url('../fonts/assc.ttf');
+}
+*{
+     font-family: 'assc'; 
+     src: url('../fonts/assc.ttf');
+}
+*, :after, :before {
+    box-sizing: border-box;}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="date"], input[type="search"], textarea {
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid #767C85;
+    font-size: 18px;
+    font-size: 1.8rem;
+/*    font-family: "Unica77-LL-TT",Helvetica,Arial,sans-serif;*/
+    font-weight: 300;
+    padding: 3px 0;
+    height: 40px;
+    width: 100%;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: -internal-light-dark-color(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+button, input, select, textarea {
+/*    font-family: inherit;*/
+    font-size: inherit;
+    line-height: inherit;
+}
+button, select {
+    text-transform: none;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+button {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(buttontext, rgb(170, 170, 170));
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+    font: 400 13.3333px Arial;
+}
+/*
+.header2, .header5, .header6, a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+*/
+.fcb-container.fcb-ad-banner-container .fcb-ad-banner.high-banner, .fcb-container.fcb-ad-banner-container .fcb-ad-banner.low-banner, .fcb-container.fcb-ad-banner-container .fcb-ad-banner.mid-banner, .fcb-container.fcb-ad-banner-container .fcb-ad-banner.multi-banner {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.fcb-container {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    max-width: 100%;
+    width: auto;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: relative;
+    top: 6rem;
+    z-index: 1;
+    margin: 0 auto;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+}
+.fcb-row{
+    margin-bottom: 0;
+    max-width: 82.25rem;
+    margin: 0 auto;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    zoom:1;
+}
+.fcb-row::before{
+    content: "";
+    display: table;
+}
+.fcb-gr-12{
+        display: inline-block;
+    min-height: 1px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding-right: 14px;
+    padding-left: 14px;
+    width: 100%;
+}
+.image-wrapper{
+    background: 0 0;
+    padding-bottom: 0;
+}
+.image-wrapper >img{
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+.fcb-row::after{
+    clear: both;
+}
+.fcb-container.layout-container.background-grey:after {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    content: '';
+/*    background-color: #e5e6e7;*/
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120rem;
+    height: 100%;
+    z-index: -1;
+}
+
+.fcb-container.layout-container.no-space {
+    margin-top: 0;
+}
+.main-page-wrapper .fcb-container.full-width {
+    max-width: 100%;
+    width: auto;
+}
+.fcb-container.fcb-ad-banner-container {
+    overflow: hidden;
+    margin-bottom: 0;
+/*    background: #e5e6e7;*/
+}
+.fcb-container.layout-container {
+    margin-top: 3.125rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+.main-page-wrapper .fcb-container {
+    max-width: 85.375rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    margin-bottom: 1.75rem;
+}
+.fcb-container.fcb-ad-banner-container>.fcb-row {
+    max-width: 82.25rem;
+    margin: 0 auto;
+}
+.fcb-row-reverse:after, .fcb-row-reverse:before, .fcb-row:after, .fcb-row:before {
+    content: "";
+    display: table;
+}
+.fcb-container.fcb-ad-banner-container>.fcb-row>div {
+    padding-left: 0;
+    padding-right: 0;
+}
+.fcb-gr-12 {
+    width: 100%;
+}
+.fcb-container.fcb-ad-banner-container .fcb-ad-banner.multi-banner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -.875rem;
+    margin-right: -.875rem;
+}
+.fcb-container.fcb-ad-banner-container .fcb-ad-banner.high-banner, .fcb-container.fcb-ad-banner-container .fcb-ad-banner.low-banner, .fcb-container.fcb-ad-banner-container .fcb-ad-banner.mid-banner, .fcb-container.fcb-ad-banner-container .fcb-ad-banner.multi-banner {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.fcb-container.fcb-ad-banner-container .fcb-ad-banner.multi-banner>* {
+    display: block;
+    width: 33.33333333%;
+    padding-left: .875rem;
+    padding-right: .875rem;
+}
+.fcb-container.fcb-ad-banner-container .fcb-ad-banner.multi-banner .image-wrapper.loaded {
+    padding-bottom: 0;
+}
+.image-wrapper>img{
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width:750px){
+    .fcb-container{
+        position: relative;
+        top: 37rem;
+    }
+}
