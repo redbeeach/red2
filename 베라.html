@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title><script src="http://code.jQuery.com/jQuery-3.4.1.min.js"></script>
+    <style>
+        *{padding: 0;margin: 0;}
+        li,a{list-style: none; text-decoration: none;}
+        html,body{height: 100%;}
+        h1{margin: 20px 180px; font-size: large; padding: 10px;width: 600px;}
+        ul{position: absolute;left: 200px;top: 100px;width: 700px;border: 3px solid pink; }
+        ul li{float: left;}
+        ul li img{border: 0;margin: 10px;vertical-align: middle;}
+        #glayLayer{position: fixed;display: none; left: 0;top: 0; height: 100%;width: 100%;background: black;filter:alpha(opacity=60%);opacity:0.60;}
+/*        특정이번트를적용시전체화면을어둡게해준다*/
+        #overLayer{display: none;top: 50%;left: 50%;margin-top: -142px;margin-left: -215px;position: fixed;}
+/*        상세이미지 가운데에 띄우기*/
+    </style>
+    
+    <script>
+    $(function(){  //배경을 어둡게하는 div, 이미지를띄우는  div태그추가
+        $('body').append("<div id='glayLayer'></div><div id='overLayer'></div>");
+        
+        $("a.modal").click(function(){
+            $("#glayLayer").show();    //어두운바탕을보여준다.
+            $("#overLayer").show().html("<img src='"+$(this).attr("href")+"' />");
+                                              //큰이미지를보여준다.
+                                         return false;
+        });
+        //바탕클릭시어두운배경,큰이미지안보임
+        $("#glayLayer,#overLayer").click(function(){
+            $("#glayLayer").hide();
+            $("#overLayer").hide();
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>jquery를 이용한 모달작성</h1>
+    <ul>
+        <li><a href="/img2/drink_01_click.gif" class="modal">
+            <img src="/img2/drink_01.jpg" alt="사진1">
+        </a></li>
+        <li><a href="/img2/drink_02_click.gif" class="modal">
+            <img src="/img2/drink_02.jpg" alt="사진1">
+        </a></li>
+        <li><a href="/img2/drink_03_click.gif" class="modal">
+            <img src="/img2/drink_03.jpg" alt="사진1">
+        </a></li>
+        <li><a href="/img2/drink_04_click.gif" class="modal">
+            <img src="/img2/drink_04.jpg" alt="사진1">
+        </a></li>
+        <li><a href="/img2/drink_05_click.gif" class="modal">
+            <img src="/img2/drink_05.jpg" alt="사진1">
+        </a></li>
+        <li><a href="/img2/drink_6_click.gif" class="modal">
+            <img src="/img2/drink_6.jpg" alt="사진1">
+        </a></li>
+    </ul>
+</body>
+</html>
