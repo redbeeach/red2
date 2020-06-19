@@ -38,6 +38,19 @@ a {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
+.hero {
+      height: 400px;
+      background: #010101;
+      position: relative;
+}
+
+#hero-title {
+      position: absolute;
+      font-family: "Playfair Display";
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
 .fcbm-matchplan-allow-page-overflows .main-page-wrapper.main-page-wrapper .main-content-wrapper {
     overflow: visible;
 }

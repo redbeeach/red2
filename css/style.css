@@ -574,44 +574,36 @@ path[Attributes Style] {
     font-size: 2rem;
 }
 
-
-.btnbutton {
+#band{
+    transition: all .5s;
+}
+.btnbutton1 {
     position: relative;
     top: 16rem;
     left: 40%;
-    text-align: center;
+    z-index: 4;
+    
 }
-
-.btnbutton img {
-    padding: 15px 0px;
-    width: 50px;
-
+.btnbutton1 a{
+    cursor: pointer;
 }
-
-.btn {
+.btn0 {
     background-color: #fff;
     border-radius: 2rem;
     color: blue;
     display: inline-block;
     margin-top: 2rem;
-    padding: 1rem 2.5rem;
+    padding: .4rem .5rem;
     cursor: pointer;
-    /*    transition: background-color 650ms;*/
     position: relative;
-
-
-    /*    font-size: 14px;*/
     text-decoration: none;
-    /*    margin: 30px 0;*/
-    /*    border: 2px solid #ff7675;*/
-    /*    padding: 14px 60px;*/
     text-transform: uppercase;
     overflow: hidden;
     transition: 1s all ease;
 
 }
 
-.btn::before {
+.btn0::before {
     background: #0c2aa7;
     color: #000000;
     opacity: .5;
@@ -627,13 +619,13 @@ path[Attributes Style] {
 
 }
 
-.btn1::before {
+.btn2::before {
     width: 100%;
     height: 0;
     transform: translate(-50%, -50%)rotate(45deg);
 }
 
-.btn1:hover::before {
+.btn2:hover::before {
     height: 380%;
     z-index: 2;
 }

@@ -94,7 +94,7 @@
 
 
 
-        <div class="hat-container-item box-basic">
+        <div class="hat-container-item box-basic" data-aos="fade-up">
             <div class="fcb-container">
                 <div class="fcb-row content">
                     <div class="fcb-gr-12">
@@ -111,7 +111,7 @@
             </div>
         </div>
         <!--    광고-->
-        <div class="hst-container-item box-basic box-teaser w-3 h-2">
+        <div class="hst-container-item box-basic box-teaser w-3 h-2" data-aos="fade-up">
             <div class="fcb-container layout-container layout-one background-grey full-width fcb-ad-banner-container no-space">
                 <div class="fcb-row content">
                     <div class="fcb-gr-12">
@@ -210,17 +210,17 @@
 	</div>
 -->
 
-        <div class="btnbutton" id="support-grid">
+        <div id="support-grid" class="btnbutton1" data-aos="fade-up">
             <ul id="tab">
-                <li> <a href="#gallery" class="on btn btn1">goalkeeper</a></li>
-                <li> <a href="#cafe" class="on btn btn1">defenderes</a></li>
-                <li> <a href="#lounge" class="on btn btn1">midfielders</a></li>
-                <li> <a href="#service" class="on btn btn1">foword</a></li>
+                <li><a href="#gallery" class="on btn0 btn2">goalkeeper</a></li>
+                <li><a href="#cafe" class="on btn0 btn2">defenderes</a></li>
+                <li><a href="#lounge" class="on btn0 btn2">midfielders</a></li>
+                <li><a href="#service" class="on btn0 btn2">foword</a></li>
             </ul>
         </div>
 
         <div id="content1">
-            <div class="wall" id="band">
+            <div class="wall" id="band" data-aos="fade-up">
 
                 <div class="wall-item">
                     <img src="img/hi-res-80689f797b6b9179e94ddd1e31ae916c_crop_north.jpg" alt="">
@@ -300,7 +300,7 @@
                 </div>
 
                 <div class="wall-item">
-                    <img src="img/1191339107.jpg.jpg" alt="">
+                    <img src="img/0000099733_002_20200513144401502.jpg" alt="">
                     <h2>Lorem ipsum dolor.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta harum atque maxime architecto hic at porro quo impedit provident exercitationem.</p>
                 </div>
@@ -419,7 +419,7 @@
 
 
         <div id="main" tabindex="0" role="main">
-            <div class="psg-tv">
+            <div class="psg-tv" data-aos="fade-up">
                 <figure class="imageBackgroundCover  imageBackgroundCover--focus-center ">
 
                     <img class="imageBackgroundCover__img no-src u-blur-up lazyautosizes lazyloaded" data-src="https://images.psg.media/media/148009/psgtv-hero-landing-cavani.jpg?anchor=center&amp;mode=crop&amp;width=800&amp;height=450&amp;quality=60" data-srcset="https://images.psg.media/media/148009/psgtv-hero-landing-cavani.jpg?anchor=center&amp;mode=crop&amp;width=800&amp;height=450&amp;quality=60 800w,
@@ -660,7 +660,7 @@
 
         <!--    bxslide====================================-->
 
-        <section class="recent_posts container1">
+        <section class="recent_posts container1" data-aos="fade-up">
             <h3 class="content_tt">onlineshop</h3>
             <p class="content_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam vitae eum eos voluptas doloremque error quod adipisci eveniet qui rem iste esse, <br>impedit voluptatibus ipsam deleniti, doloribus. Facere, vitae, ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum perferendis aperiam impedit, voluptates quia rem at dolores qui placeat repudiandae aliquid assumenda quo, porro error ipsum quis. Dolore, fugit. Aspernatur!</p>
 
@@ -776,6 +776,8 @@
     <!--    boxslide-->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js">
     </script>
+     <!--   aos js-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!--    slick-->
     <script src="js/slick.min.js"></script>
     <script>
@@ -808,12 +810,11 @@
 
     <!--        grid-->
     <script src="js/jaliswall.js"></script>
-
-
     <script>
-        $('.wall').jaliswall({
-            item: '.wall-item',
-            columnClass: '.wall-column'
+        AOS.init({
+            offset: 400, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000 // values from 0 to 3000, with step 50ms
         });
     </script>
     <script>
@@ -834,7 +835,12 @@
             });
         });
     </script>
-
+    <script>
+        $('.wall').jaliswall({
+            item: '.wall-item',
+            columnClass: '.wall-column'
+        });
+    </script>
 
     <!--      slick-->
     <script src="js/slick.js"></script>
