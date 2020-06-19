@@ -5,6 +5,7 @@ $(document).ready(function () {
         maxSlides: 3,
         moveSlides: 1,
         slideWidth: 370,
+        slideHeight: 100,
         slideMargin: 30,
         pager: false,
         nextSelector: '.recent_posts .controls .next',
