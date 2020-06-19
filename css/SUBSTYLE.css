@@ -352,7 +352,9 @@ body {
                 margin-top: 50px;
             }
         }
-
+@media screen and (max-width:768px){
+    
+}
         /*footerfooterfooterfooterfooter*/
         /*footerfooterfooterfooterfooter*/
         /*footerfooterfooterfooterfooter*/
@@ -680,7 +682,7 @@ body {
     color: blue;
     display: inline-block;
     margin-top: 1rem;
-    padding: .1rem 1.5rem;
+    padding: .1rem .2rem;
     transition: background-color 650ms;
     position: relative;
     text-decoration: none;
