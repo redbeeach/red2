@@ -297,6 +297,11 @@ p {
     .overlay1 {
         display: none;
     }
+    #support-grid{
+        position: relative;
+        left: 1.5rem;
+    }
+    
 }
 
 @media (max-width: 640px) {
@@ -589,7 +594,7 @@ path[Attributes Style] {
 }
 .btn0 {
     background-color: #fff;
-    border-radius: 2rem;
+    border-radius: 0rem;
     color: blue;
     display: inline-block;
     margin-top: 2rem;
