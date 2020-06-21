@@ -201,6 +201,11 @@ video {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
+.hat-container-item{
+ 
+        background: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 .fcb-container {
     padding-bottom: 0;
@@ -211,13 +216,18 @@ video {
     overflow: hidden;
     margin-bottom: 0;
     position: relative;
-    top: 6rem;
+    top: 4rem;
     z-index: 1;
     margin: 0 auto;
     padding-left: 1.5625rem;
     padding-right: 1.5625rem;
+         background: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    
 }
-
+.layout-container{
+    height: 13rem;
+}
 .fcb-row {
     margin-bottom: 0;
     max-width: 82.25rem;

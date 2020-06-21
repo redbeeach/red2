@@ -87,6 +87,9 @@ body {
      .container {
      flex: 1;
   }
+    .head::before{
+        display: none;
+    }
   
 }
 
@@ -135,6 +138,7 @@ body {
   .container {
       position: relative;
       top: 0rem;
+      left: -16rem;
       text-align: left;
       width: 1280px;
       margin: 70px auto 0;
@@ -354,6 +358,10 @@ body {
         }
 @media screen and (max-width:768px){
     
+   #support-grid{
+        position: relative;
+        left: -2.5rem;
+    }
 }
         /*footerfooterfooterfooterfooter*/
         /*footerfooterfooterfooterfooter*/
