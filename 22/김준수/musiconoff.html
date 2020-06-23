@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="jquery.easing.1.3.min.js"></script>
+<!--    <script src="jquery.mousewheel.min.js"></script>-->
+</head>
+<style>
+    body {
+        padding: 10px;
+        
+    }
+    input.chk {
+        position: absolute; left: -3000%;
+    }
+    input.chk + label {overflow: hidden; display: inline-block; position: relative; width: 50px;
+        height: 30px; background: #749cff; border-radius: 30px; transition: all 0.5s;}
+    input.chk + label:before {content: "on"; position: absolute; right: 2px;top: 2px;width: 26px; height: 25px;
+        background: #15126f; border-radius: 30px; line-height: 26px; text-indent: -20px; color: #fff; transition: all 0.5s;
+        font-size: 5px;
+    }
+    input.chk:checked + label:before {right: 22px;
+    background: #5f1516;}
+    input.chk:checked + label {background:  #e44e4e;}
+    input.chk + label:after {content: "off"; position: absolute;right: -23px; top: 2px; color: #fff; line-height: 26px; transition: all 0.5s; font-size: 5px;}
+    input:checked + label:after {right: 10px;}
+    
+    
+    
+</style>
+<script>
+   
+var audio = new Audio('dodo.mp3');
+    audio.oncanplay = function(){
+        if(document.getElementById("chk").checked) this.play()
+    }
+    
+
+function myfunction(el) {
+    if(el.checked) {
+        audio.load();
+    } else {
+        audio.pause();
+    }
+}
+</script>
+
+<body>
+    
+
+    <input type="checkbox" id="chk" class="chk" name="b1" onchange="myfunction(this)">
+       <label for="chk">
+        
+          
+    </label>
+   
+
+
+
+
+
+   
+</body>
+
+</html>

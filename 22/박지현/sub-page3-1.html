@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sub3-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script>
+        $(document).ready(function(){
+            $("#hd").load("header.html");
+            $("#ft").load("footerbase.html");            
+        });
+    </script>
+    <script>
+        $(function(){    
+            //기본셋팅
+            $('.title > h4').eq(0).addClass("on");
+            $('.view > ul').eq(0).addClass("show");
+            $('.btn_box > ul').eq(0).addClass("list");
+            $('.btn_box > .list > li').eq(0).addClass("tg");
+            
+            //class 부여
+            $(".content-box > .title > h4").click(function(){
+                 var i = $(this).index();
+                
+               $(".content-box > .title > h4").removeClass("on");
+                $(this).addClass("on");
+                $('.content-box > .view > ul').removeClass("show");
+                $('.content-box > .view > ul').eq(i).addClass("show");
+                $('.content-box > .btn_box > ul').removeClass("list");
+                $('.content-box > .btn_box > ul').eq(i).addClass("list");
+                $('.content-box > .btn_box > .list > li').removeClass("tg");
+                $('.content-box > .btn_box > .list > li').eq(0).addClass("tg");
+            });
+           //버튼 
+            $('.content-box > .btn_box > .list > li').click(function(){
+                
+                var tt = $(this).index();
+                $('.btn_box > .list > li').removeClass();
+                $('.btn_box > .list > li').eq(tt).addClass("tg");
+                $('.view > .show > li').hide();
+                $('.view > .show > li').eq(tt).show();
+                
+                
+        });
+             $('.content-box > .btn_box > .list2 > li').click(function(){
+                
+                var tt = $(this).index();
+                $('.btn_box > .list2 > li').removeClass();
+                $('.btn_box > .list2 > li').eq(tt).addClass("tg");
+                $('.view > .show > li').hide();
+                $('.view > .show > li').eq(tt).show();
+            });
+        });
+    </script>
+</head>
+<body>    
+    <div id="hd"></div>   
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>시설안내</h3>        
+        <ul>
+            <li class="on"><a href="sub-page3-1.html"><i class="fas fa-chevron-right"></i>시설개요</a></li>
+            <li><a href="sub-page3-2.html">전시장</a></li>
+            <li><a href="sub-page3-3.html">회의실</a></li>
+            <li><a href="sub-page3-3.html">편의시설</a></li>
+        </ul>
+    </div>
+    <div class="content-box">
+        <h3>시설개요</h3>        
+        <div class="container">
+            <img class="fty_img" src="sub-page/sub-faility1.png" alt="">
+        </div>
+        <div class="text_b">
+           <ul>
+               <li><img src="sub-page/li1.png" alt="">국내최대전시면적 108,011㎡</li>
+               <li><img src="sub-page/li1.png" alt="">이동식 칸막이로 각 홀 2분할 및 통합가능</li>
+               <li><img src="sub-page/li1.png" alt="">층고가 높아 복층부스 설치 및 리깅 가능</li>
+               <li><img src="sub-page/li1.png" alt="">수용하중 5 ton/㎡로 중장비 전시가능</li>
+               <li><img src="sub-page/li1.png" alt="">개막식, 이벤트 , 전시가 가능한 넓은 콘코스/로비</li>
+               <li><img src="sub-page/li1.png" alt="">고급 vip 대기실, 주최자 사무실 이용가능</li>
+               <li><img src="sub-page/li1.png" alt="">1,2 전시장 간 100m 폭의 공공보행통로는 무빙워크로 이동가능</li>
+               <li><img src="sub-page/li1.png" alt="">전용주차장 4,200대, 임시주차장 4,000대 수용가능(지상/지하)</li>
+           </ul>
+        </div>        
+        <div class="title">
+           <h4>1전시장</h4>
+           <h4>2전시장</h4>
+        </div>
+        <div class="view">
+            <ul>
+                 <li><img src="sub-page/sub_facility1-1.PNG" alt=""> F1.전시홀</li>
+                 <li><img src="sub-page/sub_facility1-2.PNG" alt=""> F2.회의실</li>
+                 <li><img src="sub-page/sub_facility1-3.PNG" alt=""> F3.회의실·그랜드볼룸</li>
+             </ul>
+             <ul>
+                 <li><img src="sub-page/floor2-1.png" alt="">B1.지하주차장</li>    
+                 <li><img src="sub-page/floor2-2.png" alt="">F1.전시장</li>
+                 <li><img src="sub-page/floor2-3.png" alt="">F2.전시장입구</li>
+                 <li><img src="sub-page/floor2-4.png" alt="">F3.회의실</li>
+                 <li><img src="sub-page/floor2-5.png" alt="">F4.회의실</li>
+             </ul>
+        </div>         
+        <div class="btn_box">
+            <ul>
+                <li>F1</li>
+                <li>F2</li>
+                <li>F3</li>
+            </ul>
+            <ul class="list2">
+                <li>B1</li>
+                <li>F1</li>
+                <li>F2</li>
+                <li>F3</li>
+                <li>F4</li>
+            </ul>
+           
+        </div>
+    </div>
+    <div id="ft"></div>
+</body>
+</html>

@@ -1,0 +1,569 @@
+* {margin: 0; padding: 0; }
+a,p,sapn {font-family: "Bookman Old Style";}
+
+/*sub_01*/
+#container {width: 100%;height: 100%;}
+
+.swiper-container {
+	width:600px;
+	height:500px;
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:510px;
+	height:340px;
+    margin-bottom: 10px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 80%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 300px; text-align: center; margin: 0 auto; line-height: 10;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 28px; }
+
+/*  S_text01  */
+.S_text01 {width:80%; height: 800px;margin: 0 auto; }
+.S_text01 ul {width: 85%; height: 320px; margin: 0 auto; padding-top: 30px; }
+.S_text01 ul li {width: 20%; height: 160px; float: left;  margin: 0 6.5%; text-align: center;  padding-top: 30px;border-radius: 50%;}
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 18px;}
+.S_text01 ul li a p {width: 20px; margin: 0 auto; }
+
+/*  S_text02  */
+.S_text02 {width: 75%; height: 500px; margin: 0 auto;  display: none; }
+.S_text02 ul {width: 85%; height: 320px; margin: 0 auto; padding-top: 30px; }
+.S_text02 ul li {width: 20%; height: 160px; float: left;  margin: 0 6.5%; text-align: center;  padding-top: 30px;border-radius: 50%;}
+.S_text02 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 18px;}
+.S_text02 ul li a p {width: 100px; margin: 0 auto; }
+
+
+.S_text01 .Txt01 li:nth-child(1):hover{background-image: url(../IMAGE/coffee01.png); background-size: cover;  text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px; }
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: url(../IMAGE/coffee02.png); background-size: cover; text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: url(../IMAGE/coffee03.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+.S_text01 .Txt02 li:nth-child(1):hover {  background-image: url(../IMAGE/coffee04.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: url(../IMAGE/coffee05.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: url(../IMAGE/coffee06.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+
+.S_text02 .Txt03 li:nth-child(1):hover{  background-image: url(../IMAGE/coffee07.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(2):hover{  background-image: url(../IMAGE/coffee08.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(3):hover{ background-image: url(../IMAGE/coffee09.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}   
+/*section03*/
+
+.S_Btn01 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+.S_Btn02 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+
+
+
+/*★★두번째★★*/
+@media screen and (min-width:1280px) and (max-width:1735px){
+        
+.swiper-container {
+	width:600px;
+	height:400px;
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:510px;
+	height:340px;
+    margin-bottom: 10px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 80%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 300px; text-align: center; margin: 0 auto; line-height: 10;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 28px; }
+
+/*  S_text01  */
+.S_text01 {width:80%; height: 800px;margin: 0 auto; }
+.S_text01 ul {width: 85%; height: 320px; margin: 0 auto; padding-top: 30px; }
+.S_text01 ul li {width: 20%; height: 160px; float: left;  margin: 0 6.5%; text-align: center;  padding-top: 30px;border-radius: 50%;}
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 18px;}
+.S_text01 ul li a p {width: 20px; margin: 0 auto; }
+
+/*  S_text02  */
+.S_text02 {width: 75%; height: 500px; margin: 0 auto;  display: none; }
+.S_text02 ul {width: 85%; height: 320px; margin: 0 auto; padding-top: 30px; }
+.S_text02 ul li {width: 20%; height: 160px; float: left;  margin: 0 6.5%; text-align: center;  padding-top: 30px; border-radius: 50%;}
+.S_text02 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 18px;}
+.S_text02 ul li a p {width: 100px; margin: 0 auto; }
+
+    
+.S_text01 .Txt01 li:nth-child(1):hover{background-image: url(../IMAGE/coffee01.png); background-size: cover;  text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px; }
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: url(../IMAGE/coffee02.png); background-size: cover; text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: url(../IMAGE/coffee03.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+.S_text01 .Txt02 li:nth-child(1):hover {  background-image: url(../IMAGE/coffee04.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: url(../IMAGE/coffee05.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: url(../IMAGE/coffee06.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+
+.S_text02 .Txt03 li:nth-child(1):hover{  background-image: url(../IMAGE/coffee07.png); background-size: cover;  text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(2):hover{  background-image: url(../IMAGE/coffee08.png); background-size: cover;  text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(3):hover{ background-image: url(../IMAGE/coffee09.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}   
+
+    
+/*section03*/
+#container > .section03 { width: 100%; height: 200px; padding-top: 100px; }
+.S_Btn01 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+.S_Btn02 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+
+}
+
+
+/*★★세번째★★*/
+@media screen and (min-width:1024px) and (max-width:1279px){
+    
+    
+.swiper-container {
+	width:600px;
+	height:400px;
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:510px;
+	height:340px;
+    margin-bottom: 10px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 90%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 150px; text-align: center; margin: 0 auto; line-height: 7;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 28px; }
+    
+/* S_text01 */
+.S_text01 {width:100%; height: 800px;margin: 0 auto; }
+.S_text01 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 30px; }
+.S_text01 ul li {width: 33.33%; height: 160px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 50%;}
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 18px;}
+.S_text01 ul li a p {width: 20px; margin: 0 auto; }
+    
+/* S_text02 */   
+.S_text02 {width: 100%; height: 400px; margin: 0 auto;  display: none; }
+.S_text02 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 30px; text-align: center;}
+.S_text02 ul li {width: 33.33%; height: 160px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 50%;}
+.S_text02 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 20px;}
+.S_text02 ul li a p {width: 140px; margin: 0 auto; }
+    
+    
+
+.S_text01 .Txt01 li:nth-child(1):hover{background-image: url(../IMAGE/coffee01.png); background-size: cover;  text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px; }
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: url(../IMAGE/coffee02.png); background-size: cover; text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: url(../IMAGE/coffee03.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+.S_text01 .Txt02 li:nth-child(1):hover {  background-image: url(../IMAGE/coffee04.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: url(../IMAGE/coffee05.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: url(../IMAGE/coffee06.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+
+.S_text02 .Txt03 li:nth-child(1):hover{  background-image: url(../IMAGE/coffee07.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(2):hover{  background-image: url(../IMAGE/coffee08.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(3):hover{ background-image: url(../IMAGE/coffee09.png); background-size: cover;  text-indent: -9999px; overflow: hidden;  box-shadow: 0px 2px 15px -10px;}
+    
+    
+/*section03*/
+#container > .section03 { width: 100%; height: 100px; padding-top: 100px; }
+.S_Btn01 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+.S_Btn02 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+
+
+}
+
+
+/*★★hahaha★★*/
+@media screen and (min-width:640px) and (max-width:1023px){
+    
+.swiper-container {
+	width:500px;
+	height:400px;
+    
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:510px;
+	height:340px;
+    margin-bottom: 10px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 90%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 150px; text-align: center; margin: 0 auto; line-height: 7;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 26px; }
+
+/*  S_text01  */
+.S_text01 {width:100%; height: 750px;margin: 0 auto; }
+.S_text01 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 10px; }
+.S_text01 ul li {width: 33.33%; height: 160px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px;border-radius: 50%; _transition: all .1s;  }
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; }
+.S_text01 ul li a p {width: 20px; margin: 0 auto; }
+
+/*  S_text02  */
+.S_text02 {width: 100%; height: 400px; margin: 0 auto;  display: none; }
+.S_text02 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 30px; text-align: center;}
+.S_text02 ul li {width: 33.33%; height: 160px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 50%;}
+.S_text02 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 20px;}
+.S_text02 ul li a p {width: 140px; margin: 0 auto; }
+    
+    
+    
+.S_text01 .Txt01 li:nth-child(1):hover{background-image: url(../IMAGE/coffee01.png); background-size: cover;  text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px; }
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: url(../IMAGE/coffee02.png); background-size: cover; text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: url(../IMAGE/coffee03.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+.S_text01 .Txt02 li:nth-child(1):hover {  background-image: url(../IMAGE/coffee04.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: url(../IMAGE/coffee05.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: url(../IMAGE/coffee06.png); background-size: cover;text-indent: -9999px; overflow: hidden; box-shadow: 0px 2px 15px -10px;}
+
+
+.S_text02 .Txt03 li:nth-child(1):hover{  background-image: url(../IMAGE/coffee07.png); background-size: cover;  text-indent: -9999px; overflow: hidden; border-radius: 50%; box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(2):hover{  background-image: url(../IMAGE/coffee08.png); background-size: cover;  text-indent: -9999px; overflow: hidden; border-radius: 50%; box-shadow: 0px 2px 15px -10px;}
+.S_text02 .Txt03 li:nth-child(3):hover{ background-image: url(../IMAGE/coffee09.png); background-size: cover;  text-indent: -9999px; overflow: hidden; border-radius: 50%; box-shadow: 0px 2px 15px -10px;}
+
+/*section03*/
+
+.S_Btn01 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+.S_Btn02 { width: 10%; height: 100px; margin: 0 auto;  text-align: center;  }
+
+
+
+
+}
+
+/*★★다섯번째★★*/
+@media screen and (min-width:480px) and (max-width:639px) {
+    .swiper-container {
+	width:100%;
+	height:400px;
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:480px;
+	height:300px;
+    margin-bottom: 10px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 90%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 150px; text-align: center; margin: 0 auto; line-height: 7;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 26px; }
+
+.S_text01 {width:100%; height: 750px;margin: 0 auto; }
+.S_text01 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 10px; }
+.S_text01 ul li {width: 33.33%; height: 200px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 0;}
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; z-index: -1;}
+.S_text01 ul li a p {width: 25px;height: 200px; margin: 0 auto; }
+    
+    
+.S_text02 {width:100%; height: 750px;margin: 0 auto; }
+.S_text02 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 10px; }
+.S_text02 ul li {width: 33.33%; height: 230px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 0;}
+.S_text02 ul li a { width:30px; text-align:center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; z-index: -1;}
+.S_text02 ul li a p {
+    width: 25px;
+    height: 230px; 
+    margin: 0 auto;
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    _text-transform: uppercase;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl; 
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;}
+    
+    
+    
+
+.on { 
+    color: #777;
+    text-align: left;
+    line-height: 15px;
+    padding-right: 10px;
+    font-size: 14px; 
+    font-weight: bold; 
+    _transition: 1s; 
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl; 
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    }
+
+
+    
+    
+    
+/* Txt01 */
+.S_text01 .Txt01 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+    
+/* Txt02 */
+.S_text01 .Txt02 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+    
+/* Txt03 */
+.S_text02 .Txt03 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+.S_text02 .Txt03 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+.S_text02 .Txt03 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px;     box-shadow: none;}
+    
+    
+
+
+
+/*section03*/
+
+.S_Btn01 { width: 30%; height: 100px; margin: 0 auto;  text-align: center;  }
+.S_Btn02 { width: 30%; height: 100px; margin: 0 auto;  text-align: center;  }
+
+
+
+}
+
+/*★★여섯번째★★*/
+@media screen and (max-width:479px) {
+
+.swiper-container {
+	width:100%;
+	height:400px; 
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:480px;
+	height:300px;
+    margin-bottom: 10px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 90%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 150px; text-align: center; margin: 0 auto; line-height: 7;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 26px; }
+
+.S_text01 {width:100%; height: 750px;margin: 0 auto; }
+.S_text01 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 10px; }
+.S_text01 ul li {width: 33.33%; height: 200px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 0;}
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; z-index: -1;}
+.S_text01 ul li a p {width: 25px;height: 200px; margin: 0 auto; }
+    
+    
+.S_text02 {width:100%; height: 750px;margin: 0 auto; }
+.S_text02 ul {width: 80%; height: 320px; margin: 0 auto; padding-top: 10px; }
+.S_text02 ul li {width: 33.33%; height: 230px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 0;}
+.S_text02 ul li a { width:30px; text-align:center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; z-index: -1;}
+.S_text02 ul li a p {
+    width: 25px;
+    height: 230px; 
+    margin: 0 auto;
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    _text-transform: uppercase;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl; 
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;}
+    
+    
+    
+
+.on { 
+    text-align: left;
+    line-height: 15px;
+    padding-right: 10px;
+    font-size: 14px; 
+    font-weight: bold; 
+    _transition: 1s; 
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl; 
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    }
+
+
+    
+    
+    
+/* Txt01 */
+.S_text01 .Txt01 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+    
+/* Txt02 */
+.S_text01 .Txt02 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+    
+/* Txt03 */
+.S_text02 .Txt03 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text02 .Txt03 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text02 .Txt03 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+    
+    
+
+
+
+/*section03*/
+
+.S_Btn01 { width: 30%; height: 100px; margin: 0 auto;  text-align: center;  }
+.S_Btn02 { width: 30%; height: 100px; margin: 0 auto;  text-align: center;  }
+
+
+}
+
+/*★★일곱번째(아이폰SE)★★*/
+@media screen and (max-width:320px) {
+    .swiper-container {
+	width:100%;
+	height:400px; 
+}
+
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+    width:400px;
+	height:300px;
+}
+    
+.swiper-pagination {position: absolute;}
+
+/*section02*/
+.section02 { width: 100%; height: 100%; }
+.Shop { width: 90%; height: 100%; margin: 0 auto;}
+.Shop > p { width: 100%; height: 150px; text-align: center; margin: 0 auto; line-height: 7;  font-weight: bold; font-family: "Bookman Old Style"; color: #000; font-size: 26px; }
+
+.S_text01 {width:100%; height: 570px;margin: 0 auto; }
+.S_text01 ul {width: 80%; height: 230px; margin: 0 auto; padding-top: 10px; }
+.S_text01 ul li {width: 33.33%; height: 200px; float: left; margin: 0 auto; text-align: center;  padding-top: 30px; border-radius: 0;}
+.S_text01 ul li a { width:30px; text-align: center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; z-index: -1;}
+.S_text01 ul li a p {width: 25px;height: 200px; margin: 0 auto; }
+    
+    
+.S_text02 {width:100%; height: 570px;margin: 0 auto; }
+.S_text02 ul {width: 80%; height: 300px; margin: 0 auto; }
+.S_text02 ul li {width: 33.33%; height: 200px; float: left; margin: 0 auto; text-align: center;   border-radius: 0; }
+.S_text02 ul li a { width:30px; text-align:center; font-weight: bold; font-family: "Bookman Old Style";  font-size: 17px; z-index: -1;}
+.S_text02 ul li a p {
+    width: 25px;
+    height: 230px; 
+    margin: 0 auto;
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    _text-transform: uppercase;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl; 
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;}
+    
+    
+    
+
+.on { 
+    color: #777;
+    text-align: left;
+    line-height: 15px;
+    padding-right: 10px;
+    font-size: 14px; 
+    font-weight: bold; 
+    _transition: 1s; 
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    text-orientation: upright;
+    -ms-writing-mode: tb-rl; 
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    }
+
+
+    
+    
+    
+/* Txt01 */
+.S_text01 .Txt01 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt01 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt01 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+    
+/* Txt02 */
+.S_text01 .Txt02 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt02 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text01 .Txt02 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+    
+/* Txt03 */
+.S_text02 .Txt03 li:nth-child(1):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text02 .Txt03 li:nth-child(2):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+.S_text02 .Txt03 li:nth-child(3):hover { background-image: none;  text-indent: 0; font-size: 20px; box-shadow: none;}
+    
+    
+
+
+
+/*section03*/
+.S_Btn01 { width: 30%; height: 100px; margin: 0 auto;  text-align: center;  }
+    .S_Btn01 a img {width: 50px; height: 50px;}
+    
+.S_Btn02 { width: 30%; height: 100px; margin: 0 auto;  text-align: center;  }
+    .S_Btn02 a img {width: 50px; height: 50px;}
+    
+    
+}

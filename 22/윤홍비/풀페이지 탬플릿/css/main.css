@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'NanumSquare';
+    src: local('font/NanumSquare'),
+        url('../font/NanumSquareR.ttf'),
+        url('../font/NanumSquareR.eot'),
+        url('../font/NanumSquareR.woff');
+}
+@font-face {
+    font-family: 'NanumSquareL';
+    src: url('../font/NanumSquareL.ttf'),
+        url('../font/NanumSquareL.eot'),
+        url('../font/NanumSquareL.woff');
+}
+@font-face {
+    font-family: 'NanumSquareB';
+    src: url('../font/NanumSquareB.ttf'),
+        url('../font/NanumSquareB.eot'),
+        url('../font/NanumSquareB.woff');
+}
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: url('../font/NanumSquareEB.ttf'),
+        url('../font/NanumSquareEB.eot'),
+        url('../font/NanumSquareEB.woff');
+}
+html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a{text-decoration: none; color: #f9f9f9;}
+li{list-style: none;}
+
+html, body {
+	line-height: 1;
+	min-height:100%;
+	font-family:'NanumSquare';
+}
+body {
+	background: #eeeeee;
+	background: -webkit-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: -moz-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: -o-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: -ms-linear-gradient(top, #eeeeee, #cccccc 100%);
+	background: linear-gradient(top, #eeeeee, #cccccc 100%);
+	background-attachment:fixed;
+}
+#progress {
+	width:0.3%;
+	background:#ff3a13;
+	bottom:0;
+	z-index:200;
+}
+#progress2 {
+   right: 0;
+	width:0.3%;
+	background:#ff3a13;
+	bottom:0;
+	z-index:200;
+}
+
+.skrollr-desktop #scrollbar {display:none;}
+
+#bg1, #bg2, #bg3 {
+    z-index: 50;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;    
+}
+#bg1{z-index: 51;min-width: 1920px;background:url(../images/index_bg.png) no-repeat ; background-size: cover;}
+#bg2 {z-index:55; background:url(../images/index_pa1.png) no-repeat ; background-size: cover;}
+#bg3 {z-index:56; background:url(../images/index_pa2.png) no-repeat ; background-size: cover;}
+#intro {
+    z-index: 51;
+	width:100%;
+	text-align:center;
+	
+
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	transform-origin:0 0;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

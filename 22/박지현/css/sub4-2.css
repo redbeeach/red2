@@ -1,0 +1,403 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+body {font-family: 'NanumSquare';}
+html{overflow-x: hidden}
+#bg {
+width:99vw;
+height: 340px;
+background: url(../sub-page/sub_bg4.png)no-repeat;
+background-position:top;
+background-size: cover;
+margin: 0;
+padding: 0;
+}  
+.btn_box{display: none}
+.side_nav{
+position: relative;
+top: 50px;
+left: 5vw;
+width: 200px;
+}
+.side_nav h3{
+    font-size: 20px;
+    border-bottom: 3px solid ;
+    width: 200px
+}
+.side_nav ul li {
+    padding: 8px 15px;
+}
+.side_nav ul li i {
+    position: absolute;
+    left: 175px;
+    top: 78px;
+}
+.side_nav > ul > .on {            
+    background-color: #d9e6ff;
+} 
+.container {
+    position: relative;
+    top: -75px;
+    width: 80vw;
+    max-width: 1000px;  
+    margin: 0 auto;
+}        
+.container h3{
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.container span {
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    display: inline-block;
+}
+.container span:hover{
+    -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.container span.tg {
+    color: #6098FF;
+    font-size: 17px
+}
+.container .c_box {
+    width: 100%;
+    display: none
+}
+.container .m_box {
+    display: none
+}
+.container div.show{
+    display: block
+}
+.container div.show ul.list {
+    display: table;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px
+}
+.container div.show ul.list li {
+    display: table-cell;
+    width: 20%;
+    text-align: left;
+    line-height: 2;
+    border: 1px solid #efefef;
+    border-bottom-color: #3391da;
+    padding: 5px;
+    font-size: 17px;
+    cursor: pointer
+}
+.container div.show ul.list li p {
+    text-align: right
+}
+.container div.show ul.list li.list_on {
+    color: #3391da;
+    border: 1px solid ;
+    border-bottom: 0
+}
+.cotent{
+    display: none;
+}
+div.ctg {
+    display: block;
+    width: 90%;
+    border: 1px solid #3391da;
+    margin-left: 5%;
+    border-top: 0;
+    position: relative;
+}
+div.ctg ul{
+    padding: 20px
+}
+div.ctg ul li {
+    line-height: 2;
+}
+div.ctg button {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    border: 1px solid #6098FF;
+    background: rgba(0,0,0,0);
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px
+}
+div.ctg button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-transform: scaleX(.3);
+    transform: scaleX(.3);
+    opacity: 0;
+    transition: all .6s;
+}
+div.ctg button:nth-child(2){
+ right: 140px;   
+}
+div.ctg button:hover{
+    z-index: 10;
+    color: #fff
+}
+div.ctg button:hover:before{
+    opacity: 1;
+          background-color: #6098FF;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          transition: -webkit-transform .9s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
+          transition: transform .9s cubic-bezier(.08, .35, .13, 1.02), opacity;   
+}
+.container table {
+    width: 80%;
+    text-align: center;    
+    margin: 50px 10%;
+    font-size: 15px
+}
+.container table tr {
+    line-height: 2.5;
+    border-top: 1px solid #CADBE9
+}
+.container table tr:last-child{
+    border-bottom: 1px solid #CADBE9
+}
+@media all and (min-width:1401px){
+    .container {  margin-left: 23vw;}  
+}
+@media all and (min-width:1105px) and (max-width:1400px){
+    .container { margin-left: 25vw; width: 70vw}
+    .container div.show ul.list li p {text-align: center; font-size: 15px}
+}
+@media screen and (min-width:960px) and (max-width:1104px){
+    .container {margin-left: 27vw; width: 70vw;}
+    .container div.show ul.list li  {line-height: 1.5;}
+    .container div.show ul.list li p {text-align: center; font-size: 15px}
+    .container div.show button {bottom: 15px}
+}
+@media screen and (min-width:780px) and (max-width:959px){
+    .side_nav {left: 41vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -24px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -55px}
+    .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 115px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 75vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -100px}
+    .container div.show{}
+    .container div.show ul.list li  {line-height: 1.5;}
+    .container div.show ul.list li p {text-align: center; font-size: 15px}
+    .container div.show button {bottom: 15px; position: inherit; left: 135px; padding: 5px 10px;}
+    .container div.show button:nth-child(3){left: 140px}
+    
+#footer{top: 150px;}    
+}
+@media screen and (min-width:610px) and (max-width:779px){
+    .side_nav {left: 36vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -24px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -55px}
+    .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 115px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 75vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -100px}
+    .container div.show ul.list{width: 100%;margin: 50px 0 0 0}
+    .container div.show ul.list li  {line-height: 1.5;}
+    .container div.show ul.list li p {text-align: center; font-size: 15px}
+    .container div.show button {bottom: 15px; position: inherit; left: 95px; padding: 5px 10px;}
+    .container div.show button:nth-child(3){left: 100px}
+    div.ctg {width: 100%; margin: 0}
+    .container table {width: 100%;margin:50px 0;}
+    .container table tr {line-height: ;}
+#footer {top: 150px;}
+}
+@media screen and (min-width:500px) and (max-width:609px){
+    .side_nav {left: 36vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -24px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -55px}
+    .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 115px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 90vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -150px}
+    .container div.show {display: none;}
+    .container .m_show {display: block; width: 100%; border-bottom: 1px solid #ccc;overflow: hidden;margin-top: 25px; }
+    .container .m_show div.m_move {width: 500%; height: 300px;}
+    .container .m_show div.m_move .m_list {width: 20%;float: left; padding: 15px;}
+    .container .m_show div.m_move .m_list strong {font-size: 25px}
+    .container .m_show div.m_move .m_list p {color: #3391da; font-size: 20px}
+    .container .m_show div.m_move .m_list ul li {line-height: 2;padding-left:30px }
+    .container .m_show div.m_move .m_list ul li:first-child{margin-top: 10px; }
+    .container .m_show div.m_move .m_list button {border: 1px solid #6098FF; background: rgba(0,0,0,0);color: #fff; padding: 5px 10px; background-color: #6098FF; cursor: pointer;margin-top: 20px}
+    .container .m_show div.m_move .m_list button:nth-child(4){margin:0 20px 0 80px}
+    .container .swiper-pagination{font-size: 15px; display: block; width: 100%; top: 20px;left: 170px;}
+    .container .btn_box {display: block;position: relative; width: 100%; _top: 270px}
+    .container .btn_box p{position: absolute; top: -115px;cursor: pointer;height: 20px;}
+    .container .btn_box p:last-child{right: 0;}
+    .container .btn_l button{position: absolute; border: 0; background: #fff; font-size: 35px; top: 230px; color: cornflowerblue}
+    .container .btn_l button:nth-child(2){left: 400px;}
+    .container table {width: 100%;margin:70px 0;}
+    .container table tr {line-height: 3;}
+#footer {top: 150px;}
+}
+@media screen and (max-width:499px){
+    .side_nav {left: 30vw; top: 50px}
+    .side_nav h3 {font-size: 21px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -24px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -55px}
+    .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 115px;
+    top: 84px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 90vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -179px}
+    .container div.show {display: none;}
+    .container .m_show {display: block; width: 100%;overflow: hidden;margin-top: 25px; }
+    .container .m_show div.m_move {width: 500%; height: 350px;}
+    .container .m_show div.m_move .m_list {width: 20%;float: left; padding: 1px;}
+    .container .m_show div.m_move .m_list strong {font-size: 25px}
+    .container .m_show div.m_move .m_list p {color: #3391da; font-size: 20px}
+    .container .m_show div.m_move .m_list ul li {line-height: 2;padding-left:15px }
+    .container .m_show div.m_move .m_list ul li:first-child{margin-top: 20px; }
+    .container .m_show div.m_move .m_list button {border: 1px solid #6098FF; background: rgba(0,0,0,0);color: #fff; padding: 5px 10px; background-color: #6098FF; cursor: pointer;margin-top: 20px}
+    .container .m_show div.m_move .m_list button:nth-child(4){margin:0 10px 0 30px}
+    .container .swiper-pagination{font-size: 15px; display: block; width: 100%; top: 0px;left: 130px;}
+    .container .btn_box {display: block;position: relative; width: 100%; }
+    .container .btn_box p{position: absolute; top: -185px;cursor: pointer;height: 20px;left:0}
+    .container .btn_box p:last-child{left: 305px;}
+    .container .btn_l button{position: absolute; border: 0; background: rgba(255,255,255,0.1); font-size: 35px; top: 230px; color: cornflowerblue; left: -15px;}
+    .container .btn_l button:nth-child(2){left: 305px;}
+    .container table {width: 100%;margin:50px 0; font-size: 14px}
+    .container table tr {line-height: 3;}
+    .container table tr th:nth-child(4){display: none;}
+    .container table tr td:nth-child(4){display: none;}
+    .rent {display: block; width: 100%;}
+    .rent button {background: rgba(0,0,0,0); border: 1px solid #6098FF;padding: 5px 8px;margin-right: 15px}
+    .rent button:first-child{margin-left: 17px}
+#footer {top: 150px;}
+#footer {top: 150px;}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

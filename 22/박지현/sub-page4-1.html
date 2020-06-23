@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<!--    <script src="js/jquery-3.5.0.min.js"></script>-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sub4-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script>
+        $(function(){
+           $("#hd").load("header.html") ;
+           $("#ft").load("footerbase.html") ;
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.container > .tab > li').click(function(){
+               var i = $(this).index();
+                
+                $('.container > .tab > li').removeClass();
+                $(this).addClass("tg");
+                //table select
+                 $('.container > .box > div').removeClass("t_show");
+                 $('.container > .box > div').eq(i).addClass("t_show");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>
+    <div id="bg"></div>
+    <div class="side_nav">
+       <h3>임대서비스</h3>
+        <ul>
+            <li class="on"><a href="sub-page4-1.html">임대관련서식<i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="sub-page4-2.html">임대절차</a></li>            
+        </ul>
+    </div>
+    <div class="container">
+        <h2>임대서비스</h2>
+        <ul class="tab">
+            <li class="tg">임대관련</li>
+            <li>전시홀 사용</li>
+            <li>회의실 사용</li>
+        </ul>
+        
+       <div class="box">
+             <!-- 임대관련 -->
+              <div class="table t_show">
+               <ul class="tr">
+                   <li >번호</li>
+                   <li >제목</li>
+                   <li >등록일</li>
+               </ul>
+               <ul>
+                   <li>7</li>
+                   <li>전시장 배정신청</li>
+                   <li>2017.11.07</li>
+               </ul>
+               <ul>
+                   <li>6</li>
+                   <li>전시/회의 주최자 이용 안내서(KINTEX Organizer's Guide)</li>
+                   <li>2014.07.31</li>
+               </ul>
+               <ul>
+                   <li>5</li>
+                   <li>킨텍스 홈페이지 행사일정 게재신청</li>
+                   <li>2014.03.31</li>
+               </ul>
+               <ul>
+                   <li>4</li>
+                   <li>전시장 및 회의실 운영요령</li>
+                   <li>2012.02.09</li>
+               </ul>
+               <ul>
+                   <li>3</li>
+                   <li>전시장 및 회의실 임대요율표</li>
+                   <li>2009.11.20</li>
+               </ul>
+               <ul>
+                   <li>2</li>
+                   <li>전시장 행사사진</li>
+                   <li>2009.11.20</li>
+               </ul>
+               <ul>
+                   <li>1</li>
+                   <li>회의실 행사사진</li>
+                   <li>2009.11.20</li>
+               </ul>
+              </div>
+              <div class="table ">
+              <ul class="tr">
+                   <li class="th">번호</li>
+                   <li class="th">제목</li>
+                   <li class="th">등록일</li>
+               </ul>
+               <ul >
+                   <li class="td">12</li>
+                   <li class="td">2020 지정등록업체 안전교육 자료</li>
+                   <li class="td">2020.04.09</li>
+               </ul>
+               <ul>
+                   <li class="td">11</li>
+                   <li class="td">전시주최자 제출 서류 안내</li>
+                   <li class="td">2016.02.28</li>
+               </ul>
+               <ul>
+                   <li class="td">10</li>
+                   <li class="td">전시장 운영 규정</li>
+                   <li class="td">2016.02.19</li>
+               </ul>
+               <ul>
+                   <li class="td">9</li>
+                   <li class="td">2016 장치안전관리 지침 변경 사항 안내</li>
+                   <li class="td">2016.02.19</li>
+               </ul>
+               <ul>
+                   <li class="td">8</li>
+                   <li class="td">2016 킨텍스 등록업체 작업안전관리 교육 자료</li>
+                   <li class="td">2016.02.19</li>
+               </ul>
+               <ul>
+                   <li class="td">7</li>
+                   <li class="td">전화, 인터넷 신청 안내</li>
+                   <li class="td">2016.02.19</li>
+               </ul>
+               <ul>
+                   <li class="td">6</li>
+                   <li class="td">전시주최자 행사 홍보물 설치 안내</li>
+                   <li class="td">2016.02.18</li>
+               </ul>
+               <ul>
+                   <li class="td">5</li>
+                   <li class="td">전시홀 내부 지원공간 (주최자사무실 등)</li>
+                   <li class="td">2016.02.18</li>
+               </ul>
+               <ul>
+                   <li class="td">4</li>
+                   <li class="td">VIP ROOM / PRESS CENTER 안내</li>
+                   <li class="td">2016.02.18</li>
+               </ul>
+               <ul>
+                   <li class="td">3</li>
+                   <li class="td">KINTEX 전시홀별 입·출차 안내도</li>
+                   <li class="td">2009.11.20</li>
+               </ul>
+               <ul>
+                   <li class="td">2</li>
+                   <li class="td">전시장 부대시설 사진</li>
+                   <li class="td">2012.05.01</li>
+               </ul>
+               <ul>
+                   <li class="td">1</li>
+                   <li class="td">전시장 도면</li>
+                   <li class="td">2009.11.20</li>
+               </ul>
+              </div>
+              <div class="table ">
+                  <ul class="tr">
+                   <li>번호</li>
+                   <li>제목</li>
+                   <li>등록일</li>
+               </ul>            
+               <ul>
+                   <li>2</li>
+                   <li>회의실 도면</li>
+                   <li>2016.03.23</li>
+               </ul>
+               <ul>
+                   <li>1</li>
+                   <li>KINTEX 회의실 이용자료</li>
+                   <li>2016.03.08</li>
+               </ul>  
+              </div>               
+       </div>     
+        <div class="page_wrap">
+            <a href="javascript:;;">1</a>
+        </div>
+    </div>
+    <div id="ft"></div>
+</body>
+</html>

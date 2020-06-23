@@ -1,0 +1,93 @@
+body {background: #e1e3e4; width: 100%; height: 100%;}
+#right_nav li:nth-child(4) {background: #f03a40; color: #fff;}
+input { -webkit-appearance: none; -webkit-border-radius: 0;}
+#menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px;}
+#menu_title div {padding-top: 1vh; padding-bottom: 7vh; width: 50px; margin: 0 auto;}
+#rv_wrap {background: #fff; width: 800px; margin: 0 auto; margin-bottom: 200px; transition: all 0.5s;}
+.rv_container .rv_title h2 {background: #c0c0c0; padding: 14px; font-size: 22px;}
+.rv_container .rv_title h2 b {font-size: 18px;}
+
+.rv_container1 .rv_box1 {height: 100px; padding: 0px 60px; overflow: hidden;}
+.rv_container1 .rv_box1 div:nth-child(1) {float: left; display: inline-block; line-height: 100px; padding-right: 10px;}
+.rv_container1 .rv_box1 ul {overflow: hidden; display: inline-block;}
+.rv_container1 .rv_box1 ul li {float: left; padding-top: 30px;}
+.rv_container1 .rv_box1 ul li img {width: 40px;}
+.rv_container1 .rv_box1 ul li p {display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; border: 1px solid #e1e3e4;}
+.rv_container1 .rv_box1 div:nth-child(3) {float: right; display: inline-block; line-height: 100px;}
+
+td {width: 54px; height: 54px; text-align: center; font-size: 15px;}
+
+.rv_container3 .rv_box3 {padding: 20px 0px 20px 60px;}
+.rv_container3 .rv_box3 p {padding: 10px 0px;}
+.rv_container3 .rv_box3 p:not(:last-child) {font-weight: bold; font-size: 18px;}
+.rv_container3 .rv_box3 ul {overflow: hidden; margin-bottom: 10px;}
+.rv_container3 .rv_box3 ul li {float: left; padding: 6px; border: 1px solid #e1e3e4; margin-right: 10px; cursor: pointer;}
+
+.rv_container4 .rv_box4 select {width: 80%; margin-left: 10%; margin-top: 30px; height: 40px; border: 1px solid #a6a6a6; border-radius: 0; padding: 0px 15px;}
+.rv_container4 .rv_box4 select:focus {outline: 2px solid #a3171b;}
+option {padding: 0px 15px;}
+
+.rv_container5 {}
+.rv_container5 form {text-align: center; padding-top: 100px; padding-bottom: 50px;}
+.rv_container5 input[type="button"] {border: 0; width: 25%; padding: 10px 0px; font-size: 18px;}
+.rv_container5 input[name="finish"] {background: #a3171b; color: #fff; margin-left: 10px; cursor: pointer;}
+.rv_container5 input[name="finish"]:focus {outline: none;}
+.rv_container5 input[name="cancel"] {background: #eeeeee; cursor: pointer;}
+.rv_container5 input[name="cancel"]:focus {outline: none;}
+.active {width: 54px; height: 54px; display: table-cell; vertical-align: middle; background: #a3171b; color: #fff;}
+.active2 {background: #a3171b; color: #fff;}
+
+@media screen and (min-width:1024px) and (max-width:1279px) {
+    #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 28px;}
+    #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 34px; margin: 0 auto;}
+    .rv_container .rv_title h2 {padding: 14px; font-size: 18px;}
+    .rv_container .rv_title h2 b {font-size: 16px;}
+    td {width: 50px; height: 50px; text-align: center; font-size: 15px;}
+    .rv_container3 .rv_box3 p:not(:last-child) {font-weight: bold; font-size: 17px;}
+    .rv_container3 .rv_box3 ul li {font-size: 15px;}
+    .active {width: 50px; height: 50px; display: table-cell; vertical-align: middle; background: #a3171b; color: #fff;}
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
+    #menu_title div {padding-top: 1vh; padding-bottom: 3vh; width: 30px; margin: 0 auto;}
+    #rv_wrap {width: 540px;}
+    .rv_container .rv_title h2 {padding: 12px; font-size: 18px;}
+    .rv_container .rv_title h2 b {font-size: 16px;}
+    .rv_container1 .rv_box1 {height: 100px; padding: 0px 20px;}
+    .rv_container1 .rv_box1 ul li {float: left; padding-top: 33px;}
+    .rv_container1 .rv_box1 ul li img {width: 34px;}
+    .rv_container1 .rv_box1 ul li p {display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; border: 1px solid #e1e3e4;}
+    .rv_container1 .rv_box1 div:nth-child(3) {float: right; display: inline-block; line-height: 100px; font-size: 14px;}
+    td {width: 50px; height: 50px; text-align: center; font-size: 15px;}
+    .rv_container3 .rv_box3 {padding: 20px 0px 20px 20px;}
+    .rv_container3 .rv_box3 p:not(:last-child) {font-weight: bold; font-size: 16px;}
+    .rv_container3 .rv_box3 p:last-child {font-size: 14px;}
+    .rv_container3 .rv_box3 ul li {font-size: 14px;}
+    .rv_container4 .rv_box4 select {width: 90%; margin-left: 5%; margin-top: 30px; height: 40px; border: 1px solid #a6a6a6; border-radius: 0; padding: 0px 0px;}
+    .rv_container5 input[type="button"] {border: 0; width: 30%; padding: 7px 0px; font-size: 16px;}
+    .active {width: 50px; height: 50px; display: table-cell; vertical-align: middle; background: #a3171b; color: #fff;}
+}
+@media screen and (max-width:767px) {
+    #menu_title h1 {font-size: 22px;}
+    #menu_title div {width: 30px; padding-bottom: 4vh;}
+    #rv_wrap {width: 95%;}
+    #m_header_box div:nth-child(1) a img {display: none;}
+    #m_header_box div:nth-child(2) a img {display: block;}
+    #m_header_box ul #reservation {display: block; position: absolute; right: 55px; top: 22px;}
+    .rv_container .rv_title h2 {padding: 10px; font-size: 16px;}
+    .rv_container .rv_title h2 b {font-size: 14px;}
+    .rv_container1 .rv_box1 {height: 100px; padding: 0px 20px; position: relative;}
+    .rv_container1 .rv_box1 div:nth-child(1) {float: none; display: inline-block; line-height: 0px; padding-right: 10px; position: relative; left: 0; top: -15px;}
+    .rv_container1 .rv_box1 ul li {float: left; padding-top: 24px;}
+    .rv_container1 .rv_box1 ul li img {width: 34px;}
+    .rv_container1 .rv_box1 ul li p {display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; border: 1px solid #e1e3e4;}
+    .rv_container1 .rv_box1 div:nth-child(3) {float: none; display: block; line-height: 0px; font-size: 14px; padding-top: 10px;}
+    td {width: 46px; height: 46px; text-align: center; font-size: 15px;}
+    .rv_container3 .rv_box3 {padding: 20px 0px 20px 20px;}
+    .rv_container3 .rv_box3 p:not(:last-child) {font-weight: bold; font-size: 16px;}
+    .rv_container3 .rv_box3 p:last-child {font-size: 14px;}
+    .rv_container3 .rv_box3 ul li {font-size: 14px; margin-bottom: 5px; margin-right: 5px;}
+    .rv_container4 .rv_box4 select {width: 90%; margin-left: 5%; margin-top: 30px; height: 40px; border: 1px solid #a6a6a6; border-radius: 0; padding: 0px 0px;}
+    .rv_container5 input[type="button"] {border: 0; width: 30%; padding: 7px 0px; font-size: 16px;}
+    .active {width: 46px; height: 46px; display: table-cell; vertical-align: middle; background: #a3171b; color: #fff;}
+}

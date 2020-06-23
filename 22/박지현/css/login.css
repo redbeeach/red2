@@ -1,0 +1,101 @@
+body{overflow-x: hidden}
+input:focus{outline: none}
+#banner {
+    _width: 70vw;
+    max-width:1600px;
+    height: 500px;
+    background: url(../main-img/loginBg.jfif)no-repeat 100%;
+    margin: 0 auto;
+    position: relative;
+}
+ #login {
+     position: absolute;
+     width: 600px;
+     _height: 400px;   
+     text-align: center;
+     background: rgba(255,255,255,0.7);            
+     opacity: 0.9;
+     top: 45%;
+     left: 50%;
+     transform: translate(-50%, 5%);         
+    border: 1px solid #ddd
+}
+#login > .l_box input{
+    width: 300px;
+    height: 50px;
+   padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 3px;
+    color: #727072;
+}
+#login > .l_box a:nth-child(2) {           
+    border: 1px solid;
+    padding: 10px 40px;
+    line-height: 3;
+    border-radius: 5px;
+    background: gray;
+    color: white;            
+}
+#login > .l_box a:nth-child(2):hover {
+    background: #2f2d2d
+}
+#login > .l_box > small{
+     font-size: 13px;
+    margin: 20px 3px 10px 0px
+}
+#login > .l_box > small:nth-child(4) {
+    border-right: 1px solid gray;
+   
+}
+#login > .l_box > small:hover {
+   text-decoration: underline
+}
+#login p{
+    margin: 20px 0 10px 0;    
+}
+#login p span {
+    font-weight: bold;
+    font-size: 17px;    
+}
+a.join{
+    display: block;
+    margin-bottom: 20px;
+}
+a.join:hover {
+    text-decoration: underline;
+    font-weight: bold
+}
+#footer {
+    top: 300px
+}
+미디어쿼리 베이스
+@media all and (min-width:1401px){
+    .content {  margin-left: 23vw;}  
+}
+@media all and (min-width:1105px) and (max-width:1400px){
+    .content { margin-left: 25vw; width: 70vw}
+}
+@media screen and (min-width:960px) and (max-width:1104px){
+    .content {margin-left: 27vw; width: 70vw;}
+}
+@media screen and (min-width:780px) and (max-width:959px){
+    #login {width: 550px;}
+    #footer{top: 300px;}    
+}
+@media screen and (min-width:610px) and (max-width:779px){
+    #login {width: 500px;}
+    #footer {top: 300px;}
+}
+@media screen and (min-width:500px) and (max-width:609px){
+    #banner {height: 400px;}
+    #login {width: 400px; top: 35%}
+    #footer {top:300px;}
+}
+@media screen and (max-width:499px){
+    #banner{height: 650px;}
+    #login {width: 390px; top:20%}
+    #footer {top: 0px;}
+  }
+

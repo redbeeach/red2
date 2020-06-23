@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script>
+        $(function(){
+           $("#hd").load("header.html");
+            $("#tf").load("footerbase.html");
+        });
+    </script>
+  
+   
+</head>
+<body>
+    <div id="hd"></div>    
+    <div id="banner"></div>
+    <div id="login">        
+        <h1>LOGIN</h1>
+        <div class="l_box">
+            <ul>               
+               <li><input type="text" placeholder="아이디"></li>              
+               <li><input type="password" placeholder="비밀번호"></li>
+           </ul>            
+            <a href="#">로그인</a><br>
+            <small><a href="#">아이디 찾기 </a></small>
+            <small><a href="#">비밀번호 찾기</a></small>
+            
+        </div>
+        <p>아직 회원이 아니시라면 <span>회원가입</span> 버튼을 눌러주세요</p>
+        <a class="join" href="join.html" target="_blank">회원가입</a>
+    </div>
+    <div id="tf"></div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 MENU_STEAK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="menu_1~7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+    
+    <script>
+        $(function(){
+            var menu_img = $("#menu_box tr td .menu_img");
+            var sub = $("#menu_box tr td .menu_img .hover_wrap_menu");
+            var cur = 10;
+            var isOn = 0;
+            
+            sub.hide();
+            
+            menu_img.on("click", function(e){
+                if (isOn == 1){
+                    cur = 10;
+                }
+                var i = menu_img.index(this);
+                
+                if(cur != i){
+                    sub.hide();
+                    $(this).find(".hover_wrap_menu").slideDown();
+                    isOn = 2;
+                }
+                else {
+                    $(this).find(".hover_wrap_menu").slideUp();
+                    isOn = 1;
+                }
+                cur = i;
+            });
+    });
+    </script>
+    
+    <style>
+    #m_header_box div:nth-child(1) a img {display: none;}
+    #m_header_box div:nth-child(2) a img {display: block;}
+    #m_header_box ul #sub_steak {display: block; position: absolute; right: 55px; top: 22px;}
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+    <header></header>
+    <div id="m_header"></div>
+    <div id="menu">
+        <div id="menu_title">
+            <h1>STEAK</h1>
+            <div><img src="sub_MENU_img/icon/icon_steak.png" alt="steak icon"></div>
+        </div>
+        <table id="menu_box">
+            <tr>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/7.steak/brussels%20steak.png" alt="Brussels sprouts & Tornado Striploin Steak" class="menu_pc">
+                        <img src="sub_MENU_img/7.steak/m_brussels%20steak.png" alt="Brussels sprouts & Tornado Striploin Steak" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">매콤 달콤하게 조리된 미니 양배추와 얇게 슬라이스된 해슬백 포테이토, 육즙 가득 구워낸 스테이크를 치미추리 소스와 함께 즐기는 Spring Blo:ssom 시그니처 스테이크</div>
+                                <div class="hover_origin_menu">쇠고기(채끝 200g): 호주산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_txt">
+                        <strong>Brussels sprouts & Tornado Striploin Steak</strong>
+                        <div><img src="sub_MENU_img/icon/fire3.png" alt=""></div>
+                        <p>39,900</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/7.steak/emmental%20steak.png"  alt="Emmental Garlic Tenderloin Steak" class="menu_pc">
+                        <img src="sub_MENU_img/7.steak/m_emmental%20steak.png" alt="Emmental Garlic Tenderloin Steak" class="menu_m">
+                        <div class="hover_wrap_menu hover_wrap_2n_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">스윗 갈릭을 감싼 부드러운 에멘탈 치즈와 두툼한 안심을 콜리플라워, 미니 양배추, 방울토마토 등 신선한 채소와 함께 풍성하게 즐길 수 있는 프리미엄 안심 스테이크</div>
+                                <div class="hover_origin_menu">쇠고기(안심 150g): 호주산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_txt">
+                        <strong>Emmental Garlic Tenderloin Steak</strong>
+                        <p>39,900</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/7.steak/garlic%20hug%20steak.png"  alt="Garlic Hub Steak" class="menu_pc">
+                        <img src="sub_MENU_img/7.steak/m_garlic%20hug%20steak.png" alt="Garlic Hub Steak" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">마늘을 감싸 안은 듯 마늘로 속을 채운 후, 매운 향의 치즈 크림 소스와 함께 즐기는 부드러운 안심 스테이크</div>
+                                <div class="hover_origin_menu">쇠고기(안심 150g): 호주산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_txt">
+                        <strong>Garlic Hub Steak</strong>
+                        <div><img src="sub_MENU_img/icon/fire3.png" alt="fire"></div>
+                        <p>39,900</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/7.steak/garlic%20steak.png"  alt="Garlic Steak" class="menu_pc">
+                        <img src="sub_MENU_img/7.steak/m_garlic%20steak.png" alt="Garlic Steak" class="menu_m">
+                        <div class="hover_wrap_menu hover_wrap_2n_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">특별 레시피로 조리한 마늘이 듬뿍 올라간 매드포갈릭의 시그니처 등심 스테이크</div>
+                                <div class="hover_origin_menu">쇠고기(등심 200g): 호주산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_txt">
+                        <strong>Garlic Steak</strong>
+                        <p>40,900</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/7.steak/herb%20ribeye%20steak.png"  alt="Herb Ribeye Steak" class="menu_pc">
+                        <img src="sub_MENU_img/7.steak/m_herb%20ribeye%20steak.png" alt="Herb Ribeye Steak" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">로즈마리, 타임, 월계수향을 가미하여 그릴에 굽고 허브 버터를 함께 곁들여먹는 립아이 스테이크 </div>
+                                <div class="hover_origin_menu">쇠고기(등심 200g): 호주산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_txt">
+                        <strong>Herb Ribeye Steak</strong>
+                        <p>40,900</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/7.steak/ribeye%20steak.png"  alt="Ribeye Steak & Riso Lobster" class="menu_pc">
+                        <img src="sub_MENU_img/7.steak/m_ribeye%20steak.png" alt="Ribeye Steak & Riso Lobster" class="menu_m">
+                        <div class="hover_wrap_menu hover_wrap_2n_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">치즈를 듬뿍 버무린 리소 파스타와 버터에 구운 랍스터, 그리고 허브향 가득한 신선한 채소와 그릴에 구워 육즙이 가득한 등심 스테이크 앤 리소 랍스터</div>
+                                <div class="hover_origin_menu">쇠고기: 호주산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_txt">
+                        <strong>Ribeye Steak & Riso Lobster</strong>
+                        <p>56,300</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
+<footer></footer>
+</body>
+</html>

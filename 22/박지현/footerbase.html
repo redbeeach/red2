@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+#footer {
+    position: relative;
+    width: 100vw;
+    border-top: 1px solid #efefef;
+    padding-top: 10px
+}
+#footer .ft_logo{
+    width: 200px;
+    margin:50px 50px 50px 250px;
+    float: left;
+    
+}
+#footer >ul >li {
+    line-height: 1.5;
+    font-size: 14px
+}
+/*
+#footer .sns_i {
+    position: absolute;
+    left:1100px;
+    bottom: 30px
+}
+*/
+/*
+#footer .sns_i a img {
+    width: 30px;
+    margin-left: 5px
+}
+*/
+#footer > span{
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 20px;
+    _text-indent: 80px
+}
+#footer > span:not(.delete):after {
+    content:"";
+    border-left: 1px solid;
+    height: 10px;
+    display: inline-block;
+    margin-left: 10px
+}
+#footer > span:nth-child(1){
+    margin-left: 20px
+}
+    @media all and (min-width:1105px) and (max-width:1400px){#footer .sns_i {
+        left:1000px;
+        bottom: 30px
+    }
+    #footer > span{
+        font-size: 12px;
+    }
+}
+@media all and (min-width:960px) and (max-width:1154px){
+     #footer .sns_i {left:800px; bottom: 30px}
+/*    #footer .sns_i a img { width: 25px;}*/
+}
+@media all and (min-width:780px) and (max-width:959px){
+    #footer {height: 20vh}
+    #footer .ft_logo{margin:55px 30px;}
+/*
+    #footer .sns_i {left:650px;bottom: 70px}    
+    #footer .sns_i a img {width: 25px;margin-left: 5px}
+*/
+}
+@media all and (min-width:610px) and (max-width:779px){ 
+    #footer {height: 20vh}
+    #footer .ft_logo{margin:40px 30px; width: 150px;}
+/*    #footer .sns_i {left:500px;bottom: 70px}    */
+/*    #footer .sns_i a img {width: 25px;margin-left: 5px}*/
+    #footer > span{
+    font-size: 14px;
+    display: inline-block;
+    margin-top:30px;
+    }
+    #footer .first{
+        margin-left: -100px
+    }
+}
+@media all and (min-width:500px) and (max-width:609px){
+     #footer {height: 20vh; padding-top: 40px}
+    #footer .ft_logo{margin:40px 15px; width: 100px;}
+/*    #footer .sns_i {left:135px;top: 10px}    */
+/*    #footer .sns_i a img {width: 25px;margin-left: 5px}*/
+    #footer > span{
+    font-size: 14px;
+    display: inline-block;
+    margin-top:20px;
+    }
+    #footer .first{
+        margin-left: 50px
+    }
+}
+@media all and (max-width:499px){
+    #footer {
+        padding-top: 41px;
+        background: #417dbf;
+        color: #fff
+    }
+    #footer .ft_logo{
+        display: none;
+    }
+    #footer >ul >li {
+        line-height: 1.5;
+        font-size: 14px
+    }
+/*
+    #footer .sns_i {
+        position: absolute;
+        left: 0px;
+        top: 7px
+    }
+    #footer .sns_i a img {
+        width: 25px;
+        margin-left: 5px
+    }
+*/
+    #footer > span{
+        display: inline-block;
+        margin-top: 20px;
+        _text-indent: 80px;
+        font-size: 12px
+    }
+    #footer .first{
+        margin-left: 12px
+    }
+}      
+</style>
+</head>
+<body>
+    <div id="footer">
+        <img src="main-img/lg.png" class="ft_logo" alt="">
+        <ul>
+            <li>주소 : (01233)경기도 고양시 일산서구 킨텍스로 217-60</li>
+            <li>대표전화 : 031-908-2476</li>
+            <li>이메일 : cklee@kintex.com </li>
+            <li>사업자 등록번호 : 128-81-780009</li>
+            <li><address>Copyright © KINTEX All rights reserved.</address></li>
+        </ul>
+<!--
+        <div class="sns_i">
+           <a href="https://pf.kakao.com/_GvSxaC"><img src="main-img/kakao.png" alt="" target="_blank"></a>
+            <a href="https://www.instagram.com/kintex_korea/" target="_blank"><img src="main-img/blog.png" alt=""></a>
+            <a href="http://blog.naver.com/prologue/PrologueList.nhn?blogId=kintex_korea"><img src="main-img/instar.png" alt="" target="_blank"></a>
+            <a href="https://www.facebook.com/kintexkr" target="_blank"><img src="main-img/face.png" alt=""></a>
+            
+        </div>
+-->
+        <span class="first"><a href="#">개인정보처리방침</a></span>
+        <span><a href="#">이메일주소무단수집거부</a></span>
+        <span class="delete"><a href="3">공공데이터 개방</a></span>
+    </div>
+</body>
+</html>

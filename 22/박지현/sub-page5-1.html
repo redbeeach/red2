@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+    <script src="js/jquery-3.4.1.min.js"></script>
+<!--   <script src="js/jquery-3.5.0.min.js"></script>-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sub5-1.css">
+    <script>
+        $(document).ready(function(){
+           $("#hd").load("header.html") ;
+           $("#ft").load("footerbase.html");
+        });
+    </script>  
+    <script>
+        $(document).ready(function(){
+            var num = 0,
+                i =$(this).index();
+            
+            $('.page_wrap > .btn > a').click(function(){  
+                
+                var i = $(this).index();
+                
+                $('.page_wrap > .btn > a').removeClass();
+                $('.page_wrap > .btn > a').eq(i).addClass("active");
+                $('.container > table ').removeClass("show");
+                $('.container > table ').eq(i).addClass("show");
+                num = i;
+            });
+            //왼쪽으로[prev]
+                $('.btnlb').click(function(){
+                    listNum = $('.page_wrap > .btn > a').length;
+                    num = num - 1;
+                    if(num < 0) {
+                        num = 0;
+                        return;
+                    }
+                    $('.page_wrap > .btn > a').removeClass();
+                    $('.page_wrap > .btn > a').eq(num).addClass("active");
+                    $('.container > table ').removeClass("show");
+                    $('.container > table ').eq(num).addClass("show");
+                    
+                });
+            //오른쪽으로[next]
+                $('.btnrb').click(function(){
+                    listNum = $('.page_wrap > .btn > a').length;
+                    num = num + 1;
+                    if(num >= listNum) {
+                        num = listNum - 1;
+                        return;
+                    }
+                    $('.page_wrap > .btn > a').removeClass();
+                    $('.page_wrap > .btn > a').eq(num).addClass("active");
+                    $('.container > table ').removeClass("show");
+                    $('.container > table ').eq(num).addClass("show");
+                   
+                });
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>
+    <div id="bg"></div>
+    <div class="side_nav">
+       <h3>고객만족센터</h3>
+        <ul>
+            <li class="on"><a href="sub-page5-1.html">고객의소리<i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="sub-page5-2.html">공지사항</a></li>            
+            <li><a href="sub-page5-3.html">입찰안내</a></li>            
+        </ul>
+    </div>
+    <div class="container">
+        <h3>고객의소리</h3>
+        <div class="text-box">
+            <p>고객님의 KINTEX에 대한 칭찬, 불편사항, 제안 등 소중한 의견에 귀 기울이기 위해 고객의 소리 게시판을 운영하고 있습니다.
+            고객 여러분의 소중한 의견 정성껏 귀담아 듣고 반영하여 더욱 발전하는 KINTEX가 되겠습니다.<br/>
+            <span class="tt">※ 욕설, 광고, 비방에 관한 글은 사전 통보 없이 삭제 될 수 있습니다</span>
+            </p>
+        </div>
+        <table class="show">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>등록일</th>
+            </tr>
+            <tr>
+                <td class="num">10</td>
+                <td class="subject"><a href="#">[칭찬]고객의 소리</a></td>
+                <td class="date">2020.05.12</td>
+            </tr>
+            <tr>
+                <td class="num">9</td>
+                <td class="subject"><a href="#">[제안]주차료 관련</a></td>
+                <td class="date">2020.05.11</td>
+            </tr>
+            <tr>
+                <td class="num">8</td>
+                <td class="subject"><a href="#">[불편]편의시설 확충</a></td>
+                <td class="date">2020.05.02</td>
+            </tr>
+            <tr>
+                <td class="num">7</td>
+                <td class="subject"><a href="#">[제안]VIP회원 관련</a></td>
+                <td class="date">2020.05.01</td>
+            </tr>
+            <tr>
+                <td class="num">6</td>
+                <td class="subject"><a href="#">[칭찬]사전예약알림</a></td>
+                <td class="date">2020.04.29</td>
+            </tr>
+            <tr>
+                <td class="num">5</td>
+                <td class="subject"><a href="#">[칭찬]카톡 친구추가</a></td>
+                <td class="date">2020.04.29</td>
+            </tr>                    
+        </table>
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>등록일</th>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>[Q&amp;A]사전예약</td>
+                <td>2020.04.29</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>[불편]전기차 충전기</td>
+                <td>2020.04.12</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>[칭찬]전시회의 상설화</td>
+                <td>2020.04.10</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>[불편]흡연 구역 외 흡연자제 요망</td>
+                <td>2020.04.02</td>
+            </tr>
+        </table>
+        <div class="pagination">
+		<div class="page_wrap">
+			<a href="javascript:;;" class= "btnlb"><i class="fas fa-chevron-left"></i></a>
+			<span class="btn">
+				<a href="javascript:;;" class="active">1</a>
+				<a href="javascript:;;" class="">2</a>
+            </span>				
+			<a href="javascript:;;" class= "btnrb" ><i class="fas fa-chevron-right"></i></a>
+		</div>
+	    </div>
+        <a class="write " href="#">글쓰기</a>
+        <a class="write pen" href="#"><i class="fas fa-pen"></i></a>
+        <fieldset id="bo_sch">
+			<legend>게시물검색</legend>
+			<form name="fsearch" method="get">
+				<label for="sfl" class="sound_only">검색대상</label>
+				<select name="sfl" id="sfl">
+					<option value="wr_subject||wr_content">제목+내용</option>
+					<option value="wr_subject">제목</option>
+					<option value="wr_content">내용</option>
+				</select>
+
+				<label for="sfx" class="sound_only">검색어</label>
+				<input type="text" name="stx" id="sfx" size="25" maxlength="20" placeholder="검색어를 입력해주세요" class="sch_input" required>
+				<button type="submit" value="검색" class="sch_btn"><i class="fas fa-search"></i></button>
+			</form>
+		</fieldset>
+
+    </div>
+    <div id="ft"></div>
+</body>
+</html>

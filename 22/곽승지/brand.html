@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 BRAND</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+
+    <style>
+        body {background: #212121; width: 100%; height: 100%;}
+        #header_text {text-indent: -9999px;}
+        #left_nav li:nth-child(1) {color: #a6a6a6;}
+        #brand_wrap {}
+        .brand_txt {color: #a6a6a6; font-size: 24px; line-height: 1.5;}
+        .brand_txt strong {color: #e1e3e4;}
+        .wrap_box {width: 80%; margin: 0 auto; transition: all 0.5s;}
+        
+        .wrap_box1 {width: 100%; padding-top: 60px; position: relative;}
+        .brand_img1 img {width: 100%; vertical-align: bottom;}
+        .brand_txt1 {font-size: 27px; text-align: right; position: absolute; top: 70%; right: 10%; color: #e1e3e4; line-height: 1.7;}
+        
+        .wrap_box2 {position: relative; height: 1100px;}
+        .brand_img2 {}
+        .brand_img2 img:nth-child(1) {position: relative; left: 50px; top: 150px; width: 20%;}
+        .brand_img2 img:nth-child(2) {position: absolute; top: 240px; right: 0; width: 55%;}
+        .brand_txt2 {display: inline-block; position: relative; top: 200px; left: 80px; color: #e1e3e4;}
+        
+        .wrap_box3 {position: relative;  height: 1000px;}
+        .brand_img3 video {position: relative; top: 70px; left: 0;}
+        .brand_img3 img:nth-child(2) { position: relative; top: 140px; left: 50px; width: 25%;}
+        .brand_img3 img:nth-child(3) {display: none;}
+        
+        .brand_txt3 {text-align: right; position: absolute; top: -40px; right: 50px;}
+        .brand_txt3 p {display: none;}
+        
+        .wrap_box4 {position: relative; height: 1100px;}
+        .brand_img4 img:nth-child(1) {width: 20%; position: relative; top: 100px; left: 0;}
+        .brand_img4 img:nth-child(2) {width: 15%; position: relative; top: 250px; left: 70px;}
+        .brand_img4 video {position: absolute; top: 320px; right: 0;}
+        .brand_img4 img:nth-child(4) {display: none;}
+        .brand_txt4 {height: 300px;}
+
+        
+        @media screen and (min-width:1280px) and (max-width:1599px) {
+        .wrap_box2 {height: 900px;}
+        .wrap_box3 {height: 750px;}
+        .wrap_box4 {height: 900px;}
+        .brand_img3 video {position: relative; top: 50px; left: 0;}
+        .brand_img3 img:nth-child(2) { position: relative; top: 100px; left: 50px; width: 25%;}
+        .brand_img4 img:nth-child(1) {width: 20%; position: relative; top: 50px; left: 0;}
+        .brand_img4 img:nth-child(2) {width: 15%; position: relative; top: 150px; left: 70px;}
+        .brand_img4 video {position: absolute; top: 270px; right: 0;}
+        .brand_txt {color: #a6a6a6; font-size: 20px;}
+        .brand_txt1 {font-size: 23px;}
+        }
+        
+        @media screen and (min-width:1024px) and (max-width:1279px) {
+        .wrap_box1 {padding-top: 50px;}
+        .wrap_box2 {height: 800px;}
+        .wrap_box3 {height: 650px;}
+        .wrap_box4 {height: 800px;}
+        .brand_img3 video {position: relative; top: 50px; left: 0;}
+        .brand_img3 img:nth-child(2) { position: relative; top: 100px; left: 50px; width: 25%;}
+        .brand_img4 img:nth-child(1) {width: 20%; position: relative; top: 20px; left: 0;}
+        .brand_img4 img:nth-child(2) {width: 15%; position: relative; top: 120px; left: 70px;}
+        .brand_img4 video {position: absolute; top: 240px; right: 0;}
+        .brand_txt {color: #a6a6a6; font-size: 18px;}
+        .brand_txt1 {font-size: 21px;}
+        }
+        
+        @media screen and (min-width:768px) and (max-width:1023px) {
+
+        .wrap_box {width: 90%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 50px;}
+        .wrap_box2 {height: 700px;}
+        .wrap_box3 {height: 550px;}
+        .wrap_box4 {height: 700px;}
+        .brand_img2 img:nth-child(1) {position: relative; left: 50px; top: 120px; width: 20%;}
+        .brand_img2 img:nth-child(2) {position: absolute; top: 190px; right: 0; width: 55%;}
+        .brand_txt2 {display: inline-block; position: relative; top: 170px; left: 80px; color: #e1e3e4;}
+        .brand_txt3 {text-align: right; position: absolute; top: -40px; right: 0px; width: 100%;}
+        .brand_img3 video {position: relative; top: 30px; left: 0;}
+        .brand_img3 img:nth-child(2) {position: relative; top: 80px; left: 50px; width: 25%;}
+        .brand_img4 img:nth-child(1) {width: 20%; position: relative; top: -20px; left: 0;}
+        .brand_img4 img:nth-child(2) {width: 15%; position: relative; top: 70px; left: 50px;}
+        .brand_img4 video {position: absolute; top: 220px; right: 0;}
+        .brand_txt {font-size: 15px;}
+        .brand_txt1 {font-size: 18px;}
+        }
+        
+        @media screen and (min-width:640px) and (max-width:767px) {
+        #m_header_box div:nth-child(1) a img {display: none;}
+        #m_header_box div:nth-child(2) a img {display: block;}
+        #m_header_box ul #brand {display: block; position: absolute; right: 55px; top: 22px;}
+
+        .wrap_box {width: 92%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 0vh;}
+        .wrap_box2 {height: 500px;}
+        .wrap_box3 {height: 550px;}
+        .wrap_box4 {height: 550px;}
+        .brand_img2 img:nth-child(1) {display: none;}
+        .brand_img2 img:nth-child(2) {position: absolute; top: 100px; right: 0px; width: 55%;}
+        .brand_txt2 {display: inline-block; position: relative; top: 240px; left: 20px; color: #e1e3e4;}
+        .brand_txt3 {text-align: right; position: absolute; top: 0px; right: 0px; width: 100%;}
+        .brand_img3 video {display: block; position: relative; top: 100px; left: 0; width: 60%;}
+        .brand_img3 img:nth-child(2) {position: absolute; top: 200px; left: 60%; width: 25%;}
+        .brand_img3 img:nth-child(3) {display: none; position: relative; top: 100px; left: 0; width: 60%;}
+        .brand_txt4 {height: 0px;}
+        .brand_img4 img:nth-child(1) {width: 30%; position: relative; top: 200px; left: 0;}
+        .brand_img4 img:nth-child(2) {display: none;}
+        .brand_img4 video {display:block; position: absolute; top: 160px; right: 0;}
+        .brand_img4 img:nth-child(4) {display: none; width: 55%; position: absolute; top: 160px; right: 0;}
+            
+        .brand_txt {font-size: 13px;}
+        .brand_txt p {display: block;}
+        .brand_txt1 {font-size: 15px; right: 5%;}
+        }
+            
+        @media screen and (min-width:480px) and (max-width:639px) {
+        #m_header_box div:nth-child(1) a img {display: none;}
+        #m_header_box div:nth-child(2) a img {display: block;}
+        #m_header_box ul #brand {display: block; position: absolute; right: 55px; top: 22px;}
+
+        .wrap_box {width: 92%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 0vh;}
+        .wrap_box2 {height: 450px;}
+        .wrap_box3 {height: 500px;}
+        .wrap_box4 {height: 500px;}
+        .brand_img2 img:nth-child(1) {display: none;}
+        .brand_img2 img:nth-child(2) {position: absolute; top: 100px; right: 0px; width: 55%;}
+        .brand_txt2 {display: inline-block; position: relative; top: 240px; left: 20px; color: #e1e3e4;}
+        .brand_txt3 {text-align: right; position: absolute; top: 0px; right: 0px; width: 100%;}
+        .brand_img3 video {display: block; position: relative; top: 100px; left: 0; width: 60%;}
+        .brand_img3 img:nth-child(2) {position: absolute; top: 200px; left: 60%; width: 25%;}
+        .brand_img3 img:nth-child(3) {display: none; position: relative; top: 100px; left: 0; width: 60%;}
+        .brand_txt4 {height: 0px;}
+        .brand_img4 img:nth-child(1) {width: 30%; position: relative; top: 200px; left: 0;}
+        .brand_img4 img:nth-child(2) {display: none;}
+        .brand_img4 video {display:block; position: absolute; top: 160px; right: 0;}
+        .brand_img4 img:nth-child(4) {display: none; width: 55%; position: absolute; top: 160px; right: 0;}
+            
+        .brand_txt {font-size: 13px;}
+        .brand_txt p {display: block;}
+        .brand_txt1 {font-size: 15px; right: 5%;}
+        }
+        
+        @media screen and (max-width:479px) {
+        #m_header_box div:nth-child(1) a img {display: none;}
+        #m_header_box div:nth-child(2) a img {display: block;}
+        #m_header_box ul #brand {display: block; position: absolute; right: 55px; top: 22px;}
+
+        .wrap_box {width: 92%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 0vh;}
+        .wrap_box2 {height: 400px;}
+        .wrap_box3 {height: 400px;}
+        .wrap_box4 {height: 400px;}
+
+        .brand_img2 img:nth-child(1) {display: none;}
+        .brand_img2 img:nth-child(2) {position: absolute; top: 100px; right: 0px; width: 55%;}
+        .brand_txt2 {display: inline-block; position: relative; top: 240px; left: 20px; color: #e1e3e4;}
+        .brand_txt3 {text-align: right; position: absolute; top: 0px; right: 0px; width: 100%;}
+        .brand_img3 video {display: block; position: relative; top: 100px; left: 0; width: 60%;}
+        .brand_img3 img:nth-child(2) {position: absolute; top: 150px; left: 60%; width: 30%;}
+        .brand_img3 img:nth-child(3) {display: none; position: relative; top: 100px; left: 0; width: 60%;}
+        .brand_txt4 {height: 0px;}
+        .brand_img4 img:nth-child(1) {width: 30%; position: relative; top: 200px; left: 0;}
+        .brand_img4 img:nth-child(2) {display: none;}
+        .brand_img4 video {display:block; position: absolute; top: 160px; right: 0; width: 60%;}
+        .brand_img4 img:nth-child(4) {display: none; width: 55%; position: absolute; top: 160px; right: 0;}
+            
+        .brand_txt {font-size: 11px;}
+        .brand_txt p {display: block;}
+        .brand_txt1 {font-size: 12px; right: 5%;}
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header></header>
+    <div id="m_header"></div>
+    <div id="brand_wrap">
+        <div class="wrap_box wrap_box1">
+            <div class="brand_img brand_img1"><img src="sub_other_img/brand1.png" alt=""></div>
+            <div class="brand_txt brand_txt1">매드포갈릭은 2001년 론칭한 국내 순수 개발 브랜드로,<br>마늘과 와인으로 콘셉트를 특화한 이탈리안 레스토랑입니다.</div> 
+        </div>
+        <div class="wrap_box wrap_box2">
+            <div class="brand_img brand_img2">
+                <img src="sub_other_img/brand2.jpg" alt="">
+                <img src="sub_other_img/brand3.jpg" alt="">
+            </div>
+            <div class="brand_txt brand_txt2">매드포갈릭의 'Creative Way'로 개발된 창작메뉴와<br>독자적인 프라이빗 브랜드 와인(Mad Wine) 페어링은<br>'오직 매드포갈릭' 에서만 누릴 수 있는 특별한 가치입니다.</div>
+        </div>
+        <div class="wrap_box wrap_box3">
+            <div class="brand_txt brand_txt3"><strong>프라이빗 브랜드 와인 (Mad Wine)</strong>은<p></p> 와인라벨의 독창적인 디자인 아트웍과 함께<br>이탈리아, 프랑스, 스페인 등 <p></p> 유서깊은 정통 유럽 와이너리에서 생산된 와인만을 엄선합니다.</div>
+            <div class="brand_img brand_img3">
+                <video width="55%" autoplay muted playsinline loop>
+                    <source src="sub_other_img/brand4.mp4" type="video/mp4"/>
+                </video>
+                <img src="sub_other_img/brand5.png" alt="">
+                <img src="sub_other_img/brand4.png" alt="">
+            </div>
+        </div>
+        <div class="wrap_box wrap_box4">
+            <div class="brand_txt brand_txt4">
+                매드포갈릭은 경상북도 의성군 마늘농장에서<br>연간 350t에 달하는 마늘을 사용하며 최상의 식재료만을 고집합니다.<br><br>
+                
+                <strong>24시간 숙성한 생 도우 피자, <p></p>20여가지에 달하는 매드포갈릭만의 수제 특제 소스,<br>다양한 조리법으로 마늘의 풍미를 더한 시크릿 레시피</strong>는 <p></p>매드포갈릭의 프라이드입니다.
+            </div>
+            <div class="brand_img brand_img4">
+               <img src="sub_other_img/brand6.PNG" alt="">
+               <img src="sub_other_img/brand7.PNG" alt="">
+                <video width="55%" autoplay muted playsinline loop>
+                    <source src="sub_other_img/brand8.mp4" type="video/mp4"/>
+                </video>
+                <img src="sub_MENU_img/5.pizza/m_garlic%20snowing%20pizza.png" alt="">
+            </div>
+        </div> 
+    </div>
+</div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
+<footer></footer>
+</body>
+</html>

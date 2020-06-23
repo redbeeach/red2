@@ -1,0 +1,402 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+body {font-family: 'NanumSquare';}
+html{overflow-x: hidden}
+#bg {
+width:99vw;
+height: 340px;
+background: url(../sub-page/sub_bg3.png)no-repeat;
+background-position:top;
+background-size: cover;
+margin: 0;
+padding: 0;
+}  
+    .side_nav{
+position: relative;
+top: 50px;
+left: 5vw;
+width: 200px;
+
+}
+.side_nav h3{
+    font-size: 20px;
+    border-bottom: 3px solid ;
+    width: 200px
+}
+
+.side_nav ul li {
+    padding: 8px 15px;
+}
+.side_nav ul li i {
+    position: absolute;
+    left: 175px;
+    top: 115px;
+}
+.side_nav > ul > .on {            
+    background-color: #d9e6ff;
+} 
+.content {
+    position: relative;
+    top: -145px;
+    width: 80vw;
+    max-width: 1000px;
+    height: 1450px;           
+    margin: 0 auto;
+   
+}        
+.content h3{
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.content ul.tab li {
+    float: left;
+    font-size: 17px;
+    width: 85px;
+    cursor: pointer;
+    padding:5px 10px
+}
+.content ul.tab li.tab_on{
+    border-bottom: 2px solid #6098FF;
+}
+.content ul li ul {
+    display: none
+}
+.content ul.sub_view {
+    position: absolute;
+    display: block; 
+    width: 100%;
+    top: 120px;
+    left: 0%;
+}
+.content ul.sub_view li {
+    width: 13%;
+    text-align: center;
+    border: 1px solid ;
+    margin-left: 30px;
+    padding: 10px 0;
+}
+.content ul.sub_view li.tg {
+    color: #6098FF
+}
+/*본문 */
+.content .c_area section{
+    position: absolute;
+    display: none;
+}
+.content .c_area section.show {
+    display: block;
+    top: 200px;
+    width: 100%;
+}
+.content .c_area section div.tab-c {
+    display: none;
+}
+.content .c_area section div.c_on{
+    display: block;
+}
+.content .c_area section div.tab-c .center{
+    width: 70%;
+    margin: 0;
+}
+.content .c_area section div.tab-c {
+    position: absolute;
+    left: 10vw;
+    top: 50px;
+    width: 100%;
+}
+.content .c_area section div.tab-c .show_i img{
+    position: absolute;
+}
+.content .c_area section div.tab-c > .img_box {
+    position: absolute;
+    width: 600px;    
+    top: 300px;
+}
+.content .c_area section div.tab-c > .img_box img {
+    width: 21%;
+    float: left;
+    margin: 5px;   
+    cursor: pointer
+}
+.content .c_area section div.tab-c > .img_box img:first-child{
+    margin-left: -2px
+}
+.content .c_area section div.tab-c > .img_box img.image {
+    border: 2px solid
+}
+.content .c_area section div.tab-c table {
+    display: none;
+}        
+.content .c_area section div.tab-c table.t_show{
+    display: block;
+    position: absolute;
+    top: 450px;
+    left:-5vw;    
+    line-height: 1.5;
+    border-collapse: collapse;
+}
+.content .c_area section div.tab-c table.t_show th {
+    padding:10px 0;
+    color: #6689d2;
+    border-top: 2px solid #84B1ED;
+    border-bottom: 2px solid #84B1ED;    
+}
+.content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 140px}
+.content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 700px}
+.content .c_area section div.tab-c table.t_show tr td{
+    padding: 10px;
+    border-bottom: 1px solid #ccc
+}
+.content .c_area section div.tab-c table.t_show tr td:first-child{
+    background: #e1eef6;
+    color: #353848;
+    text-align: center;
+}
+.content .c_area section div.tab-c table.t_show button{
+    border: 1px solid ;
+    background-color: #fff;
+    padding: 2px 5px;
+    cursor: pointer;  
+    margin-left: 10px;
+}
+.content .c_area section div.tab-c table.t_show button:hover {
+    color: #84B1ED
+}
+.content p{
+    width: 460px;
+    position: absolute;
+    bottom: 180px;
+    left: 25%;
+} 
+.content p span {
+    font-weight: bold;
+    color: cornflowerblue
+}
+.content button.rent {
+    position: absolute;
+    bottom: 120px;
+    background: #fff;
+    border: 1px solid ;
+    padding: 10px 15px;
+    left: 40%;
+    cursor: pointer;
+    border-radius: 7px
+}
+.content button.rent:hover{
+    color: cornflowerblue
+}
+@media all and (min-width:1401px){
+            .content {  margin-left: 23vw;  }            
+}
+@media all and (min-width:1105px) and (max-width:1400px){
+    .content { margin-left: 25vw; width: 70vw}
+    .content ul.sub_view li{width: 12%;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 140px}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 500px}
+}
+@media all and (min-width:960px) and (max-width:1104px){
+    .content {margin-left: 27vw; width: 70vw;}
+    .content ul.sub_view li{width: 13%; margin-left:20px}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 140px}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 400px}
+}
+@media all and (min-width:780px) and (max-width:959px){
+    .side_nav {left: 41vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -50px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -195px}
+    .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 95px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .content {top: 130px; height: 1300px; width: 75vw;}
+    .content h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -200px}
+    .content ul.sub_view li{width: 14.6%; margin-left:10px;border: none; }
+    .content .c_area section div.c_on {margin-left: 2%;}
+    .content .c_area section div.tab-c .center{width: 90%;}
+    .content .c_area section div.tab-c {left: 2vw;}  
+    .content .c_area section div.tab-c table.t_show{left: 5vw; width: 95%;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 19%;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 85%;}
+    .content p {bottom: 100px;left:13%;}
+    .content button.rent {bottom: 30px; left: 40%;}
+    #footer{top: 130px;}
+}
+@media all and (min-width:610px) and (max-width:779px){
+            .side_nav {left: 41vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+                 margin-left: -50px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 550px;margin-left: -195px}
+            .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 95px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+    .content {top: 130px; height: 1300px; }
+    .content h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -210px}
+    .content ul.sub_view li{width: 20%; margin-left:10px;border: none; }
+    .content ul.sub_view li:first-child{margin-left: 30px}
+    .content ul.sub_view li:nth-child(5){margin-left: 35px}
+    .content .c_area section div.c_on {margin-left: 2%;}
+    .content .c_area section div.tab-c .center{width: 90%;}
+    .content .c_area section div.tab-c {left: 2vw; width: 90%} 
+    /*.content .c_area section div.tab-c .show_i img{width: 430px;}*/
+    .content .c_area section div.tab-c .img_box{width: 400px;left: 4vw;top: 240px;}
+    .content .c_area section div.tab-c table.t_show{left: 2vw; width: 95%; top: 350px;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 19%;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 85%;}
+    .content p {bottom: 150px;left:17%; width: 300px;text-align: center; }
+    .content button.rent {bottom: 70px; left: 34%;}
+    #footer{top: 130px;}
+}
+@media all and (min-width:500px) and (max-width:609px){
+            .side_nav {left: 41vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+                 margin-left: -50px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 550px;margin-left: -195px}
+            .side_nav ul li {width: 20%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 95px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+    .content {top: 130px; height: 1300px; width: 90vw;}
+    .content h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -210px}
+    .content ul.sub_view li{width: 20%; margin-left:10px;border: none; }
+    .content ul.sub_view li:first-child{margin-left: 30px}
+    .content ul.sub_view li:nth-child(5){margin-left: 35px}
+    .content .c_area section div.c_on {margin-left: 2%;}
+    .content .c_area section div.tab-c .center{width: 90%;}
+    .content .c_area section div.tab-c {left: 2vw; width: 90%}  
+    .content .c_area section div.tab-c .img_box{width: 400px;left: 4vw;top: 240px;}
+    .content .c_area section div.tab-c table.t_show{left: 2vw; width: 95%; top: 350px;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 19%;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 85%;}
+    .content p {bottom: 150px;left:17%; width: 300px;text-align: center; }
+    .content button.rent {bottom: 70px; left: 34%;}
+    #footer{top: 130px;}
+}
+@media all and (max-width:499px){
+            .side_nav {left: 140px; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+                 margin-left: -50px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 370px;margin-left: -136px;}
+            .side_nav ul li {width: 23%; float: left; text-align: center;margin-left: 5px; border: 1px solid #d9e6ff; border-radius: 5px;font-size: 14px;padding: 10px 10px}         
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 77px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+    .content {top: 130px; height: 1200px; width: 90vw;}
+    .content h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -210px}
+    .content ul.sub_view li{width: 27%; margin-left:10px;border: none; }
+    .content ul.sub_view li:first-child{margin-left: 20px}
+    .content ul.sub_view li:nth-child(4){margin-left: 20px}
+    .content .c_area section div.c_on {margin-left: 2%;}
+    .content .c_area section div.tab-c .center{width: 90%;}
+    .content .c_area section div.focus img{height: 650px;}
+    .content .c_area section div.tab-c {left: 2vw; width: 90%;top: 30px;}  
+    .content .c_area section div.tab-c .img_box{width: 350px;left: -2vw;top: 180px;}
+    .content .c_area section div.tab-c table.t_show{left: 2vw; width: 95%; top: 270px;font-size: 14px}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(1){width: 19%;}
+    .content .c_area section div.tab-c table.t_show tr th:nth-child(2){width: 85%;}
+    .content .c_area section div.tab-c table.t_show tr td button{margin-top: 5px;}
+    .content .c_area section div.tab-c table.t_show tr td button:last-child{margin:10px 0 5px 10px}
+    .content p {bottom: 140px;left:5%; width: 300px;text-align: center; }
+    .content button.rent {bottom: 80px; left: 31%;padding: 8px 10px;}
+    #footer{top: 130px;}
+    }

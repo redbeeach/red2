@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>게시판 예제</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5d65a7ae82.js" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var tableList = $(".table_layout > .list");
+            var pageBtn = $(".pagenation button.page_num");
+            var current = 0;
+            
+            
+            pageBtn.click(function(){
+                pageBtn.removeClass("active");
+                $(this).addClass("active");
+                
+                
+                var i = $(this).index();
+                tableList.removeClass("active");
+                tableList.eq(i).addClass("active");
+                
+                current = i;
+            });
+            
+            var arrow = $(".pagenation > .arrow");
+            arrow.on({
+                mousedown: function(){
+                    $(this).toggleClass("active");
+                },
+                mouseup: function(){
+                    $(this).toggleClass("active");
+                },
+                mouseout: function(){
+                    $(this).removeClass("active");
+                }
+            });
+            
+            var ll = $(".pagenation > .ll");
+            var lb = $(".pagenation > .lb");
+            var rb = $(".pagenation > .rb");
+            var rr = $(".pagenation > .rr");
+            var listNum = pageBtn.length;
+            
+            ll.click(function(){
+                pageBtn.removeClass("active");
+                pageBtn.eq(0).addClass("active");
+                tableList.removeClass("active");
+                tableList.eq(0).addClass("active");
+            });
+            lb.click(function(){
+                if(current <= 0) {
+                    current = 0;
+                    return;
+                }
+                current -= 1;
+                pageBtn.removeClass("active");
+                pageBtn.eq(current).addClass("active");
+                tableList.removeClass("active");
+                tableList.eq(current).addClass("active");
+            });
+            rr.click(function(){
+                pageBtn.removeClass("active");
+                pageBtn.eq(listNum-1).addClass("active");
+                tableList.removeClass("active");
+                tableList.eq(listNum-1).addClass("active");
+            });
+            rb.click(function(){
+                if(current >= listNum-1) {
+                    current = listNum-1;
+                    return;
+                }
+                current += 1;
+                pageBtn.removeClass("active");
+                pageBtn.eq(current).addClass("active")
+                tableList.removeClass("active");
+                tableList.eq(current).addClass("active");
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+        body {
+            font-family: "나눔고딕", NanumGothic;
+            font-size: 12px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        fieldset, button { border: 0; }
+        
+        
+        h3 {
+            text-align: center;
+            height: 80px;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 50px auto 30px;
+        }
+        .logo{
+            width: 10%; 
+            float: left;
+        }
+        .logo img { 
+            width: 10%;
+            min-width: 107px;
+            max-width: 150px;
+            margin-top: 20px;
+
+        }
+        
+        div.table_layout { width: 90%; margin: 0 auto; }
+        div.table_layout ul.list { width: 100%; display: none; }
+        div.table_layout ul.active { display: table; }
+        div.table_layout ul > li { display: table-row; }
+        div.table_layout ul > li > div {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .table_layout .table_th > div {
+            border-bottom: 2px solid #d1e4c9;
+            height: 30px;
+            font-size: 16px;
+        }
+        
+        .table_tr .subject { text-align: left !important; }
+        .table_tr:hover { background: #fbfbfb; }
+        
+        .pagenation { width: 295px; height: 35px; margin: 30px auto; }
+        .pagenation button {
+            width: 30px; height: 30px;
+            padding: 7px 5px 5px; margin: 2px;
+            background: #fff; border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .pagenation .page_num { position: relative; top: -6px; }
+        .pagenation .arrow { background-size: cover; }
+        .pagenation .lb { background: url('img/arrow_lb.gif') no-repeat 50% 50%; }
+        .pagenation .ll { background: url('img/arrow_ll.gif') no-repeat 50% 50%; }
+        .pagenation .rr { background: url('img/arrow_rr.gif') no-repeat 50% 50%; }
+        .pagenation .rb { background: url('img/arrow_rb.gif') no-repeat 50% 50%; }
+        .pagenation button.active { background-color: #e0e0e0; }
+        
+        .search_area { width: 90%; margin: 30px auto; }
+        .search_area fieldset {
+            width: 345px; height: 40px;
+            padding: 0;
+            float: left;
+            background: #fff;
+            box-sizing: border-box;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .search_area fieldset .search_btn {
+            background: transparent; float: right;
+            padding: 10px; margin-right: 5px; margin-top: 1px;
+        }
+        .search_area fieldset select, .search_area fieldset input {
+            height: 33px;
+            line-height: 30px;
+            padding: 5px 0px 3px;
+            border: 0;
+            margin-left: 5px;
+            box-sizing: border-box;
+        }
+        .search_area fieldset .sound_only, .search_area fieldset legend {
+            display: none; text-indent: -99999%;
+        }
+        
+        .search_area .wr_btn {
+            float: right;
+            height: 40px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: #111;
+            color: #fff;
+        }
+        
+        @media screen and (min-width:1281px){
+            div.table_layout, .search_area { width: 1200px; }
+        }
+        
+        @media screen and (max-width:600px){
+            html, body { min-width: 480px; }
+            div.table_layout ul li div {
+                display: block;
+                width: 90%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .num.dpnone, .data.dpnone, .count.dpnone { display: none; }
+            .num, .data, .count { display: none !important; }
+            .table_tr:after { content: ""; display: block; clear: both; }
+            .table_tr > div { float: left; height: 30px; border-bottom: none; font-size: 14px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="01.html"><img src="img/logo1-1.png" alt="" ></a>
+        </div>
+    <h3>이벤트</h3>
+    <div class="table_layout">
+        <ul class="list active">
+            <li class="table_th">
+                <div class="num dpnone">번호</div>
+                <div class="subject">제목</div>
+                <div class="data dpnone">등록일</div>
+                <div class="count dpnone">조회</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">15</div>
+                <div class="subject">[케어비몰]첫만남 첫소개 첫-사전예약! </div>
+                <div class="data">2020-04-06</div>
+                <div class="count">717</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">14</div>
+                <div class="subject">[케어비몰]새로운 이유식 케어비 사전예약 공유이벤트 </div>
+                <div class="data">2020-02-18</div>
+                <div class="count">808</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">13</div>
+                <div class="subject">프리미엄 상품 구매시 팸퍼스 기저귀 100% 증정 이벤트 감자퐁 </div>
+                <div class="data">2020-01-16</div>
+                <div class="count">1004</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">12</div>
+                <div class="subject">남양몰 프리미엄멤버십 무료가입 이벤트 </div>
+                <div class="data">2020-06-10</div>
+                <div class="count">1122</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">11</div>
+                <div class="subject">(남양몰×팸퍼스)프리미엄 상품 구매시 팸퍼스 기저귀 100% 증정 </div>
+                <div class="data">2020-05-26</div>
+                <div class="count">615</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">10</div>
+                <div class="subject">[케어비몰]첫만남 첫소개 첫-사전예약! </div>
+                <div class="data">2020-04-06</div>
+                <div class="count">717</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">9</div>
+                <div class="subject">[케어비몰]새로운 이유식 케어비 사전예약 공유이벤트 <strong>[종료]</strong></div>
+                <div class="data">2020-02-18</div>
+                <div class="count">808</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">8</div>
+                <div class="subject">프리미엄 상품 구매시 팸퍼스 기저귀 100% 증정 이벤트 감자퐁 <strong>[종료]</strong></div>
+                <div class="data">2020-01-16</div>
+                <div class="count">1004</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">7</div>
+                <div class="subject">남양몰 프리미엄멤버십 무료가입&쇼핑지원금 증정이벤트 <strong>[종료]</strong></div>
+                <div class="data">2019-12-30</div>
+                <div class="count">1107</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">6</div>
+                <div class="subject">프리미엄 멤버십 첫구매 선물증정 이벤트 <strong>[종료]</strong></div>
+                <div class="data">2019-10-04</div>
+                <div class="count">526</div>
+            </li>
+        </ul>
+        
+        <ul class="list">
+            <li class="table_th">
+                <div class="num dpnone">번호</div>
+                <div class="subject">제목</div>
+                <div class="data dpnone">등록일</div>
+                <div class="count dpnone">조회</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">5</div>
+                <div class="subject">[케어비몰]첫만남 첫소개 첫-사전예약! <strong>[종료]</strong></div>
+                <div class="data">2020-04-06</div>
+                <div class="count">717</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">4</div>
+                <div class="subject">[케어비몰]새로운 이유식 케어비 사전예약 공유이벤트 <strong>[종료]</strong></div>
+                <div class="data">2020-02-18</div>
+                <div class="count">808</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">3</div>
+                <div class="subject">프리미엄 상품 구매시 팸퍼스 기저귀 100% 증정 이벤트 감자퐁 <strong>[종료]</strong></div>
+                <div class="data">2020-01-16</div>
+                <div class="count">1004</div>
+            </li>
+            <li class="table_tr">
+                <div class="num">2</div>
+                <div class="subject">남양몰 프리미엄멤버십 무료가입&쇼핑지원금 증정이벤트 <strong>[종료]</strong></div>
+                <div class="data">2015-05-27</div>
+                <div class="count">610</div>
+            </li>
+            
+            <li class="table_tr">
+                <div class="num">1</div>
+                <div class="subject">프리미엄 상품 구매시 팸퍼스 기저귀 100% 증정 이벤트 감자퐁 <strong>[종료]</strong></div>
+                <div class="data">2015-05-26</div>
+                <div class="count">526</div>
+            </li>
+        </ul>
+    </div>
+    <div class="pagenation">
+        <button class="arrow ll"></button>
+        <button class="arrow lb"></button>
+        <span class="page_num_warp">
+            <button class="page_num active">1</button>
+            <button class="page_num">2</button>
+        </span>
+        <button class="arrow rb"></button>
+        <button class="arrow rr"></button>
+    </div>
+    <div class="search_area">
+        <fieldset>
+           <legend>게시물 검색</legend>
+           <form class="frm" method="get">
+               <label for="sfl" class="sound_only">검색대상</label>
+               <select name="sfl" id="sfl">
+                   <option value="wr_subject||wr_content">제목+내용</option>
+                   <option value="wr_subject">제목</option>
+                   <option value="wr_content">내용</option>
+                   <option value="wr_name">작성자</option>
+               </select>
+               
+               <label for="sfx" class="sound_only">검색어</label>
+               <input type="text" class="search_input" name="sfx" id="sfx" size="25" maxlength="20" placeholder="검색어를 입력하세요" required>
+               <button type="submit" value="검색" class="search_btn"><i class="fas fa-search"></i></button>
+           </form>
+       </fieldset>
+       
+    </div>
+</body>
+</html>

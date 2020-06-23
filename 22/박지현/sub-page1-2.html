@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>오시는 길</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script>
+        $(document).ready(function(){
+            $("#hd").load("header.html");
+            $("#ft").load("footerbase.html");            
+        });
+    </script>
+    <style>
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+        body {font-family: 'NanumSquare';}
+        html{overflow-x: hidden}
+        #bg {
+            width: 100vw;
+            height: 340px;
+            background: url(sub-page/LBG.png)no-repeat;
+            background-position:top;
+            background-size: cover
+        }
+        .side_nav{
+            position: relative;
+            top: 50px;
+            left: 5vw;
+        }
+        .side_nav h3{
+            font-size: 20px;
+            border-bottom: 3px solid ;
+            display: inline-block;
+            width: 200px
+        }
+        .side_nav ul li {
+            padding: 8px 15px;
+            width: 200px
+        }
+        .side_nav ul li img {
+            width: 36px;
+            position: absolute;
+            left: 165px;
+            top: 67px;
+        }
+        .side_nav > ul > .on {
+            background-image: url(main-img/right.png) no-repeat;
+            background-position: right;
+            background-color: #d9e6ff;
+        }       
+        .content-box {
+            position: relative;
+            top: -75px;
+            max-width:900px;
+            margin: 0 auto;
+            height: 1000px
+        }
+        .content-box h3 {
+            font-size: 25px;
+            padding-bottom: 30px;
+        }
+        .content-box h3 span {
+            color: #427dbf;
+            font-size: 30px
+        }
+        .content-box ul.map{
+            width: 100%;
+        }
+        .content-box ul.map > li {
+            position: absolute;
+            display: none;
+        }
+        .content-box ul.list-t {
+            position: absolute;
+            top: 550px;
+        }
+        .content-box ul.list-t li {
+            float: left;
+            margin: 10px;
+        }
+        .content-box ul li.text_line {
+            font-weight: bold;
+            font-size: 18px;       
+        }
+        .content-box .text {
+            position: absolute;
+            top: 610px;
+            padding-left: 10px;
+        }
+        .content-box .text h4 {
+            padding: 10px;
+        }
+        .content-box .text span {
+            display: block;
+            padding: 5px 30px
+        }
+        .content-box .text span a {
+            font-weight: bold;
+            text-decoration: underline;
+            padding-left: 15px
+        }
+        .content-box .going {
+            position: absolute;
+            bottom: 80px;
+            left: 20vw;
+            border: 1px solid #6098FF;
+            padding: 10px 40px;
+            color: #6098FF            
+        }
+        .content-box .going:before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          _background-color: #000;
+          -webkit-transform: scaleX(.3);
+          transform: scaleX(.3);
+          opacity: 0;
+          transition: all .6s;
+        }
+        .content-box .going:hover{
+            z-index: 10;
+            color: #fff
+        }
+        .content-box .going:hover:before{
+          opacity: 1;
+          background-color: #6098FF;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          transition: -webkit-transform .9s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
+          transition: transform .9s cubic-bezier(.08, .35, .13, 1.02), opacity;
+        }
+        .pop_base {
+            position: absolute;
+            width: 100vw;
+            height: 163vh;
+            background: rgba(0,0,0,0.5);
+            top:0px;
+            left: 0;
+            z-index: 300;
+            display:none
+        }
+        .pop_base .pop_content {
+            position: relative;
+            left: 28%;
+            top: 450px
+        }
+        .pop_base .pop_content .pop_close {
+            position: absolute;
+            cursor: pointer;
+            bottom: -30px;
+            left: 740px;
+            color: white;
+        }
+        @media all and (min-width:1401px) {
+            .content-box {  margin-left: 23vw;  }
+            .content-box ul.map li iframe {width: 70vw}
+        }
+        @media all and (min-width:1105px) and (max-width:1400px){
+            .content-box { margin-left: 25vw; width: 70vw}
+            .content-box ul.map li iframe {width: 70vw}            
+        }
+        @media all and (min-width:960px) and (max-width:1104px){
+            .content-box {margin-left: 27vw; width: 65vw;}
+            .content-box > span {width: 60vw; margin-left:2vw;}
+            .content-box ul.map li iframe {width: 70vw}
+            .pop_base .pop_content{top: 550px}
+            .pop_base .pop_content img{width: 60vw}
+            .pop_base .pop_content .pop_close{left: 58vw;}
+        }
+        @media all and (min-width:780px) and (max-width:959px){
+            .side_nav {left: 40vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+                margin-left: -35px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px;margin-left: -110px}
+            .side_nav ul li {width: 45%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+            .side_nav img {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 130px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+            .content-box {left: 8vw;top: 150px; height: 1150px;}
+            .content-box ul.map li iframe{width: 80vw;}
+            .content-box .going {bottom: 220px;left: 250px}
+            .pop_base {height: 173vh;}
+            .pop_base .pop_content{top: 750px; left: 20vw;}
+            .pop_base .pop_content img{width: 60vw}
+            .pop_base .pop_content .pop_close{left: 57vw;}
+            #ft {top: 200px;}
+        }
+        @media all and (min-width:610px) and (max-width:779px){
+            .side_nav {left: 40vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -35px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -110px}
+            .side_nav ul li {width: 45%; float: left; background: none; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px;
+            }
+            .side_nav img {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 130px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+            .content-box {left: 8vw;top: 150px; height: 1150px;}
+            .content-box h3 {text-indent: -25px}
+            .content-box ul.map li iframe{width: 80vw;}
+            .content-box .text {padding-left: 20px}
+            .content-box .text span {font-size: 15px; width: 85vw;white-space: }
+            .content-box .going {bottom: 180px;left: 200px}
+            .pop_base {height: 175vh;}
+            .pop_base .pop_content{top: 750px; left: 20vw;}
+            .pop_base .pop_content img{width: 60vw}
+            .pop_base .pop_content .pop_close{left: 57vw;}
+            #ft {top: 200px}
+        }
+        @media all and (min-width:500px) and (max-width:609px){
+            .side_nav {left: 38vw; top: 20px}
+            .side_nav h3 {font-size: 20px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -33px; width: 180px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -70px}
+            .side_nav ul li {width: 35%; float: left; background: none; text-align: center;margin-right: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+             .side_nav img {display: none}
+            .side_nav .on{font-weight: bold; background:none;}
+             .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 109px;
+            top: 80px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }            
+            .content-box {top: 110px; height: 1150px; width: 80vw}
+            .content-box h3 {text-indent: -70px}
+            .content-box ul.map li iframe{width: 80vw;}
+            .content-box .text {padding: 0}
+            .content-box .text span {font-size: 15px; width: 85vw; white-space:pre-wrap}
+            .content-box .going {bottom: 180px;left: 125px; padding: 10px 20px}
+            .pop_base {height: 171.7vh;}
+            .pop_base .pop_content{top: 750px; left: 8vw;}
+            .pop_base .pop_content img{width: 80vw}
+            .pop_base .pop_content .pop_close{left: 75vw;}
+            #ft {top: 200px}
+        }
+        @media all and (max-width:499px){
+            #bg{background: url(sub-page/LBG.jpg)no-repeat; background-position: -200px -50px; height: 250px
+            }
+            .side_nav {left: 35vw; top: 30px}
+            .side_nav h3 {font-size: 20px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -33px; width: 180px;padding-top: 5px;
+            }
+            .side_nav ul {width: 300px; _border: 1px solid ;margin-left: -55px}
+            .side_nav ul li {width: 35%; float: left; background: none; text-align: center;margin-right: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+            .side_nav img {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: 95px;
+            top: 80px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }      
+            .content-box {top: 110px; height: 1150px; width: 80vw}
+            .content-box h3 {text-indent: -70px; font-size: 20px}
+            .content-box h3 span {font-size: 23px}
+            .content-box ul.map li iframe{width: 80vw;}
+            .content-box .text {padding: 0}
+            .content-box .text span {font-size: 15px; width: 87vw; padding: 5px;}
+            .content-box .going {bottom: 180px;left: 70px; padding: 10px 20px}
+            .pop_base {height: 227.1vh;}
+            .pop_base .pop_content{top: 750px; left: 2vw;}
+            .pop_base .pop_content img{width:95vw}
+            .pop_base .pop_content .pop_close{left: 88vw;}
+            #ft {top: 200px}
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+//            var target = $(".content-box > ul.map > li").index();
+           $(".content-box > ul.map > li").eq(0).show()
+//            
+//            $(".content-box > ul.list-t > li").click(function(){                
+//                
+//               $(".content-box > ul.list-t > li").removeClass();
+                
+               // target.eq().addClass('text_line');
+                
+                var tab = $('.content-box>ul.list-t > li');         
+                var content = $('.content-box > ul.map >li');    
+                tab.on('click', function(e){          
+                    e.preventDefault();               
+                   
+                    var tg = $(this);                 
+                    //var tc = tg.find('>a');           
+                   
+                    tab.removeClass('text_line'); 
+                   
+                    tg.addClass('text_line');                
+                   
+                    i = tg.index();                   
+                   
+                    content.css('display', 'none');   
+                    content.eq(i).css('display', 'block');
+                });
+            //modal
+            $('.more_map').click(function(){
+               $('.pop_base').show(); 
+            });
+            $('.pop_close').click(function(){
+                 $('.pop_base').hide(); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>   
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>킨텍스 소개</h3>        
+        <ul>
+            <li><a href="sub_page1-1.html">개요</a></li>
+            <li class="on"><a href="sup-page1-2.html">오시는 길<img src="main-img/right.png" alt="화살표"></a></li>
+        </ul>
+    </div>
+    <div class="content-box">
+        <h3><span>KINTEX</span> 오시는 길</h3>
+        <ul class="map">
+            <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.1445400204484!2d126.74349581563197!3d37.669311325992524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c857a0a1c05a1%3A0x26d25ef19eddf91c!2z7YKo7YWN7IqkIOygnDHsoITsi5zsnqU!5e0!3m2!1sko!2skr!4v1590539425237!5m2!1sko!2skr" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </li>
+            <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.3414461866246!2d126.7399335156319!3d37.66468392625817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8575b16a93fd%3A0x884982b6afbacbd6!2z7YKo7YWN7IqkIOygnDLsoITsi5zsnqU!5e0!3m2!1sko!2skr!4v1590539501233!5m2!1sko!2skr" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>            
+            </li>
+        </ul>
+        <ul class="list-t">
+            <li class="text_line"><a href="javascript:;;">제 1 전시장</a></li>
+            <li><a href="javascript:;;">제 2 전시장</a></li>
+        </ul>
+        <div class="text">
+            <h4>대화역 2번출구 기준 오는 방법</h4>            
+            <span>1) 도보 : 위도 기준 직선거리, 제 1전시장까지 7분, 
+            제 2 전시장 까지 15분 소요<a href="javascript:;;" class="more_map">[약도보기]</a></span>
+            <span>2) 대중교통 : 58번 탑승 → 킨텍스 후문에서 하차 
+            (5분 소요, 배차 간격 15분)</span>   
+            
+                                                      
+            <h4>대화역 5번출구 기준 오는 방법</h4>
+            <span>1) 대중교통 : 39번, 82번 탑승 → 킨텍스 제 1전시장 
+                  정류장 하차 (5분소요, 배차간격 15분 )</span>
+            <span>+) 시외버스 : 9700번, 8109번 → 킨텍스 제 2전시장 
+                  정류장 하차 5분 소요, 배차간격 20분) </span>
+        </div>
+        <div class="going"><a href="https://map.naver.com/v5/directions/-/-/-/transit?c=14108677.2229837,4532723.8209190,14,0,0,0,dh"><i class="fas fa-bus"></i>킨텍스 길찾기</a></div>
+    </div>
+    <div class="pop_base">
+        <div class="pop_content">
+           <a class="pop_close" href="javascript:;;"><i class="fas fa-times fa-2x"></i></a>
+            <img src="sub-page/mab.png" alt="약도">
+        </div>
+    </div>
+    <div id="ft"></div>
+</body>
+</html>

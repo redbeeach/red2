@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOWNCATRECORDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/index1.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <!--    <link rel="stylesheet" href="../JS/WOW-master/WOW-master/css/libs/animate.css">-->
+    <script src="JS/WOW-master/WOW-master/dist/wow.min.js"></script>
+    <!--
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+-->
+    <link rel="stylesheet" href="JS/animate.css-master/animate.css-master/animate.min.css">
+ 
+</head>
+
+<body>
+    <wrap class="wrap">
+        <header class="header">
+            <header class="header_top">
+
+                <div class="headermenu_mobile">
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <ul class="sidesct">
+                            <li><a href="about.html"> ABOUT</a></li>
+                            <li class="sidesct2">STORE
+                                <ul class="sidesct2_1">
+
+
+                                    <li> <a href="store.html">
+                                            ALL
+                                        </a></li>
+
+                                    <li> <a href="store_sub_cassettetape.html">
+                                            CASSETTE TAPE
+                                        </a></li>
+                                    <li><a href="store_sub_cassetape%20player.html"> PLAYER </a></li>
+                                    <li><a href="store_sub_goods.html"> GOODS/ANOTHER</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="newarrival.html"> NEW ARRIVAL </a></li>
+                            <li><a href="custom.html"> CUSTOM </a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <logo class="logo">
+                    <a href="index.html"> <img src="IMG/LOGO/DOWNCAT%20LOGO.gif" alt=""></a>
+                    <span class="maintitletxt"><a href="index.html"> DOWNCAT RECORDS</a></span>
+                </logo>
+                <ul class="right_top">
+                    <div class="right_top_login">
+
+                        <li class="loginbutton"> <a href="#">LOGIN </a> </li>
+
+
+                        <li class="baskett"><img src="IMG/basket.png" alt="tapeicon" class="basket">
+                        <span class="maketnum"></span>
+                        </li>
+                         <div class="makittlist1">
+                    
+                        <div class="items"> 
+                            <div class="topmit"><img src="IMG/x_icon2.PNG"  style="width: 15px; position: relative; left: -65px; top: 2px; cursor: pointer;" class="xix">Shopping Cart</div>
+                            <ul class="itemslist">
+                            
+                             </ul>
+                           
+                        </div>
+                             <div class="bflex">
+                                <div class="bottom">
+                                    <input type="button" class="buy" value="buy" id="buy">
+                                    <span>Total:</span>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <form class="search">
+                        <p>SEARCH</p>
+                        <input type="search" class="right_top_search">
+                    </form>
+                </ul>
+            </header>
+            <div class="main_nav_box">
+
+                <ul class="main_nav">
+
+                    <li><a href="about.html"> ABOUT </a></li>
+
+
+                    <li> <a href="newarrival.html"> NEW ARRIVAL </a></li>
+
+
+                    <li> <a href="store.html">STORE </a></li>
+
+
+                    <li> <a href="custom.html">CUSTOM </a></li>
+
+
+                </ul>
+                <div class="subsct1_main_custom">
+                    <div class="sub_nav_bakgrnd">
+                        BCKGRND
+                        <div class="themes_switch">
+                            <button class="graphic_button is-_w"></button>
+                            <button class="graphic_button is-_b"></button>
+                            <button class="graphic_button is-_g"></button>
+                            <button class="graphic_button is-_o"></button>
+                            <button class="graphic_button is-_y"></button>
+
+
+
+                        </div>
+                    </div>
+                    <div class="sub_nav_bgm">
+                        MUSIC
+                        <input type="checkbox" id="chk" class="chk" name="b1">
+                        <!--                onchange="myfunction(this)"-->
+                        <label for="chk">
+
+
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="loginpos">
+            <div class="loginwarp">
+                <div class="emtt"></div>
+                <div class="inner_login">
+                    <span class="logintext">LOGIN</span>
+                    <span class="logintext2">JOIN</span>
+                    <img src="IMG/x_icon2.PNG" alt="" class="xicon">
+                    <div class="login_tistory">
+
+                        <form method="post" id="authForm" action="https://www.tistory.com/auth/login">
+                            <input type="hidden" name="redirectUrl" value="https://blogpack.tistory.com/manage">
+                            <fieldset>
+                                <legend class="screen_out">로그인 정보 입력폼</legend>
+                                <div class="box_login">
+                                    <p>E-MAIL</p>
+                                    <p class="p2">YOUR E-MAIL</p>
+                                    <div class="inp_text">
+
+                                        <label for="loginId" class="screen_out">아이디</label>
+                                        <input type="email" id="loginId" name="loginId">
+                                    </div>
+                                    <p>PASSWORD</p>
+                                    <p class="p2">YOUR PASSWORD</p>
+                                    <div class="inp_text">
+
+                                        <label for="loginPw" class="screen_out">비밀번호</label>
+                                        <input type="password" id="loginPw" name="password">
+                                    </div>
+                                </div>
+
+                                <div class="login_append">
+
+
+
+
+                                    <span class="txt_lab">JOIN</span>
+
+
+                                    <!--
+                            <span class="txt_find">
+                           ID  PASSWORD FIND
+                            </span>
+-->
+                                </div>
+                            </fieldset>
+                        </form>
+
+
+                        <div class="sectionlogin">
+
+                            <div class="asdasd">
+                                <p>다음내용에 동의 합니다</p>
+                                <input type="checkbox" id="ck3"> <label for="ck3"><span>홈페이지 이용약관 동의 (필수)</span></label>
+                            </div>
+
+                            <form>
+                                <textarea placeholder="" readonly rows="5">특별한 행사와 소식을 이메일로 보내기 위해 개인정보 수집, 이용 및 보관.
+
+개인정보에 관해서는 한국 DOWNCAT RECORDS가 책임을 집니다.
+
+수집하는 개인정보 항목 </textarea>
+                                <div class="last"><input type="checkbox" id="ck1"><label for="ck1"> 개인정보 수집 및 이용동의 (필수)</label></div>
+                                <textarea placeholder="" readonly rows="5">개인정보 수집, 이용 및 보관에 동의
+
+수집하는 개인정보 항목.
+
+성명(국문 및 영문), 이메일 주소,휴대전화번호,우편번호
+
+(청구서/배송),사용자 이름과 비밀번호,생년월일</textarea>
+                            </form>
+
+
+
+
+                            <form>
+
+                                <div class="loginfooter"> <input type="checkbox" id="ck2"><label for="ck2"><span> E-MAIL 및 SMS 광고성 정보 수신동의 (선택)</span></label></div>
+
+                            </form>
+                        </div>
+                        <form>
+                            <button type="submit" class="btn_login" disabled>LOGIN </button>
+                            <button type="submit" class="btn_login2" disabled>JOIN </button>
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="sction1">
+
+            <div class="sub_sct1title">
+                <h1>NEW ARRIVAL</h1>
+                <div class="line1001"></div>
+                <span>새로운 신보 앨범</span>
+
+
+
+                <img src="IMG/giphy-unscreen.gif" alt="" class="cat">
+
+
+
+            </div>
+            <div class="sct1_sidemenu">
+
+                <div class="sub_sct1img">
+                    <a href="sub.info.html"> <img src="IMG/go1.jpg" alt=""></a>
+                </div>
+                <div class="line"></div>
+                <div class="subside_txtbox">
+                    <div class="sub_sct1subtitle_box">
+                        <h1>GOLD BROWN</h1>
+                        <p> 밝게 빛나는 금색과 깊고 짙은 갈색. 이 두개의 색이 합해진 [Goldbrown]은<br>
+                            이 앨범을 하나로 관통하는 새로운 색이다.<br>
+                            두 개의 주제를 이루는 각각의 곡들은 커버의 콜라주처럼 무심하게 어우러진다.<br>
+                            [Goldbrown]은 60-70년대 재즈와 70-80년대의 소울, 펑크, 블루스 등<br>
+                            다양한 곡들을 샘플링 기법을 기반으로 담아냈다.<br>
+                            첫 트랙부터 마지막 트랙까지의 큰 흐름은 물처럼 자연스레 흘러가 듣고있다 보면<br> 어느새 앨범의 끝에 다다랐음을 깨달을 것이다.<br>
+                            [Goldbrown]은 Gohots Guwen의 모든 영감에 대한 존경이며<br>
+                            다음 단계로 도약하는 포부이다.</p>
+
+                    </div>
+                    <ul class="sct1subtitle_box2">
+                        <a href="newarrival.html">
+                            <li>NEW</li>
+                            <li>gohots guwen - gold brown</li>
+                            <li>15,000 원</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <span class="wave"></span>
+            <div class="scroll"> <img src="IMG/scrool.PNG" alt=""> </div>
+        </section>
+
+        <section class="sction2">
+            <div class="sub_sct1title2 wow fadeInUp">
+                <h1>CASSETTE TAPE</h1>
+                <span>독특한 감성과<br> 좋은 음악 & 디자인이 함께 어울어진<br>
+                    다운캣 레코즈에서 발매한 작품을<br>만나보세요.
+                </span>
+            </div>
+            <div class="secton2_imgbox">
+                <div class="secton2_imgbox1">
+                    <div class="sction2_img1 wow fadeInLeftBig animate__slower hover1"><a href="store.html"><img src="IMG/section2img/doc1.gif" alt="" onmouseover="this.src='IMG/section2img/newdoc1-1.png'" onmouseout="this.src='IMG/section2img/doc1.gif'"> </a>
+                        <div class="secton2_txtbox ">
+                            <span>4KAPAS</span>[김준수1집]
+                            <p>15,000원</p>
+                            <div class="xline900 nohide">
+                             
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sction2_img2  wow fadeInRightBig animate__slower hover2"><a href="store.html"><img src="IMG/section2img/doc2.gif" alt="" onmouseover="this.src='IMG/section2img/catcomnew.png'" onmouseout="this.src='IMG/section2img/doc2.gif'"> </a>
+                        <div class="secton2_txtbox ">
+                            <span>Downcat Records
+                                Compilation<br>[WAVE]</span>
+                            <p>15,000원</p>
+                            <div class="xline901 nohide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="secton2_imgbox2">
+                    <div class="sction2_img3 sction2_img1 wow fadeInLeftBig animate__slower hover3"><a href="store.html"><img src="IMG/section2img/doc3.gif" alt="" onmouseover="this.src='IMG/section2img/hover4.gif'" onmouseout="this.src='IMG/section2img/doc3.gif'"></a>
+                        <div class="secton2_txtbox">
+                            <span>4KAPAS X VANHALLYAN<br>[독수리]</span>
+                            <p>15,000원</p>
+                          
+                        </div>
+                    </div>
+                    <div class="sction2_img4 sction2_img2  wow fadeInRightBig animate__slower hover4"><a href="store.html">
+                            <img src="IMG/section2img/doc5.gif" alt="" onmouseover="this.src='IMG/section2img/hover.gif'" onmouseout="this.src='IMG/section2img/doc5.gif'"></a>
+                        <div class="secton2_txtbox">
+                            <span>WDRW - Greenery Smoke<br>[Meditation]</span>
+                            <p>15,000원</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section2_more_icon wow fadeInDown animate__slower">
+                <a href="store_sub_cassettetape.html"><img src="IMG/section2img/moreicon.gif" alt=""></a>
+            </div>
+        </section>
+
+
+        <section class="sction3">
+            <div class="sub_sct1title2 wow fadeInUp animate__slower">
+                <h1>CASSETTE
+                    PLAYER<br>특별전</h1>
+                <span>귀여운 색감과<br>
+                    SPORTY한 성능을 가진<br>
+                    SONY WALKMAN SPORTS<br>시리즈를
+                    소개합니다.
+                </span>
+            </div>
+            <div class="mainpic">
+
+                <img class="m1" src="IMG/section3img/sect3m1.gif" alt="">
+                <img class="m2" src="IMG/section3img/sect3m1.gif" alt="">
+                <img class="m3" src="IMG/section3img/sect3m1.gif" alt="">
+
+                <img src="IMG/section3img/sect3mdown.gif" alt="" class="down">
+                <span>Sony WM-FS493</span>
+
+            </div>
+            <div class="secton3_imgbox">
+                <div class="secton3_imgbox1">
+                    <div class="sction3_img1 wow fadeInLeftBig animate__slower hover5"><a href="store_sub_cassetape%20player.html"><img src="IMG/section3img/sect3m2.gif" alt=""></a>
+                        <div class="secton3_txtbox">
+                            <span>
+                                Sony Walkman FM/AM Sports
+                                Cassette Player Radio<br>[WM-B53]</span>
+                            <p>150,000원</p>
+                          
+                        </div>
+                    </div>
+                    <div class="sction3_img2 wow fadeInRightBig animate__slower hover6"><a href="store_sub_cassetape%20player.html"><img src="IMG/section3img/sect3m1-1.gif" alt=""></a>
+                        <div class="secton3_txtbox">
+                            <span>Sony Walkman Sports
+                                Cassette Player Radio<br>[WM-FS493]</span>
+                            <p>150,000원</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="secton3_imgbox2">
+                    <div class="sction3_img3 wow fadeInLeftBig animate__slower hover7"><a href="store_sub_cassetape%20player.html"><img src="IMG/section3img/sect3m3.gif" alt=""></a>
+                        <div class="secton3_txtbox">
+                            <span>Sony Walkman Sports
+                                Cassette Player Radio <br>[WM-45]</span>
+                            <p>150,000원</p>
+                       
+                        </div>
+                    </div>
+                    <div class="sction3_img4 wow fadeInRightBig animate__slower hover8"><a href="store_sub_cassetape%20player.html">
+                            <img src="IMG/section3img/sect3m4.gif" alt=""></a>
+                        <div class="secton3_txtbox">
+                            <span>Sony Walkman FM/AM Sports Cassette Player Radio<br>[WM-F73]</span>
+                            <p>150,000원</p>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section3_more_icon wow fadeInUp animate__slower">
+                <a href="store_sub_cassetape%20player.html"><img src="IMG/section2img/moreicon.gif" alt=""></a>
+            </div>
+
+
+
+        </section>
+
+
+        <section class="sction4">
+            <div class="sub_sct1title2 wow fadeInDown">
+                <h1>GOODS<br>&<br>ANOTHERS</h1>
+                <span>자체지작 굿즈와<br>
+                    기타 상품들을 소개 합니다.
+                </span>
+            </div>
+            <div class="sction4main">
+                <img src="IMG/section4img/section4imgback.gif" alt="" class="set4background">
+                <div class="sct4submain">
+                    <a href="store_sub_goods.html">
+                        <div class="sct4sub img1"><img src="IMG/section4img/sct3img1.jpg" alt=""></div>
+                        <div class="sct4sub img2"><img src="IMG/section4img/sct3img3.jpg" alt="">
+                            <span>DOWNCAT SUMMER S/S20 T-SHIRTS</span>
+                        </div>
+                        <div class="sct4sub img3"><img src="IMG/section4img/sct3img2.jpg" alt=""></div>
+                        <div class="sct4sub img4"><img src="IMG/section4img/sct3img4.jpg" alt=""></div>
+                        <div class="sct4sub img5"><img src="IMG/section4img/sct3img5.jpg" alt="">
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="section4_more_icon wow fadeInUp animate__slower">
+                <a href="store_sub_goods.html"><img src="IMG/section2img/moreicon.gif" alt=""></a>
+            </div>
+        </section>
+
+
+        <section class="sction5">
+
+            <div class="sub_sct1title2  wow fadeInDown">
+                <h1>CUSTOM</h1>
+                <span>다양한 개성이 넘치는<br>
+                    자신만의 테이프를<br>
+                    직접
+                    만들어 보세요!
+                </span>
+            </div>
+            <div class="sct5mainimg1">
+
+                <img src="IMG/section5img/sect5imgmain.gif" alt="">
+                <span>MAKE YOUR OWN CASSETTE TAPE</span>
+            </div>
+            <div class="sction5_more_icon wow fadeIn animate__slower">
+                <a href="custom.html"><img src="IMG/section2img/moreicon.gif" alt=""></a>
+            </div>
+            <a id="back-to-top"></a>
+        </section>
+        <footer class="footer">
+            <div class="footermain">
+                <ul>
+                    <li><a href=""> INSTAGRAM</a></li>
+                    <li><a href=""> YOUTUBE</a></li>
+                    <li><a href=""> FACEBOOK</a></li>
+                    <div class="img"> <img src="IMG/footer/icon.gif" alt=""></div>
+                </ul>
+
+
+            </div>
+            <span>DOWNCAT RECORDS</span>
+            <address>
+                <span> KOREA SEOUL,VIA M.PONZA N 4,10121,KOREA,SEOUL,VAT N IT07725270016,<br>
+                    REA- TO915864,PH +8201030739118 DOWNCATRECORDS@GMAIL.COM </span>
+
+            </address>
+        </footer>
+
+
+    </wrap>
+
+    <script>
+        //gotop
+        $(function() {
+            $('#back-to-top').on('click', function(e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 600);
+            });
+
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 100) {
+                    $('#back-to-top').addClass('show');
+                } else {
+                    $('#back-to-top').removeClass('show');
+                }
+            });
+        });
+
+
+
+
+
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            var scttop1 = $('.sction1').offset().top;
+            var scttop2 = $('.sction3 .sub_sct1title2 h1').offset().top - 370;
+            var scttop3 = $('.sction3').offset().top;
+            var scttop4 = $('.sction4').offset().top - 600;
+            var scttopp4 = $('.set4background').offset().top - 700;
+            var scttopp41 = $('.sct4sub.img2').offset().top + 300;
+            var scttopplaset = $('.sct4sub.img3').offset().top;
+            var scttop5 = $('.sction5').offset().top - 500;
+     
+            if (scroll >= scttop2) {
+                //console.log('a');
+                $(".m1").addClass("change"), $(".m2").addClass("change2"), $(".m3").addClass("change3"), $('.sction3 .mainpic > span').addClass("change5");
+            } else {
+                //console.log('a');
+                $(".m1").removeClass("change"), $(".m2").removeClass("change2"), $(".m3").removeClass("change3"), $(".sction3 .mainpic > span").removeClass("change5");
+            }
+            if (scroll >= scttop4) {
+                //		console.log('a');
+                $(".set4background").addClass('showing');
+            } else {
+                //console.log('a');
+                $(".set4background").removeClass('showing');
+            }
+
+            if (scroll >= scttopp4) {
+                //		console.log('a');
+                $(".sct4sub.img1").addClass('movel1');
+                $(".sct4sub.img2").addClass('mover1');
+            } else {
+
+                $(".sct4sub.img1").removeClass('movel1');
+                $(".sct4sub.img2").removeClass('mover1');
+            }
+            if (scroll >= scttopp41) {
+                //		console.log('a');
+                $(".sct4sub.img3").addClass('movel2');
+                $(".sct4sub.img4").addClass('mover2');
+            } else {
+
+                $(".sct4sub.img3").removeClass('movel2');
+                $(".sct4sub.img4").removeClass('mover2');
+            }
+            if (scroll >= scttopplaset) {
+                //		console.log('a');
+                $(".sct4sub.img5").addClass('moveup');
+
+            } else {
+
+                $(".sct4sub.img5").removeClass('moveup');
+
+            }
+            if (scroll >= scttop5) {
+                //		console.log('a');
+                $(".sction5 .sct5mainimg1 img ").addClass('tape');
+                $(".sction5 .sct5mainimg1 span").addClass('showtext');
+
+            } else {
+
+                $(".sction5 .sct5mainimg1 img ").removeClass('tape');
+                $(".sction5 .sct5mainimg1 span").removeClass('showtext');
+            }
+        });
+
+
+
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('.header_top .logo img').outerHeight();
+
+        $(window).scroll(function(event) {
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            if (Math.abs(lastScrollTop - st) <= delta) return;
+
+            if (st > lastScrollTop && st > navbarHeight) {
+                $('.header_top .logo img,.header .main_nav_box').removeClass('nav-down').addClass('nav-up');
+              $('.scroll').hide();
+            } else {
+                if (st + $(window).height() < $(document).height()) {
+                    $('.header_top .logo img,.header .main_nav_box').removeClass('nav-up').addClass('nav-down');
+
+                }
+            }
+            lastScrollTop = st;
+        }
+
+
+
+        $(document).ready(function() {
+
+
+            $('.sidesct2_1').slideUp();
+            $('.sidesct2').click(function() {
+                $('.sidesct2_1').slideToggle(300);
+            });
+
+        });
+
+
+  $(document).ready(function(){
+     
+      $('.xline900').click(function(){
+        var itemheigt = $('.itemslist').height();
+          
+          if(itemheigt >= 353) {
+               $('.items').css('overflow-y','scroll');
+          }
+          
+           var length = $(".itemslist > li").length+1; 
+          $("<li class='kim'><img src='IMG/section2img/doc1.gif' class='kim2'><span>4kapas<br>[김준수1집] 15,000원</span><div class='itemxicon'><img src='IMG/x_icon2.PNG' alt=''></div></li>").appendTo(".itemslist"); 
+          $(".right_top_login .bflex span").html("총수량: "+ length);
+          $('.right_top_login .maketnum').html(length);
+           $(function(){
+
+            $('.itemxicon').click(function(){
+               $(this).parents('li').remove(); 
+                
+          var length2 = $(".itemslist > li").length; 
+           
+         $(".right_top_login .bflex span").html("총수량: "+ length2); 
+            $('.right_top_login .maketnum').html(length2);
+      
+            });  
+ });
+      });
+       $('.xline901').click(function(){
+            var itemheigt = $('.itemslist').height();
+            $('.maketnum').html(length);
+     if(itemheigt >= 353) {
+               $('.items').css('overflow-y','scroll');
+          }
+          
+           var length = $(".itemslist > li").length+1; 
+          $("<li class='kim'><img src='IMG/section2img/doc2.gif' class='kim2'><span>Downcat Records Compilation [WAVE] 15,000원</span><div class='itemxicon'><img src='IMG/x_icon2.PNG' alt=''></div></li>").appendTo(".itemslist"); 
+          $(".right_top_login .bflex span").html("총수량: "+ length);
+           $('.right_top_login .maketnum').html(length);
+           $(function(){
+
+            $('.itemxicon').click(function(){ 
+                $(this).parents('li').remove(); 
+                
+               
+           var length2 = $(".itemslist > li").length; 
+           
+         $(".right_top_login .bflex span").html("총수량: "+ length2);      
+            $('.right_top_login .maketnum').html(length2);
+//             
+            });  
+ });
+      });
+      
+  }); 
+
+
+
+        
+
+
+        $(document).ready(function() {
+
+            $('.loginpos').hide();
+            $('.right_top_login .loginbutton').click(function() {
+                $('.loginpos').show();
+
+            });
+            $('.inner_login .xicon, .loginwarp::before').click(function() {
+                $('.loginpos').hide();
+            });
+        });
+
+        $(document).ready(function() {
+            $('.sectionlogin').hide();
+            $('.btn_login2').hide();
+            $('.btn_login').show();
+            $('.login_append .txt_lab,.txt_find').click(function() {
+                $('.sectionlogin').slideToggle(),
+                    $('.box_login p,.logintext').toggleClass("move"),
+                    $('.box_login .p2,.logintext2').toggleClass("move2");
+                $('.btn_login2').toggle(),
+                    $('.btn_login').toggle();
+            });
+        });
+
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_w').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top .logo,.header_top .logo a,.sction3 .mainpic .down,.sct4sub span,.footer .img img,.footer li,a,.footer ul,.header_top,.sction4 .sct4sub.img1,.sction4 .sct4submain,.sction4 .sct4submain .sct4sub,.header_top .right_top .right_top_login,.loginbutton,.right_top_login li,.search p,.m1.change,.m2.change,.m3.change,.sction2 .secton2_imgbox .sction2_img1 img,.sction2 .sction2_img3,.maketnum,.sub_sct1title,.secton2_imgbox2,.xline900,.xline901,.sction1 .sub_sct1title h1,.line1001,.sction1 .sub_sct1title span,.sction1 .cat,.sction1 .sct1_sidemenu,.sction1 .subside_txtbox,.header .maintitletxt').css({
+                    'border-color': 'black',
+                    'background': '#fff'
+
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_b').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top .logo,.header_top .logo a,.sction3 .mainpic .down,.sct4sub span,.footer .img img,.footer li,a,.footer ul,.header_top,.sction4 .sct4sub.img1,.sction4 .sct4submain,.sction4 .sct4submain .sct4sub,.header_top .right_top .right_top_login,.loginbutton,.right_top_login li,.search p,.m1.change,.m2.change,.m3.change,.sction2 .secton2_imgbox .sction2_img1 img,.sction2 .sction2_img3,.maketnum,.sub_sct1title,.secton2_imgbox2,.xline900,.xline901,.sction1 .sub_sct1title h1,.line1001,.sction1 .sub_sct1title span,.sction1 .cat,.sction1 .sct1_sidemenu,.sction1 .subside_txtbox,.header .maintitletxt').css({
+                    'border-color': '#1327f2',
+                    'background': '#3164f7'
+
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_g').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top .logo,.header_top .logo a,.sction3 .mainpic .down,.sct4sub span,.footer .img img,.footer li,a,.footer ul,.header_top,.sction4 .sct4sub.img1,.sction4 .sct4submain,.sction4 .sct4submain .sct4sub,.header_top .right_top .right_top_login,.loginbutton,.right_top_login li,.search p,.m1.change,.m2.change,.m3.change,.sction2 .secton2_imgbox .sction2_img1 img,.sction2 .sction2_img3,.maketnum,.sub_sct1title,.secton2_imgbox2,.xline900,.xline901,.sction1 .sub_sct1title h1,.line1001,.sction1 .sub_sct1title span,.sction1 .cat,.sction1 .sct1_sidemenu,.sction1 .subside_txtbox,.header .maintitletxt').css({
+                    'border-color': '#1f6328',
+                    'background': '#4f9e67'
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_o').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5, .footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top .logo,.header_top .logo a,.sction3 .mainpic .down,.sct4sub span,.footer .img img,.footer li,a,.footer ul,.header_top,.sction4 .sct4sub.img1,.sction4 .sct4submain,.sction4 .sct4submain .sct4sub,.header_top .right_top .right_top_login,.loginbutton,.right_top_login li,.search p,.m1.change,.m2.change,.m3.change,.sction2 .secton2_imgbox .sction2_img1 img,.sction2 .sction2_img3,.maketnum,.sub_sct1title,.secton2_imgbox2,.xline900,.xline901,.sction1 .sub_sct1title h1,.line1001,.sction1 .sub_sct1title span,.sction1 .cat,.sction1 .sct1_sidemenu,.sction1 .subside_txtbox,.header .maintitletxt').css({
+                    'border-color': '#ff3c1b',
+                    'background': '#ff8645'
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_y').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5, .footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top .logo,.header_top .logo a,.sction3 .mainpic .down,.sct4sub span,.footer .img img,.footer li,a,.footer ul,.header_top,.sction4 .sct4sub.img1,.sction4 .sct4submain,.sction4 .sct4submain .sct4sub,.header_top .right_top .right_top_login,.loginbutton,.right_top_login li,.search p,.m1.change,.m2.change,.m3.change,.sction2 .secton2_imgbox .sction2_img1 img,.maketnum,.sub_sct1title,.sction2 .sction2_img3,.secton2_imgbox2,.xline900,.xline901,.sction1 .sub_sct1title h1,.line1001,.sction1 .sub_sct1title span,.sction1 .cat,.sction1 .sct1_sidemenu,.sction1 .subside_txtbox,.header .maintitletxt').css({
+                    'border-color': 'black',
+                    'background': '#e1ff2a'
+                });
+            });
+        });
+        $(function() {
+
+            $('.emtt').click(function() {
+                $('.loginpos').hide();
+            })
+
+        });
+
+        wow = new WOW({
+            boxClass: 'wow', // default
+            animateClass: 'animated', // default
+            offset: 200, // default
+            mobile: true, // default
+            live: true // default
+        })
+        wow.init();
+        $(function(){
+            $('.makittlist1').hide();
+            $('.baskett').click(function(){
+                $('.makittlist1').toggle();  
+            });
+
+        });
+        
+
+$(function(){
+            
+            $('.xix').click(function(){
+                $('.makittlist1').toggle();  
+            });
+
+        });
+        
+
+
+    </script>
+
+</body></html>

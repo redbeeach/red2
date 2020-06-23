@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>행사안내</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script>
+        $(document).ready(function(){
+            $("#hd").load("header.html");
+            $("#ft").load("footerbase.html");            
+        });
+    </script>
+    <style>
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+        body {font-family: 'NanumSquare';}
+        html{overflow-x: hidden}
+        input:focus{outline: none}
+        button:focus{outline: none}
+        #bg {
+            width: 100vw;
+            height: 340px;
+            background: url(sub-page/sub_bg2.png)no-repeat;
+            background-position:top;
+            background-size: cover
+        }
+        .side_nav{
+            position: relative;
+            top: 50px;
+            left: 5vw;
+        }
+        .side_nav h3{
+            font-size: 20px;
+            border-bottom: 3px solid ;
+            width: 200px
+        }
+        .side_nav ul li {
+            padding: 8px 15px;
+            width: 200px
+        }
+        .side_nav ul li i {
+            position: absolute;
+            left: 175px;
+            top: 40px;
+        }
+        .side_nav > ul > .on {            
+            background-color: #d9e6ff;
+        }       
+        .content-box {
+            position: relative;
+            top: -105px;
+            width: 80vw;
+            max-width:950px;
+            margin: 0 auto;
+            height: 1000px;
+        }        
+        .content-box h3{
+            font-size: 25px;
+            padding-bottom: 30px;
+        }
+        .content-box .from{
+            width: 100%;
+        }
+        .content-box .from> span{
+            border:1px solid #888a8c;
+            display: inline-block;
+        }
+        .content-box .from > span > input {
+            border: 0px;
+            width: 180px;
+            height: 32px;
+            font-size: 16px
+        }
+        .content-box .from > span:nth-child(3){
+            position: absolute;
+            right: 40px;
+            width: 220px;
+        }
+        .content-box .from > span:nth-child(3) > input {
+            font-size: 14px;
+        }
+        .content-box .from > button {
+            position: absolute;
+            right:40px;
+            width: 40px;
+            height: 34px;
+            background: none;
+            border: 0px;
+            cursor: pointer;
+            top: 63px
+        }
+        .content-box .from > button img {
+           width: 40px;
+           height: 35px;
+        }
+        .box ul {
+            display: none;
+        }
+        ul.show {
+            display: block
+        }
+        ul.effect{
+            margin-top: 20px
+        }
+         ul.effect li {         
+           width: 200px;
+           height: 320px;
+           _border: 1px solid;
+           text-align: center;
+           padding-top: 5px;
+           float: left;
+           margin: 20px 40px;
+             
+        }
+         ul.effect li img{
+            width: 90%;            
+        }
+         ul.effect li a{
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            width: 200px;
+            position: absolute;
+            height: 319px;
+            line-height: 18;
+             margin: -5px -10px;
+        }
+        ul.effect li >span {
+            display: none;
+        }
+        ul.btn_box{
+            position: absolute;
+            bottom: 100px;
+            width: 50%;
+            left: 45%;
+        }
+        ul.btn_box li {
+            float: left;
+            text-align: center;
+            width: 6.5%;  
+            border: 1px solid #dfdfdf;
+            height: 30px;
+            line-height: 1.6;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer
+        }
+        ul.btn_box li img{
+          width: 80%;
+            vertical-align: bottom
+        }
+        ul.btn_box li.tg {
+            background: #6098FF;
+            color: #fff
+        }
+        .last-t {
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            color: #96bfff
+        }
+        .m_content, .list_btn{display: none;}
+        @media all and (min-width:1401px){
+               .content-box {  margin-left: 23vw;  }
+            .content-box ul.map li iframe {width: 70vw}
+        }
+        @media all and (min-width:1105px) and (max-width:1400px){
+            .content-box { margin-left: 25vw; width: 70vw}
+            .content-box ul.map li iframe {width: 70vw}
+            .box ul.effect li { margin: 15px}
+        }
+        @media all and (min-width:960px) and (max-width:1104px){
+            .content-box {margin-left: 27vw; width: 65vw;}
+            .content-box > span {width: 60vw; margin-left:2vw;}
+            .box > ul.effect {padding-top: 40px}
+            .box ul.effect li {margin: 15px; width: 170px;font-size: 14px; height: 280px;}
+            .box ul.effect li > .back {width: 170px; height: 280px;}
+            .content-box > .btn_box {bottom: 160px; left: 40%}
+            .content-box .btn_box > li >img {width: 100%;}
+            div.last-t p{bottom: 50px;}
+        }
+        @media all and (min-width:780px) and (max-width:959px){
+            .side_nav {left: 44vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+                margin-left: -50px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px;margin-left: -130px}
+            .side_nav ul li {width: 30%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -83px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+            .content-box {top: 130px; height: 720px; width: 70vw; _border: 1px solid}
+            .content-box h3 {display: block; text-align: center; font-size: 20px; width: 100%; text-indent: -110px}
+            .content-box > .from > span > input {width: 150px; }
+            .content-box > .from > span:nth-child(3){width: 180px}
+            .content-box > .from > button {top: 58px;}
+            .content-box > .from > button > img {height: 33px;}
+            .pc_var, .btn_box {display: none}
+            .m_content {display: block ; border: 1px solid pink; width: 250px; height: 430px; position: absolute; left: 20vw;overflow: hidden; top: 150px
+            }
+            .m_content ul.effect {width: 2250px; margin: 0;}
+            .m_content ul.effect li{margin: 0; width: 250px;height:430px; padding-top: 9px}
+            .m_content ul.effect li span {display: block; margin-top: 5px}
+            .m_content ul.effect li span a{background: none; color: lightskyblue;
+            line-height: 2; margin: 0; position: inherit; border: 1px solid ; padding: 3px; font-size: 12px; border-radius: 5px}
+            .list_btn {display: block;}
+            .list_btn ul li{position: absolute; top: 320px; cursor: pointer}
+            .list_btn ul li:nth-child(1){left: 30px;}
+            .list_btn ul li:nth-child(2){right: 30px;}    
+            .indicator {position: absolute; bottom: 90px; border: 1px solid skyblue; display: block; width: 270px;height: 8px; border-radius: 100px;left:19vw;}
+            .swiper-pagination{background: #fff}
+            .last-t {font-size: 14px; text-indent: 50px}
+            #footer {top: 150px;}
+        }
+        @media all and (min-width:610px) and (max-width:779px){
+            .side_nav {left: 40vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -49px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -121px}
+            .side_nav ul li {width: 30%; float: left; background: none; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px; font-size: 15px
+            }
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -75px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+            .content-box {top: 130px; height: 720px; width: 80vw; _border: 1px solid}
+            .content-box h3 {display: block; text-align: center; font-size: 20px; width: 100%; text-indent: -240px}
+            .content-box > .from > span > input {width: 130px;font-size: 14px }
+            .content-box > .from > span:nth-child(3){width: 170px}
+            .content-box > .from > button {top: 58px;}
+            .content-box > .from > button > img {height: 33px;}
+            .pc_var, .btn_box {display: none}
+            .m_content {display: block ; border: 1px solid pink; width: 250px; height: 430px; position: absolute; left: 20vw;overflow: hidden; top: 150px
+            }
+            .m_content ul.effect {width: 2250px; margin: 0;}
+            .m_content ul.effect li{margin: 0; width: 250px;height:430px; padding-top: 9px}
+            .m_content ul.effect li img {width: 220px; padding-bottom: 10px}
+            .m_content ul.effect li span {display: block; margin-top: 5px}
+            .m_content ul.effect li span a{background: none; color: lightskyblue;
+            line-height: 2; margin: 0; position: inherit; border: 1px solid ; padding: 3px; font-size: 12px; border-radius: 5px}
+            .list_btn {display: block;}
+            .list_btn ul li{position: absolute; top: 320px; cursor: pointer}
+            .list_btn ul li:nth-child(1){left: 30px;}
+            .list_btn ul li:nth-child(2){left: 67vw;}    
+            .indicator {position: absolute; bottom: 90px; border: 1px solid skyblue; display: block; width: 270px;height: 8px; border-radius: 100px;left:19vw;}
+            .swiper-pagination{background: #fff}
+            .last-t {font-size: 14px; text-indent: 50px}
+            #footer {top: 150px;}
+        }
+        @media all and (min-width:500px) and (max-width:609px){
+            .side_nav {left: 40vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -49px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -121px}
+            .side_nav ul li {width: 30%; float: left; background: none; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px; font-size: 15px
+            }
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -75px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+            .content-box {top: 130px; height: 790px; width: 85vw; _border: 1px solid}
+            .content-box h3 {display: block; font-size: 20px;margin: 0 auto; width: 100%; text-indent: -3vw}
+            .content-box > .from > span > input {width: 130px;font-size: 14px }
+            .content-box > .from > span:nth-child(3){width: 270px; display: block; margin-top: 10px; left: 0}
+            .content-box > .from > button {top: 102px; left: 230px}
+            .content-box > .from > button > img {height: 33px;}
+            .pc_var, .btn_box {display: none}
+            .m_content {display: block ; border: 1px solid pink; width: 230px; height: 430px; position: absolute; left: 20vw;overflow: hidden; top: 200px}
+            .m_content ul.effect {width: 2070px; margin: 0;}
+            .m_content ul.effect li{margin: 0; width: 230px;height:430px; padding-top: 9px}
+            .m_content ul.effect li img {width: 200px; padding: 10px 0}
+            .m_content ul.effect li span {display: block; margin-top: 5px}
+            .m_content ul.effect li span a{background: none; color: lightskyblue;
+            line-height: 2; margin: 0; position: inherit; border: 1px solid ; padding: 3px; font-size: 12px; border-radius: 5px}
+            .list_btn {display: block;}
+            .list_btn ul li{position: absolute; top: 370px; cursor: pointer}
+            .list_btn ul li:nth-child(1){left: 30px;}
+            .list_btn ul li:nth-child(2){left: 77vw;}    
+            .indicator {position: absolute; bottom: 70px; border: 1px solid skyblue; display: block; width: 270px;height: 8px; border-radius: 100px;left:16vw;}
+            .swiper-pagination{background: #fff}
+            .last-t {font-size: 14px; text-align: center; display: block; width: 350px; left: 9vw}
+            #footer {top: 150px;}
+        }
+        @media all and (max-width:499px){
+            .side_nav {left: 36vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none; }
+            .side_nav h3:after {content: ""; display: block; border-bottom: 2px solid; margin-left: -49px; width: 200px;padding-top: 5px;}
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -121px}
+            .side_nav ul li {width: 30%; float: left; background: none; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff;
+                                border-radius: 5px; font-size: 15px}
+            .side_nav i {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -75px;
+            top: 85px
+            }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }
+            .content-box {top: 130px; height: 790px; width: 85vw; _border: 1px solid}
+            .content-box h3 {display: block; font-size: 20px;margin: 0 auto; width: 100%; text-indent: -20vw}
+            .content-box > .from > span > input {width: 130px;font-size: 14px }
+            .content-box > .from > span:nth-child(3){width: 270px; display: block; margin-top: 10px; left: 0}
+            .content-box > .from > button {top: 102px; left: 230px}
+            .content-box > .from > button > img {height: 33px;}
+            .pc_var, .btn_box {display: none}
+            .m_content {display: block ; border: 1px solid lightskyblue; width: 230px; height: 430px; position: absolute; left: 11vw;overflow: hidden; top: 180px}
+            .m_content ul.effect {width: 2070px; margin: 0;}
+            .m_content ul.effect li{margin: 0; width: 230px;height:430px; padding-top: 9px}
+            .m_content ul.effect li img {width: 200px; padding: 10px 0}
+            .m_content ul.effect li span {display: block; margin-top: 15px}
+            .m_content ul.effect li span a{background: none; color: lightskyblue;
+            line-height: 2; margin: 0; position: inherit; border: 1px solid ; padding: 3px; font-size: 12px; border-radius: 5px}
+            .list_btn {display: block;}
+            .list_btn ul li{position: absolute; top: 370px; cursor: pointer}
+            .list_btn ul li:nth-child(1){left: 0px;}
+            .list_btn ul li:nth-child(2){left: 77vw;}    
+            .indicator {position: absolute; bottom: 120px; border: 1px solid lightskyblue; display: block; width: 270px;height: 8px; border-radius: 100px;left:6vw;}
+            .swiper-pagination{background: #fff}
+            .last-t {font-size: 14px; text-align: center; display: block; width: 350px; left: -5vw}
+            #footer {top: 150px;}
+        }
+    </style>
+   <script>
+        $(document).ready(function(){            
+         $(".back").hide();
+            
+         $("ul.effect > li").mouseover(function(){
+             $(this).find(">a.back").show();
+         });
+         $("ul.effect > li").mouseleave(function(){
+              $(".back") .hide();
+         });
+            
+            //일정리스트변경
+            var num = 0,
+                i =$(this).index();
+            
+            $('.btn_num > li').click(function(){  
+                var i = $(this).index();
+                
+                $('.btn_num >li').removeClass();
+                $('.btn_num > li').eq(i).addClass("tg");
+                $('.box > ul').removeClass("show");
+                $('.box > ul').eq(i).addClass("show");
+                num = i;
+            });
+            //왼쪽으로[prev]
+                $('.prev').click(function(){
+                    listNum = $('.btn_num > li').length;
+                    num = num - 1;
+                    if(num < 0) {
+                        num = 0;
+                        return;
+                    }
+                    $('.btn_num > li').removeClass();
+                    $('.btn_num > li').eq(num).addClass("tg");
+                    $('.box > ul').removeClass("show");
+                    $('.box > ul').eq(num).addClass("show");
+                    
+                });
+            //오른쪽으로[next]
+                $('.next').click(function(){
+                    listNum = $('.btn_num > li').length;
+                    num = num + 1;
+                    if(num >= listNum) {
+                        num = listNum - 1;
+                        return;
+                    }
+                    $('.btn_num > li').removeClass();
+                    $('.btn_num > li').eq(num).addClass("tg");
+                    $('.box > ul').removeClass("show");
+                    $('.box > ul').eq(num).addClass("show");
+                });
+            //m_content 슬라이드
+
+                 var swiper = new Swiper('.swiper-container', {
+                     
+                   pagination: {
+                     el: '.swiper-pagination',
+                     type: 'progressbar',
+                   },
+                   navigation: {
+                     nextEl: '.swiper-button-next',
+                     prevEl: '.swiper-button-prev',
+                   }
+   
+            });
+        });
+    </script>
+</head>
+<body>
+     <div id="hd"></div>   
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>행사안내</h3>        
+        <ul>
+            <li class="on"><a href="sub-page2-1.html"><i class="fas fa-chevron-right "></i>전체일정</a></li>
+            <li><a href="sub-page2-2.html">행사일정</a></li>
+            <li><a href="sub_page2-3.html">회의일정</a></li>
+        </ul>
+    </div>
+    <div class="content-box">
+        <h3>전체일정</h3>
+        <div class="from">
+             <span><input type="date" value="2020-05-01"></span> -
+             <span><input type="date" value="2020-05-31"></span>
+             <span><input type="text" placeholder="행사명을 입력하세요"></span>
+             <button><img src="sub-page/search.png" alt=""></button>  
+        </div>                             
+        <div class="box pc_var">
+            <ul class="effect show">
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-1.png" alt=""> 
+                 <p>[뉴경기미디어페스티벌]</p>
+                 <p>2020-05-02~05-03</p>     
+                 <span><a href="#">자세히보기</a></span>             
+                </li>
+                 <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-2.png" alt=""> 
+                 <p>[대한민국기본소득박람회]</p>
+                 <p>2020-05-07</p>    
+                 <span><a href="#">자세히보기</a></span>              
+                </li>
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-3.png" alt=""> 
+                 <p>[두드림타악페스티벌]</p>
+                 <p>2020-05-08</p>   
+                 <span><a href="#">자세히보기</a></span>               
+                </li>
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-4.png" alt=""> 
+                 <p>[여성유망직종설명회]</p>
+                 <p>2020-05-16</p>  
+                 <span><a href="#">자세히보기</a></span>                
+                </li>
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-5.png" alt=""> 
+                 <p>[2020핸드아티코리아]</p>
+                 <p>2020-05-16~05-17</p>  
+                 <span><a href="#">자세히보기</a></span>                
+                </li>
+            </ul>       
+             <ul class="effect">
+                 <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-6.png" alt=""> 
+                 <p>[제7회등공예강사자격시험]</p>
+                 <p>2020-05-21</p>    
+                 <span><a href="#">자세히보기</a></span>              
+                </li>
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-7.png" alt=""> 
+                 <p>[프리미엄펫쇼in킨텍스]</p>
+                 <p>2020-05-22~05-24</p>
+                 <span><a href="#">자세히보기</a></span>                  
+                </li>
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-8.png" alt=""> 
+                 <p>[PLAYX4:플레이엑스포]</p>
+                 <p>2020-04-29~05-01</p>
+                 <span><a href="#">자세히보기</a></span>                 
+                </li>
+                <li>                
+                 <a class="back" href="naver.com">상세보기</a>             
+                 <img src="sub-page/poster-9.png" alt=""> 
+                 <p>[2021년대학입시설명회]</p>
+                 <p>2020-05-01</p>  
+                 <span><a href="#">자세히보기</a></span>               
+                </li>
+             </ul>             
+        </div>
+            <ul class="btn_box">
+                <li class="prev"><img src="main-img/left.png" alt=""></li> 
+                <div class="btn_num">
+                    <li class="tg">1</li>
+                    <li>2</li>
+                </div>
+                <li class="next"><img src="main-img/right.png" alt=""></li>
+           </ul>
+           <div class="m_content swiper-container">
+               <ul class="effect swiper-wrapper">
+                <li class="swiper-slide">                       
+                 <img src="sub-page/poster-1.png" alt=""> 
+                 <p>[뉴경기미디어페스티벌]</p>
+                 <p>2020-05-02~05-03</p>     
+                 <span><a href="#">자세히보기</a></span>             
+                </li>
+                 <li class="swiper-slide">           
+                 <img src="sub-page/poster-2.png" alt=""> 
+                 <p>[대한민국기본소득박람회]</p>
+                 <p>2020-05-07</p>    
+                 <span><a href="#">자세히보기</a></span>              
+                </li>
+                <li class="swiper-slide">         
+                 <img src="sub-page/poster-3.png" alt=""> 
+                 <p>[두드림타악페스티벌]</p>
+                 <p>2020-05-08</p>   
+                 <span><a href="#">자세히보기</a></span>               
+                </li>
+                <li class="swiper-slide">            
+                 <img src="sub-page/poster-4.png" alt=""> 
+                 <p>[여성유망직종설명회]</p>
+                 <p>2020-05-16</p>  
+                 <span><a href="#">자세히보기</a></span>                
+                </li>
+                <li class="swiper-slide">            
+                 <img src="sub-page/poster-5.png" alt=""> 
+                 <p>[2020핸드아티코리아]</p>
+                 <p>2020-05-16~05-17</p>  
+                 <span><a href="#">자세히보기</a></span>                
+                </li>
+                <li class="swiper-slide">            
+                 <img src="sub-page/poster-6.png" alt=""> 
+                 <p>[제7회등공예강사자격시험]</p>
+                 <p>2020-05-21</p>    
+                 <span><a href="#">자세히보기</a></span>              
+                </li>
+                <li class="swiper-slide">             
+                 <img src="sub-page/poster-7.png" alt=""> 
+                 <p>[프리미엄펫쇼in킨텍스]</p>
+                 <p>2020-05-22~05-24</p>
+                 <span><a href="#">자세히보기</a></span>                  
+                </li>
+                <li class="swiper-slide">            
+                 <img src="sub-page/poster-8.png" alt=""> 
+                 <p>[PLAYX4:플레이엑스포]</p>
+                 <p>2020-04-29~05-01</p>
+                 <span><a href="#">자세히보기</a></span>                 
+                </li>
+                <li class="swiper-slide">             
+                 <img src="sub-page/poster-9.png" alt=""> 
+                 <p>[2021년대학입시설명회]</p>
+                 <p>2020-05-01</p>  
+                 <span><a href="#">자세히보기</a></span>               
+                </li> 
+               </ul>
+           </div>
+           <div class="list_btn">
+               <ul>
+                   <li class="l_b swiper-button-prev"></li>
+                   <li class="r_b swiper-button-next"></li>
+               </ul>               
+           </div>
+           <div class="indicator swiper-pagination"></div>
+         <div class="last-t">
+             <p>※본 일정은 주최측의 사정에 따라 변경 될 수 있는 점 참고 부탁드립니다.</p>
+         </div>
+    </div>
+    <div id="ft"></div>
+    <script src="swiper-5.3.7/package/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           var swiper = new Swiper('.swiper-container', {
+                    
+                   pagination: {
+                     el: '.swiper-pagination',
+                     type: 'progressbar',
+                   },
+                   navigation: {
+                     nextEl: '.swiper-button-next',
+                     prevEl: '.swiper-button-prev',
+                   }
+   
+            }); 
+        });
+    </script>
+</body>
+</html>

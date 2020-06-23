@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회의실 안내</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />   
+    <link rel="stylesheet" href="css/sub3-3.css"> 
+    <script>
+        $(document).ready(function(){
+           $("#hd").load("header.html") ;
+           $("#ft").load("footerbase.html");
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.content > .c_area > .show > .tab-c > .show_i > img').hide();
+            $('.content > .c_area > .show > .tab-c > .show_i > img:first-child').show();
+            //$('.content > .c_area > .show > .tab-c > .show_i > img:first-child').addClass("image");
+           
+            
+            $('.content > .tab > li').click(function(){
+                
+               var i = $(this).index();
+                
+                $('.content > .tab > li').removeClass("tab_on");
+                $(this).addClass("tab_on");
+                /*subtab*/
+                $('.content > .tab > li >ul').removeClass("sub_view");
+                $('.content > .tab > li >ul').eq(i).addClass("sub_view");
+                /*li.tg*/
+                $('.content > .tab > .tab_on > .sub_view > li').removeClass("tg");
+                $('.content > .tab > .tab_on > .sub_view > li').eq(0).addClass("tg");
+                /*section*/
+                $('.content > .c_area > section').removeClass("show");
+                $('.content > .c_area > section').eq(i).addClass("show");
+                /*foucs*/
+                $('.content > .c_area > .show ').children('.tab-c').removeClass("c_on");
+                $('.content > .c_area > .show ').children('.tab-c').eq(0).addClass("c_on");
+            });
+            
+            //subview-content내용연결
+                $('.content > .tab > .tab_on > .sub_view > li ').click(function(){
+                   var ss = $(this).index();
+                    
+                    $('.content > .tab > .tab_on > .sub_view > li ').removeClass();
+                    $('.content > .tab > .tab_on > .sub_view > li ').eq(ss).addClass("tg");
+                    $('.content > .c_area > .show').children('.tab-c').removeClass("c_on");
+                    $('.content > .c_area > .show').children('.tab-c').eq(ss).addClass("c_on");
+                    
+                    
+                    return false;
+                });
+            //subview-content내용연결
+            $('.list > li ').click(function(){
+                var st = $(this).index();
+                               
+                $('.list > li ').removeClass();
+                $('.list > li ').eq(st).addClass("tg");
+                $('.content > .c_area > .show').children('.tab-c').removeClass("c_on");
+                $('.content > .c_area > .show').children('.tab-c').eq(st).addClass("c_on");
+                
+                return false;
+            });
+            
+            //1전시장image 변경 
+            
+            var s_img = $('.content > .c_area > .show > .tab-c > .img_box > img');
+            
+            s_img.click(function(){
+               var on = $(this).index();
+                                 
+                $('.content > .c_area > .show > .c_on > .show_i > img').hide();
+                $('.content > .c_area > .show > .c_on > .show_i > img').eq(on).show();
+                s_img.removeClass();
+                $(this).addClass('image');
+                
+            
+                return false;
+            });
+            //2전시장 image 변경
+            $('.content > .c_area > .two > .ing > .img_box > img').click(function(){
+               var tt = $(this).index();
+                
+                $('.content > .c_area > .show > .c_on > .show_i > img').hide();
+                $('.content > .c_area > .show > .c_on > .show_i > img').eq(tt).show();
+                $('.content > .c_area > .two > .ing > .img_box > img').removeClass();
+                $(this).addClass('image');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>시설안내</h3>        
+        <ul>
+            <li><a href="sub-page3-1.html"><i class="fas fa-chevron-right"></i>시설개요</a></li>
+            <li><a href="sub-page3-1.html">전시장</a></li>
+            <li class="on"><a href="sub-page3-3.html">회의실</a></li>
+            <li><a href="sub-page3-4.html">편의시설</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h3>회의실</h3>
+        <ul class="tab">
+            <li class="tab_on">1전시장
+                <ul class=" sub_view">
+                    <li class="tg">전체개요</li>
+                    <li>그랜드볼룸</li>
+                    <li>이벤트홀</li>
+                    <li>중회의실</li>
+                    <li>통합회의실</li>
+                    <li>VIP회의실</li>
+                </ul>
+            </li>
+            <li>2전시장
+                <ul class="list">
+                    <li class="tg">전체개요</li>
+                    <li>이벤트홀</li>
+                    <li>대회의실</li>
+                    <li>통합회의실</li>
+                    <li>중회의실</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="c_area">
+        <!-- 1전시장-->
+            <section class="show">
+              <!-- 개요  -->
+              <div class="tab-c c_on">
+                  <img class="center" src="sub3-3img/conventions_flash_summary01.gif" alt="">
+              </div>
+              <!-- 그랜드볼룸  -->
+              <div class="tab-c ">
+              <h4></h4>
+               <div class="show_i">
+                    <img src="sub3-3img/conventions_1.png" alt="">
+                    <img src="sub3-3img/conventions_1-2.png" alt="">
+                    <img src="sub3-3img/conventions_1-3.png" alt="">
+                    <img src="sub3-3img/conventions_1-4.png" alt="">
+               </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/conventions_1.png" alt="">
+                    <img src="sub3-3img/conventions_1-2.png" alt="">
+                    <img src="sub3-3img/conventions_1-3.png" alt="">
+                    <img src="sub3-3img/conventions_1-4.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>1,600㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 800명, 극장식 1,600명</li>
+                        <li>연회식 900명, 리셉션식 2,000명</li>
+                        <li>자유로방향 로비 연회식 500석</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>8개국어 동시통역시설, 스크린(매립형 300˚)</li>
+                            <li>10,000 ANSI 빔 프로젝터</li>
+                            <li>마이크 15개(유선 9, 무선6)</li>
+                            <li>조명, 바텐, 스피커</li>
+                        </ul>
+                   </td>                     
+                </tr>
+                <tr>
+                    <td>부대시설</td>
+                    <td>
+                        <ul>
+                            <li>주최자 사무실 2개소, VIP대기실(8명)</li>
+                            <li>안내데스크, 분장실, 보관실</li>                         
+                        </ul>
+                    </td>                     
+                </tr>
+                <tr>
+                    <td>도면</td>
+                    <td><button>JPG 파일 다운로드</button>
+                        <button> CAF 파일 다운로드</button> 
+                    </td>
+                </tr>
+            </table>  
+              </div>
+               <!-- 이벤트홀  -->
+              <div class="tab-c ">
+               <div class="show_i">
+                <img src="sub3-3img/conventions2.png" alt="">
+                <img src="sub3-3img/conventions2-2.png" alt="">
+                <img src="sub3-3img/conventions2-3.png" alt="">
+                <img src="sub3-3img/conventions2-4.png" alt="">
+               </div>                
+                <div class="img_box">
+                     <img class="image" src="sub3-3img/conventions_1.png" alt="">
+                     <img src="sub3-3img/conventions2-2.png" alt="">
+                     <img src="sub3-3img/conventions2-3.png" alt="">
+                     <img src="sub3-3img/conventions2-4.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>420㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 220명, 극장식 360명</li>
+                        <li>연회식 180명, 리셉션식 300명</li>
+                        <li>자유로방향 로비 연회식 500석</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개 (매립형 150˚), 스피커</li>
+                            <li>5,000 ANSI 빔 프로젝터</li>
+                            <li>마이크 7개(유선 5, 무선2)</li>
+                        </ul>
+                   </td>                     
+                </tr>                
+                <tr>
+                    <td>도면</td>
+                    <td><button>JPG 파일 다운로드</button>
+                        <button> CAF 파일 다운로드</button> 
+                    </td>
+                </tr>
+            </table>
+              </div> 
+              <!-- 중회의실  --> 
+              <div class="tab-c ">
+               <div class="show_i">
+                <img src="sub3-3img/conventions3.png" alt="">
+                <img src="sub3-3img/conventions3-1.png" alt="">
+                <img src="sub3-3img/conventions3-2.png" alt="">
+                <img src="sub3-3img/conventions3-3.png" alt="">
+               </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/conventions3.png" alt="">
+                    <img src="sub3-3img/conventions3-1.png" alt="">
+                    <img src="sub3-3img/conventions3-2.png" alt="">
+                    <img src="sub3-3img/conventions3-3.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>225㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 100명, 극장식 160명</li>
+                        <li>연회식 60명, 리셉션식 100명</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개(매립형 150˚), 스피커</li>
+                            <li>5,000 ANSI 빔 프로젝터</li>
+                            <li>마이크 4개(유선 2, 무선2)</li>
+                        </ul>
+                   </td>                     
+                </tr>                
+                <tr>
+                    <td>도면</td>
+                    <td><button>JPG 파일 다운로드</button>
+                        <button> CAF 파일 다운로드</button> 
+                    </td>
+                </tr>
+            </table>
+              </div>
+              <!-- 통합회의실  -->
+              <div class="tab-c ">
+               <div class="show_i">
+                   <img src="sub3-3img/conventions4.png" alt="">
+                <img src="sub3-3img/conventions4-1.png" alt="">
+                <img src="sub3-3img/conventions4-2.png" alt="">
+                <img src="sub3-3img/conventions4-3.png" alt="">
+               </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/conventions4.png" alt="">
+                    <img src="sub3-3img/conventions4-1.png" alt="">
+                    <img src="sub3-3img/conventions4-2.png" alt="">
+                    <img src="sub3-3img/conventions4-3.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>468㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 250명, 극장식 400명</li>
+                        <li>연회식 180명, 리셉션식 300명</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개(매립형 200˚), 스피커</li>
+                            <li>5,000 ANSI 빔 프로젝터, 50˚보조 PDP</li>
+                            <li>마이크 4개(유선 2, 무선2)</li>
+                        </ul>
+                   </td>                     
+                </tr>                
+                <tr>
+                    <td>도면</td>
+                    <td><button>JPG 파일 다운로드</button>
+                        <button> CAF 파일 다운로드</button> 
+                    </td>
+                </tr>
+            </table>  
+              </div>
+              <!-- VIP회의실  -->
+              <div class="tab-c ">
+              <div class="show_i">
+                <img src="sub3-3img/conventions5.png" alt="">
+                <img src="sub3-3img/conventions5-1.png" alt="">
+                <img src="sub3-3img/conventions5-2.png" alt="">
+                <img src="sub3-3img/conventions5-3.png" alt="">
+              </div>
+              
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/conventions5.png" alt="">
+                    <img src="sub3-3img/conventions5-1.png" alt="">
+                    <img src="sub3-3img/conventions5-2.png" alt="">
+                    <img src="sub3-3img/conventions5-3.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>468㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 250명, 극장식 400명</li>
+                        <li>연회식 180명, 리셉션식 300명</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개(매립형 200˚), 스피커</li>
+                            <li>5,000 ANSI 빔 프로젝터, 50˚보조 PDP</li>
+                            <li>마이크 4개(유선 2, 무선2)</li>
+                        </ul>
+                   </td>                     
+                </tr>                
+                <tr>
+                    <td>도면</td>
+                    <td><button>JPG 파일 다운로드</button>
+                        <button> CAF 파일 다운로드</button> 
+                    </td>
+                </tr>
+            </table>  
+            </div>
+            </section>
+        <!-- 2전시장-->
+            <section class="two">
+               <!-- 개요  -->
+                <div class="ing tab-c ">
+                    <img class="center" src="sub3-3img/conventions_flash_summary02.gif" alt=""> 
+                </div>
+                <!-- 이벤트홀  -->
+                <div class="ing tab-c ">
+                <div class="show_i">
+                    <img src="sub3-3img/c1.png" alt="">
+                    <img src="sub3-3img/c1-2.png" alt="">
+                    <img src="sub3-3img/c1-3.png" alt="">
+                </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/c1.png" alt="">
+                    <img src="sub3-3img/c1-2.png" alt="">
+                    <img src="sub3-3img/c1-3.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>5,618㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 3,000명, 극장식 6,000명</li>
+                        <li>연회식 3,000명, 리셉션식 10,000명</li>
+                        <li>자유로방향 로비 연회식 500석</li>
+                        <li>분할 사용 가능(최대 6분할)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>12개국어 동시통역시설, 스크린(매립형 300˚, 400˚)</li>
+                            <li>10,000 ANSI 빔 프로젝터(5개), 10,000 ANSI 빔 프로젝터(1개)</li>
+                            <li>마이크 60개(유선 42개, 무선18개), 밀리게이트 마이크 설치가능</li>
+                            <li>스포트라이트 2KW Fresnel lens 8"</li>
+                        </ul>
+                   </td>                     
+                </tr>
+                <tr>
+                    <td>부대시설</td>
+                    <td>
+                        <ul>
+                            <li>1층 : 주최자 사무실 5개소,  VIP 라운지, 대기실 3개소, 분장실</li>
+                            <li>2층 : 동시통역실 12개소, 조정실 3개소</li>                         
+                        </ul>
+                    </td>                     
+                </tr>
+                <tr>
+                    <td>도면</td>
+                    <td><button>도면 다운로드</button>
+                    </td>
+                </tr>
+            </table>
+                </div>
+                <!-- 대회의실  -->
+                <div class="ing tab-c ">
+                <div class="show_i">
+                    <img src="sub3-3img/c2.png" alt="">
+                    <img src="sub3-3img/c2-1.png" alt="">
+                    <img src="sub3-3img/c2-2.png" alt="">
+                </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/c2.png" alt="">
+                    <img src="sub3-3img/c2-1.png" alt="">
+                    <img src="sub3-3img/c2-2.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>628㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 300명, 극장식 520명</li>
+                        <li>연회식 250명, 리셉션식 400명</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개(매립형 200˚), 스피커(메인 300w 2개, 천정 30w 16개)</li>
+                            <li>5,000 ANSI 빔 프로젝터</li>
+                            <li>마이크 8개(유선4, 무선4), 적외선동시통역장비</li>
+                            <li>스포트라이트 10개 (1KW Fresnel lens 8")</li>
+                        </ul>
+                   </td>                     
+                </tr> 
+                <tr>
+                    <td>부대시설</td>
+                    <td>조정실, 동시통역실 4개소, 사무실(대기실) 2개소</td>
+                </tr>               
+                <tr>
+                    <td>도면</td>
+                    <td><button>도면다운로드</button>
+                    </td>
+                </tr>
+            </table>  
+                </div>
+                <!-- 통합회의실 -->
+                <div class="ing tab-c ">
+                <div class="show_i">
+                   <img src="sub3-3img/c3.png" alt="">
+                    <img src="sub3-3img/c3-1.png" alt="">
+                    <img src="sub3-3img/c3-2.png" alt="">
+                    <img src="sub3-3img/c3-3.png" alt="">                    
+                </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/c3.png" alt="">
+                    <img src="sub3-3img/c3-1.png" alt="">
+                    <img src="sub3-3img/c3-2.png" alt="">
+                    <img src="sub3-3img/c3-3.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>628㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 130명, 극장식 250명</li>
+                        <li>연회식 110명, 리셉션식 200</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개(매립형 200˚), 스피커(메인 300w 2개, 천정 30w 8개)</li>
+                            <li>5,000 ANSI 빔 프로젝터</li>
+                            <li>마이크 8개(유선4, 무선4), 적외선동시통역장비</li>
+                        </ul>
+                   </td>                     
+                </tr> 
+                <tr>
+                   <td>부대시설</td>
+                    <td>조정실, 동시통역실 2개소, 사무실(대기실) 1개소</td>
+                </tr>               
+                <tr>
+                    <td>도면</td>
+                    <td><button>도면다운로드</button>
+                    </td>
+                </tr>
+            </table>  
+                </div>
+                <!-- 중회의실 -->
+                <div class="ing tab-c ">
+                <div class="show_i">
+                    <img src="sub3-3img/c4.png" alt="">
+                    <img src="sub3-3img/c4-1.png" alt="">
+                    <img src="sub3-3img/c4-2.png" alt="">
+                    <img src="sub3-3img/c4-3.png" alt="">
+                </div>                
+                <div class="img_box">
+                    <img class="image" src="sub3-3img/c4.png" alt="">
+                    <img src="sub3-3img/c4-1.png" alt="">
+                    <img src="sub3-3img/c4-2.png" alt="">
+                    <img src="sub3-3img/c4-3.png" alt="">
+                </div>
+                <table class="t_show">
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>규모</td>
+                    <td>188㎡</td>
+                </tr>
+                <tr>
+                   <td>수용능력</td>
+                    <td>
+                       <ul>
+                        <li>강의식 80명, 극장식 160명</li>
+                        <li>연회식 80명, 리셉션식 120명</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>부대장비</td>
+                    <td>
+                        <ul>
+                            <li>스크린 1개(매립형 150˚), 스피커(메인 100w 4개, 천정 30w 8개)</li>
+                            <li>5,000 ANSI 빔 프로젝터</li>
+                            <li>마이크 6개(유선2, 무선4), 적외선동시통역장비</li>
+                        </ul>
+                   </td>                     
+                </tr> 
+                <tr>
+                   <td>부대시설</td>
+                    <td>조정실, 사무실(대기실)</td>
+                </tr>               
+                <tr>
+                    <td>도면</td>
+                    <td><button>도면다운로드</button>
+                    </td>
+                </tr>
+            </table>  
+                </div>
+            </section>
+        </div>
+        <p>세부 견적은 <span>'임대상담 문의하기'</span> 버튼을 눌러서 확인해 주세요</p>
+        <button class="rent">임대상담 문의하기</button>
+    </div>    
+    <div id="ft"></div>
+</body>
+</html>

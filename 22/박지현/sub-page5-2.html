@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+    <script src="js/jquery-3.4.1.min.js"></script>
+<!--   <script src="js/jquery-3.5.0.min.js"></script>-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sub5-2.css">
+    <script>
+        $(document).ready(function(){
+           $("#hd").load("header.html") ;
+           $("#ft").load("footerbase.html");
+        });
+    </script>  
+    <script>
+        $(document).ready(function(){
+           var num = 0,
+                i =$(this).index();
+            
+            $('.page_wrap > .btn > a').click(function(){  
+                
+                var i = $(this).index();
+                
+                $('.page_wrap > .btn > a').removeClass();
+                $('.page_wrap > .btn > a').eq(i).addClass("active");
+                $('.container > div ').removeClass("t_show");
+                $('.container > div ').eq(i).addClass("t_show");
+                num = i;
+            });
+            //왼쪽으로[prev]
+                $('.btnlb').click(function(){
+                    listNum = $('.page_wrap > .btn > a').length;
+                    num = num - 1;
+                    if(num < 0) {
+                        num = 0;
+                        return;
+                    }
+                    $('.page_wrap > .btn > a').removeClass();
+                    $('.page_wrap > .btn > a').eq(num).addClass("active");
+                    $('.container > div ').removeClass("t_show");
+                    $('.container > div ').eq(num).addClass("t_show");
+                    
+                    console.log("왼쪽")
+                });
+            //오른쪽으로[next]
+                $('.btnrb').click(function(){
+                    listNum = $('.page_wrap > .btn > a').length;
+                    num = num + 1;
+                    if(num >= listNum) {
+                        num = listNum - 1;
+                        return;
+                    }
+                    $('.page_wrap > .btn > a').removeClass();
+                    $('.page_wrap > .btn > a').eq(num).addClass("active");
+                    $('.container > div ').removeClass("t_show");
+                    $('.container > div ').eq(num).addClass("t_show");
+                });
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>
+    <div id="bg"></div>
+    <div class="side_nav">
+       <h3>고객만족센터</h3>
+        <ul>
+            <li><a href="sub-page5-1.html">고객의소리</a></li>
+            <li  class="on"><a href="sub-page5-2.html">공지사항<i class="fas fa-chevron-right"></i></a></li>            
+            <li><a href="sub-page5-3.html">입찰안내</a></li>            
+        </ul>
+    </div>
+    <div class="container">
+        <h3>공지사항</h3>
+        <div class="table t_show">
+               <ul class="tr">
+                   <li >번호</li>
+                   <li >제목</li>
+                   <li >등록일</li>
+               </ul>
+               <ul>
+                   <li>공지</li>
+                   <li>"고양시 청년인턴 200" 킨텍스 참여자 모집안내</li>
+                   <li>2020.06.08</li>
+               </ul>
+               <ul>
+                   <li>공지</li>
+                   <li>2020년 6월 킨텍스 임시직 사원 공개채용 공고</li>
+                   <li>2020.06.01</li>
+               </ul>
+               <ul>
+                   <li>공지</li>
+                   <li>2020 프리미엄 펫쇼 반려동물 입장금지</li>
+                   <li>2020.05.29</li>
+               </ul>
+               <ul>
+                   <li>공지</li>
+                   <li>킨텍스 2020년 6월 전시행사안내</li>
+                   <li>2020.05.26</li>
+               </ul>
+               <ul>
+                   <li>10</li>
+                   <li>㈜킨텍스에서 사외이사(비상임이사)를 모십니다.</li>
+                   <li>2020.05.28</li>
+               </ul>
+               <ul>
+                   <li>9</li>
+                   <li>2020년도 하절기 장기문화전시 대관 신청안내</li>
+                   <li>2020.05.08</li>
+               </ul>
+       </div>
+       <div class="table">
+               <ul class="tr">
+                   <li >번호</li>
+                   <li >제목</li>
+                   <li >등록일</li>
+               </ul>
+               <ul>
+                   <li>8</li>
+                   <li>[성평등캠페인] '경기도 라떼파파' 홍보콘텐츠 게시</li>
+                   <li>2020.04.02</li>
+               </ul>
+               <ul>
+                   <li>7</li>
+                   <li>2020년 6월 킨텍스 임시직 사원 공개채용 공고</li>
+                   <li>2020.06.01</li>
+               </ul>
+               <ul>
+                   <li>6</li>
+                   <li>[공모] 2020 경기환경산업전 슬로건(주제) 공모('20. 3. 18. ~ '20. 3. 27. 10일간)</li>
+                   <li>2020.03.18</li>
+               </ul>
+               <ul>
+                   <li>5</li>
+                   <li>2020년 새로운 경기 징검다리 일자리 사업 참여자 모집 안내</li>
+                   <li>2020.02.17</li>
+               </ul>
+               <ul>
+                   <li>4</li>
+                   <li>2020년도 킨텍스 지정등록업체 모집 결과</li>
+                   <li>2020.02.06</li>
+               </ul>
+               <ul>
+                   <li>3</li>
+                   <li>[경기도 공고] 경기도 기본소득 영화제 공모전 개최 공고</li>
+                   <li>2020.02.02</li>
+               </ul><ul>
+                   <li>2</li>
+                   <li>[경기도 공고] 제2회 기본소득 아이디어 모집</li>
+                   <li>2020.01.13</li>
+               </ul><ul>
+                   <li>1</li>
+                   <li>KINTEX 홈페이지 개편 안내</li>
+                   <li>2020.01.01</li>
+               </ul>
+       </div>
+       <div class="pagination">
+		<div class="page_wrap">
+			<a href="javascript:;;" class= "btnlb"><i class="fas fa-chevron-left"></i></a>
+			<span class="btn">
+				<a href="javascript:;;" class="active">1</a>
+				<a href="javascript:;;" class="">2</a>
+            </span>				
+			<a href="javascript:;;" class= "btnrb" ><i class="fas fa-chevron-right"></i></a>
+		</div>
+	    </div>
+    </div>
+    <div id="ft"></div>
+</body>
+</html>

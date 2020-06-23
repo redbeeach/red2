@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 MEMBERSHIP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".membership_img").hide();
+            $("#menu_title ul li").eq(0).addClass("selected");
+            $(".membership_img").eq(0).show();
+            
+            $("#menu_title ul li").click(function(){
+                $("#menu_title ul li").find(">h2").removeClass();
+                $(this).find(">h2").addClass("selected");
+                $(".membership_img").hide();
+                var i = $(this).index();
+                $(".membership_img").eq(i).show();
+            });
+        });
+    </script>
+     
+    <style>
+        body {background: #212121; width: 100%; height: 100%;}
+        #left_nav li:nth-child(3) {color: #a6a6a6;}
+        #menu {width: 100%; margin: 0 auto;}
+        #menu_title {width: 80%; margin: 0 auto;}
+        #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px; color: #eeeeee;}
+        #menu_title div {padding-top: 1vh; padding-bottom: 10vh; width: 40px; margin: 0 auto;}
+        #menu_title div img {width: 100%;}
+        #menu_title ul {display: flex; padding-bottom: 50px }
+        #menu_title ul li {flex: 1; text-align: center; padding: 0px;}
+        #menu_title ul li {padding-right: 25px;}
+        #menu_title ul li:nth-child(4) {padding-right: 0px;}
+        #menu_title ul li h2 {font-size: 23px; border-top: 2px solid; padding-top: 10px; cursor: pointer; color: #757575;}
+        #menu_title ul li .selected {color: #a3171b;}
+        
+        .membership_img1 {background:url(sub_other_img/membership1-1.jpg) no-repeat; background-size: cover; height: 900px;}
+        .membership_img2 {background:url(sub_other_img/membership2-2.jpg) no-repeat; background-size: cover; height: 900px;}
+        .membership_img3 {background:url(sub_other_img/membership3-3.jpg) no-repeat; background-size: cover; height: 900px;}
+        .membership_img4 {background:url(sub_other_img/membership4-4.jpg) no-repeat; background-size: cover; height: 900px;}
+        
+        .membership_img {margin-bottom: 150px; position: relative;}
+        .mem_txt {background: rgba(0,0,0,0.8); width: 80%; margin: 0 auto; height: 500px; display: table; position: relative; top: 200px; transition: all 0.5s;}
+        .mem_txt div {display: table-cell; vertical-align: middle; }
+        .mem_txt div h3 {color: #b4884b; font-size: 23px; padding-bottom: 5px; text-align: center; transition: all 0.5s;}
+        .mem_txt div h4 {color: #896839; font-size: 16px; padding-bottom: 20px; text-align: center; transition: all 0.5s;}
+        .mem_txt div p {color: #eeeeee; font-size: 14px; padding-bottom: 15px; text-align: center; line-height: 1.5; transition: all 0.5s;}
+        .mem_txt div ul {color: #a6a6a6; font-size: 14px; padding-bottom: 20px; line-height: 1.5; width: 90%; margin: 0 auto; transition: all 0.5s;}
+        
+        .mem_txt1 {width: 80%; height: 800px; top: 50px;}
+        .mem_txt1 ul:nth-child(4) {overflow: hidden; width: 80%; margin: 0 auto; color: #c0c0c0; margin-bottom: 20px;}
+        .mem_txt1 ul:nth-child(4) li {float: left; width: 25%; text-align: center; line-height: 2.5; background: #757575; padding: 5px;}
+        .mem_txt1 ul:nth-child(4) li strong {color: #eeeeee;}
+        .mem_txt1 ul:nth-child(4) li:nth-child(2) {background: #6b6b6b;}
+        .mem_txt1 ul:nth-child(4) li:nth-child(3) {background: #555555;}
+        .mem_txt1 ul:nth-child(4) li:nth-child(4) {background: #494949;}     
+        .mem_txt1 ul:nth-child(5) {overflow: hidden;  padding-left: 5%;}
+        .mem_txt1 ul:nth-child(5) li {float: left; padding: 0px 15px; border-right: 1px solid #a6a6a6;}
+        .mem_txt1 ul:nth-child(5) li:nth-child(3) {padding-left: 0}
+        .mem_txt1 ul:nth-child(5) li:nth-child(6) {border: 0}
+        .mem_txt1 ul:nth-child(5) b {float: left;}
+        .mem_txt1 ul:nth-child(6) {padding-left: 5%;}
+        .mem_txt1 ul:nth-child(7) {padding-left: 5%;}
+        .mem_txt1 ul:nth-child(7) li img {width: 3px; vertical-align: middle; margin-right: 5px;}
+        .mem_txt1 ul:nth-child(8) {padding-left: 5%;}
+        .mem_txt1 ul:nth-child(8) li img {width: 3px; vertical-align: middle; margin-right: 5px;}
+        
+        .mem_txt2 ul {text-align: center;}
+        .mem_txt2 p strong {font-size: 16px;}
+        .mem_txt3 ul {text-align: center;}
+        .mem_txt4 ul {text-align: center;}
+        
+
+/*        @media screen and (min-width:1280px) and (max-width:1599px) {}*/
+        @media screen and (min-width:1024px) and (max-width:1279px) {
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 28px; color: #eeeeee;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 7vh; width: 34px; margin: 0 auto;}
+            #menu_title ul li h2 {font-size: 20px;}
+            .mem_txt div h3 {font-size: 23px;}
+            .mem_txt div h4 {font-size: 16px;}
+            .mem_txt div p {font-size: 13px;}
+            .mem_txt div ul {font-size: 13px;}
+            .mem_txt1 ul:nth-child(5) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(6) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(7) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(8) {padding-left: 0%;}
+            .mem_txt2 p strong {font-size: 15px;}
+        }
+        
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            #menu_title {width: 90%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px; color: #eeeeee;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 7vh; width: 30px; margin: 0 auto;}
+            #menu_title ul li h2 {font-size: 18px;}
+            .mem_txt {width: 90%; margin: 0 auto;}
+            .mem_txt div h3 {font-size: 21px;}
+            .mem_txt div h4 {font-size: 14px;}
+            .mem_txt div p {font-size: 12px;}
+            .mem_txt div ul {font-size: 12px;}
+            .mem_txt1 ul:nth-child(5) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(6) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(7) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(8) {padding-left: 0%;}
+            .mem_txt2 p strong {font-size: 14px;}
+        }
+        
+        @media screen and (min-width:640px) and (max-width:767px) {
+            #menu {width: 100%; margin: 0 auto;}
+            #menu_title {width: 100%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 22px; color: #eeeeee;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 4vh; width: 27px; margin: 0 auto;}
+            #menu_title ul {display: block; margin-bottom: 50px; height: 84px; padding-bottom: 0px;}
+            #menu_title ul li {padding-right: 0px; text-align: center; float: left; width: 50%;}
+            #menu_title ul li:nth-child(1) {border-bottom: 1px solid #757575; border-right: 1px solid #757575;}
+            #menu_title ul li:nth-child(2) {border-bottom: 1px solid #757575;}
+            #menu_title ul li:nth-child(3) {border-right: 1px solid #757575;}
+            #menu_title ul li:nth-child(4) {padding-right: 0px;}
+            #menu_title ul li h2 {font-size: 14px; border-top: 0; padding-top: 0px; cursor: pointer; color: #757575; padding: 10px 0px;}
+            #menu_title ul li .selected {color: #b4884b; background: rgba(225,225,225,0.1);}
+            
+            .membership_img1 {background:url(sub_other_img/membership1-1.jpg) no-repeat; background-size: cover; height: 1000px;}
+            .membership_img2 {background:url(sub_other_img/membership2-2.jpg) no-repeat; background-size: cover; height: 600px;}
+            .membership_img3 {background:url(sub_other_img/membership3-3.jpg) no-repeat; background-size: cover; height: 600px;}
+            .membership_img4 {background:url(sub_other_img/membership4-4.jpg) no-repeat; background-size: cover; height: 600px;}
+            
+            .mem_txt {background: rgba(0,0,0,0.8); width: 95%; margin: 0 auto; height: 400px; display: table; position: relative; top: 100px;}
+            .mem_txt div h3 {font-size: 20px; padding-top: 10px}
+            .mem_txt div h4 {font-size: 13px;}
+            .mem_txt div p {font-size: 11px; width: 90%; margin: 0 auto;}
+            .mem_txt div ul {font-size: 11px;}
+            .mem_txt1 ul:nth-child(5) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(6) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(7) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(8) {padding-left: 0%;}
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #membership {display: block; position: absolute; right: 55px; top: 22px;}
+            
+            .mem_txt1 {width: 95%; height: 900px; top: 50px;}
+            .mem_txt1 ul:nth-child(4) {overflow: hidden; width: 90%; margin: 0 auto; color: #c0c0c0; margin-bottom: 20px;}
+            .mem_txt1 ul:nth-child(4) li {float: left; width: 50%; text-align: center; line-height: 2.5; background: #757575; padding: 5px;}
+            .mem_txt1 ul:nth-child(4) li strong {color: #eeeeee;}
+            .mem_txt1 ul:nth-child(4) li:nth-child(2) {background: #6b6b6b;}
+            .mem_txt1 ul:nth-child(4) li:nth-child(3) {background: #555555;}
+            .mem_txt1 ul:nth-child(4) li:nth-child(4) {background: #494949;}     
+            .mem_txt1 ul:nth-child(5) {overflow: hidden;}
+            .mem_txt1 ul:nth-child(5) li {float: none; padding: 0px 0px; border-right: 0; }
+            .mem_txt1 ul:nth-child(5) li:nth-child(3) {padding-left: 0}
+            .mem_txt1 ul:nth-child(5) li:nth-child(6) {border: 0}
+            .mem_txt1 ul:nth-child(5) b {float: left;}
+            .mem_txt2 p strong {font-size: 12px;}
+        }
+        
+        @media screen and (max-width:639px) {
+            #menu {width: 100%; margin: 0 auto;}
+            #menu_title {width: 100%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 22px; color: #eeeeee;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 4vh; width: 27px; margin: 0 auto;}
+            #menu_title ul {display: block; margin-bottom: 50px; height: 84px; padding-bottom: 0px;}
+            #menu_title ul li {padding-right: 0px; text-align: center; float: left; width: 50%;}
+            #menu_title ul li:nth-child(1) {border-bottom: 1px solid #757575; border-right: 1px solid #757575;}
+            #menu_title ul li:nth-child(2) {border-bottom: 1px solid #757575;}
+            #menu_title ul li:nth-child(3) {border-right: 1px solid #757575;}
+            #menu_title ul li:nth-child(4) {padding-right: 0px;}
+            #menu_title ul li h2 {font-size: 13px; border-top: 0; padding-top: 0px; cursor: pointer; color: #757575; padding: 10px 0px;}
+            #menu_title ul li .selected {color: #b4884b; background: rgba(225,225,225,0.1);}
+            
+            .membership_img1 {background:url(sub_other_img/membership1-1.jpg) no-repeat; background-size: cover; height: 1000px;}
+            .membership_img2 {background:url(sub_other_img/membership2-2.jpg) no-repeat; background-size: cover; height: 600px;}
+            .membership_img3 {background:url(sub_other_img/membership3-3.jpg) no-repeat; background-size: cover; height: 600px;}
+            .membership_img4 {background:url(sub_other_img/membership4-4.jpg) no-repeat; background-size: cover; height: 600px;}
+            
+            .mem_txt {background: rgba(0,0,0,0.8); width: 95%; margin: 0 auto; height: 400px; display: table; position: relative; top: 100px;}
+            .mem_txt div h3 {font-size: 19px; padding-top: 10px}
+            .mem_txt div h4 {font-size: 12px;}
+            .mem_txt div p {font-size: 10px; width: 90%; margin: 0 auto;}
+            .mem_txt div ul {font-size: 10px;}
+            .mem_txt1 ul:nth-child(5) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(6) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(7) {padding-left: 0%;}
+            .mem_txt1 ul:nth-child(8) {padding-left: 0%;}
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #membership {display: block; position: absolute; right: 55px; top: 22px;}
+            
+            .mem_txt1 {width: 95%; height: 900px; top: 50px;}
+            .mem_txt1 ul:nth-child(4) {overflow: hidden; width: 90%; margin: 0 auto; color: #c0c0c0; margin-bottom: 20px;}
+            .mem_txt1 ul:nth-child(4) li {float: left; width: 50%; text-align: center; line-height: 2.5; background: #757575; padding: 5px;}
+            .mem_txt1 ul:nth-child(4) li strong {color: #eeeeee;}
+            .mem_txt1 ul:nth-child(4) li:nth-child(2) {background: #6b6b6b;}
+            .mem_txt1 ul:nth-child(4) li:nth-child(3) {background: #555555;}
+            .mem_txt1 ul:nth-child(4) li:nth-child(4) {background: #494949;}     
+            .mem_txt1 ul:nth-child(5) {overflow: hidden;}
+            .mem_txt1 ul:nth-child(5) li {float: none; padding: 0px 0px; border-right: 0; }
+            .mem_txt1 ul:nth-child(5) li:nth-child(3) {padding-left: 0}
+            .mem_txt1 ul:nth-child(5) li:nth-child(6) {border: 0}
+            .mem_txt1 ul:nth-child(5) b {float: left;}
+            .mem_txt2 p strong {font-size: 11px;}
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+    <header></header>
+    <div id="m_header"></div>
+    <div id="menu">
+        <div id="menu_title">
+            <h1>MEMBERSHIP</h1>
+            <div><img src="sub_other_img/icon_membership.png" alt="membership icon"></div>
+            <ul>
+                <li><h2 class="selected">매드 리워즈</h2></li>
+                <li><h2>매드데이</h2></li>
+                <li><h2>기념일 혜택</h2></li>
+                <li><h2>리워즈 선물하기</h2></li>
+            </ul>
+        </div>
+        <ul class="membership_box">
+            <li class="membership_img membership_img1">
+                <div class="mem_txt mem_txt1">
+                    <div>
+                        <h3>매드 리워즈</h3>
+                        <h4>다양해진 매드 리워즈 혜택</h4>
+                        <p>1회 방문적립만 해도 메뉴 할인권, 방문 횟수 & 누적금액에 따라 최대 4인 식사권 혜택을 드립니다.</p>
+                        <ul>
+                            <li>1회 방문<br><strong>20% 메뉴 할인권</strong></li>
+                            <li>3회 방문 & 10만원<br><strong>40% 메뉴 할인권</strong></li>
+                            <li>5회 방문 & 20만원<br><strong>2인 식사권</strong></li>
+                            <li>7회 방문 & 40만원<br><strong>4인 식사권</strong></li>
+                        </ul>
+                        <ul>
+                            <b>[제공혜택]</b>
+                            <br>
+                            <li>20% 메뉴 할인권</li>
+                            <li>40% 메뉴 할인권</li>
+                            <li>2인 식사권(피자 + 파스타)</li>
+                            <li>4인 식사권(샐러드 + 피자 + 파스타 + 라이스)</li>
+                        </ul>
+                        <ul>
+                            <li>※2인, 4인 식사권은 카테고리별 메뉴 선택가능. 단, 제공되는 메뉴는 정책에 따라 달라질 수 있습니다.</li>
+                            <li>- 샐러드 (매드포갈릭 돔 샐러드 or 시저 샐러드)</li>
+                            <li>- 피자 (갈릭 스노잉 피자 or 고르곤졸라 피자)</li>
+                            <li>- 파스타 (갈릭 페뇨 파스타 or 갈릭 까르보나라)</li>
+                            <li>- 라이스 (갈릭 시즈닝 라이스 or 댄싱 살사 라이스 위드 비프)</li>
+                        </ul>
+                        <ul>
+                            <b>[이용안내]</b>
+                            <li><img src="sub_other_img/disc.png" alt="">쿠폰은 혜택 조건 충족 시 자동으로 발급됩니다.</li>
+                            <li><img src="sub_other_img/disc.png" alt="">쿠폰 혜택은 조건 충족일 다음날 부터 30일간 사용 가능합니다.</li>
+                            <li><img src="sub_other_img/disc.png" alt="">리워즈 적립 내역은 최초 적립일자로부터 365일 이후 소멸됩니다. (4인 식사권 발급시, 발급일자 기준으로 적립 내역이 소멸됩니다.)</li>
+                            <li><img src="sub_other_img/disc.png" alt="">매드포갈릭 멤버십 APP을 삭제할 경우 쿠폰 적립 및 소멸, 적립 내역 소멸 안내를 받지 못할 수 있습니다.</li>
+                        </ul>
+                        <ul>
+                            <b>[사용약관]</b>
+                            <li><img src="sub_other_img/disc.png" alt="">주문 전 모바일 카드를 제시해주시고, 테이블 및 일행당 1회 사용 가능합니다.</li>
+                            <li><img src="sub_other_img/disc.png" alt="">타 프로모션 / 타 쿠폰 / 세트메뉴 / 제휴카드 / 멤버십 혜택과 중복 사용 불가합니다. <br>
+                            (단, 추가 주문한 정가메뉴에 한하여 중복 적용 여부가 상이하므로 매장에 문의 바랍니다.)</li>
+                            <li><img src="sub_other_img/disc.png" alt="">더 블랙 프리미엄 신메뉴는 모든 제휴 할인 및 멤버십 혜택과 중복되지 않습니다.</li>
+                            <li><img src="sub_other_img/disc.png" alt="">20%,40% 메뉴 할인권은 정가 메뉴 주문시 사용가능하며, 할인 전 주문금액 20만원 한도 내에서 할인 가능합니다. (음료 및 주류 제외)</li>
+                            <li><img src="sub_other_img/disc.png" alt="">현금으로 환원 및 포장 불가합니다.</li>
+                            <li><img src="sub_other_img/disc.png" alt="">12월 24일,25일,31일 사용 불가합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="membership_img membership_img2">
+                <div class="mem_txt mem_txt2">
+                    <div>
+                        <h3>매드 데이</h3>
+                        <h4>매월 마지막 주 수요일! 매드한 혜택 </h4>
+                        <p>매월 단 하루, 매드포갈릭의 인기 메뉴와 독자적인 매드 와인을 함께 즐길 수 있는 한정 혜택을 드립니다.</p>
+                        <p><strong>멤버십 추가 혜택</strong><br>생맥주 1잔 가격으로 생맥주를 무제한 제공! (클라우드 생맥주는 현재 판매하지 않습니다.)</p>
+                        <ul><b>[이용약관]</b>
+                            <li>생맥주 무제한 혜택은 테이블에 착석한 일행이 생맥주를 포함하여 음료를 각 1잔 이상 주문시 이용 가능합니다.</li>
+                            <li>(모든 고객이 멤버십 회원시 이용가능)</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="membership_img membership_img3">
+                <div class="mem_txt mem_txt3">
+                    <div>
+                        <h3>기념일 혜택</h3>
+                        <h4>생일에 즐기는 나만의 혜택</h4>
+                        <p>회원님의 생일 축하 기념으로 중복 사용 가능한 헤택을 드립니다.</p>
+                        <ul><b>[제공혜택]</b>
+                            <li>디저트 6종 중 택1 + 아메리카노 2잔 제공</li>
+                            <li>(*디저트 6종: 바닐라 아이스크림, 아포카토, 갈릭&오렌지 아이스크림, 밀 크레이프, 캐럿 케이크, 바나나 크레이프 파우치)</li>
+                        </ul>
+                        <ul><b>[이용안내]</b>
+                            <li>유효기간은 생일 당일 포함 전,후 7일(총 15일)동안 사용 가능 합니다.</li>
+                            <li>매드포갈릭 멤버십 APP을 삭제할 경우 쿠폰 적립 및 소멸, 적립 내역 소멸 안내를 받지 못할 수 있습니다.</li>
+                        </ul>
+                        <ul><b>[사용약관]</b>
+                            <li>타 혜택과 중복 사용 가능합니다.(동일 쿠폰 중복 불가)</li>
+                            <li>테이블 및 일행당 1회 사용 가능합니다.</li>
+                            <li>12월 24일,25일,31일 사용 불가합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="membership_img membership_img4">
+                <div class="mem_txt mem_txt4">
+                    <div>
+                        <h3>리워즈 선물하기</h3>
+                        <h4>멤버십 전용 리워즈 쿠폰 선물하기</h4>
+                        <p>매드포갈릭의 리워즈 혜택을 소중한 친구에게 선물해 특별한 경험을 함께 나누세요.</p>
+                        <ul><b>[이용안내]</b>
+                            <li>리워즈 쿠폰만 선물하실 수 있습니다.</li>
+                            <li>쿠폰 선물은 APP,SMS,카카오톡으로 전송하실 수 있습니다.</li>
+                            <li>선물한 쿠폰은 선물 취소하실 수 있습니다.</li>
+                            <li>선물 받은 쿠폰은 멤버십 회원만 사용 가능합니다.</li>
+                            <li>선물 받은 쿠폰은 직접 쿠폰을 등록하셔야 사용 가능 합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
+<footer></footer>
+</body>
+</html>

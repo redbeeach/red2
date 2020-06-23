@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOWNCATRECORDS</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="CSS/custom.info.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="JS/jquery-ui.min.css">
+    <script src="JS/jquery-ui.js"></script>
+    <!--    <script src="../JS/jquery.ui.touch-punch.js">  </script>-->
+</head>
+
+<body>
+    <wrap class="wrap">
+        <header class="header">
+            <header class="header_top">
+
+                <div class="headermenu_mobile">
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <ul class="sidesct">
+                            <li><a href="about.html"> ABOUT</a></li>
+                            <li class="sidesct2">STORE
+                                <ul class="sidesct2_1">
+                                    <li> <a href="store.html">
+                                            ALL
+                                        </a></li>
+                                    <li> <a href="store_sub_cassettetape.html">
+                                            CASSETTE TAPE
+                                        </a></li>
+                                    <li><a href="store_sub_cassetape%20player.html"> PLAYER </a></li>
+                                    <li><a href="store_sub_goods.html"> GOODS/ANOTHER</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="newarrival.html"> NEW ARRIVAL </a></li>
+                            <li><a href="custom.html"> CUSTOM </a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <logo class="logo">
+                    <a href="index.html"> <img src="IMG/LOGO/DOWNCAT%20LOGO.gif" alt=""></a>
+                    <span class="maintitletxt"><a href="index.html"> DOWNCAT RECORDS</a></span>
+                </logo>
+                <ul class="right_top">
+                    <div class="right_top_login">
+
+                        <li class="loginbutton"> <a href="#">LOGIN </a> </li>
+
+
+                        <li class="baskett"><img src="IMG/basket.png" alt="tapeicon" class="basket"></li>
+
+                    </div>
+                    <form class="search">
+                        <p>SEARCH</p>
+                        <input type="search" class="right_top_search">
+                    </form>
+                </ul>
+            </header>
+            <div class="main_nav_box">
+
+                <ul class="main_nav">
+
+                    <li><a href="about.html"> ABOUT </a></li>
+
+
+                    <li> <a href="newarrival.html"> NEW ARRIVAL </a></li>
+
+
+                    <li> <a href="store.html">STORE </a></li>
+
+
+                    <li> <a href="custom.html">CUSTOM </a></li>
+
+
+                </ul>
+                <div class="subsct1_main_custom">
+                    <div class="sub_nav_bakgrnd">
+                        BCKGRND
+                        <div class="themes_switch">
+                            <button class="graphic_button is-_w"></button>
+                            <button class="graphic_button is-_b"></button>
+                            <button class="graphic_button is-_g"></button>
+                            <button class="graphic_button is-_o"></button>
+                            <button class="graphic_button is-_y"></button>
+
+
+
+                        </div>
+                    </div>
+                    <div class="sub_nav_bgm">
+                        MUSIC
+                        <input type="checkbox" id="chk" class="chk" name="b1">
+
+                        <label for="chk">
+
+
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="loginpos">
+            <div class="loginwarp">
+                <div class="emtt"></div>
+                <div class="inner_login">
+                    <span class="logintext">LOGIN</span>
+                    <span class="logintext2">JOIN</span>
+                    <img src="IMG/x_icon2.PNG" alt="" class="xicon">
+                    <div class="login_tistory">
+
+                        <form method="post" id="authForm" action="https://www.tistory.com/auth/login">
+                            <input type="hidden" name="redirectUrl" value="https://blogpack.tistory.com/manage">
+                            <fieldset>
+                                <legend class="screen_out">로그인 정보 입력폼</legend>
+                                <div class="box_login">
+                                    <p>E-MAIL</p>
+                                    <p class="p2">YOUR E-MAIL</p>
+                                    <div class="inp_text">
+
+                                        <label for="loginId" class="screen_out">아이디</label>
+                                        <input type="email" id="loginId" name="loginId">
+                                    </div>
+                                    <p>PASSWORD</p>
+                                    <p class="p2">YOUR PASSWORD</p>
+                                    <div class="inp_text">
+
+                                        <label for="loginPw" class="screen_out">비밀번호</label>
+                                        <input type="password" id="loginPw" name="password">
+                                    </div>
+                                </div>
+
+                                <div class="login_append">
+
+
+
+
+                                    <span class="txt_lab">JOIN</span>
+
+
+                                    <!--
+                            <span class="txt_find">
+                           ID  PASSWORD FIND
+                            </span>
+-->
+                                </div>
+                            </fieldset>
+                        </form>
+
+
+                        <div class="sectionlogin">
+
+                            <div class="asdasd">
+                                <p>다음내용에 동의 합니다</p>
+                                <input type="checkbox" id="ck3"> <label for="ck3"><span>홈페이지 이용약관 동의 (필수)</span></label>
+                            </div>
+
+                            <form>
+                                <textarea placeholder="" readonly rows="5">특별한 행사와 소식을 이메일로 보내기 위해 개인정보 수집, 이용 및 보관.
+
+개인정보에 관해서는 한국 DOWNCAT RECORDS가 책임을 집니다.
+
+수집하는 개인정보 항목 </textarea>
+                                <div class="last"><input type="checkbox" id="ck1"><label for="ck1"> 개인정보 수집 및 이용동의 (필수)</label></div>
+                                <textarea placeholder="" readonly rows="5">개인정보 수집, 이용 및 보관에 동의
+
+수집하는 개인정보 항목.
+
+성명(국문 및 영문), 이메일 주소,휴대전화번호,우편번호
+
+(청구서/배송),사용자 이름과 비밀번호,생년월일</textarea>
+                            </form>
+
+
+
+
+                            <form>
+
+                                <div class="loginfooter"> <input type="checkbox" id="ck2"><label for="ck2"><span> E-MAIL 및 SMS 광고성 정보 수신동의 (선택)</span></label></div>
+
+                            </form>
+                        </div>
+                        <form>
+                            <button type="submit" class="btn_login" disabled>LOGIN </button>
+                            <button type="submit" class="btn_login2" disabled>JOIN </button>
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section1">
+            <p class="about">CUSTOM</p>
+            <!--
+            <div class="textboxpo">
+                <div class="textbox">
+                    <video autoplay loop muted width="100%" id="myvideo">
+                        <source src="../IMG/custom/Untitled.mp4" type="video/mp4" /> </video>
+
+                    <div class="ani1"><span class="sp1">나만의 개성 : </span><span class="sp2">My personality</span></div>
+                    <div class="ani2"><span class="sp3">나만의 디자인 : </span><span class="sp4">Your own design</span></div>
+                    <div class="ani3"><span class="sp6">나만의 카세트 테이프 : </span><span class="sp7">My own cassette tape</span></div>
+
+                </div>
+                </div>
+            </div>
+-->
+
+            <form action="">
+                <div class="tools">
+                    <span>CUSTOM 1.0v</span><br>
+                    <label for="font-picker-size">Font size</label>
+                    <input type="range" id="font-picker-size" value="125" min="80" max="200" class="step02">
+                   
+                    <label for="color-picker-primary">Tape color</label>
+                    <input type="color" id="color-picker-primary" value="#ffffff" class="step03">
+                    <label for="color-picker-contrast">Font color</label>
+                    <input type="color" id="color-picker-contrast" value="#000000" class="step04">
+
+                    <div style=" width:279px; height:20px; " class="emty">
+                        <label for="color-picker-contrast"> Input image </label>
+                        <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" class="step05" /><br>
+                        <!--                        <label for="color-picker-contrast"> Create text box </label><br>-->
+                        <!--
+                        <div style="margin-top: 6.5px;">
+                        <input type="text" name="txtCount" placeholder="숫자1입력후 생성클릭" id="i" />
+
+                        <input type="button" value="  생성  " onclick="CreateTextBox();" />
+                        <input type="button" value="  삭제  " onclick="ClearTextBox();" />
+                        </div>
+-->
+                    </div>
+                    <div class="reset2">
+                        <input type="reset" value="Reset" class="reset">
+                    </div>
+
+                </div>
+
+            </form>
+            <div class="template">
+                <div class="center">
+                    <div class="mainposion">
+
+                        <img src="IMG/custom/sect5imgmain.gif" alt="" class="img primary--fill ">
+
+                        <img class="imgprew" id="uploadPreview" />
+                        <img src="IMG/custom/sect5imgmain.png" alt="" class="img primary--fill subimg2">
+                        <div id="draggable" class="ui-widget-content">
+                            <div id="txtPanel"></div>
+                            <input type="text" autofocus placeholder="INPUT TEXT" id="draggable2" class="step01">
+                            
+                            
+                        </div>
+                        <div id="draggable3" class="ui-widget-content3">
+                            <div id="txtPane2"></div>
+                        </div>
+
+                        <div id="draggable4" class="ui-widget-content4">
+                            <div id="txtPane3"></div>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tbody id="input1"></tbody>
+                        </table>
+                        <div class="sososo"></div>
+                    </div>
+
+                </div>
+
+            <div class="textbox1234">
+            <div class="introdus">
+                <p class="step0">Let's Making The Cassette Tape<br><br>----INPUT TEXT를 클릭하여 text를 입력해 보세요!----</p><br>
+                  <script>
+                            $(function(){
+                                $('.step01').click(function(){
+                                    $('.step0').addClass('topup').removeClass('step0');
+                                    $('.step1').addClass('rightshow');
+                                });
+                            });
+                            </script>
+                           <div class="introdus2"> 
+                <p class="step1">step2. font size를 선택해 보세요</p>
+                <p class="step2">step3. tape color를 선택해 보세요</p>
+                <p class="step3">step4. font color를 선택해 보세요</p>
+                <p class="step4">step5. 나만의 이미지를 넣어보세요 </p>
+                <p class="step5">Congratulations! Thank you for using it.</p>
+                </div>
+            </div>
+
+</div>
+            </div>
+            
+    
+        </div>
+
+        <footer class="footer">
+            <div class="footermain">
+                <ul>
+                    <li><a href=""> INSTAGRAM</a></li>
+                    <li><a href="">YOUTUBE</a></li>
+                    <li><a href=""> FACEBOOK</a></li>
+                    <div class="img5"> <img src="IMG/footer/icon.gif" alt=""></div>
+                </ul>
+
+
+            </div>
+            <span>DOWNCAT RECORDS</span>
+            <address>
+                <span> KOREA SEOUL,VIA M.PONZA N 4,10121,KOREA,SEOUL,VAT N IT07725270016,<br>
+                    REA- TO915864,PH +8201030739118 DOWNCATRECORDS@GMAIL.COM </span>
+
+            </address>
+        </footer>
+
+
+
+    </wrap>
+
+    <script>
+         $(function(){
+                        $('.step02').click(function(){
+                            $('.step1').addClass('lefthide');
+                            $('.step2').addClass('rightshow');
+                        });
+                     $('.step03').click(function(){
+                
+                            $('.step2').addClass('lefthide'); $('.step3').addClass('rightshow');
+                        }); 
+             $('.step04').click(function(){
+                
+                          $('.step3').addClass('lefthide');  $('.step4').addClass('rightshow');
+                        });
+             $('.step05').click(function(){
+                
+                         $('.step4').addClass('lefthide'); $('.step5').addClass('rightshow');
+                        });
+             
+             
+                    });
+        
+        
+        
+        
+        
+        
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('.header_top .logo img').outerHeight();
+
+        $(window).scroll(function(event) {
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            if (Math.abs(lastScrollTop - st) <= delta) return;
+
+            if (st > lastScrollTop && st > navbarHeight) {
+                $('.header_top .logo img,.header .main_nav_box').removeClass('nav-down').addClass('nav-up');
+            } else {
+                if (st + $(window).height() < $(document).height()) {
+                    $('.header_top .logo img,.header .main_nav_box'
+                     ).removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            lastScrollTop = st;
+        }
+
+
+
+        $(document).ready(function() {
+
+
+            $('.sidesct2_1').slideUp();
+            $('.sidesct2').click(function() {
+                $('.sidesct2_1').slideToggle(300);
+            });
+
+        });
+
+        //        
+        //        //
+        //                $(document).ready(function() {
+        //                        $('.catnip').hide();
+        //                    
+        //        
+        //                });
+
+
+        $(document).ready(function() {
+            $('.catnip').hide();
+            $('.sction1 .downcatcontent img').click(function() {
+
+                $('.catnip').slideDown(300);
+                return false;
+            });
+        });
+
+        $(document).ready(function() {
+            $('.catnipwarp .xicon').click(function() {
+
+                $('.catnip').slideUp(300);
+
+            });
+
+        });
+
+
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_w').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text').css({
+                    'border-color': 'black',
+                    'background': '#fff'
+
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_b').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos').css({
+                    'border-color': '#1327f2',
+                    'background': '#3164f7'
+
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_g').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos').css({
+                    'border-color': '#1f6328',
+                    'background': '#4f9e67'
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_o').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5, .footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos').css({
+                    'border-color': '#ff3c1b',
+                    'background': '#ff8645'
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_y').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img5>img,.img5, .footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.section1 #draggable .background,#pushpin,.tools,.tools span,#draggable2,.tools label,.tools input,.tools div,.center .subimg2,#draggable4,.center .subimg2,.mainposion,.imgprew,.img,.sososo,.ui-widget-content,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos').css({
+                    'border-color': 'black',
+                    'background': '#e1ff2a'
+                });
+            });
+        });
+        $(function() {
+            $('.subimgbox .img1').click(function() {
+                $('.section1 .sub_sct1img img').attr('src', 'IMG/subinfo/biggomain1-1.png');
+            });
+            $('.subimgbox .img2').click(function() {
+                $('.section1 .sub_sct1img img').attr('src', 'IMG/newarrival/biggomain1.gif');
+            });
+            $('.subimgbox .img3').click(function() {
+                $('.section1 .sub_sct1img img').attr('src', 'IMG/go1.jpg');
+            });
+        });
+        $(function() {
+            $(".section1 #draggable,#pushpin").draggable();
+        });
+        $(document).ready(function() {
+
+            $('.loginpos').hide();
+            $('.right_top_login .loginbutton').click(function() {
+                $('.loginpos').show();
+
+            });
+
+            //            확인사항.
+            $('.inner_login .xicon, .loginwarp::before').click(function() {
+                $('.loginpos').hide();
+            });
+        });
+
+        $(document).ready(function() {
+            $('.sectionlogin').hide();
+            $('.btn_login2').hide();
+            $('.btn_login').show();
+            $('.login_append .txt_lab,.txt_find').click(function() {
+                $('.sectionlogin').slideToggle(),
+                    $('.box_login p,.logintext').toggleClass("move"),
+                    $('.box_login .p2,.logintext2').toggleClass("move2");
+                $('.btn_login2').toggle(),
+                    $('.btn_login').toggle();
+            });
+        });
+
+        var elem = document.getElementById("myvideo");
+
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+        }
+        $(function() {
+            $('.section1 .tools .reset').click(function() {
+                setThemeVar('font-size', 125, '%'),
+                    setThemeVar('contrast', 'black'),
+                    setThemeVar('primary', '#fff'),
+                    $('.imgprew').removeAttr('src');
+
+
+
+                //                setThemeVar('font-size', 125, '%')
+            });
+        });
+
+        var primaryColorPicker = document.getElementById('color-picker-primary');
+        var contrastColorPicker = document.getElementById('color-picker-contrast');
+        var fontSizePicker = document.getElementById('font-picker-size');
+
+        function setThemeVar(name, value, unit) {
+            var rootStyles = document.styleSheets[0].cssRules[0].style;
+            rootStyles.setProperty('--theme-' + name, value + (unit || ''));
+        }
+
+        primaryColorPicker.addEventListener('input', function(e) {
+            setThemeVar('primary', e.target.value);
+        });
+
+        contrastColorPicker.addEventListener('input', function(e) {
+            setThemeVar('contrast', e.target.value);
+        });
+
+        fontSizePicker.addEventListener('input', function(e) {
+            setThemeVar('font-size', e.target.value, '%');
+        });
+
+        setThemeVar('primary', primaryColorPicker.value);
+        setThemeVar('contrast', contrastColorPicker.value);
+        setThemeVar('font-size', fontSizePicker.value, '%');
+
+
+        var primaryColorPicker = document.getElementById('color-picker-primary');
+        var contrastColorPicker = document.getElementById('color-picker-contrast');
+        var fontSizePicker = document.getElementById('font-picker-size');
+
+        function setThemeVar(name, value, unit) {
+            var rootStyles = document.styleSheets[0].cssRules[0].style;
+            rootStyles.setProperty('--theme-' + name, value + (unit || ''));
+        }
+
+        primaryColorPicker.addEventListener('input', function(e) {
+            setThemeVar('primary', e.target.value);
+        });
+
+        contrastColorPicker.addEventListener('input', function(e) {
+            setThemeVar('contrast', e.target.value);
+        });
+
+        fontSizePicker.addEventListener('input', function(e) {
+            setThemeVar('font-size', e.target.value, '%');
+        });
+
+        setThemeVar('primary', primaryColorPicker.value);
+        setThemeVar('contrast', contrastColorPicker.value);
+        setThemeVar('font-size', fontSizePicker.value, '%');
+
+
+
+        function PreviewImage() {
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                document.getElementById("uploadPreview").src = oFREvent.target.result;
+            };
+        };
+
+        $(function() {
+            $("#draggable").draggable();
+        });
+        $(function() {
+            $("#draggable3").draggable();
+        });
+        $(function() {
+            $("#draggable4").draggable();
+        });
+        $(function() {
+            $(".tools").draggable();
+        });
+
+        function CreateTextBox() {
+            var count = document.all.txtCount.value;
+
+            //숫자인지 아닌지를 판단 (isNaN : is not a Number의 약자)
+            //숫자가 들어가면 false를 반환
+            if (!isNaN(count)) //숫자를 입력한다면...
+            {
+                //개체를 생성할때마다 누적시키려면 아래의 코드를 주석처리 하세요.
+                document.getElementById("txtPane2").innerHTML = "";
+                document.getElementById("txtPane3").innerHTML = "";
+
+
+                //자식으로 넣을 태그를 만듭니다. body에 <div></div>사이에 들어갑니다.
+                for (i = 0; i < count; i++) {
+                    var txt = "<input type='text'  autofocus placeholder='INPUT TEXT' id='draggable3' onfocus='ChangeColor()' onblur='ChangeColor()'/>";
+                    document.getElementById("txtPane2").innerHTML += txt;
+                    var txt2 = "<input type='text'  autofocus placeholder='INPUT TEXT' id='draggable4' onfocus='ChangeColor()' onblur='ChangeColor()'/>";
+                    document.getElementById("txtPane3").innerHTML += txt2;
+                }
+            }
+        }
+
+        function ClearTextBox() {
+            document.getElementById("txtPane2").innerHTML = "";
+            document.getElementById("txtPane3").innerHTML = "";
+        }
+
+        function ChangeColor() {
+            if (event.type == "focus")
+                event.srcElement.style.backgroundColor = "#FFFF00";
+            else if (event.type == "blur")
+                event.srcElement.style.backgroundColor = "transparent";
+        }
+
+        $(function() {
+
+
+            $('#draggable2').focusin(function() {
+                $('.ui-widget-content').css('background-color', 'black');
+
+                $('.ui-widget-content').attr('data-before', 'drag');
+
+            });
+            $('#draggable2').blur(function() {
+                $('.ui-widget-content').css('background-color', 'transparent');
+                $('.ui-widget-content').attr('data-before', '');
+
+
+            });
+
+        });
+
+        $(window).resize(function() {
+
+            var width_size = window.outerWidth;
+
+
+            if (width_size <= 767) {
+                $('#draggable2').focusin(function() {
+                    $('.ui-widget-content').css('background-color', 'transparent');
+
+                    $('.ui-widget-content').attr('data-before', 'drag');
+
+                });
+            } else {
+                $('#draggable2').focusin(function() {
+                    $('.ui-widget-content').css('background-color', 'black');
+
+                    $('.ui-widget-content').attr('data-before', 'drag');
+
+                });
+
+            }
+        })
+
+
+
+
+
+
+        function fileReset() {
+            var fileopen = document.getElementById("imgprew"),
+                clone = fileopen.cloneNode(true);
+            fileopen.parentNode.replaceChild(clone, fileopen);
+        }
+        $(document).ready(function() {
+
+            $('.loginpos').hide();
+            $('.right_top_login .loginbutton').click(function() {
+                $('.loginpos').show();
+
+            });
+            $('.inner_login .xicon, .loginwarp::before').click(function() {
+                $('.loginpos').hide();
+            });
+        });
+
+
+        $(function() {
+
+            $('.emtt').click(function() {
+                $('.loginpos').hide();
+            })
+
+        });
+
+    </script>
+
+</body>
+
+</html>

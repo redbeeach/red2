@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>개요</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        $(document).ready(function(){
+           $("#header").load("header.html");
+           $("#ft").load("footerbase.html");            
+        });
+    </script>
+    <style>
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+        body {font-family: 'NanumSquare';}
+        html{overflow-x: hidden}
+        #bg {
+            width: 100vw;
+            height: 340px;
+            background: url(sub-page/LBG.png)no-repeat;
+            background-position:top;
+            background-size: cover
+        }
+        .side_nav{
+            position: relative;
+            top: 50px;
+            left: 5vw;
+        }
+        .side_nav h3{
+            font-size: 20px;
+            border-bottom: 3px solid ;
+            width: 200px
+        }
+        .side_nav ul li {
+            padding: 8px 15px;
+            width: 200px
+        }
+        .side_nav ul li img {
+            width: 35px;
+            position: absolute;
+            left: 165px;
+            top: 31px;
+        }
+        .side_nav > ul > .on {            
+            background-color: #d9e6ff;
+        }       
+        .content-box {
+            position: relative;
+            top: -75px;
+            max-width:900px;
+            margin: 0 auto
+        }
+        .content-box h3 {
+            font-size: 25px;
+            padding-bottom: 50px;
+        }
+        .content-box > h3 > span {
+            color:  #427dbf;
+            font-size: 30px;
+            display: inline-block;
+            margin: 10px
+        }
+        .content-box img {
+            width: 100%            
+        }
+        .content-box span.cl {
+            color:#6f91f7;
+            display: block;
+            padding: 10px;
+            font-size: 18px;
+            width: 700px;
+            text-align: center;
+            margin: 30px 0 0 5vw;
+        }
+        .content-box > .point{
+            font-weight: bold;
+                padding: 10px
+        }
+        .content-box > p:nth-child(2n){
+            padding:0 0 15px 20px;
+            white-space: pre-wrap
+        }
+        @media all and (min-width:1401px) {
+            .content-box {  margin-left: 23vw;  }
+        }
+        @media all and (min-width:1105px) and (max-width:1400px){
+            .content-box { margin-left: 25vw; width: 70vw}
+        }
+        @media all and (min-width:960px) and (max-width:1104px){
+            .content-box {margin-left: 27vw; width: 65vw;}
+           
+            .content-box > span.cl {width: 60vw; margin-left:2vw;}
+        }
+        @media all and (min-width:780px) and (max-width:959px){
+            .side_nav {left: 40vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+                margin-left: -35px; width: 200px;padding-top: 5px;
+            }            
+            .side_nav ul {width: 350px;margin-left: -110px}
+            .side_nav ul li {width: 45%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+             .side_nav img {display: none}
+            .side_nav .on{font-weight: bold;}
+             .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -37px;
+            top: 85px
+        }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }            
+            .content-box {top:150px; width: 80%;height: 1200px;}
+            .content-box h3 {text-indent: 100px}
+            .content-box> h3 > span {margin-left: -90px}
+            .content-box > span.cl {width: 70vw; margin-left:2vw;}
+            #ft {top: 200px}
+        }
+        @media all and (min-width:610px) and (max-width:779px){
+            .side_nav {left: 40vw; top: 50px}
+            .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -35px; width: 200px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -110px}
+            .side_nav ul li {width: 45%; float: left; background: none; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px;
+            }
+            .side_nav img {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -37px;
+            top: 85px
+        }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }            
+            .content-box {top:150px; width: 80%;height: 1200px;}
+            .content-box h3 {text-indent: 50px}
+             .content-box> h3 > span {margin-left: -10vw}
+            .content-box > span.cl {width: 70vw; margin-left:2vw;}
+            #ft {top: 200px}
+            .content-box > p:nth-child(2n){
+                white-space:normal
+            }
+        }
+        
+        @media all and (min-width:500px) and (max-width:609px){
+            .side_nav {left: 38vw; top: 20px}
+            .side_nav h3 {font-size: 20px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -33px; width: 180px;padding-top: 5px;
+            }
+            .side_nav ul {width: 350px; _border: 1px solid ;margin-left: -70px}
+            .side_nav ul li {width: 35%; float: left; background: none; text-align: center;margin-right: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+             .side_nav img {display: none}
+            .side_nav .on{font-weight: bold; background:none;}
+             .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -23px;
+            top: 80px
+        }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }            
+            .content-box {top:120px; width: 80%;height: 1000px;}
+            .content-box h3 {text-indent: -30px}
+             .content-box> h3 > span {margin-left: 10vw}
+            .content-box > span.cl {font-size: 16px; width: 70vw; margin-left:2vw;}
+            #ft {top: 200px}
+            .content-box > p{font-size: 14px}
+            .content-box > p:nth-child(2n){
+                white-space:normal
+            }
+        }
+        @media all and (max-width:499px){
+            #bg{background: url(sub-page/LBG.jpg)no-repeat; background-position: -200px -50px; height: 250px
+            }
+            .side_nav {left: 35vw; top: 30px}
+            .side_nav h3 {font-size: 20px; padding-bottom: 10px; border: none}
+            .side_nav h3:after {content: ""; display: block; 
+                border-bottom: 2px solid; margin-left: -33px; width: 180px;padding-top: 5px;
+            }
+            .side_nav ul {width: 300px; _border: 1px solid ;margin-left: -55px}
+            .side_nav ul li {width: 35%; float: left; background: none; text-align: center;margin-right: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+            .side_nav img {display: none}
+            .side_nav .on{font-weight: bold;}
+            .side_nav > ul > .on:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 15px solid #d9e6ff;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            position: absolute;
+            left: -18px;
+            top: 80px
+        }
+            .side_nav > ul > li > a {
+                display: block;
+                -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+            .side_nav > ul > li:hover > a {
+             -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                 -ms-transform: scale(1.1);
+                  -o-transform: scale(1.1);
+                     transform: scale(1.1);  
+            }            
+            .content-box {top:120px; width: 80%;height: 1100px;}
+            .content-box h3 {text-indent: -70px}
+            .content-box> h3 > span {margin-left: 20vw}
+            .content-box > span.cl {font-size: 16px; width: 70vw; margin-left:2vw;}
+            #ft {top: 200px}
+            .content-box > p{font-size: 14px}
+            .content-box > p:nth-child(2n){
+                white-space:pre-line
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="m_header">
+         <div class="m_logo"><a href="#"><img src="main-img/lg.png" alt=""></a></div>
+        <div class="m_btn"><a href="#"><img src="main-img/m_menu.png" alt=""></a></div>
+        <div class="m_login"><a href=""><img src="main-img/mobile-icon.png" alt=""></a></div>
+        <div class="m_nav">
+            <ul>
+                <li><a href="#">킨텍스소개<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="#" target="_blank">개요</a></li>
+                        <li><a href="#" target="_blank">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">행사안내<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="#" target="_blank">전체일정</a></li>
+                        <li><a href="#" target="_blank">행사일정</a></li>
+                        <li><a href="#" target="_blank">회의일정</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">시설안내<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="#" target="_blank">시설개요</a></li>
+                        <li><a href="#" target="_blank">전시홀</a></li>
+                        <li><a href="#" target="_blank">회의실</a></li>
+                        <li><a href="#" target="_blank">편의시설</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">임대서비스<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="#" target="_blank">임대관련서식</a></li>
+                        <li><a href="#" target="_blank">임대서비스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객만족센터<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="#" target="_blank">고객의소리</a></li>
+                        <li><a href="#" target="_blank">공지사항</a></li>
+                        <li><a href="#" target="_blank">입찰안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+    </div>
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>킨텍스 소개</h3>
+        <ul>
+            <li class="on"><a href="sub_page1-1.html">개요<img src="main-img/right.png" alt=""></a></li>
+            <li><a href="sub-page1-2.html">오시는 길</a></li>
+        </ul>
+    </div>
+    <div class="content-box"> 
+    <h3><span >KINTEX</span>개요</h3>
+    <img src="sub-page/sub-img.png" alt="킨텍스 사진"> <br>           
+    <span class="cl">KINTEX는 국내 전시 컨벤션 센터의 면적 부족 해소 및 동 산업의 국제화를 위하여, 정부와 지자체가 공동출자하여 설립한 국제 전시·컨벤션 센터 입니다.</span>
+  <br>
+  <br>
+   <p class="point">-아시아 4번째 전시면적 10만㎡ 확보국가로서 대한민국 전시산업의 국제화 달성</p>
+   <p>: 킨텍스는 국내 최대 전시면적(108,566㎡)을 기반으로 국제적 수준의 전시, 컨벤션을
+   유치, 운영함으로서  대한민국 전시산업을 대표하고 있습니다.</p>
+	     
+    <p class="point">-국내 전시·컨벤션 산업의 10만㎡ 대형화 전환점 마련</p>
+	<p>:  킨텍스는 국내 최초 전시화인 '2011 한국산업대전'의 성공적 개최를 시작으로 
+    국내 주요 전시화들의 대형화를 견인해가고 있습니다.</p>
+		
+   <p class="point">-신재생 에너지를 활용한 최첨단 그린 전시장 구현</p>
+   <p>: 킨텍스 전시장은 지열, 햇빛, 빗물 등 신재생 에너지를 활용해 전력 및 난방을 
+   생산하는 시스템으로 설계되어 연간 10억원이 넘는 비용 절감 및 4천톤 이상의 
+   온실가스 배출량 감소 효과를 거두고 있는 친환경 그린 전시·컨벤션 센터입니다.</p>
+    </div>
+    <div id="ft"></div>
+</body>
+</html>

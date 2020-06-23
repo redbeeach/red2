@@ -1,0 +1,382 @@
+/* FONTS
+=========================== */
+@font-face {
+    font-family: 'assc';
+    src: url('/fonts/assc.ttf');
+}
+
+/* GENERAL
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'assc';
+}
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'assc';
+     background: #212226;
+    color: #fff;
+    /*  overflow: hidden;*/
+}
+
+ul {
+    list-style: none;
+}
+
+/* NAVBAR
+=========================== */
+/*
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+}
+
+.navbar .media li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.navbar .media li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar .menu i {
+    padding-right: 20px;
+}
+*/
+
+
+/* BG TEXT
+=========================== */
+.bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .3;
+}
+
+.bg-text h1 {
+    font-family: "assc";
+    font-size: 500px;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 3px #444;
+    text-transform: uppercase;
+}
+.text_box{
+    font-size: 55px;
+    opacity: .6;
+    padding: 15px;
+    line-height: 140px;
+        
+}
+.text_box p{
+    color: transparent;
+    -webkit-text-stroke: 3px #444;
+}
+/*main img*/
+
+.herocontainer {
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.main-message {
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 20rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(20%);
+    animation: left-in .5s ease-in forwards;
+    animation-delay: 0s;
+}
+
+.main-message h3 {
+    font-size: 1.6rem;
+}
+
+.main-message h1 {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.main-message p {
+    text-transform: lowercase;
+}
+
+.btn {
+background: #fff;
+    padding: 1rem 2.5rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+
+}
+
+.btn::before {
+    background: #0c2aa7;
+    color: #fff;
+    opacity: .1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: all .6s ease;
+
+}
+
+.btn1::before {
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%)rotate(45deg);
+}
+
+.btn1:hover::before {
+    height: 380%;
+    z-index: 2;
+}
+.container1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    
+    transform: translateY(-50%);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mainimg {
+    width: 1800px;
+    height: 500px;
+}
+
+.main-img {
+    background-image: url(/Jan-Vertonghen-UCL1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.main-text {
+    position: absolute;
+    top: 200px;
+    left: -250px;
+    z-index: 1;
+    width: 240px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.main-text .h4 {
+    color: #fff;
+    font-size: 60px;
+    font-family: "assc";
+    position: relative;
+}
+
+.main-text .h4 span {
+    position: absolute;
+    left: 10px;
+}
+
+
+@media screen and (max-width:760px) {
+    .nav-list {
+        width: 30rem;
+
+    }
+
+}
+
+@media screen and (min-width:850px) {
+    .band {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+  h4 {
+      text-align: center;
+      font-size: 30px;
+      padding: 20px;
+  }
+
+  h5 {
+      position: absolute;
+      top: 14rem;
+      left: 1rem;
+      font-size: 10px;
+      font-weight: 500;
+      color: red;
+  }
+
+  h6 {
+      position: absolute;
+      top: 15rem;
+      left: 1rem;
+      font-size: 30px;
+      color: #fff;
+      text-align: left;
+  }
+
+  .container {
+      position: relative;
+      top: 50rem;
+      text-align: left;
+      width: 1280px;
+      margin: 70px auto 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+.container2{
+      position: relative;
+      top: 0rem;
+      text-align: left;
+      width: 1280px;
+      margin: 70px auto 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+}
+  .container .box {
+      position: relative;
+      width: 232px;
+      height: 320px;
+      background: #fff;
+      margin: 10px;
+      box-sizing: border-box;
+
+  }
+
+  .container .box .imgbox {
+      position: relative;
+      overflow: hidden;
+      height: 320px;
+      background: linear-gradient(to right bottom, #141c2b, #234687);
+
+  }
+
+  .container .box .imgbox img {
+      max-width: 100%;
+      transition: transform 2s;
+      height: 320px;
+
+
+  }
+
+  .container .box:hover .imgbox img {
+      transform: scale(1.2);
+  }
+
+  .container .box .details {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, .8);
+      transform: scaleY(0);
+      transition: transform .5s;
+  }
+
+  .container .box:hover .details {
+      transform: scaleY(1);
+  }
+
+  .container .box .details .content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 10px;
+      color: #fff;
+  }
+
+  .content span {
+      display: block;
+
+  }
+
+  .container .box .details .content h2 {
+      margin: 0;
+      padding: 0;
+      padding-left: 50px;
+      font-size: 20px;
+      color: #bababb;
+      display: inline-block;
+  }
+
+  .btn4 {
+      display: inline-block;
+
+      vertical-align: top;
+
+  }
+
+  .container .box .details .content p {
+      margin: 10px 0 0;
+      padding: 10px;
+      text-align: center;
+      display: inline-block;
+      font-size: 10px;
+      padding-left: 1px;
+
+  }
+
+  .back {
+
+      margin: 70px auto 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .container button {
+
+      font-size: 5px;
+      padding: 8px;
+      background-color: #0d123c;
+      color: #fff;
+      margin: 0 .2rem;
+      border: none;
+  }
+    /*footerfooterfooterfooterfooter*/
+    /*footerfooterfooterfooterfooter*/
+    /*footerfooterfooterfooterfooter*/
+
+
+
+   
+
+
+
+
+
+
+

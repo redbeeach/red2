@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <title>NEW ARRUVAL</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/jquery-3.3.1.min.js"></script>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/newarrival.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script src="JS/WOW-master/WOW-master/dist/wow.min.js"></script>
+<link rel="stylesheet" href="JS/animate.css-master/animate.css-master/animate.min.css">
+
+</head>
+ 
+<body>
+    <wrap class="wrap">
+        <header class="header">
+            <header class="header_top">
+
+                <div class="headermenu_mobile">
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <ul class="sidesct">
+                            <li><a href="about.html"> ABOUT</a></li>
+                            <li class="sidesct2">STORE
+                                <ul class="sidesct2_1">
+                                   
+                                   
+                                    <li><a href="store.html">
+                                        ALL
+                                    </a></li> 
+                                   
+                                    <li><a href="store_sub_cassettetape.html">
+                                        CASSETTE TAPE
+                                    </a></li>
+                                    <li><a href="store_sub_cassetape%20player.html"> PLAYER </a></li>
+                                    <li><a href="store_sub_goods.html"> GOODS/ANOTHER</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="newarrival.html"> NEW ARRIVAL </a></li>
+                            <li><a href="custom.html"> CUSTOM </a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <logo class="logo">
+                    <a href="index.html"> <img src="IMG/LOGO/DOWNCAT%20LOGO.gif" alt=""></a>
+                    <span class="maintitletxt"><a href="index.html"> DOWNCAT RECORDS</a></span>
+                </logo>
+                <ul class="right_top">
+                    <div class="right_top_login">
+
+                        <li class="loginbutton"> <a href="#">LOGIN </a> </li>
+
+
+                        <li class="baskett"><img src="IMG/basket.png" alt="tapeicon" class="basket"></li>
+
+                    </div>
+                    <form class="search">
+                        <p>SEARCH</p>
+                        <input type="search" class="right_top_search">
+                    </form>
+                </ul>
+            </header>
+            <div class="main_nav_box">
+
+                <ul class="main_nav">
+
+                    <li><a href="about.html"> ABOUT </a></li>
+
+
+                    <li> <a href="newarrival.html"> NEW ARRIVAL </a></li>
+
+
+                    <li> <a href="store.html">STORE </a></li>
+
+
+                    <li> <a href="custom.html">CUSTOM </a></li>
+
+
+                </ul>
+                <div class="subsct1_main_custom">
+                    <div class="sub_nav_bakgrnd">
+                        BCKGRND
+                        <div class="themes_switch">
+                            <button class="graphic_button is-_w"></button>
+                            <button class="graphic_button is-_b"></button>
+                            <button class="graphic_button is-_g"></button>
+                            <button class="graphic_button is-_o"></button>
+                            <button class="graphic_button is-_y"></button>
+
+
+
+                        </div>
+                    </div>
+                    <div class="sub_nav_bgm">
+                        MUSIC
+                        <input type="checkbox" id="chk" class="chk" name="b1">
+                        <!--                onchange="myfunction(this)"-->
+                        <label for="chk">
+
+
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="loginpos">
+        <div class="loginwarp">
+           <div class="emtt"></div>
+            <div class="inner_login">
+                <span class="logintext">LOGIN</span>
+                <span class="logintext2">JOIN</span>
+                <img src="IMG/x_icon2.PNG" alt="" class="xicon">
+                <div class="login_tistory">
+
+                    <form method="post" id="authForm" action="https://www.tistory.com/auth/login">
+                        <input type="hidden" name="redirectUrl" value="https://blogpack.tistory.com/manage">
+                        <fieldset>
+                            <legend class="screen_out">로그인 정보 입력폼</legend>
+                            <div class="box_login">
+                                <p>E-MAIL</p>
+                                <p class="p2">YOUR E-MAIL</p>
+                                <div class="inp_text">
+
+                                    <label for="loginId" class="screen_out">아이디</label>
+                                    <input type="email" id="loginId" name="loginId">
+                                </div>
+                                <p>PASSWORD</p>
+                                <p class="p2">YOUR PASSWORD</p>
+                                <div class="inp_text">
+
+                                    <label for="loginPw" class="screen_out">비밀번호</label>
+                                    <input type="password" id="loginPw" name="password">
+                                </div>
+                            </div>
+
+                            <div class="login_append">
+
+
+
+
+                                <span class="txt_lab">JOIN</span>
+
+
+                                <!--
+                            <span class="txt_find">
+                           ID  PASSWORD FIND
+                            </span>
+-->
+                            </div>
+                        </fieldset>
+                    </form>
+
+
+                    <div class="sectionlogin">
+
+                        <div class="asdasd">
+                            <p>다음내용에 동의 합니다</p>
+                            <input type="checkbox" id="ck3"> <label for="ck3"><span>홈페이지 이용약관 동의 (필수)</span></label>
+                        </div>
+
+                        <form>
+                            <textarea placeholder="" readonly rows="5">특별한 행사와 소식을 이메일로 보내기 위해 개인정보 수집, 이용 및 보관.
+
+개인정보에 관해서는 한국 DOWNCAT RECORDS가 책임을 집니다.
+
+수집하는 개인정보 항목 </textarea>
+                            <div class="last"><input type="checkbox" id="ck1"><label for="ck1"> 개인정보 수집 및 이용동의 (필수)</label></div>
+                            <textarea placeholder="" readonly rows="5">개인정보 수집, 이용 및 보관에 동의
+
+수집하는 개인정보 항목.
+
+성명(국문 및 영문), 이메일 주소,휴대전화번호,우편번호
+
+(청구서/배송),사용자 이름과 비밀번호,생년월일</textarea>
+                        </form>
+
+
+
+
+                        <form>
+
+                            <div class="loginfooter"> <input type="checkbox" id="ck2"><label for="ck2"><span> E-MAIL 및 SMS 광고성 정보 수신동의 (선택)</span></label></div>
+
+                        </form>
+                    </div>
+                    <form>
+                        <button type="submit" class="btn_login" disabled>LOGIN </button>
+                        <button type="submit" class="btn_login2" disabled>JOIN </button>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="logisdi">
+            
+        </div>
+        </div>
+        <section class="sction1">
+          <a href="newarrival.html">  <p class="about">NEW ARRIVAL</p></a>
+            <div class="sct1_sidemenu">
+
+                <div class="sub_sct1img">
+                 <a href="sub.info.html">   <img src="IMG/go1.jpg" alt=""></a>
+                </div>
+                <div class="line"></div>
+                <div class="subside_txtbox">
+                    <div class="sub_sct1subtitle_box">
+                        <h1>GOLD BROWN</h1>
+                        <p> 밝게 빛나는 금색과 깊고 짙은 갈색. 이 두개의 색이 합해진 [Goldbrown]은<br>
+                            이 앨범을 하나로 관통하는 새로운 색이다.<br>
+                            두 개의 주제를 이루는 각각의 곡들은 커버의 콜라주처럼 무심하게 어우러진다.<br>
+                            [Goldbrown]은 60-70년대 재즈와 70-80년대의 소울, 펑크, 블루스 등<br>
+                            다양한 곡들을 샘플링 기법을 기반으로 담아냈다.<br>
+                            첫 트랙부터 마지막 트랙까지의 큰 흐름은 물처럼 자연스레 흘러가 듣고있다 보면<br> 어느새 앨범의 끝에 다다랐음을 깨달을 것이다.<br>
+                            [Goldbrown]은 Gohots Guwen의 모든 영감에 대한 존경이며<br>
+                            다음 단계로 도약하는 포부이다.</p>
+
+                    </div>
+                    <ul class="sct1subtitle_box2">
+                        <a href="sub.info.html">
+                            <li>NEW</li>
+                            <li>gohots guwen - gold brown</li>
+                            <li>15,000 원</li>
+                        </a> 
+                    </ul>
+                    <div class="subimgbox">
+                        <img src="IMG/newarrival/gomain1.gif" alt="" class="img1">
+                        <img src="IMG/newarrival/gomain2.gif" alt="" class="img2">
+                        <img src="IMG/go1.jpg" alt="" class="img3">
+
+                    </div>
+                </div>
+            </div>
+            <span class="wave"></span>
+        </section>
+        <section class="section2">
+
+            <div class="sec2imgbox">
+                <img class="lef" src="IMG/newarrival/lef.png" alt="">
+                <div class="bottom"></div>
+                <div class="bottomright"></div>
+                <img class="mainimg" src="IMG/newarrival/mainimg.jpg" alt="">
+                <img class="cover" src="IMG/newarrival/cover.png" alt="">
+                <img class="backside" src="IMG/newarrival/backside.png" alt="">
+                <div class="egle"></div>
+                <div class="bottomhand"></div>
+                <div class="bottomelement"></div>
+                <div class="people"></div>
+
+            </div>
+
+
+        </section>
+        <section class="section3">
+
+            <div class="sct3_sidemenu">
+                <div class="subside_txtbox3">
+                    <div class="sub_sct3subtitle_box3">
+                        <div class="titmain3">
+                            <div class="ssp1"> <span>COVER<br>DESIGN</span></div>
+                        <div class="ssp2">  <span>N</span></div>
+                            <div class="ssp3">  <span>TRACK<br>LIST</span></div>
+                        </div>
+                        <p> 무심한듯 전체를 아우르는 콜라주 소스들의 COVER는<br>
+                            이 앨범을 하나로 관통하는 하나의 색이다.<br>
+                            gohots guwen이 표현하는 음악에 색체를 불어넣어<br>
+                            토속적이고 로우파이한 [Goldbrown]에 COVER를 완성시켰다.
+                        </p>
+                    </div>
+
+                    <ul class="sct1subtitle_box3">
+                        <a href="">
+
+                            <li>Design by 4kapas</li>
+
+                        </a>
+                    </ul>
+
+                </div>
+                <div class="line2"></div>
+                <div class="sub_sct3img">
+                    <div class="mbutton">
+                        <ul>view button
+                            
+                            <li class="first"></li>
+                            <li class="two"></li>
+                            <li class="three"></li>
+                            <li class="for"></li>
+<!--                            <li class="reset">view</li>-->
+                            <li class="veiw">reset</li>
+                             <div class="downarrow"><span> click</span></div>
+                        </ul>
+                    </div>
+                    <img src="IMG/newarrival/LAYER1.png" alt="" class="l1">
+                    <img src="IMG/newarrival/LAYER2.png" alt="" class="l2">
+                    <img src="IMG/newarrival/LAYER3.png" alt="" class="l3">
+                    <img src="IMG/newarrival/LAYER4.png" alt="" class="l4">
+                    <img src="IMG/newarrival/LAYER5.png" alt="" class="l5">
+
+                    <table class="track_list track_table" id="track_table">
+                        <tbody>
+
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">1.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">typgo</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:17
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <!--
+                               <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">2.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">bornnow</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:38
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+-->
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">2.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">bornnow</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:38
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">3.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">hiiighsteeep</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:44
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">4.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">junglefever</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:03
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">5.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">catbasso</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:35
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">6.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">nothem</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:14
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">7.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">bornnow</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:38
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">8.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">articwinter</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            02:05
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">9.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">jade</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:56
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">10.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">seeking</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:35
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">11.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">accel</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:06
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">12.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">lifeisssu</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:03
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">13.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">drinknext</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:14
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">14.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">feelsogood</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:38
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">15.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">backing</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:21
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">16.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">yabb</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            02:31
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">17.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">anego</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:38
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="track_row_view linked" rel="tracknum=1" itemprop="tracks" itemscope="" itemtype="http://www.schema.org/MusicRecording">
+                                <td class="play-col"><a role="button" aria-label="Play typgo" style="visibility: hidden">
+                                        <div class="play_status"></div>
+                                    </a></td>
+                                <td class="track-number-col">
+                                    <div class="track_number secondaryText">18.</div>
+                                </td>
+                                <td class="title-col">
+                                    <div class="title">
+
+                                        <a href="/track/typgo" itemprop="url"><span class="track-title" itemprop="name">done</span></a>
+
+                                        <span class="time secondaryText">
+
+                                            01:36
+
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </section>
+        <section class="section4">
+<div class="sct4_sidemenu">
+                 <div class="sub_sct4img">
+                 <div class="slider_area">
+                     <div class="bx-wrpper" aria-live="polite">
+                         <div class="bx-viewport">
+                             <ul class="bxslider">
+                                 <li> <img src="IMG/newarrival/KakaoTalk_20200528_161657179_01.jpg" alt=""></li>
+                                 <li><img src="IMG/newarrival/KakaoTalk_20200528_161657179_02.jpg" alt=""></li>
+                                 <li><img src="IMG/newarrival/KakaoTalk_20200528_161657179_03.jpg" alt=""></li>
+                             </ul>
+                         </div>
+                     </div>
+                     
+                 </div>
+               
+                
+                
+            </div>
+                 <div class="line3"></div>
+           
+            <div class="subside_txtbox4">
+                <div class="sub_sct4subtitle_box4">
+                    <div class="titmain4">
+                        <h1>CATNIP LIVE</h1>
+                    </div>
+                    <p> Gohots Guwen의 [Gold Brown] 발매를 기념하며 <br>제작했던 라이브 셋을  #CATNIPLIVE 로 공개한다.<br> 기타 보드 이펙터, sp 등을 이용한 실시간 라이브로,<br> [Gold Brown]의 트랙들과 함께 앞으로 발매할 트랙들을 한데 묶어<br> 밀집도 있는 라이브 셋을 감상해보자.
+                    </p>
+                </div>
+                    
+                <ul class="sct4subtitle_box4">
+                
+                     <img src="IMG/newarrival/live-stream-logo-vector-22836543.png" alt="" class="live2">
+                       <img src="IMG/aboutimg/catnilive.gif" alt="">
+
+                </ul>
+ 
+            </div>
+            
+            </div>
+            <div class="catnip">
+                <div class="catnipwarp">
+                   <div class="catnipwarpbefore"></div>
+                    <div class="xicon">
+                        <img src="IMG/x_icon.gif" alt="">
+
+                    </div>
+                    <div class="catniplive">
+                        <div class="catlivelogo">
+                            <img src="IMG/aboutimg/catnilive.gif" alt="">
+                        </div> 
+
+                        <iframe src="https://www.youtube.com/embed/RGNjMzuaEW0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  ></iframe>
+
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section> 
+        <section class="section5">
+           <div class="sect5wap">
+            <div class="maintitle">
+                <h1>지금 플레이 해보세요!</h1>
+                 <div class="line100"></div>
+                <span>듣는 재미가 가득한<br>gohots guwen [Goldbrown]을<br>지금 바로 만나보실수 있습니다.</span>
+            </div>
+            <div class="sect5mainbox">
+            <div class="sect5imgbox">
+               
+                <img src="IMG/newarrival/caseeteimg4.png" alt="">
+                <img src="IMG/newarrival/caseeteimg2.png" alt="">
+<!--                 <img src="../IMG/newarrival/cassette%20button.png" alt="">--></div>
+           <div class="sectcontentbox"> 
+                <input type="checkbox" id="button">
+                    <label for="button">
+             <span></span>
+             <span></span>
+             <span></span>
+             <span>click</span> 
+             <span>button up</span>
+          
+   </label>
+              
+          
+            
+     
+        </div>
+                 <script>
+                $(function(){
+                     $('.sectcontentbox span:nth-child(5)').hide();
+                    $('.sectcontentbox span:nth-child(4)').click(function(){
+                       $('.sectcontentbox span:nth-child(5)').show();
+                     
+                    });
+                    $('.sectcontentbox span:nth-child(5)').click(function(){
+                          $('.sectcontentbox span:nth-child(5)').hide();
+                    })
+                })
+                </script>
+                  </div>
+                
+                   <div class="subtitle">
+                     <div class="lastbox">
+                <h1><a href="sub.info.html"> BUY</a></h1>
+            </div>
+              </div>
+            </div>
+          
+                    <a id="back-to-top"></a>
+        </section>
+
+        <footer class="footer">
+            <div class="footermain"> 
+                <ul>
+                    <li><a href=""> INSTAGRAM</a></li>
+                    <li><a href="">YOUTUBE</a></li>
+                    <li><a href=""> FACEBOOK</a></li>
+                    <div class="img"> <img src="IMG/footer/icon.gif" alt=""></div>
+                </ul>
+
+
+            </div>
+            <span>DOWNCAT RECORDS</span>
+            <address>
+                <span> KOREA SEOUL,VIA M.PONZA N 4,10121,KOREA,SEOUL,VAT N IT07725270016,<br>
+                    REA- TO915864,PH +8201030739118 DOWNCATRECORDS@GMAIL.COM </span>
+
+            </address>
+        </footer>
+
+
+
+    </wrap>
+ 
+    <script>
+        $(function(){
+    $('#back-to-top').on('click',function(e){
+            e.preventDefault();
+            $('html,body').animate({scrollTop:0},600);
+  });
+  
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+      $('#back-to-top').addClass('show');
+    } else {
+      $('#back-to-top').removeClass('show');
+    }
+  });
+});
+        
+        
+        
+        
+        $(window).scroll(function() {
+	var scroll = $(window).scrollTop();
+   var sct3top3 = $('.section3').offset().top-650;
+   var sct3top4 = $('.section4').offset().top-690;
+    var sct3top5 = $('.section5').offset().top-1010;
+	console.log(scroll);
+	if (scroll >= sct3top3) {
+		console.log('a');
+		$(".section3 .titmain3 .ssp1").addClass("change");
+        $(".section3 .titmain3 .ssp2").addClass("change2"); 
+        $(".section3 .titmain3 .ssp3").addClass("change3");
+        $(".section3 .sub_sct3subtitle_box3 p").addClass("movetop");
+        $(".sub_sct3img .l1").addClass("show1");
+        $(".sub_sct3img .l2").addClass("show2");
+        $(".sub_sct3img .l3").addClass("show3");
+        $(".sub_sct3img .l4").addClass("show4");
+        $(".sub_sct3img .l5").addClass("show5");
+        $(".sub_sct3img table").addClass("tableshow");
+         $(".section3 .sct1subtitle_box3").addClass("movetop");
+         $(".mbutton").addClass("mbmove");
+        $(".section3 .line2").addClass("junsu2");
+        
+      
+          
+	} else {
+		//console.log('a');
+		$(".section3 .titmain3 .ssp1").removeClass("change");
+        $(".section3 .titmain3 .ssp2").removeClass("change2");  
+        $(".section3 .titmain3 .ssp3").removeClass("change3");
+        $(".section3 .sub_sct3subtitle_box3 p").removeClass("movetop");
+        $(".sub_sct3img .l1").removeClass("show1");
+        $(".sub_sct3img .l2").removeClass("show2");
+        $(".sub_sct3img .l3").removeClass("show3");
+        $(".sub_sct3img .l4").removeClass("show4");
+        $(".sub_sct3img .l5").removeClass("show5");
+        $(".sub_sct3img table").removeClass("tableshow");
+         $(".section3 .sct1subtitle_box3").removeClass("movetop");
+         $(".mbutton").removeClass("mbmove");
+          $(".section3 .line2").removeClass("junsu2");
+	} 
+            
+            if (scroll >= sct3top4) {
+		
+        $(".bx-wrpper .bx-viewport .bx-wrapper").addClass("change"); 
+        $(".section4 .subside_txtbox4 h1").addClass("change2");
+        $(".section4 .sub_sct4subtitle_box4 p").addClass("show3");
+        $(".section4 .sct4subtitle_box4").addClass("change3");
+                $(".section4 .line3").addClass("junsu3");
+      
+          
+	} else {
+        $(".bx-wrpper .bx-viewport .bx-wrapper").removeClass("change");  
+        $(".section4 .subside_txtbox4 h1").removeClass("change2");
+         $(".section4 .sub_sct4subtitle_box4 p").removeClass("show3");
+         $(".section4 .sct4subtitle_box4").removeClass("change3"); 
+        $(".section4 .line3").removeClass("junsu3");
+		//console.log('a');
+		
+	} if (scroll >= sct3top5) {
+		 
+      
+       $(".maintitle h1").addClass("change2"); 
+        $(".line100").addClass("linw");
+        $(".maintitle span").addClass("show4");
+        $(".sect5mainbox").addClass("movetop");
+        $(".subtitle").addClass("show6");
+
+           
+	} else {
+      
+		 $(".maintitle h1").removeClass("change2");
+         $(".line100").removeClass("linw");
+         $(".maintitle span").removeClass("show4");
+         $(".sect5mainbox").removeClass("movetop");
+         $(".subtitle").removeClass("show6");
+          
+	} 
+        });
+        
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('.header_top .logo img').outerHeight();
+
+        $(window).scroll(function(event) {
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            if (Math.abs(lastScrollTop - st) <= delta) return;
+
+            if (st > lastScrollTop && st > navbarHeight) {
+                $('.header_top .logo img,.header .main_nav_box').removeClass('nav-down').addClass('nav-up');
+            } else {
+                if (st + $(window).height() < $(document).height()) {
+                    $('.header_top .logo img,.header .main_nav_box').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            lastScrollTop = st;
+        }
+$(function(){
+    $('.sub_sct3img .mbutton li').click(function(){
+        $('.downarrow span,.downarrow').hide();
+    });
+});
+        
+$(function(){
+    $('.sub_sct3img .mbutton li:nth-child(5)').click(function(){
+        $('.downarrow span,.downarrow').show();
+    });
+});
+$(function(){
+
+    $('.emtt').click(function(){
+        $('.loginpos').hide();
+    })
+
+});
+
+        $(document).ready(function() {
+
+
+            $('.sidesct2_1').slideUp();
+            $('.sidesct2').click(function() {
+                $('.sidesct2_1').slideToggle(300);
+            });
+
+        });
+
+        //        
+        //        //
+        //                $(document).ready(function() {
+        //                        $('.catnip').hide();
+        //                    
+        //         
+        //                });
+
+
+        $(document).ready(function() {
+            $('.catnip').hide();
+            $('.sction1 .downcatcontent img').click(function() {
+
+                $('.catnip').slideDown(300);
+                return false;
+            });
+        });
+
+        $(document).ready(function() {
+            $('.catnipwarp .xicon').click(function() {
+
+                $('.catnip').slideUp(300);
+
+            });
+
+        });
+
+
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_w').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,input,label,.sectcontentbox,.sect5mainbox .sect5imgbox,.sect5mainbox .sect5imgbox img,span,.sect5mainbox, label span,button,input[id="button"] + label span,.logo a,.header_top .logo,.header_top .logo img,.downarrow,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top').css({
+                    'border-color': 'black',
+                    'background': '#fff'
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_b').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,input,label,.sectcontentbox,.sect5mainbox .sect5imgbox,.sect5mainbox .sect5imgbox img,span,.sect5mainbox,label span,button,input[id="button"] + label span,.logo a,.header_top .logo,.header_top .logo img,.downarrow,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top').css({
+                    'border-color': '#1327f2',
+                    'background': '#3164f7'
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_g').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,input,label,.sectcontentbox,.sect5mainbox .sect5imgbox,.sect5mainbox .sect5imgbox img,span,.sect5mainbox,label span,button,input[id="button"] + label span,.logo a,.header_top .logo,.header_top .logo img,.downarrow,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top').css({
+                    'border-color': '#1f6328',
+                    'background': '#4f9e67'
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_o').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,input,label,.sectcontentbox,.sect5mainbox .sect5imgbox,.sect5mainbox .sect5imgbox img,span,.sect5mainbox,label span,button,input[id="button"] + label span,.logo a,.header_top .logo,.header_top .logo img,.downarrow,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top').css({
+                    'border-color': '#ff3c1b',
+                    'background': '#ff8645'
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_y').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,input,label,.sectcontentbox,.sect5mainbox .sect5imgbox,.sect5mainbox .sect5imgbox img,span,.sect5mainbox,label span,button,input[id="button"] + label span,.logo a,.header_top .logo,.header_top .logo img,.downarrow,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.header_top').css({
+                    'border-color': 'black',
+                    'background': '#e1ff2a'
+                });
+            });
+        });
+        $(function() {
+            $('.subimgbox .img1').click(function() {
+                $('.sction1 .sub_sct1img img').css('margin-top', '350px').attr('src', 'IMG/newarrival/biggomain2.gif');
+            });
+            $('.subimgbox .img2').click(function() {
+                $('.sction1 .sub_sct1img img').css('margin-top', '200px').attr('src', 'IMG/newarrival/biggomain1.gif');
+            });
+            $('.subimgbox .img3').click(function() {
+                $('.sction1 .sub_sct1img img').css('margin-top', '200px').attr('src', 'IMG/go1.jpg');
+            });
+        });
+        $(function() {
+            $('.sec2imgbox .backside').mouseover(function() {
+                $('.sec2imgbox .egle').css({
+                    "transform": "rotate(90deg)"
+                })
+                return;
+            });
+
+
+
+            $('.sec2imgbox .backside').mouseout(function() {
+                $('.sec2imgbox .egle').css({
+                    "transform": "rotate(-90deg)"
+                });
+
+            });
+        });
+
+        $(function() {
+            $('.sub_sct3img .mbutton li:nth-child(1)').click(function() {
+                $('.sub_sct3img .l2').css({
+                    'top': '-150px'
+                });
+
+            });
+            $('.sub_sct3img .mbutton li:nth-child(2)').click(function() {
+                $('.sub_sct3img .l3').css({
+                    'right': '-350px'
+                });
+
+            });
+            $('.sub_sct3img .mbutton li:nth-child(3)').click(function() {
+                $('.sub_sct3img .l4').css({
+                    'right': '-370px'
+                });
+
+            });
+            $('.sub_sct3img .mbutton li:nth-child(4)').click(function() {
+                $('.sub_sct3img .l5').css({
+                    'right': '-390px'
+                });
+
+            });
+        
+            $('.sub_sct3img .mbutton li:nth-child(5)').click(function() {
+                $('.sub_sct3img .l2').css({
+                    'top': '0'
+                }), $('.sub_sct3img .l3').css({
+                    'right': '0'
+                }), $('.sub_sct3img .l4').css({
+                    'right': '0'
+                }), $('.sub_sct3img .l5').css({
+                    'right': '0'
+                })
+
+            });
+//            $('.sub_sct3img .mbutton ul').click(function() {
+//                $('.sub_sct3img .l2').css({
+//                    'top': '-150px'
+//                }), $('.sub_sct3img .l3').css({
+//                    'right': '-350px'
+//                }), $('.sub_sct3img .l4').css({
+//                    'right': '-370px'
+//                }), $('.sub_sct3img .l5').css({
+//                    'right': '-390px'
+//                })
+//
+//            });
+        });
+        
+        $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+        
+        $('.bxslider').bxSlider({
+  auto: true,
+  autoControls: true,
+  stopAutoOnClick: true,
+  pager: true,
+  slideWidth: 600
+ 
+});
+        
+        $(document).ready(function() {
+            $('.catnip,.catnipwarpbefore').hide();
+            $('.sct4subtitle_box4 > img').click(function() {
+
+                $('.catnip,.catnipwarpbefore').slideDown(300); 
+                return false;
+            });
+        });
+
+        $(document).ready(function() {
+            $('.catnipwarp .xicon').click(function() {
+
+                $('.catnip,.catnipwarpbefore').slideUp(300);
+
+            });
+
+        });
+         $(document).ready(function() {
+            $('.catnipwarpbefore').click(function() {
+
+                $('.catnip').slideUp(300);
+
+            });
+
+        });
+        
+         $(document).ready(function(){
+         
+                $('.loginpos').hide();
+                   $('.right_top_login .loginbutton').click(function(){
+                       $('.loginpos,.emtt').show();
+     
+        });
+            $('.inner_login .xicon, .loginwarp::before').click(function(){
+                $('.loginpos').hide();
+            });
+        });
+        
+         $(document).ready(function() {
+            $('.sectionlogin').hide();
+            $('.btn_login2').hide();
+            $('.btn_login').show();
+            $('.login_append .txt_lab,.txt_find').click(function() {
+                $('.sectionlogin').slideToggle(),
+                    $('.box_login p,.logintext').toggleClass("move"),
+                    $('.box_login .p2,.logintext2').toggleClass("move2");
+                $('.btn_login2').toggle(),
+                    $('.btn_login').toggle();
+            });
+        }); 
+        wow = new WOW({
+            boxClass: 'wow', // default
+            animateClass: 'animated', // default
+            offset: 400, // default
+            mobile: true, // default
+            live: true // default
+        })
+        wow.init();
+          
+        document.cookie = "safeCookie1=foo; SameSite=Lax";
+        document.cookie = "safeCookie2=foo";
+        document.cookie = "crossCookie=bar; SameSite=None; Secure";
+    </script>
+ 
+</body></html>

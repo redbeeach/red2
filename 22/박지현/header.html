@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+#m_header{
+    display: none;
+}
+.m_figcaption{
+    opacity: 0;
+}
+    #header {
+        width: 100%;
+        height: 100px;           
+        position: relative;            
+        z-index: 150
+    }
+    #header .h_logo {
+        width: 180px;
+        position: absolute;
+        top: 35%;
+        left: 2%
+    }
+    #header .h_login{
+        position: absolute;
+        right: 0px;
+        width: 250px;
+        top: 5px;
+    }
+    #header .h_login > ul > li {
+        float: left;
+        width:30%;
+    }
+    #header .h_login > ul > li:nth-child(1){
+        margin-left: 80px;
+    }
+    #header .h_login > ul > li:nth-child(1):after{
+        height: 9px;
+        content: "";
+        display: inline-block;
+        border-right: 1px solid #000;
+        padding: 2px 0 0 12px
+    }
+    
+    #header .h_nav {           
+        width: 100%;
+        line-height: 2;
+        position: absolute;
+        top: 65px;
+       
+    }
+    #header .h_nav > ul > li {
+        width:10%;
+        float: left;
+        font-size: 18px;            
+        text-align: center;   
+        margin-left: 15px;
+        letter-spacing: 1px;
+        cursor: context-menu;
+        position: relative;
+        margin-left: 5%
+    }
+    .link-1:before, .link-1:after {
+      content: '';
+      border-bottom: solid 3px skyblue;
+      position: absolute;
+      top: 33.3px;
+      width: 0;
+    }
+    
+    .link-1:before { left: 0; }
+    .link-1:after { right: 0; }
+    .link-1:hover:before, .link-1:hover:after {
+      width: 50%;
+    }
+    .link-1:before, .link-1:after {
+      -webkit-transition: all 0.7s ease;
+              transition: all 0.7s ease;
+    }
+    
+    #header .h_nav > ul > li:nth-child(1) {
+        margin-left: 260px
+    }
+    /*
+    #header .h_nav > ul> li:hover > ul {
+        background: white
+    }
+    */
+    #header .h_nav > ul > li > ul{
+        height: 200px
+    }
+    #header .h_nav > ul > li > ul > li{    
+        height: 40px;     
+        background: white;
+        padding-top: 5px
+    }
+    #header .h_nav > ul > li > ul >li:hover> a{
+        font-weight: bold;
+        _text-decoration: underline
+    }
+@media all and (min-width:960px) and (max-width:1154px){
+    #header .h_logo { width: 160px;}
+    #header .h_login{ font-size: 14px }
+    #header .h_nav {           
+        width: 100%;
+        line-height: 2;
+        position: absolute;
+        top: 65px;
+    }
+    #header .h_nav > ul > li {
+        width:12%;
+        font-size: 16px;              
+        margin-left: 15px;
+    }
+    .link-1:before { left: 0; }
+    .link-1:after { right: 0; }
+    .link-1:hover:before, 
+    .link-1:hover:after {
+      width: 50%;
+    }
+    
+    #header .h_nav > ul > li:nth-child(1) {
+        margin-left: 250px
+    }
+}
+@media all and (min-width:780px) and (max-width:959px){
+    h3{font-size: 30px;padding-bottom: 30px;}
+    #header .h_logo {width: 150px;}
+    #header .h_login{font-size: 14px}
+    #header .h_login > ul > li:nth-child(1):after{padding: 2px 0 0 16px}    
+    #header .h_nav {           
+        width: 100%;
+        line-height: 2;
+        position: absolute;
+        top: 65px;       
+    }
+    #header .h_nav > ul > li {
+        width:13.5%;       
+        font-size: 16px;
+        margin-left: 10px    
+    }
+    #header .h_nav > ul > li:nth-child(1) {
+        margin-left:180px
+    }
+    #header .h_nav > ul > li > ul{
+        height: 200px
+    }
+    #header .h_nav > ul > li > ul > li{  
+       font-size: 14px
+    }
+}
+@media all and (min-width:610px) and (max-width:779px){
+     h3{font-size: 30px;padding-bottom: 30px;}
+    #header{display: none;}
+    #m_header {
+        display: block;
+        width: 100%;
+        height: 120px;
+        position: relative;
+        z-index: 200;
+    }
+    #m_header .m_logo {
+        width: 150px;
+        position: absolute;
+        left: 38%;
+        top: 20%
+    }
+    #m_header .m_btn{
+        position: absolute;
+        left: 40px;
+        top: 60%;
+       
+    }
+    #m_header .m_btn a img {
+        width: 30px;
+    }
+    #m_header .m_login{
+        position: absolute;
+        width: 40px;
+        right: 40px;
+        top: 55%
+    }
+    #m_header .m_nav {
+        position: absolute;
+        width: 100vw;
+        z-index: 130;
+        top: 120px;
+        background: #fff;
+        border-top:1px solid #e0e0e0;
+        height: 450px;
+        text-indent: 5px;
+    }
+    #m_header .m_nav >ul >li{
+         font-size: 18px;  
+    }
+    #m_header .m_nav >ul >li>a {
+        display: block;
+        border-bottom:1px solid #dfdfdf;
+        padding: 10px
+    }
+    #m_header .m_nav >ul >li> a > img {
+        position: absolute;
+        right: 30px;
+        
+    }
+    #m_header .m_nav >ul >li >a:hover  {
+        color: skyblue
+    }
+    #m_header .m_nav >ul >li>ul{
+        display: none;
+    }
+    #m_header .m_nav >ul >li>ul>li {
+        padding: 8px 20px;
+        line-height: 1.5;
+        border-bottom: 1px solid #dfdfdf
+    }
+    #m_header .m_nav >ul >li>ul>li:first-child{
+        border-top: 1px solid #6098FF;        
+    }
+    #m_header .m_nav >ul >li>ul>li:last-child{
+         border-bottom: 1px solid #6098FF
+    }
+    #m_header .m_nav >ul >li>ul>li:hover {
+        background: #6098FF;
+        color: #fff
+    }
+}
+@media all and (min-width:500px) and (max-width:609px){
+    h3{font-size: 30px;padding-bottom: 30px;}
+    #header{display:none}
+    #m_header {
+        display: block;
+        width: 100%;
+        height: 90px;
+        position: relative;
+        z-index: 200
+    }
+    #m_header .m_logo {
+        width: 150px;
+        position: absolute;
+        left: 39%;
+        top: 20%;
+    }
+    #m_header .m_btn{
+        position: absolute;
+        left: 40px;
+        top: 50%;
+       width: 25px
+    }
+    #m_header .m_btn a img {
+        width: 30px;
+    }
+    #m_header .m_login{
+        position: absolute;
+        width: 30px;
+        right: 40px;
+        top: 50%
+    }
+    #m_header .m_nav {
+        position: absolute;
+        width: 100vw;
+        z-index: 10;
+        top: 90px;
+        background:#fff;
+        border-top:1px solid #e0e0e0;
+        height: 360px;
+        text-indent: 5px;
+    }
+    #m_header .m_nav >ul >li{
+         font-size: 16px;  
+    }
+    #m_header .m_nav >ul >li>a {
+        display: block;
+        border-bottom:1px solid #dfdfdf;
+        padding: 10px
+    }
+    #m_header .m_nav >ul >li> a > img {
+        position: absolute;
+        right: 30px;
+        
+    }
+    #m_header .m_nav >ul >li >a:hover  {
+        font-weight: bold
+    }
+    #m_header .m_nav >ul >li>ul{
+        display: none;
+    }
+    #m_header .m_nav >ul >li>ul>li {
+        padding: 8px 20px;
+        line-height: 1.5;
+        border-bottom: 1px solid #dfdfdf
+    }
+    #m_header .m_nav >ul >li>ul>li:first-child{
+        border-top: 1px solid #6098FF;        
+    }
+    #m_header .m_nav >ul >li>ul>li:last-child{
+         border-bottom: 1px solid #6098FF
+    }
+    #m_header .m_nav >ul >li>ul>li:hover {
+        background: #6098FF;
+        color: #fff
+    }
+    
+}
+@media all and (max-width:499px){
+    h3{font-size: 25px;padding-bottom: 30px;}
+    #header{display:none}
+    #m_header {
+        display: block;
+        width: 100%;
+        height: 70px;
+        position: relative;
+        z-index: 200
+    }
+    #m_header .m_logo {
+        width: 110px;
+        position: absolute;
+        left: 36%;
+        top: 20%;
+    }
+    #m_header .m_btn{
+        position: absolute;
+        left: 30px;
+        top: 48%;
+       width: 20px
+    }
+    #m_header .m_login{
+        position: absolute;
+        width: 28px;
+        right: 20px;
+        top: 40%
+    }
+    #m_header .m_nav {
+        position: absolute;
+        width: 100vw;
+        z-index: 130;
+        top: 70px;
+        background: #fff;
+        border-top:1px solid #e0e0e0;
+        height: 360px;
+        text-indent: 5px;
+    }
+    #m_header .m_nav >ul >li{
+         font-size: 16px;  
+    }
+    #m_header .m_nav >ul >li>a {
+        display: block;
+        border-bottom:1px solid #dfdfdf;
+        padding: 5px
+    }
+    #m_header .m_nav >ul >li> a > img {
+        position: absolute;
+        right: 30px;        
+    }
+    #m_header .m_nav >ul >li >a:hover  {
+        color: skyblue
+    }
+    #m_header .m_nav >ul >li>ul{
+        display: none;
+    }
+    #m_header .m_nav >ul >li>ul>li {
+        padding: 8px 20px;
+        line-height: 1.5;
+        border-bottom: 1px solid #dfdfdf
+    }
+    #m_header .m_nav >ul >li>ul>li:first-child{
+        border-top: 1px solid #6098FF;        
+    }
+    #m_header .m_nav >ul >li>ul>li:last-child{
+         border-bottom: 1px solid #6098FF
+    }
+    #m_header .m_nav >ul >li>ul>li:hover {
+        background: #6098FF;
+        color: #fff
+    }
+}
+    </style>
+    <script>
+        $(document).ready(function(){
+           $('.h_nav > ul > li > ul ').hide();
+            
+             $('.h_nav > ul > li').on({
+                 mouseenter:function(){
+                     var i = $(this).index();                     
+                     $('.h_nav > ul >li > ul ').eq(i).stop().slideDown(1000);
+                 }, 
+                 mouseleave:function(){
+                     $('.h_nav > ul >li > ul').stop().slideUp(500);
+                 }
+        });
+             var a = 0;
+            $("#m_header > .m_nav").hide();
+            
+            $("#m_header > .m_btn").click(function(){
+              if(a == 0){
+                  $("#m_header > .m_btn > a > img").attr("src", "main-img/x.png");
+                  $("#m_header > .m_nav").show(500); 
+                  a = 1;
+              }else{
+                  $("#m_header > .m_btn > a > img").attr("src", "main-img/m_menu.png");
+                  $("#m_header > .m_nav").hide(500);
+                  $(".m_sub").slideUp();
+                  a = 0;
+              } 
+          });
+            var cur = 10;
+            var isOn = 2;
+            $("#m_header > .m_nav> ul > li ").click(function(){
+                var i = $(this).index();
+             
+                 //동일한 것을 두번 눌렀을 경우 cur 과 i 값이 동일 이므로 cur을 다른 값으로 setting
+                    if(isOn == 1){
+                        cur = 10;
+                    }
+                    var i = $(this).index();
+                    
+                    if(cur != i){
+                        $(".m_sub").hide();
+                         $("#m_header > .m_nav> ul > li>  a > img").attr("src", "main-img/plus.png");
+                        $(this).find("img").attr("src","main-img/minus.png");
+                        $(this).find(".m_sub").slideDown();
+                        isOn = 2; //slide다운상태
+                    }
+                    else{
+                        $("#m_header > .m_nav> ul > li>  a > img").attr("src", "main-img/plus.png");
+                        $(this).find(".m_sub").slideUp();
+                        isOn = 1; //slide업상태
+                    }
+                    cur = i;      
+            });        
+     });
+    </script>
+
+</head>
+<body>
+    <div id="header">       
+        <a href="index.html"><img class="h_logo" src="main-img/lg.png" alt=""></a>
+        <div class="h_login">
+            <ul>
+                <li><a href="login.html" target="_blank">로그인</a></li>
+                <li><a href="join.html" target="_blank">회원가입</a></li>     
+            </ul>  
+        </div>
+        <div class="h_nav">
+            <ul>
+                <li class="link-1"><a href="#">킨텍스소개</a>
+                    <ul>
+                        <li><a href="sub_page1-1.html" target="_blank">개요</a></li>
+                        <li><a href="sub-page1-2.html" target="_blank">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="link-1"><a href="#">행사안내</a>
+                    <ul>
+                        <li><a href="sub-page2-1.html" target="_blank">전체일정</a></li>
+                        <li><a href="sub-page2-2.html" target="_blank">행사일정</a></li>
+                        <li><a href="sub_page2-3.html" target="_blank">회의일정</a></li>
+                    </ul>
+                </li>
+                <li class="link-1"><a href="#">시설안내</a>
+                    <ul>
+                        <li><a href="sub-page3-1.html" target="_blank">시설개요</a></li>
+                        <li><a href="sub-page3-2.html" target="_blank">전시홀</a></li>
+                        <li><a href="sub-page3-3.html" target="_blank">회의실</a></li>
+                        <li><a href="sub-page3-4.html" target="_blank">편의시설</a></li>
+                    </ul>
+                </li>
+                <li class="link-1"><a href="#">임대서비스</a>
+                    <ul>
+                        <li><a href="sub-page4-1.html" target="_blank">임대관련서식</a></li>
+                        <li><a href="sub-page4-2.html" target="_blank">임대서비스</a></li>
+                    </ul>
+                </li>
+                <li class="link-1"><a href="#">고객만족센터</a>
+                    <ul>
+                        <li><a href="sub-page5-1.html" target="_blank">고객의소리</a></li>
+                        <li><a href="sub-page5-2.html" target="_blank">공지사항</a></li>
+                        <li><a href="sub-page5-3.html" target="_blank">입찰안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <div id="m_header">
+        <div class="m_logo"><a href="index.html"><img src="main-img/lg.png" alt="킨텍스로고"></a></div>
+        <div class="m_btn"><a href="javascript:;;"><img src="main-img/m_menu.png" alt="메뉴아이콘"></a></div>
+        <div class="m_login"><a href="login.html"><img src="main-img/mobile-icon.png" alt="로그인"></a></div>
+        <div class="m_nav">
+            <ul>
+                <li><a href="#">킨텍스소개<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="sub_page1-1.html" target="_blank">개요</a></li>
+                        <li><a href="sub-page1-2.html" target="_blank">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">행사안내<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="sub-page2-1.html">전체일정</a></li>
+                        <li><a href="sub-page2-2.html" target="_blank">행사일정</a></li>
+                        <li><a href="sub_page2-3.html" target="_blank">회의일정</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">시설안내<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="sub-page3-1.html" target="_blank">시설개요</a></li>
+                        <li><a href="sub-page3-2.html" target="_blank">전시홀</a></li>
+                        <li><a href="sub-page3-3.html" target="_blank">회의실</a></li>
+                        <li><a href="sub-page3-4.html" target="_blank">편의시설</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">임대서비스<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="sub-page4-1.html" target="_blank">임대관련서식</a></li>
+                        <li><a href="sub-page4-2.html" target="_blank">임대서비스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객만족센터<img src="main-img/plus.png" alt=""></a>
+                    <ul class="m_sub">
+                        <li><a href="sub-page5-1.html" target="_blank">고객의소리</a></li>
+                        <li><a href="sub-page5-2.html" target="_blank">공지사항</a></li>
+                        <li><a href="sub-page5-3.html" target="_blank">입찰안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>    
+    </div>
+</body>
+</html>

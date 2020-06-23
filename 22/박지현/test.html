@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        table{
+            width: 50%;
+            table-layout: fixed;
+        }
+        table tr {
+            height: 30px;
+        }
+        table tr th:first-child{
+            width: 10%;            
+        }
+        table tr th:nth-child(2){
+            width: 70%;
+        }
+        table tr td:nth-child(2){            
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis
+        }
+    </style>
+    <script>
+        $(function(){
+           $(".container > ul > li") .mouseover(function(e){
+              e.preventDefault
+               
+               $(this).find(">a").animate({rotateY:"180deg"}, 1500)
+           });
+        });
+    </script>
+</head>
+<body>
+<!--
+    <h3>get방식으로 데이터 전송</h3>
+    <form action="testdata.jsp" method="post">
+        <p>이름 : <input name="name" type="text"></p>
+        <p>전공 : <input name="major" type="text"></p>
+        <p></p>
+        <input type="submit" value="전송">
+        <input type="reset" value="다시작성">
+    </form>
+-->
+    <!--    -->
+<div class="container">
+     <ul>
+         <li><a href="#"><img src="2d25e1c778895809c5f78bb31a81dacb.jpg" alt=""></a></li>
+     </ul>   
+</div>
+<table>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+    </tr>
+    <tr>
+        <td>공란</td>
+        <td>남산 위에 저 소나무 철갑을 두른 듯 바람서리 불변함은 우리 기상일세</td>
+        <td>애국가 가사</td>
+    </tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOWNCATRECORDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="CSS/store_sub_cassette_tape_player.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+</head>
+
+<body>
+    <wrap class="wrap">
+        <header class="header">
+            <header class="header_top">
+
+                <div class="headermenu_mobile">
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <ul class="sidesct">
+                            <li><a href="about.html"> ABOUT</a></li>
+                            <li class="sidesct2">STORE
+                                <ul class="sidesct2_1">
+                                    <li><a href="store.html">
+                                        ALL
+                                    </a></li><li><a href="store_sub_cassettetape.html">
+                                        CASSETTE TAPE
+                                    </a></li>
+                                    <li><a href="store_sub_cassetape%20player.html"> PLAYER </a></li>
+                                    <li><a href="store_sub_goods.html"> GOODS/ANOTHER</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="newarrival.html"> NEW ARRIVAL </a></li>
+                            <li><a href="custom.html"> CUSTOM </a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <logo class="logo">
+                    <a href="index.html"> <img src="IMG/LOGO/DOWNCAT%20LOGO.gif" alt=""></a>
+                    <span class="maintitletxt"><a href="index.html"> DOWNCAT RECORDS</a></span>
+                </logo>
+                <ul class="right_top">
+                    <div class="right_top_login">
+
+                        <li class="loginbutton"> <a href="#">LOGIN </a> </li>
+
+
+                        <li><a href=""> <img src="IMG/tape%20icon.gif" alt="tapeicon"></a></li>
+
+                    </div>
+                    <form class="search">
+                        <p>SEARCH</p>
+                        <input type="search" class="right_top_search">
+                    </form>
+                </ul>
+            </header>
+            <div class="main_nav_box">
+
+                <ul class="main_nav">
+
+                    <li><a href="about.html"> ABOUT </a></li>
+
+
+                    <li> <a href="newarrival.html"> NEW ARRIVAL </a></li>
+
+
+                    <li> <a href="store.html">STORE </a></li>
+
+
+                    <li> <a href="custom.html">CUSTOM </a></li>
+
+
+                </ul>
+                <div class="subsct1_main_custom">
+                    <div class="sub_nav_bakgrnd">
+                        BCKGRND
+                        <div class="themes_switch">
+                            <button class="graphic_button is-_w"></button>
+                            <button class="graphic_button is-_b"></button>
+                            <button class="graphic_button is-_g"></button>
+                            <button class="graphic_button is-_o"></button>
+                            <button class="graphic_button is-_y"></button>
+
+
+
+                        </div>
+                    </div>
+                    <div class="sub_nav_bgm">
+                        MUSIC
+                        <input type="checkbox" id="chk" class="chk" name="b1">
+                        <!--                onchange="myfunction(this)"-->
+                        <label for="chk">
+
+
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="loginpos">
+            <div class="loginwarp">
+                <div class="emtt"></div>
+                <div class="inner_login">
+                    <span class="logintext">LOGIN</span>
+                    <span class="logintext2">JOIN</span>
+                    <img src="IMG/x_icon2.PNG" alt="" class="xicon">
+                    <div class="login_tistory">
+
+                        <form method="post" id="authForm" action="https://www.tistory.com/auth/login">
+                            <input type="hidden" name="redirectUrl" value="https://blogpack.tistory.com/manage">
+                            <fieldset>
+                                <legend class="screen_out">로그인 정보 입력폼</legend>
+                                <div class="box_login">
+                                    <p>E-MAIL</p>
+                                    <p class="p2">YOUR E-MAIL</p>
+                                    <div class="inp_text">
+
+                                        <label for="loginId" class="screen_out">아이디</label>
+                                        <input type="email" id="loginId" name="loginId">
+                                    </div>
+                                    <p>PASSWORD</p>
+                                    <p class="p2">YOUR PASSWORD</p>
+                                    <div class="inp_text">
+
+                                        <label for="loginPw" class="screen_out">비밀번호</label>
+                                        <input type="password" id="loginPw" name="password">
+                                    </div>
+                                </div>
+
+                                <div class="login_append">
+
+
+
+
+                                    <span class="txt_lab">JOIN</span>
+
+
+                                    <!--
+                            <span class="txt_find">
+                           ID  PASSWORD FIND
+                            </span>
+-->
+                                </div>
+                            </fieldset>
+                        </form>
+
+
+                        <div class="sectionlogin">
+
+                            <div class="asdasd">
+                                <p>다음내용에 동의 합니다</p>
+                                <input type="checkbox" id="ck3"> <label for="ck3"><span>홈페이지 이용약관 동의 (필수)</span></label>
+                            </div>
+
+                            <form>
+                                <textarea placeholder="" readonly rows="5">특별한 행사와 소식을 이메일로 보내기 위해 개인정보 수집, 이용 및 보관.
+
+개인정보에 관해서는 한국 DOWNCAT RECORDS가 책임을 집니다.
+
+수집하는 개인정보 항목 </textarea>
+                                <div class="last"><input type="checkbox" id="ck1"><label for="ck1"> 개인정보 수집 및 이용동의 (필수)</label></div>
+                                <textarea placeholder="" readonly rows="5">개인정보 수집, 이용 및 보관에 동의
+
+수집하는 개인정보 항목.
+
+성명(국문 및 영문), 이메일 주소,휴대전화번호,우편번호
+
+(청구서/배송),사용자 이름과 비밀번호,생년월일</textarea>
+                            </form>
+
+
+
+
+                            <form>
+
+                                <div class="loginfooter"> <input type="checkbox" id="ck2"><label for="ck2"><span> E-MAIL 및 SMS 광고성 정보 수신동의 (선택)</span></label></div>
+
+                            </form>
+                        </div>
+                        <form>
+                            <button type="submit" class="btn_login" disabled>LOGIN </button>
+                            <button type="submit" class="btn_login2" disabled>JOIN </button>
+
+                        </form>
+
+ 
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+ 
+        <div class="section3">
+            <div class="submenu">
+                <div class="flex">
+                    <ul class="sec1submenu"><span class="more1"> MORE</span>
+                        <li class="subnav">
+                            <ul>
+
+                                <a href="store_sub_cassettetape.html">
+                                    <li>CASSETTE TAPE</li>
+                                </a>
+                                <a href="store_sub_goods.html">
+                                    <li>GOODS & ANOTHER</li>
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="store_sub_cassetape%20player.html">
+                        <p class="about">CASSETTE TAPE PLAYER</p>
+                    </a>
+                    <a href="store.html" class="stt1">
+                        <p>STORE</p> 
+                    </a>
+                </div>
+            </div>
+            <div class="section2_imgbox">
+                <div class="section2_imgbox1">
+                    <div class="section2_img1"><a href=""><img src="IMG/section3img/sect3m1-1.gif" alt="">
+                            <div class="section2_txtbox">
+                                <span>Sony Walkman Sports<br>Cassette Player Radio<br>[WM-FS493]</span>
+                                <p>150,000원</p>
+                            </div>
+                        </a></div>
+                    <div class="section2_img2"><a href=""><img src="IMG/section3img/sect3m2.gif" alt="">
+                            <div class="section2_txtbox">
+                                <span>Sony Walkman FM/AM Sports<br>Cassette Player Radio<br>[WM-B53]</span>
+                                <p>15,000원</p>
+                            </div>
+                        </a></div>
+                </div>
+                <div class="section2_imgbox2">
+                    <div class="section2_img3"><a href=""><img src="IMG/section3img/sect3m3.gif" alt="">
+                            <div class="section2_txtbox">
+                                <span>Sony Walkman Sports<br>Cassette Player Radio <br>[WM-45]</span>
+                                <p>15,000원</p>
+                            </div>
+                        </a></div>
+                    <div class="section2_img4"><a href=""><img src="IMG/section3img/sect3m4.gif" alt="">
+                            <div class="section2_txtbox">
+                                <span>Sony Walkman FM/AM Sports<br>Cassette Player Radio<br>[WM-F73]</span>
+                                <p>15,000원</p>
+                            </div>
+                        </a></div>
+
+                </div>
+                <div class="section2_imgbox1">
+                    <div class="section2_img1"><a href=""><img src="IMG/store/player.png" alt="">
+                            <div class="section2_txtbox">
+                                <span>SIT'S OK Bluetooth 5.0<br> Cassette Player</span>
+                                <p>150,000원</p>
+                            </div>
+                        </a></div>
+                    <div class="section2_img2"><a href=""><img src="IMG/store/player2.png" alt="">
+                            <div class="section2_txtbox">
+                                <span>Sony Walkman Vintage<br>
+                                    Cassette Player Radio</span>
+                                <p>150,000원</p>
+                            </div>
+                        </a></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="footermain">
+                <ul>
+                    <li><a href=""> INSTAGRAM</a></li>
+                    <li><a href="">YOUTUBE</a></li>
+                    <li><a href=""> FACEBOOK</a></li>
+                    <div class="img"> <img src="IMG/footer/icon.gif" alt=""></div>
+                </ul>
+
+
+            </div>
+            <span>DOWNCAT RECORDS</span>
+            <address>
+                <span> KOREA SEOUL,VIA M.PONZA N 4,10121,KOREA,SEOUL,VAT N IT07725270016,<br>
+                    REA- TO915864,PH +8201030739118 DOWNCATRECORDS@GMAIL.COM </span>
+
+            </address>
+        </footer>
+
+
+
+    </wrap>
+
+    <script>
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('.header_top .logo img').outerHeight();
+
+        $(window).scroll(function(event) {
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250); 
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            var width_size = window.outerWidth;
+            if (Math.abs(lastScrollTop - st) <= delta) return;
+
+            if (st > lastScrollTop && st > navbarHeight) {
+                $('.header_top .logo img,.header .main_nav_box,.header_top .right_top').removeClass('nav-down').addClass('nav-up');
+                $('.submenu .about').removeClass('nav-down').addClass('nav-up2');           
+                if (width_size <= 1700) {
+                     $('.submenu .about').removeClass('nav-down').addClass('nav-up');             
+                    
+                } 
+            } else {
+                if (st + $(window).height() < $(document).height()) {
+                    $('.header_top .logo img,.header .main_nav_box,.header_top .right_top').removeClass('nav-up').addClass('nav-down');
+                    $('.submenu .about').removeClass('nav-up2').addClass('nav-down2');
+                } if (width_size <= 1700) {
+                     
+                      $('.submenu .about').addClass('nav-down ').removeClass('nav-up'); 
+                
+                      }
+                
+                if (st > lastScrollTop && st > navbarHeight) {}
+            }
+            lastScrollTop = st;
+        }
+
+
+
+        $(document).ready(function() {
+
+
+            $('.sidesct2_1').slideUp();
+            $('.sidesct2').click(function() {
+                $('.sidesct2_1').slideToggle(300);
+            });
+
+        });
+
+        //        
+        //        //
+        //                $(document).ready(function() {
+        //                        $('.catnip').hide();
+        //                    
+        //        
+        //                });
+
+
+        $(document).ready(function() {
+            $('.catnip').hide();
+            $('.sction1 .downcatcontent img').click(function() {
+
+                $('.catnip').slideDown(300);
+                return false;
+            });
+        });
+
+        $(document).ready(function() {
+            $('.catnipwarp .xicon').click(function() {
+
+                $('.catnip').slideUp(300);
+
+            });
+
+        });
+
+
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_w').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.section3 .submenu .flex,.section3 .submenu,.header_top,a,.header_top .logo,.section3 .section2_imgbox .section2_img2 .section2_txtbox,.section3 .section2_imgbox .section2_img4 .section2_txtbox,.section3 .section2_imgbox .section2_img3 .section2_txtbox,.section3 .section2_imgbox .section2_img1 .section2_txtbox,.section3 .section2_imgbox .section2_img1 img,.section3 .section2_imgbox .section2_img2 img,.section3 .section2_imgbox .section2_img3 a img,.section3 .section2_imgbox .section2_img4 a img,.section3 .section2_img3,.section3 .section2_imgbox2,.section3 .section2_img4,.header_top .right_top .right_top_login img,.header .maintitletxt,ol, ul, li,.header_top .right_top .right_top_login').css({
+                    'border-color': 'black',
+                    'background': '#fff'
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_b').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.section3 .submenu .flex,.section3 .submenu,.header_top,a,.header_top .logo,.section3 .section2_imgbox .section2_img2 .section2_txtbox,.section3 .section2_imgbox .section2_img4 .section2_txtbox,.section3 .section2_imgbox .section2_img3 .section2_txtbox,.section3 .section2_imgbox .section2_img1 .section2_txtbox,.section3 .section2_imgbox .section2_img1 img,.section3 .section2_imgbox .section2_img2 img,.section3 .section2_imgbox .section2_img3 a img,.section3 .section2_imgbox .section2_img4 a img,.section3 .section2_img3,.section3 .section2_imgbox2,.section3 .section2_img4,.header_top .right_top .right_top_login img,.header .maintitletxt,ol, ul, li,.header_top .right_top .right_top_login').css({
+                    'border-color': '#1327f2',
+                    'background': '#3164f7'
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_g').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.section3 .submenu .flex,.section3 .submenu,.header_top,a,.header_top .logo,.section3 .section2_imgbox .section2_img2 .section2_txtbox,.section3 .section2_imgbox .section2_img4 .section2_txtbox,.section3 .section2_imgbox .section2_img3 .section2_txtbox,.section3 .section2_imgbox .section2_img1 .section2_txtbox,.section3 .section2_imgbox .section2_img1 img,.section3 .section2_imgbox .section2_img2 img,.section3 .section2_imgbox .section2_img3 a img,.section3 .section2_imgbox .section2_img4 a img,.section3 .section2_img3,.section3 .section2_imgbox2,.section3 .section2_img4,.header_top .right_top .right_top_login img,.header .maintitletxt,ol, ul, li,.header_top .right_top .right_top_login').css({
+                    'border-color': '#1f6328',
+                    'background': '#4f9e67'
+                });
+
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_o').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.section3 .submenu .flex,.section3 .submenu,.header_top,a,.header_top .logo,.section3 .section2_imgbox .section2_img2 .section2_txtbox,.section3 .section2_imgbox .section2_img4 .section2_txtbox,.section3 .section2_imgbox .section2_img3 .section2_txtbox,.section3 .section2_imgbox .section2_img1 .section2_txtbox,.section3 .section2_imgbox .section2_img1 img,.section3 .section2_imgbox .section2_img2 img,.section3 .section2_imgbox .section2_img3 a img,.section3 .section2_imgbox .section2_img4 a img,.section3 .section2_img3,.section3 .section2_imgbox2,.section3 .section2_img4,.header_top .right_top .right_top_login img,.header .maintitletxt,ol, ul, li,.header_top .right_top .right_top_login').css({
+                    'border-color': '#ff3c1b',
+                    'background': '#ff8645'
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('.header .sub_nav_bakgrnd .graphic_button.is-_y').click(function() {
+                $('*').not('.graphic_button,.xicon,.xicon>img,.footer .img>img,.footer .img,.header_top .right_top,.sub_sct3img img,.sec2imgbox img~div,.sec2imgbox img,.sec2imgbox,.inner_login,.inner_login .logintext2,.login_tistory,.login_tistory .box_login,.sectionlogin p,.asdasd,.sectionlogin form,.sectionlogin form textarea,.inner_login form span,.login_tistory fieldset,#authForm,div.login_append,form,input, span.logintext2,.logintext,.sectionlogin,.sectionlogin label,.loginfooter,.last,.btn_login2,.btn_login,.asdasd span,.screen_out,.login_tistory p,.inp_text,.catnipwarpbefore,.emtt,.loginwarp,.loginpos,.section3 .submenu .flex,.section3 .submenu,.header_top,a,.header_top .logo,.section3 .section2_imgbox .section2_img2 .section2_txtbox,.section3 .section2_imgbox .section2_img4 .section2_txtbox,.section3 .section2_imgbox .section2_img3 .section2_txtbox,.section3 .section2_imgbox .section2_img1 .section2_txtbox,.section3 .section2_imgbox .section2_img1 img,.section3 .section2_imgbox .section2_img2 img,.section3 .section2_imgbox .section2_img3 a img,.section3 .section2_imgbox .section2_img4 a img,.section3 .section2_img3,.section3 .section2_imgbox2,.section3 .section2_img4,.header_top .right_top .right_top_login img,.header .maintitletxt,ol, ul, li,.header_top .right_top .right_top_login').css({
+                    'border-color': 'black',
+                    'background': '#e1ff2a'
+                });
+            });
+        });
+        $(function() {
+            $('.subimgbox .img1').click(function() {
+                $('.sction1 .sub_sct1img img').css('margin-top', '350px').attr('src', 'IMG/newarrival/biggomain2.gif');
+            });
+            $('.subimgbox .img2').click(function() {
+                $('.sction1 .sub_sct1img img').css('margin-top', '200px').attr('src', 'IMG/newarrival/biggomain1.gif');
+            });
+            $('.subimgbox .img3').click(function() {
+                $('.sction1 .sub_sct1img img').css('margin-top', '200px').attr('src', 'IMG/go1.jpg');
+            });
+        });
+
+        $(function() {
+            $('.section2,.section4').hide();
+            $('.sction1 .sction1_more_icon img').click(function() {
+                $('.section2,.section3,.section4').show(), $('.sction1 .sction1_more_icon img').hide();
+
+            });
+        });
+
+        $(document).ready(function() {
+
+            $('.loginpos').hide();
+            $('.right_top_login .loginbutton').click(function() {
+                $('.loginpos').show();
+
+            });
+            $('.inner_login .xicon, .loginwarp::before').click(function() {
+                $('.loginpos').hide();
+            });
+        });
+
+        $(document).ready(function() {
+            $('.sectionlogin').hide();
+            $('.btn_login2').hide();
+            $('.btn_login').show();
+            $('.login_append .txt_lab,.txt_find').click(function() {
+                $('.sectionlogin').slideToggle(),
+                    $('.box_login p,.logintext').toggleClass("move"),
+                    $('.box_login .p2,.logintext2').toggleClass("move2");
+                $('.btn_login2').toggle(),
+                    $('.btn_login').toggle();
+            });
+        });
+        $(function() {
+
+            $('.emtt').click(function() {
+                $('.loginpos').hide();
+            })
+
+        });
+    </script>
+
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 RESERVATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#plus").click(function(e){
+                var stat = $("#number").text();
+                var num = parseInt (stat,10);
+                num++;
+                
+                if(num>8){
+                    num=8;
+                }
+                $("#number").text(num);
+            });
+            
+            $("#minus").click(function(e){
+                var stat = $("#number").text();
+                var num = parseInt (stat,10);
+                num--;
+                if(num<=0){
+                    num=1;
+                }
+                $("#number").text(num);
+            });
+            
+            $(".rv_container3 .rv_box3 ul li").click(function(){
+                $(".rv_container3 .rv_box3 ul li").removeClass("active2");
+                $(this).addClass("active2");
+            });
+        });
+    </script>
+    
+    <script type="text/javascript">
+            var today = new Date(); //오늘 날짜
+            var date = new Date(); //today의 date를 세어주는 역할
+            function prevCalendar(){ //이전 달
+                today = new Date(today.getFullYear(),today.getMonth() -1, today.getDate());
+                buildCalendar();
+            }
+            function nextCalendar(){
+                today = new Date(today.getFullYear(),today.getMonth() +1, today.getDate());
+                buildCalendar();
+            }
+            function buildCalendar(){
+                var doMonth = new Date(today.getFullYear(),today.getMonth(), 1); //이번 달의 첫째 날
+                var lastDate = new Date(today.getFullYear(),today.getMonth()+1, 0); //이번 달의 마지막 날
+                var tdCalendar = document.getElementById("calendar"); //날짜 찍을 테이블 변수만듬, 일까지 찍힘
+                var tdCalendarYM = document.getElementById("tdCalendarYM"); //yyyy년 mm월
+                tdCalendarYM.innerHTML = today.getFullYear() + "년 " + (today.getMonth()+1) + "월";
+                // innerHTML : js언어를 html의 권장 표준 언어로 바꾼다.
+
+                while (tdCalendar.rows.length > 2) { //이번달이 끝나면 다음달로 넘겨주는 역할
+                    tdCalendar.deleteRow(tdCalendar.rows.length-1);
+                }
+                
+                var row = null;
+                row = tdCalendar.insertRow(); // 테이블에 새로운 열 삽입. 즉, 초기화
+                var cnt = 0;  //셀의 갯수를 세어주는 역할
+                for (i=0; i<doMonth.getDay(); i++) {
+                    cell = row.insertCell(); //열 한칸한칸 계속 만들어주는 역할
+                    cnt = cnt + 1; //열의 갯수를 계속 다음으로 위치하게 해주는 역할
+                }
+                
+                
+                
+                for (i=1; i<=lastDate.getDate(); i++) {
+                    cell = row.insertCell();
+                    cell.innerHTML = i; // 셀을 1부터 마지막 day까지 html 문법에 넣어줌
+                    
+                    cell.innerHTML = "<div id=active_box>" + i;
+                    
+                    cnt=cnt+1;
+                    if(cnt%7 == 1){
+                        cell.innerHTML = "<font color=#f03a40><div id=active_box>" + i
+                    }
+                    if(cnt%7 == 0){
+                        cell.innerHTML = "<font color=#0084ff><div id=active_box>" + i
+                        row = calendar.insertRow(); // 토요일 다음에 올 셀을 추가
+                    }
+                    if (today.getFullYear() == date.getFullYear()
+                       && today.getMonth() == date.getMonth()
+                       && i == date.getDate()) {
+                        cell.bgColor = '#eeeeee';
+                    }
+                }
+                
+                var cols = document.querySelectorAll('#active_box');
+                [].forEach.call(cols,function(col){
+                    col.addEventListener("click",click,false);
+                });
+                function click(e){
+                    $('#calendar tr td div').removeClass("active");
+                    $(this).addClass("active");
+                }
+            }
+    </script>
+</head>
+
+<body>
+<div id="wrap">
+    <header></header>
+    <div id="m_header"></div>
+    <div id="reservation">
+        <div id="menu_title">
+            <h1>예약</h1>
+            <div><img src="sub_other_img/icon_reservation.png" alt="reservation icon"></div>
+        </div>
+        <div id="rv_wrap">
+            <div class="rv_container rv_container1">
+                <div class="rv_title">
+                    <h2><b>step1.</b> 인원선택</h2>
+                </div>
+                <div class="rv_box rv_box1">
+                   <div>인원수</div>
+                    <ul>
+                        <li><img src="sub_other_img/minus2.png" alt="빼기" id="minus"></li>
+                        <li><p id="number">1</p></li>
+                        <li><img src="sub_other_img/plus2.png" alt="더하기" id="plus"></li>
+                    </ul>
+                    <div>*9인이상 매장 전화 문의 부탁드립니다.</div>
+                </div>
+            </div>
+            <div class="rv_container rv_container2">
+                <div class="rv_title">
+                    <h2><b>step2.</b> 날짜선택</h2>
+                </div>
+                <div class="rv_box rv_box2">
+                    <table id="calendar" align="center" style="margin: 20px auto">
+                        <tr>
+                            <td colspan="2"><label onclick="prevCalendar()"><img src="index_img/section2_prev.png" alt="" style="width: 15px"></label></td>
+                            <td align="center" id="tdCalendarYM" colspan="3" style="font-size: 17px; font-weight: bold;">yyyy년 mm월</td>
+                            <td colspan="2"><label onclick="nextCalendar()"><img src="index_img/section2_next.png" alt="" style="width: 17px"></label></td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="color:#f03a40; font-weight: bold;">일</td>
+                            <td align="center" style="font-weight: bold">월</td>
+                            <td align="center" style="font-weight: bold">화</td>
+                            <td align="center" style="font-weight: bold">수</td>
+                            <td align="center" style="font-weight: bold">목</td>
+                            <td align="center" style="font-weight: bold">금</td>
+                            <td align="center" style="color:#0084ff; font-weight: bold;">토</td>
+                        </tr> 
+                    </table>
+                    <script language="javascript" type="text/javascript">
+                    buildCalendar();
+                    </script>
+                </div>
+            </div>
+            <div class="rv_container rv_container3">
+                <div class="rv_title">
+                    <h2><b>step3.</b> 시간선택</h2>
+                </div>
+                <div class="rv_box rv_box3">
+                   <p>점심</p>
+                    <ul>
+                        <li>10:30</li>
+                        <li>11:00</li>
+                        <li>11:30</li>
+                        <li>12:00</li>
+                        <li>12:30</li>
+                        <li>13:00</li>
+                        <li>13:30</li>
+                    </ul>
+                    <p>오후</p>
+                    <ul>
+                        <li>14:00</li>
+                        <li>14:30</li>
+                        <li>15:00</li>
+                        <li>15:30</li>
+                        <li>16:00</li>
+                        <li>16:30</li>
+                        <li>17:00</li>
+                        <li>17:30</li>
+                    </ul>
+                    <p>저녁</p>
+                    <ul>
+                        <li>18:00</li>
+                        <li>18:30</li>
+                        <li>19:00</li>
+                        <li>19:30</li>
+                        <li>20:00</li>
+                        <li>20:30</li>
+                    </ul>
+                    <p>*매장 방문 기준 1시간 전까지 예약 가능</p>
+                </div>
+            </div>
+            <div class="rv_container rv_container4">
+                <div class="rv_title">
+                    <h2><b>step4.</b> 장소선택</h2>
+                </div>
+                <div class="rv_box rv_box4">
+                    <form action="#" method="post">
+                        <select name="store" id="store">
+                            <option value="" selected><strong>가산현대아울렛점</strong></option>
+                            <option value="">강남삼성타운점</option>
+                            <option value="">건대스타시티점</option>
+                            <option value="">광화문D타워점</option>
+                            <option value="">도곡점</option>
+                            <option value="">롯데시네마월드타워점</option>
+                            <option value="">목동점</option>
+                            <option value="">발산점</option>
+                            <option value="">봉은사아이파크타워점</option>
+                            <option value="">사당점</option>
+                            <option value="">상암엠비씨점</option>
+                            <option value="">센터원점</option>
+                            <option value="">여의도점</option>
+                            <option value="">역삼점</option>
+                            <option value="">영등포타임스퀘어점</option>
+                            <option value="">예술의전당점</option>
+                            <option value="">왕십리역사점</option>
+                            <option value="">용산아이파크몰점</option>
+                            <option value="">잠원점</option>
+                            <option value="">합정점</option>
+                            <option value="">현대미아점</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="rv_container rv_container5">
+                <form action="" method="post">
+                    <input type="button" value="취소" name="cancel">
+                    <input type="button" value="완료" name="finish">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
+<footer></footer>
+</body>
+</html>

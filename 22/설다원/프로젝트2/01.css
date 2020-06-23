@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+body {
+    font-family: "나눔스퀘어", N
+		anumSquare;
+    font-size: 12px;
+    width: 100%; height: 100vh;
+}
+
+      
+
+       
+#header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+}
+.logo{
+    width: 10%; 
+    float: left;
+    margin-top: 25px;
+    
+}
+.logo img { 
+    width: 100%;
+    min-width: 50px;
+	max-width: 120px;
+
+}
+.top_menu {
+    float: right;
+    width: 10%;
+    margin-top: 25px;
+
+}
+.top_menu a {
+    font-size: 13px;
+    display: inline-block;
+    padding: 5px 5px 5px;
+}
+     
+#gnb {
+    background: #FFF;
+    height: 45px;
+    margin-top: 40px;
+    width: 80%;
+    float: left;
+}
+
+.gnb_top {
+    margin: 0 auto;
+    width: 28%;
+}
+
+.gnb_top > li {float:left;}
+.gnb_top > li > a {
+    display: block;
+    width: 120px;    
+    font-size: 17px;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+}
+.lnb {
+    display: none;
+}
+.gnb_top > li:hover > .lnb {
+    display: block;
+}
+.lnb li {
+    color: #000;
+    margin-left: 45px;
+}
+.lnb li a {display:block;}
+
+
+#brandVisual {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #8c908c;
+}
+#brandVisual ul {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 850px;
+    margin: 0;
+    padding: 0;
+}
+#brandVisual ul li {
+    position: absolute;
+    width: 100%;
+    height: 850px;
+}
+#brandVisual ul li a {
+    display: block; 
+    text-indent: -9999px;
+}
+
+
+#brandVisual .visual01 { left: 0px; background: url("img/01-1.png") 50% 0 no-repeat; background-size: cover; }
+#brandVisual .visual02 { left: 100%; background: url("img/02-2.png") 50% 0 no-repeat; background-size: cover; }
+#brandVisual .visual03 { left: 200%; background: url("img/03-2.png") 50% 0 no-repeat; background-size: cover; }
+
+#buttonList:after{ content: ""; display: block; clear: both }
+
+#buttonList li {
+    background: url("img/btnVisual.png") 0 -16px no-repeat;
+    width: 14px;
+    height: 15px;
+    float: left;
+    position: relative;
+    left: 93%;
+    top: -40px;
+    overflow: hidden;
+    margin: 0 5px;
+    cursor: pointer; 
+}
+#buttonList li.on {
+    background-position: 0 0;
+}
+#buttonList li a {
+    display: block;
+    text-indent: -9999px;
+}
+/*--------------------------------------------------------------*/
+.service {
+    height:943px; 
+    background:#E0E0F8; 
+    text-align:center;
+    font-size: 20px;
+}
+.container{
+     position:relative; 
+     width:1200px; 
+     margin:0 auto; 
+     padding-top:130px;
+	
+
+}
+.container > p{
+	font-size: 25px;
+}
+
+
+.content > ul >li{
+    float: left;
+    text-align: center;
+    margin-left: 17px;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------------------*/
+.scetion{
+    position:relative; 
+    height:910px; 
+    background:#E0F2F7;
+    text-align:center; 
+    overflow:hidden
+}
+.scetion_scale {
+    position:absolute; 
+    top:0px;  
+    left:50%; 
+    width:1920px; 
+    height:910px; 
+    margin-left:-960px; 
+    z-index:1;
+	
+}
+.scetion_scale_2{
+    position:absolute; 
+    top:217px; 
+    left:-1920px; 
+    width:100%; 
+    _background:url(img/5-1.png)no-repeat top center; 
+    z-index:2;
+	transition: all 1s;
+	transform: rotate(-12deg);
+}
+
+.scetion_scale_2:hover{
+	transition: all 0.5s;
+	transform: rotate(-12deg) scale(1.1);
+	_transform: scale(1.1);
+	
+	
+}
+.scetion_scale_3:hover{
+	transition: all 0.5s;
+	transform: rotate(-12deg) scale(1.1);
+
+	
+}
+.scetion_scale_3{
+    position:absolute;  
+    bottom:-63px; 
+    right:-1920px; 
+    width:100%; 
+    z-index:99;
+	transition: all 1s;
+	transform: rotate(-12deg);
+}
+
+
+.footer {
+	text-align: center; 
+	padding: 30px 50px;
+} 
+.s-footer {
+	padding: 25px;
+	text-align: center;
+}
+
+.footer li {
+	position: relative; 
+	display: inline; 
+	padding: 0 7px 0 10px; 
+}
+.footer li:before {
+	content: ''; 
+	width: 1px; 
+	height: 12px; 
+	background-color: #dbdbdb; 
+	position: absolute; 
+	left: 0; 
+	top: 2px;
+}
+.footer li:first-child:before {width: 0;}
+.footer address {padding-top: 15px;}

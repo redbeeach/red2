@@ -1,0 +1,304 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+body {font-family: 'NanumSquare';}
+html{overflow-x: hidden}
+input:focus {outline:none;}
+select:focus {outline: none;}
+.pen {display: none}
+#bg {
+width:99vw;
+height: 340px;
+background: url(../sub-page/sub_bg5.png)no-repeat;
+background-position:top;
+background-size: cover;
+margin: 0;
+padding: 0;
+}  
+.btn_box{display: none}
+.rent {display: none}
+.side_nav{
+position: relative;
+top: 50px;
+left: 10vw;
+width: 200px;
+}
+.side_nav h3{
+    font-size: 20px;
+    border-bottom: 3px solid ;
+    width: 200px
+}
+.side_nav ul li {
+    padding: 8px 15px;
+}
+.side_nav ul li i {
+    position: absolute;
+    left: 175px;
+}
+.side_nav > ul > .on {            
+    background-color: #d9e6ff;
+} 
+.container {
+    position: relative;
+    top: -75px;
+    width: 80vw;
+    max-width: 1150px;  
+    margin: 0 auto;
+    _border: 1px solid 
+}        
+.container h3{
+    font-size: 25px;
+    padding-bottom: 50px;
+    display: block;
+}
+.container div.table {
+    display: none;
+}
+.container div.t_show {
+    display: block;
+    width: 100%;
+    margin: 0 auto
+}
+.container div.t_show ul {
+    display: table
+}
+.container div.t_show ul li {
+    display: table-cell;
+}
+.container div.t_show ul{
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    table-layout: fixed;
+}
+.container div.t_show ul.tr{
+    border-top: 3px solid #0e71b8
+}
+.container div.t_show ul li {
+    display: table-cell;
+    line-height: 2.5;
+}
+.container div.t_show ul.tr li:nth-child(2){
+    text-align: center
+}
+.container div.t_show ul li:first-child{
+    width: 10%;
+    text-align: center
+}
+.container div.t_show ul li:nth-child(2){
+    width: 70%;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+.container div.t_show ul li:last-child{
+   text-align: center 
+}
+.pagination {
+    width:85%;
+    margin:0 auto;
+    margin-top:70px;
+}
+.pagination .page_wrap{
+    width:30%;
+    min-width:200px ;
+    margin:0 auto;
+    overflow: hidden;
+}
+.pagination a{
+    display: block;
+    float: left;
+	width: 40px;
+    height:40px;
+    line-height:40px;
+	border: 1px solid #eaf1f9;
+    text-align:center;
+	vertical-align:middle;margin:0 5px;
+    margin-bottom: 100px
+}
+.pagination a:hover{
+    background: #eaf1f9;
+}
+.pagination a.active{
+    background: #eaf1f9;
+}
+@media all and (min-width: 1960px) and (max-width:2199px){
+    .side_nav {left: 10vw}
+}
+@media all and (min-width: 1750px) and (max-width:1959px){
+    .side_nav {left: 5vw}
+}
+@media all and (min-width: 1500px) and (max-width:1749px){
+    .side_nav {left: 1vw}    
+    .container {width: 70%;}
+}
+@media all and (min-width: 1401px) and (max-width:1499px){
+    .side_nav {left: 2vw}    
+    .container {width: 65%; left: 5vw;}
+}
+@media all and (min-width:1105px) and (max-width:1400px){
+    .side_nav {left: 5vw;}
+    .container { margin-left: 25vw; width: 70vw}    
+}
+@media screen and (min-width:960px) and (max-width:1104px){
+    .side_nav{left: 3vw;}
+    .container {margin-left: 27vw; width: 70vw;}
+    
+}
+@media screen and (min-width:780px) and (max-width:959px){
+    .side_nav {left: 40vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -30px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -160px}
+    .side_nav ul li {width: 25%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 195px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 75vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -200px}
+    
+#footer{top: 150px;}    
+}
+@media screen and (min-width:610px) and (max-width:779px){
+    .side_nav {left: 40vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -30px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -160px}
+    .side_nav ul li {width: 25%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 195px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 75vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -200px}
+#footer{top: 150px;}    
+}
+@media screen and (min-width:500px) and (max-width:609px){
+    .side_nav {left: 35vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -30px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 550px;margin-left: -160px}
+    .side_nav ul li {width: 25%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 195px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 75vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -225px}
+    .container div.t_show ul li {font-size: 14px; line-height: 3.5;}
+    .pagination .page_wrap a {width: 35px; height: 35px;line-height: 32px;}    
+#footer{top: 150px;}    
+  }
+@media screen and (max-width:499px){
+    .side_nav {left: 31vw; top: 50px}
+    .side_nav h3 {font-size: 23px; padding-bottom: 10px; border: none}
+    .side_nav h3:after {content: "";display: block; border-bottom: 2px solid ;
+         margin-left: -30px; width: 200px;padding-top: 5px;
+    }
+    .side_nav ul {width: 450px;margin-left: -118px}
+    .side_nav ul li {width: 25%; float: left; text-align: center;margin-left: 10px; border: 1px solid #d9e6ff; border-radius: 5px}
+    .side_nav i {display: none}
+    .side_nav .on{font-weight: bold;}
+    .side_nav > ul > .on:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 15px solid #d9e6ff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 175px;
+    top: 85px
+    }
+    .side_nav > ul > li > a {
+        display: block;
+        -webkit-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+    .side_nav > ul > li:hover > a {
+     -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+             transform: scale(1.1);  
+    }
+    .container {top: 130px;width: 95vw;}
+    .container h3 {display: block; text-align: center; font-size: 22px; width: 100%; text-indent: -240px}
+    .container div.t_show ul li {font-size: 14px; line-height: 3.5;}
+    .pagination .page_wrap a {width: 35px; height: 35px;line-height: 32px;}
+#footer{top: 150px;}    
+}

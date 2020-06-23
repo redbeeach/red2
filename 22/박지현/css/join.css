@@ -1,0 +1,238 @@
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+body {font-family: 'NanumSquare';}
+html{ width: 99vw; overflow-x: hidden}
+h4{
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 150px;
+    font-size:25px;
+    line-height: 170px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+h4 > img {
+    width: 180px;
+    margin-right: 10px;
+}
+hr {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    _height: 1px;
+    border-color: #a7c9ee;    
+}
+form {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;   
+    max-width: 900px;
+    _height: 800px;
+    padding-top: 25px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-top: 10px
+}
+form:after{
+    content:"";
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+    border-bottom: 2px solid #a7c9ee;
+    margin-top: 120px
+}
+form .set {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: table;
+}
+form .set label, input, button{
+    display: table-cell
+}
+form .set label{
+    width: 250px;
+    min-width: 20%;
+    text-align: center
+}
+form .set input {
+    height: 40px;
+    width: 250px;
+}
+form .set small{
+    display: block;
+    color: #ff6961;
+    margin-top: 5px
+}
+form .em{
+    margin-bottom: 40px
+}
+form .em select{
+    width: 150px;
+    height: 40px;
+}
+form .set button {
+    border: 1px solid #333;
+    width: 70px;
+    height: 35px;
+    margin-left: 20px;
+    background: #fff;
+    cursor: pointer
+}
+form .set button:hover{
+    color: #fff;
+    border-color: #fff;
+    background: #6098FF
+}
+form .gender div input{
+    width: 12px;
+    display: block;
+    float: left;
+    margin-top: -9px;
+    margin-right: 4px
+}
+form .gender div label {
+    _border: 1px solid;
+    text-align: left;
+    width: 40px;
+    float: left;
+}
+form .agree {
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 0 
+}
+form .agree h2{
+    display: inline;
+    width: 100%;
+    font-size: 22px
+}
+form .agree h2 input{
+    margin-right: 10px
+}
+form .agree a:after{
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc
+}
+form .agree .sc_box {
+    display: none;
+}
+form .agree .on {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    left: 0;
+    top: 0;    
+    z-index: 500;
+}
+form .agree .on .bg{
+    background: #fff;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    padding: 10px;
+    border-radius: 3px
+}
+form .agree .on .bg h3{
+    font-size: 22px;
+    display: inline-block;
+    margin:10px 0 50px 3px
+}
+form .agree .on .bg i {
+    cursor: pointer;
+    _display: block;
+    float: right;
+    font-size: 40px;
+    margin: 5px 15px;
+}
+form .agree .on .bg p {
+    display: block;
+    border: 1px solid #ccc;
+    height: 280px;
+    overflow-y: scroll;
+}
+form .clear{
+    position: absolute;
+    bottom: -70px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid ;
+    background: #fff;
+    left: 300px;
+    cursor: pointer
+}
+form .clear:hover{
+    
+}
+#footer {
+    top: 150px;
+}
+@media all and (min-width:1401px){
+    
+}
+@media all and (min-width:1105px) and (max-width:1400px){
+    
+}
+@media screen and (min-width:960px) and (max-width:1104px){
+    
+}
+@media screen and (min-width:780px) and (max-width:959px){
+    form:after{margin-top: 150px}
+    form .set small{font-size: 12px;}
+    form .set label{width: 200px;}
+    form .set input{width: 200px; height: 35px;}
+    form .set select {width: 110px; height: 35px;}
+    form .agree .on .bg{width: 60%;}
+    form .agree .on .bg h3 {margin-bottom: 30px}
+    form .clear {left: 35%;}
+}
+@media screen and (min-width:610px) and (max-width:779px){
+    h4{height: 100px;line-height: 100px;}
+    form:after{margin-top: 110px}
+    form .set small{font-size: 12px;}
+    form .set label{width: 120px;}
+    form .set input{width: 170px; height: 35px;}
+    form .set select {width: 110px; height: 35px;}
+    form .agree .on .bg{width: 80%;}
+    form .agree .on .bg h3 {margin-bottom: 30px}
+    form .agree .on .bg i {font-size:30px}
+    form .clear {left: 30%;}
+}
+@media screen and (min-width:500px) and (max-width:609px){
+    h4{height: 100px;line-height: 100px;}
+    hr{width: 90%;}
+    form{width: 90%;}
+    form:after{margin-top: 110px}   
+    form .set label{width: 120px; display: block; text-align: left;margin-bottom: 15px}
+    form .set input{width: 230px; }
+    form .set small{font-size: 12px;}
+    form .set select {width: 110px;}
+    form .agree {width: 90%;}
+    form .agree .on .bg{width: 90%;}
+    form .agree .on .bg h3 {margin-bottom: 30px}
+    form .agree .on .bg i {font-size:30px}
+    form .clear {left: 30%;}
+}
+@media screen and (max-width:499px){
+     h4{height: 100px;line-height: 100px;}
+    hr{width: 90%;}
+    form{width: 90%;}
+    form:after{margin-top: 110px}   
+    form .set label{width: 120px; display: block; text-align: left;margin-bottom: 15px}
+    form .set input{width: 170px; }
+    form .set small{font-size: 12px;}
+    form .set select {width: 110px;}
+    form .agree {width: 90%;}
+    form .agree .on .bg{width: 100%;}
+    form .agree .on .bg h3 {margin-bottom: 30px}
+    form .agree .on .bg i {font-size:35px}
+    form .clear {left: %; width: 150px}
+  }

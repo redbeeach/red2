@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Seoul Pay</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">    
+    <link rel="stylesheet" href="css/main.css">  
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    
+    <script type="text/javascript">
+        $(function(){
+            $(".btn_list li").click(function(){  
+                     var i = $(".btn_list li").index(this);
+                     var s = $(".section").eq(i).offset().top;
+                       $(".btn_list li i").removeClass();
+                       $(".btn_list li i").addClass("fas fa-circle");
+                       $(".btn_list li i").eq(i).removeClass();
+                       $(".btn_list li i").eq(i).addClass("fas fa-circle on");
+                       $("html,body").stop().animate({scrollTop:s});
+                 });
+
+            var deflut=0;
+            $(".btn_list li i").removeClass();
+            $(".btn_list li i").addClass("fas fa-circle");
+            $(".btn_list li i").eq(deflut).removeClass();
+            $(".btn_list li i").eq(deflut).addClass("fas fa-circle on");
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                var ht= $(window).height();
+
+            for(var i=0; i<7; i++){
+                if(scroll >=ht*(i) && scroll < ht*(i+1)){                    
+                    $(".btn_list li i").removeClass();
+                    $(".btn_list li i").addClass("fas fa-circle");
+                    $(".btn_list li i").eq(i).removeClass();
+                    $(".btn_list li i").eq(i).addClass("fas fa-circle on");
+                    console.log("a");
+                }
+                else if(scroll == 0){
+                    $(".btn_list li i").removeClass();
+                    $(".btn_list li i").addClass("fas fa-circle");
+                    $(".btn_list li i").eq(0).removeClass();
+                    $(".btn_list li i").eq(0).addClass("fas fa-circle on");
+                };               
+            }
+            }); 
+            var select = ".section";
+            $(select).each(function (index) {
+                
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveScorll = $(window).scrollTop();
+                    var section = $(select).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(section).next() != undefined) {
+                            try{
+                                moveScorll = $(section).next().offset().top;
+                                $('header').removeClass('nav-up').addClass('nav-down');
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(section).prev() != undefined) {
+                            try{
+                                moveScorll = $(section).prev().offset().top;
+                                
+                            }catch(e){}
+                        }
+                    }
+                    $(window).scroll(function(){
+                        var windowScroll = $(window).scrollTop();
+                        if(windowScroll == 0){
+                        $('header').removeClass('nav-down').addClass('nav-up');
+                        };
+                    });
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveScorll + 'px'
+                    },{duration: 1200, complete: function(){}});
+                    
+                });
+            });
+
+        });
+    </script>
+    
+    <style>
+        /*defult setting*/
+        body::-webkit-scrollbar {display: none;} 
+        html,body{ margin:0; padding:0; width:100%; height:100%; font-family:'NanumSquareR';}
+        #wrap {width: 100%; height: 100%;position: relative;}
+        .section{ width:100%; height:100%; position:relative; color:#ffffff; font-size:24pt;}
+        .content{width: 100%; height: 90%; position: relative; top: 100px;}
+        header{position: fixed; width: 100%; height: 100px; z-index: 9;}
+        .btn_list{position: fixed; right: 0; top: 30%; width: 3%; text-align: center;}
+        .btn_list li{width: 30px; height: 30px; margin: 10px; margin-top: 30px;}
+        .btn_list li i{color: rgba(255,255,255,0.3); font-size: 13px; display: inline-block;}
+        .btn_list li i.on{color: brown; font-size: 20px;}
+        .nav-up{background: rgba(0,0,0,0.1); transition: 0.5s;}
+        .nav-down{background: rgba(255,255,255,1); transition: 0.5s;}
+        
+        .s1{background: #000; background-size: cover;}
+        .s2{background: #333; background-size: cover;}
+        .s3{background: #ccc; background-size: cover;}
+        .s4{background: #3c3c3c; background-size: cover;}
+        .s5{background: #8e8e8e; background-size: cover;}
+        .s6{background: #9d9d9d; background-size: cover;}
+        .s7{background: #eee; background-size: cover;}
+        
+    </style>
+    
+</head>
+<body>
+       <header class="nav-up">header</header>
+    <div id="wrap">
+        <div class="section s1"><div class="content">1</div></div>
+        <div class="section s2"><div class="content">2</div></div>
+        <div class="section s3"><div class="content">3</div></div>
+        <div class="section s4"><div class="content">4</div></div>
+        <div class="section s5"><div class="content">5</div></div>
+        <div class="section s6"><div class="content">6</div></div>
+        <div class="section s7"><div class="content">7</div></div>
+    </div>
+    <ul class="btn_list">
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+       </ul>
+</body>
+</html>

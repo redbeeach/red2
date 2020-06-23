@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sub3-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />    
+    <script>
+        $(document).ready(function(){
+           $("#hd").load("header.html") ;
+            $("#ft").load("footerbase.html");
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+          $('.content-box > .tab li').click(function(){
+              var i = $(this).index();
+              
+              $('.tab > li ').removeClass();
+              $(this).addClass("on");
+              $('.hall > ul').removeClass("h_show");
+              $('.hall > ul').eq(i).addClass("h_show");
+              $('.hall > .h_show > li').removeClass();
+              $('.hall > .h_show > li').eq(0).addClass("tg");
+              $('.img-box > ul').removeClass("hall_img");
+              $('.img-box > ul').eq(i).addClass("hall_img");
+              $('.hall_img > li').removeClass();
+              $('.hall_img > li').eq(0).addClass("guide");              
+              $('.text_box > ul').removeClass();              
+              $('.text_box > ul').eq(i).addClass("text-b");
+              $('.table_list > table').removeClass();
+              $('.table_list > table').eq(i).addClass("t_show");
+          });
+            $('.h_show > li').click(function(){
+               var vi = $(this).index();
+               // $('.hall_img').hide();
+                $('.h_show > li').removeClass();
+                $('.h_show > li').eq(vi).addClass("tg");
+                $('.img-box > ul >li').removeClass();
+                $('.img-box > ul >li').eq(vi).addClass("guide");
+                
+            });
+            $('.hall > .ing > li').click(function(){
+               var vi = $(this).index();
+                
+                $('.hall > .ing > li').removeClass();
+                $('.hall > .ing > li').eq(vi).addClass("tg");
+                $('.img-box > .ping > li').removeClass();
+                $('.img-box > .ping > li').eq(vi).addClass("guide");
+               
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>시설안내</h3>        
+        <ul>
+            <li><a href="sub-page3-1.html"><i class="fas fa-chevron-right"></i>시설개요</a></li>
+            <li class="on"><a href="sub-page3-1.html">전시장</a></li>
+            <li><a href="sub-page3-3.html">회의실</a></li>
+            <li><a href="sub-page3-4.html">편의시설</a></li>
+        </ul>
+    </div>
+    <div class="content-box">
+        <h3>전시장</h3>
+        <ul class="tab">
+            <li class="on">1전시장</li>
+            <li>2전시장</li>
+        </ul>
+        <!--탭-->
+        <div class="hall">
+             <ul class="h_show">
+                 <li class="tg">전체개요</li>
+                 <li>전시 1홀</li>
+                 <li>전시 2홀</li>
+                 <li>전시 3홀</li>
+                 <li>전시 4홀</li>
+                 <li>전시 5홀</li>
+                 <li>옥외전시장</li>
+            </ul> 
+            <ul class="ing">
+                 <li>전체개요</li>
+                 <li>전시 6홀</li>
+                 <li>전시 7홀</li>
+                 <li>전시 8홀</li>
+                 <li>전시 9홀</li>
+                 <li>전시 10홀</li>                 
+            </ul>       
+        </div>
+       <!--이미지박스-->
+        <div class="img-box">
+           <ul class="hall_img">
+               <li class="guide"><img src="sub-page/exhibit_flash_summary01.gif" alt="1층 전시장 전체도면"></li>
+               <li><img src="sub-page/col1.png" alt=""></li>
+               <li><img src="sub-page/col2.gif" alt=""></li>
+               <li><img src="sub-page/col3.gif" alt=""></li>
+               <li><img src="sub-page/col4.gif" alt=""></li>
+               <li><img src="sub-page/col5.gif" alt=""></li>
+               <li><img src="sub-page/col6.gif" alt=""></li>
+           </ul> 
+           <ul class="ping">
+                <li><img src="sub-page/col2-1.gif" alt=""></li>
+                <li><img src="sub-page/col2-2.gif" alt=""></li>
+                <li><img src="sub-page/col2-3.gif" alt=""></li>
+                <li><img src="sub-page/col2-4.gif" alt=""></li>
+                <li><img src="sub-page/col2-5.gif" alt=""></li>
+                <li><img src="sub-page/col2-6.gif" alt=""></li>
+            </ul>           
+        </div>
+        <div class="text_box">
+            <ul class="text-b">
+                <li><img src="sub-page/li1.png" alt="">
+                    실내전시면적 53,541㎡, 옥외 전시면적 2,849㎡
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    단층무주구조 : 천장높이 15m 복층 부스 설치가능
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    중장비 전시 : 수중하중 5ton/㎡로 중장비 전시가능 
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    분할/통합 : 총 5개홀, 이동식 칸막이로 각홀 2분할 및 통합 사용 가능
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    대형주차장(지상) : 전용주차장 2,000대 수용가능
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    전문하역시설 : 일반차량 동선과 분리된 전용도로, 대형화물출입구, 홀 내부 차량 진입
+                </li>
+            </ul>
+            <ul class="">
+                <li><img src="sub-page/li1.png" alt="">
+                    실내전시면적 53,541㎡
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                   4개의 전시홀 : 가로세로비율1.4:1, 각 2분할 가능
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    1개의 이벤트홀 : 이동식 무대배치, 6분할 가능, 컨벤션, 이벤트 등 다목적 사용가능 
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    참관객 동선 : 2층로비(전시홀 조망) → 1층 전시장으로 진입
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    전문하역시설 : 일반차량 동선과 분리된 전용도로, 대형화물출입구, 홀 내부 차량 진입
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    대형주차장(지상/지하) : 전용주차장 2,200대 수용가능
+                </li>
+                <li><img src="sub-page/li1.png" alt="">
+                    지상주차장 : 지상주차장 386대(버스17대)
+                </li>
+            </ul>
+        </div>            
+        <div class="table_list">
+            <table width="900" class="t_show">
+            <tr>
+                <th>구분</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>규모</td>
+                <td>10,611㎡</td>
+            </tr>
+            <tr>
+               <td>수용능력</td>
+                <td>
+                   <ul>
+                    <li>전시부스600부스 (3X3부스 기준, 통로포함)</li>
+                    <li>A·B 2분할 사용가능</li>
+                    </ul>
+                </td>
+            </tr>
+             <tr>
+                 <td>주요시설</td>
+                 <td>
+                     <ul>
+                         <li> Trench: 전기, 급배수, 압축공기, 전화, 인터넷</li>
+                         <li>바닥마감재:하드너</li>
+                         <li>바닥하중: 5ton/㎡</li>
+                     </ul>
+                </td>                     
+             </tr>
+             <tr>
+                 <td>주최자이용시설</td>
+                 <td>
+                     <ul>
+                         <li>주최자 사무실 (1층,로비방향) : 66㎡</li>
+                         <li>주최자 사무실 (2층) : 23㎡</li>
+                         <li>전시지원사무실 A: 40㎡ </li>
+                         <li>전시지원사무실 B: 40㎡</li>
+                     </ul>
+                 </td>                     
+             </tr>
+             <tr>
+                 <td>도면</td>
+                 <td><button>JPG 파일 다운로드</button>
+                     <button> CAF 파일 다운로드</button> 
+                 </td>
+             </tr>
+            </table>
+            <!--제 2전시장 -->
+             <table width="900px">
+            <tr>
+                <th>구분</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>규모</td>
+                <td>5,580㎡</td>
+            </tr>
+            <tr>
+               <td>수용능력</td>
+                <td>
+                    <ul>
+                        <li>전시부스 200부스 (3X3 부스 기준 , 통로포함)</li>
+                        <li>A,B,C 각 2분할 가능, 전체 6분할 가능</li>
+                        <li>6분할 - 강의식:400 극장식:800 연회식:450 리셉션 :1,000</li>
+                        <li>전체 - 강의식:2,400 극장식:5,400 연회식:2,700 리셉션식:6,000</li>
+                    </ul>
+                </td>
+            </tr>
+             <tr>
+                 <td>주요시설</td>
+                 <td>
+                     <ul>
+                         <li> Trench: 전기, 급배수, 압축공기, 전화, 인터넷</li>
+                         <li>바닥마감재:카펫</li>
+                         <li>바닥하중: 2ton/㎡</li>
+                     </ul>
+                </td>                     
+             </tr>
+             <tr>
+                 <td>주최자이용시설</td>
+                 <td>
+                     <ul>
+                         <li>1층 : 주최자사무실 3개소, VIP대기실 1개소, 강사대기실 2개소, 대기실 1개소,분장실 1개소, 사무실 4개소</li>
+                         <li>2층 : 음향조정실 3개소, 통역실 3개소(각 8개국어)</li>  
+                     </ul>
+                 </td>                     
+             </tr>
+             <tr>
+                 <td>도면</td>
+                 <td><button>JPG 파일 다운로드</button><button> CAF 파일 다운로드</button> </td>
+             </tr>
+        </table>                   
+        </div> 
+    <button class="rent_b">임대상담 문의하기</button> 
+   </div>
+    <div id="ft"></div>
+</body>
+</html>

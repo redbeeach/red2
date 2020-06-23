@@ -1,0 +1,124 @@
+    <script>
+        $(window).resize(function(){
+            var width_size = window.outerWidth;
+            if(width_size<=767) {
+                $("html,body").css({"overflow-x" : "hidden"}); 
+            };
+        });
+    </script>
+       
+       <script>
+        $(function(){
+            $('body').append("<div id ='glayLayer'></div>");
+            
+            $("#m_header_box div img").click(function(){
+                $("#m_nav").show();
+                $("#m_nav").animate({right:"0px"});
+                $("#glayLayer").show();
+                $("html,body").css({"overflow" : "hidden", "overflow-x" : "hidden", "height" : "100%"});
+            });
+            $("#m_nav_box1 div").click(function(){
+                $("#m_nav").animate({right:"-80%"});
+                $("#m_nav").hide(300);
+                $(".m_sub_nav").animate({right:"-50%"});
+                $("#glayLayer").hide();
+                $("html,body").css({"overflow" : "auto", "overflow-x" : "hidden", "height" : "100%"});
+            });
+        });
+    </script>
+    
+   <script>
+    $(function(){
+        var cur = 10;
+        var isOn = 0;
+        
+        $("#m_nav_left li").on("click",function(e){
+            if(isOn == 1){
+                cur = 10;
+            }
+            var i = $("#m_nav_left li").index(this);
+        
+            if(cur != i){
+            $(".m_sub_nav").animate({right:"-50%"});
+            $(this).find(".m_sub_nav").animate({right:"0px"});
+                isOn = 2;
+                console.log("show")
+            } else{
+            $(this).find(".m_sub_nav").animate({right:"-50%"});
+                isOn = 1;
+                console.log("hide")
+            }
+            cur = i;
+        });
+    });
+    </script>
+    
+    <div id="m_header">
+        <div id="m_header_box">
+          <div><a href="index.html"><img src="index_img/logo2.png" alt="매드포갈릭"></a></div>
+          <div><a href="index.html"><img src="index_img/arrow_left.png" alt="left"></a></div>
+          <ul>
+              <li id="brand">BRAND</li>
+              <li id="menu">MENU</li>
+              <li id="sub_new">NEW</li>
+              <li id="sub_bread">BREAD</li>
+              <li id="sub_starter">STARTER</li>
+              <li id="sub_pasta">PASTA</li>
+              <li id="sub_pizza">PIZZA</li>
+              <li id="sub_risotto">RICE & RISOTTO</li>
+              <li id="sub_steak">STEAK</li>
+              <li id="sub_dessert">DESSERT</li>
+              <li id="sub_wine">WINE</li>
+              <li id="sub_beverage">BEVERAGE</li>
+              <li id="membership">MEMBERSHIP</li>
+              <li id="event">EVENT</li>
+              <li id="sub_event">이벤트</li>
+              <li id="sub_alliance">제휴멤버십 & 카드</li>
+              <li id="store">STORE</li>
+              <li id="login">LOGIN</li>
+              <li id="join">JOIN</li>
+              <li id="customer">CUSTOMER</li>
+              <li id="reservation">RESERVATION</li>
+          </ul>
+          <div><img src="index_img/ham.png" alt="메뉴"></div>
+            
+        </div>
+        <div id="m_nav">
+            <div id="m_nav_box1">
+                <div>X</div>
+                <ul>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="join.html">JOIN</a></li>
+                </ul>
+            </div>
+            <div id="m_nav_box2">
+                <ul id="m_nav_left">
+                    <li><a href="brand.html">BREAD</a><span>&gt;</span></li>
+                    <li>MENU<span>&gt;</span>
+                        <ul class="m_sub_nav">
+                            <li><a href="menu_1.new.html">NEW</a></li>
+                            <li><a href="menu_2.bread.html">BREAD</a></li>
+                            <li><a href="menu_3.starter.html">STARTER</a></li>
+                            <li><a href="menu_4.pasta.html">PASTA</a></li>
+                            <li><a href="menu_5.pizza.html">PIZZA</a></li>
+                            <li><a href="menu_6.rice&risotto.html">RICE & RISOTTO</a></li>
+                            <li><a href="menu_7.steak.html">STEAK</a></li>
+                            <li><a href="menu_8.dessert.html">DESSERT</a></li>
+                            <li><a href="menu_9.beverage.html">BEVERAGE</a></li>
+                            <li><a href="menu_10.wine.html">WINE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="membership.html">MEMBERSHIP</a><span>&gt;</span></li>
+                    <li>EVENT<span>&gt;</span>
+                        <ul class="m_sub_nav">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="alliance.html">제휴멤버십 & 카드</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="store.html">STORE</a><span>&gt;</span></li>
+                    <li><a href="reservation.html">RESERVATION</a><span>&gt;</span></li>
+                    <li><a href="customer.html">CUSTOMER</a><span>&gt;</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,95 @@
+        body {background: #e1e3e4; width: 100%; height: 100%;}
+        #left_nav li:nth-child(2) {color: #a6a6a6;}
+        #menu {width: 80%; margin: 0 auto; transition: all 0.5s;}
+        #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px}
+        #menu_title div {padding-top: 1vh; width: 40px; margin: 0 auto;}
+        #menu_title div img {width: 100%;}
+        #menu_title ul {display: table; overflow: hidden; width: 90%; margin: 0 auto; text-align: center; padding-top: 90px; padding-bottom: 60px;}
+        #menu_title ul li {display: table-cell; vertical-align: middle; width: 20%; padding: 5px 10px; border-right: 1px solid #a6a6a6; background: #e1e3e4;}
+        #menu_title ul li a {font-weight: bold; font-size: 18px; color: #757575}
+        #menu_title ul li:last-child {border-right: 0;}
+        #menu_title ul li a.selected {color: #f03a40;}
+        
+        .wine {width: 100%; margin-bottom: 200px;}
+        .wine td {padding: 10px; position: relative;}
+        .wine td .menu_img {background: #757575; cursor: pointer;}
+        .wine td .menu_txt {color: #e1e3e4; overflow: hidden; padding: 0 15px 10px 15px; width: 100%; height: 50px; display: table;}
+        .wine td .menu_txt strong {font-size: 16px; display: inline-block; width: 80%; display: table-cell; vertical-align: middle; padding-left: 20px; padding-right: 20px; line-height: 1.3;}
+        .wine td .menu_txt p {font-size: 16px; padding-top: 5px; display: inline-block; display: table-cell; vertical-align: middle; text-align: right; padding-right: 20px;}
+
+        .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 10px; left: 10px; z-index: 10; width: calc(100% - 20px); height: calc(100% - 20px); font-size: 14px; cursor: pointer;}
+        .hover_wrap_menu .hover_data_menu {color: #e1e3e4; text-align: center; line-height: 1.5; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; padding: 20px;}
+        .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 20px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px 5px; font-weight: bold;}
+        
+        
+        
+        @media screen and (min-width:1280px) and (max-width:1599px) {
+            .wine td .menu_txt strong {font-size: 14px;}
+            .wine td .menu_txt p {font-size: 14px;}
+            .hover_wrap_menu {font-size: 12px;}
+        }
+        
+        @media screen and (min-width:1024px) and (max-width:1279px) {
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 28px;}
+            #menu_title div {padding-top: 1vh; width: 34px; margin: 0 auto;}
+            #menu_title ul {width: 100%;}
+            #menu_title ul li a {font-weight: bold; font-size: 15px;}
+            
+            .wine td .menu_txt strong {font-size: 13px; padding-left: 10px;}
+            .wine td .menu_txt p {font-size: 13px; padding-right: 10px;}
+            .hover_wrap_menu {font-size: 11px;}
+        }
+        
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            #menu {width: 90%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
+            #menu_title div {padding-top: 1vh; width: 30px; margin: 0 auto;}
+            #menu_title ul {width: 100%;}
+            #menu_title ul li a {font-size: 13px;}
+            
+            .wine {margin-bottom: 150px;}
+            .wine td .menu_txt strong {font-size: 12px; padding-left: 10px;}
+            .wine td .menu_txt p {font-size: 12px; padding-right: 10px;}
+            .hover_wrap_menu {font-size: 11px;}
+        }
+        @media screen and (min-width:640px) and (max-width:767px) {
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #sub_wine {display: block; position: absolute; right: 55px; top: 22px;}
+            
+            #menu_title h1 {font-size: 22px;}
+            #menu_title div {width: 27px;}
+            #menu_title ul {display: block; overflow: hidden; width: 80%; margin: 0 auto; text-align: center; padding-top: 50px; padding-bottom: 30px;}
+            #menu_title ul li {display: block; vertical-align: middle; width: 100%; padding: 10px 0px; border-right: 0; border-top: 1px solid #a6a6a6;}
+            #menu_title ul li:last-child {border-bottom: 1px solid #a6a6a6;}
+            #menu_title ul li a {font-size: 15px; color: #757575;}
+            
+            .wine td {display: block; width: 100%; padding: 20px 0px;}
+            .wine td .menu_txt strong {font-size: 15px;}
+            .wine td .menu_txt p {font-size: 14px;}
+            
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 20px; left: 0px; z-index: 10; width: 100%; height: calc(100% - 40px); font-size: 12px; cursor: pointer;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; text-align: center; line-height: 1.5; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; padding: 20px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 20px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px 5px; font-weight: bold;}
+        }
+
+        @media screen and (max-width:639px) {
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #sub_wine {display: block; position: absolute; right: 55px; top: 22px;}
+            
+            #menu_title h1 {font-size: 22px;}
+            #menu_title div {width: 27px;}
+            #menu_title ul {display: block; overflow: hidden; width: 80%; margin: 0 auto; text-align: center; padding-top: 50px; padding-bottom: 30px;}
+            #menu_title ul li {display: block; vertical-align: middle; width: 100%; padding: 10px 0px; border-right: 0; border-top: 1px solid #a6a6a6;}
+            #menu_title ul li:last-child {border-bottom: 1px solid #a6a6a6;}
+            #menu_title ul li a {font-size: 15px; color: #757575;}
+            
+            .wine td {display: block; width: 100%; padding: 20px 0px;}
+            .wine td .menu_txt strong {font-size: 15px;}
+            .wine td .menu_txt p {font-size: 14px;}
+            
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 20px; left: 0px; z-index: 10; width: 100%; height: calc(100% - 40px); font-size: 12px; cursor: pointer;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; text-align: center; line-height: 1.5; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; padding: 20px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 20px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px 5px; font-weight: bold;}
+        }

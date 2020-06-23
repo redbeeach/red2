@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 EVENT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+    <script>
+        $(function(){
+            var menu_img = $(".menu_box .menu_img");
+            var sub = $(".menu_box .menu_img .hover_wrap");
+            var cur = 10;
+            var isOn = 0;
+            
+            sub.hide();
+            
+            menu_img.on("click", function(e){
+                if (isOn == 1){
+                    cur = 10;
+                }
+                var i = menu_img.index(this);
+                
+                if(cur != i){
+                    sub.hide();
+                    $(this).find(".hover_wrap").fadeIn();
+                    isOn = 2;
+                }
+                else {
+                    $(this).find(".hover_wrap").fadeOut();
+                    isOn = 1;
+                }
+                cur = i;
+            });
+    });
+    </script>
+    <style>
+        body {background: #e1e3e4; width: 100%;}
+        #left_nav li:nth-child(2) {color: #a6a6a6;}
+        #menu {width: 80%; margin: 0 auto; transition: all 0.5s;}
+        #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px;}
+        #menu_title div {padding-top: 1vh; padding-bottom: 10vh; width: 40px; margin: 0 auto;}
+        #menu_title div img {width: 100%;}
+        
+        ul.menu_box {overflow: hidden; margin: 0 auto; margin-bottom: 200px; background: #ffffff; padding: 50px 20px;}
+        ul.menu_box li.menu_img {float: left; width: 22%; margin: 1.5%; position: relative; cursor: pointer; transition: all 0.5s;}
+        ul.menu_box li.menu_img .scale {overflow: hidden;}
+
+        ul.menu_box li.menu_img .scale img {width: 100%; vertical-align: bottom; transition: all 0.5s;}
+        ul.menu_box li.menu_img .scale img:hover {transform: scale(1.1);}
+        ul.menu_box li.menu_img .menu_txt {width: 100%; height: 70px; margin: 0 auto; padding: 10px; position: relative; background: #ffffff; border: 2px solid #eeeeee; border-top: 0;}
+        ul.menu_box li.menu_img .menu_txt strong {font-size: 16px; padding-bottom: 5px; display: inline-block;}
+        ul.menu_box li.menu_img .menu_txt p {font-size: 14px; position: absolute; left: 10px; bottom: 10px;}
+        
+        .hover_wrap {background: rgba(0,0,0,0.8); position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - 70px); vertical-align: top; padding: 30px;}
+        .hover_wrap .hover_data {margin: 0 auto; margin-top: 30%; padding: 7px 0px; text-align: center; font-size: 14px; background: #eeeeee; color: #000; font-weight: bold;}
+        .hover_wrap .hover_data:hover {background: #a3171b; color: #eeeeee;}
+        
+        
+        
+        @media screen and (min-width:1280px) and (max-width:1599px) {
+            ul.menu_box li.menu_img .menu_txt {padding: 10px; height: 60px;}
+            ul.menu_box li.menu_img .menu_txt strong {font-size: 14px;}
+            ul.menu_box li.menu_img .menu_txt p {font-size: 12px; position: absolute; left: 10px; bottom: 10px;}
+            .hover_wrap {height: calc(100% - 60px);}
+            .hover_wrap .hover_data {font-size: 12px; margin-top: 25%;}
+        }
+        
+        @media screen and (min-width:1024px) and (max-width:1279px) {
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 28px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 34px; margin: 0 auto;}
+            ul.menu_box li.menu_img {width: 30%;}
+            ul.menu_box li.menu_img .menu_txt {padding: 10px; height: 60px;}
+            ul.menu_box li.menu_img .menu_txt strong {font-size: 13px;}
+            ul.menu_box li.menu_img .menu_txt p {font-size: 11px; position: absolute; left: 10px; bottom: 10px;}
+            .hover_wrap {height: calc(100% - 60px);}
+            .hover_wrap .hover_data {font-size: 11px; margin-top: 25%;}
+        }
+        
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            #menu {width: 90%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 30px; margin: 0 auto;}
+            ul.menu_box li.menu_img {width: 30%;}
+            ul.menu_box li.menu_img .menu_txt {padding: 10px; height: 60px;}
+            ul.menu_box li.menu_img .menu_txt strong {font-size: 12px;}
+            ul.menu_box li.menu_img .menu_txt p {font-size: 11px; position: absolute; left: 10px; bottom: 10px;}
+            .hover_wrap {height: calc(100% - 60px);}
+            .hover_wrap .hover_data {font-size: 11px; margin-top: 25%;}
+        }
+        
+        @media screen and (min-width:640px) and (max-width:767px) {
+            body {background: #ffffff; width: 100%;}
+            #menu {width: 100%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 30px; margin: 0 auto;}
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #event {display: block; position: absolute; right: 55px; top: 22px;}
+            
+            ul.menu_box li.menu_img {width: 47%;}
+            ul.menu_box li.menu_img .menu_txt {padding: 10px; height: 60px;}
+            ul.menu_box li.menu_img .menu_txt strong {font-size: 12px;}
+            ul.menu_box li.menu_img .menu_txt p {font-size: 11px; position: absolute; left: 10px; bottom: 10px;}
+            .hover_wrap {height: calc(100% - 60px);}
+            .hover_wrap .hover_data {font-size: 11px; margin-top: 25%;}
+        }
+        
+        @media screen and (max-width:639px) {
+            body {background: #ffffff; width: 100%;}
+            #menu {width: 100%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 60px; font-size: 22px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 0px; margin: 0 auto; width: 27px;}
+            #menu_title div img {width: 100%;}
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #event {display: block; position: absolute; right: 55px; top: 22px;}
+            
+            ul.menu_box {overflow: hidden; margin: 0 auto; margin-bottom: 100px; background: #ffffff; padding: 50px 20px;}
+            ul.menu_box li.menu_img {width: 90%; margin: 5%;}
+            ul.menu_box li.menu_img .menu_txt {padding: 10px; height: 60px;}
+            ul.menu_box li.menu_img .menu_txt strong {font-size: 12px;}
+            ul.menu_box li.menu_img .menu_txt p {font-size: 11px; position: absolute; left: 10px; bottom: 10px;}
+
+            .hover_wrap {background: rgba(0,0,0,0.8);position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - 60px); padding: 30px;}
+            .hover_wrap .hover_data {font-size: 11px;}
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header></header>
+    <div id="m_header"></div>
+    <div id="menu">
+        <div id="menu_title">
+            <h1>EVENT</h1>
+            <div><img src="sub_EVENT_img/icon_event.png" alt="event icon"></div>
+        </div>
+        <ul class="menu_box">
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event1.jpg" alt=""></div>
+                <div class="menu_txt">
+                    <strong>봄 시즌 마지막 초대권 혜택</strong>
+                    <p>2020.05.27 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub1.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event2.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>가정의 달 혜택! 내 맘대로 BOX</strong>
+                    <p>2020.05.27 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub2.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event3.jpg"></div>
+                <div class="menu_txt">
+                    <strong>온라인 매드마켓 특별 혜택</strong>
+                    <p>2020.05.13 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub3.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event5.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>정부 긴급재난지원금 사용처 안내</strong>
+                    <p>2020.05.13 ~ 2020.06.30</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub5.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event4.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>딜리버리 메뉴 15% 할인!</strong>
+                    <p>2020.04.01 ~ 2020.06.30</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub4.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event6.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>매드포갈릭 셰프 추천 메뉴</strong>
+                    <p>2020.03.12 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub6.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event7.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>봄 신메뉴 출시</strong>
+                    <p>2020.03.12 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub7.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event8.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>봄 시즌 와인 출시</strong>
+                    <p>2020.03.12 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub8.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event9.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>매드포갈릭 20주년 이벤트</strong>
+                    <p>2020.03.12 ~ 2020.06.10</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub9.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+            <li class="menu_img">
+                <div class="scale"><img src="sub_EVENT_img/s_event10.jpg"  alt=""></div>
+                <div class="menu_txt">
+                    <strong>20주년 기념! 매드스탬프 이벤트!</strong>
+                    <p>2020.03.12 ~ 2020.07.31</p>
+                </div>
+                <div class="hover_wrap"><a href="event_sub10.html">
+                    <div class="hover_data">자세히 보기</div>
+                </a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,1265 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+body {font-family: 'NanumSquare';}
+html{ width: 99vw; overflow-x: hidden}
+#visual, #content1, #content2, #content3{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden
+        }
+#m_header{
+    display: none;
+}
+#content2 .m_ver {
+    display: none;
+}
+ h3{
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+h6{text-indent: -99999px}
+#content2, #content3 {
+    max-width: 1535px;
+    margin: 0 auto;
+}
+#visual .bgimg{
+    width: 100vw;
+    height: 87.9vh;
+    position: absolute;    
+    z-index: 100;
+    animation: ani 15s infinite;
+    -webkit-animation: ani 15s infinite;
+    -o-animation: ani 15s infinite;
+    -ms- animation: ani 15s infinite;
+    -moz- animation: ani 15s infinite;
+}
+@keyframes ani{
+    0% {background: url(../main-img/pc-bg.png) no-repeat;
+        background-size: cover;
+        background-position: center
+    }
+    50%{background: url(../main-img/bg2.png) no-repeat;
+        background-size: cover;
+        background-position: center
+    }
+    99.99% {background: url(../main-img/pc-bg.png) no-repeat;
+        background-size: cover;
+        background-position: center
+    }
+}
+#visual p {
+    z-index: 120;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    font-size: 45px;
+    line-height: 2;
+    font-weight: bold;
+    border: 1px solid white;
+    width: 750px;
+    height: 400px;
+    padding: 55px 0 0 55px;
+    transform: translate(-50%, -0%)
+}
+/*visual 끝*/
+/*content1*/
+#content1 {
+    background: url(../main-img/bbb.png) no-repeat;
+    background-size:cover;
+    position: relative;
+    Ocolor: white
+}
+#content1 >.box1 {
+position: absolute;
+    top: 280px;
+    left: 10vw;
+}
+
+#content1 >.box1 > p {
+        padding-bottom: 50px;
+}
+.link_a{
+    display: inline; 
+}
+#content1 >.box1 > ul.btn_list > li {
+    float: left;
+    cursor: pointer;
+    font-size: 40px
+}
+#content1 >.box1 > ul.btn_list > li:first-child {
+    padding-right: 7%;
+    margin-left: 60%
+}
+#content1 >.box2 {
+    position: absolute;
+    width: 70vw;
+    max-width:1030px;
+    top: 30%;
+    left: 30vw;
+    overflow: hidden;
+    height: 310px;
+    background: rgba(255,255,255,0.7);
+}
+
+#content1 >.box2 > ul.poster_box{
+    position: absolute;
+    _right: -610px;
+}
+#content1 >.box2 > ul.poster_box > li{
+    float: left;
+    width: 18vw;  
+    max-width: 250px;
+    max-height: 450px;
+}
+#content1 >.box2 > ul.poster_box > li img{
+    width: 14vw;
+    max-width: 200px;
+    max-height: 450px;        
+}
+/*content1 끝*/
+/*content2*/
+#content2 {
+    position: relative;  
+}
+#content2 div.text{
+    position: absolute;
+    top: 10%;
+    left: 10%;   
+}
+.facility01 {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width:400px;
+  width: 100%;
+  color: #141414;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 16px;
+  display: inline-block;
+  top: 35%;
+  left: 10%
+}
+.facility01 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.7s ease;
+}
+.facility01 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.facility01 figcaption {
+  position: absolute;
+  top: calc(89%);
+  width: 100%;
+  background-color: rgba(255,255,255,0.7);
+  padding: 15px 25px 110px;
+    
+}
+/*
+.facility01 figcaption:before {
+  position: absolute;
+  content: '';
+  z-index: 2;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+}
+*/
+.facility01 h4 {
+  font-weight: 300;
+  line-height: 1.2em;
+  text-transform: uppercase;
+    font-size: 18px;
+     font-weight: bold;
+}
+.facility01 p {
+  font-size: 0.9em;
+  opacity: 0.9;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: 1px solid;
+    bottom: 15px
+}
+.facility01 p a {
+    display: block;
+}
+
+#content2 .facility01 p:hover {
+    background: #000
+}
+#content2 .facility01 p:hover a{
+   color: #fff
+}
+.facility01:hover figcaption,
+.facility01.hover figcaption {
+  top: 180px;
+}
+
+#content2 > .icon_l {
+    position: absolute;
+    bottom: 70px;
+    width:80%;
+    left:250px
+}
+
+#content2 > .icon_l > ul > li{
+    float: left;
+    width: 22.6%;
+    font-size: 17px;
+    line-height: 3;
+    padding: 5px;
+    padding-left: 10px;
+    background: #f3f0f0;
+    text-align: center;
+    border-left: 2px solid #fff
+}
+#content2 > .icon_l > ul > li i{
+    
+    vertical-align: sub;
+    margin-right: 15px;
+}
+#content2 > .icon_l > ul > li:hover {
+    background: #92b0e0;
+    color: white;
+}
+/*cotnent2 끝*/
+/*content3*/
+#content3 {
+    position: relative;    
+    background: #f4f4f4
+}
+#content3 .text3{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+#content3 .box_c {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 18px
+}
+#content3 .box_c span:nth-child(1){
+    margin-right: 50px;
+}
+#content3 .box_c .on {
+    border-bottom: 2px solid;
+}
+#content3 .more a{
+    position: absolute;   
+    right: -250px;
+    top: 0;
+}
+#content3 > .list_n {
+    position: absolute;
+    top: 35%;
+    left: 20%;   
+    _border: 1px solid #88ceec;
+    height: 500px;
+    width: 370px;
+    background: #fff
+}
+#content3 > .list_n > ul >li {
+    line-height: 4;
+    width: 370px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 10px;
+}
+#content3 > .list_n > ul >li:hover{
+    background: #88ceec;
+    color: white;
+}
+#content3 > .campaing {
+    left: 50%;
+    top: 30%;
+    position: absolute;
+}
+#content3 > .campaing h3{
+    position: relative;
+    font-size: 25px;
+    padding-bottom: 10px
+}
+#content3 > .campaing .rolling {
+    position: relative;
+    width: 530px;
+    height: 210px;
+    overflow: hidden;
+}
+#content3 > .campaing > .rolling > ul {
+    width: 1060px;
+    height: 210px;
+   position: absolute;
+}
+#content3 > .campaing > .rolling > ul > li {
+    float: left;
+}
+#content3 > .campaing > .btn_l {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer
+}
+#content3 > .campaing > .btn_r{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer
+}
+/*content3끝*/
+/*footer*/
+
+@media all and (min-width:1105px) and (max-width:1400px){
+    #visual p {
+    font-size: 40px;
+    width: 700px;
+    height: 350px;
+}
+
+    #content1 >.box1 {
+        top: 150px;
+        left: 10vw;
+    }
+    #content1 > .box1 > p:hover > a {
+        border-bottom: 1px solid white
+    }
+    #content1 >.box1 > ul.btn_list > li {
+        float: left;
+        cursor: pointer;
+        margin-top: -30px
+    }
+    #content1 >.box1 > ul.btn_list > li img{
+        width: 30px
+    }
+    #content1 >.box1 > ul.btn_list > li:first-child {
+        padding-right: 7%;
+        margin-left: 60%
+    }    
+    #content1 >.box2 {
+        top: 35vw;
+        left: 17vw;
+        overflow: hidden;
+        height: 22vw;
+        _border: 1px solid;
+        width: 68vw;
+        height: ;
+    }    
+    #content1 >.box2 > ul.poster_box{
+        position: absolute;       
+        _width: 1368px;
+    }
+    #content1 >.box2 > ul.poster_box > li{
+        float: left;
+        width: 228px;
+    }
+    #content1 >.box2 > ul.poster_box > li img{
+        width: 180px
+    }
+    
+/*    content2*/
+
+    .facility01 {
+      width: 340px;
+      text-align: left;
+      top: 33%;
+      left: %;
+    }
+    
+    .facility01 figcaption {
+      top: calc(85%);      
+      padding: 15px 25px 130px;
+    }
+    .facility01 figcaption:before {     
+      height: 50px;
+    }    
+    .facility01 h4 {     
+        font-size: 17px
+    }
+    .facility01 p {
+        bottom: 60px;
+        right: 10px;
+        padding: 5px 10px;
+    }    
+    .facility01:hover figcaption,
+    .facility01.hover figcaption {
+      top: 160px;
+    }    
+    #content2 > .icon_l {     
+        bottom: 170px;       
+        left:180px
+    } 
+/*    content3*/
+    #content3 .box_c {        
+        left: 12%;
+        font-size: 18px
+    }
+    #content3 .more a{
+        right: -235px;
+        top: 0;
+    }
+    #content3 > .list_n {
+        left: 12%;          
+        height: 450px;
+    }
+    #content3 > .list_n > ul >li {
+        padding-left: 10px;
+    }
+    #content3 > .campaing {
+        left: 50%;
+        top: 35%;
+        position: absolute;
+    }
+    #content3 > .campaing h3{
+        font-size: 23px;
+    }
+    #content3 > .campaing > .btn_l {
+        width: 35px
+    }
+    #content3 > .campaing > .btn_r{
+        width: 35px
+    }
+/*    footer*/
+    
+}
+@media all and (min-width:960px) and (max-width:1154px){
+/*visual*/
+    #visual p {
+        font-size: 30px;
+        width: 550px;
+        height: 350px;
+        padding: 70px 0 0 55px
+    }
+    /*visual 끝*/
+    /*content1*/
+    #content1 >.box1 {
+        top: 150px;
+        left: 10vw;
+    }
+    #content1 >.box1 > p {
+            padding-bottom: 30px;
+    }
+    .link_a{
+        display: inline; 
+    }
+    #content1 >.box1 > ul.btn_list > li {
+       margin-top: -25px
+    }
+    #content1 >.box1 > ul.btn_list > li img{
+        width: 25px
+    }
+    #content1 >.box1 > ul.btn_list > li:first-child {
+        padding-right: 10px;
+        margin-left: 40%
+    }
+    #content1 >.box2 {
+        width: 75%;
+        top: 50%;
+        left: 15%;
+        height: 27.5vw;
+        min-height:317px; 
+        min-width: 800px
+    }
+    #content1 >.box2 > ul.poster_box{
+        width: 144vw;
+    }
+    #content1 >.box2 > ul.poster_box > li{
+        width: 250px;
+    }
+    #content1 >.box2 > ul.poster_box > li img{
+        width: 21vw
+    }
+    /*content1 끝*/
+    /*content2*/
+    
+    .facility01 {
+      margin: 0 auto;
+      width:280px;
+      left: 7
+    }
+    .facility01 figcaption {
+      top: calc(80%);
+      padding: 15px 25px 90px;
+    }
+    .facility01 p {
+        font-size: 14px;   
+        padding: 0px 8px;
+        bottom: 30px;
+        right: 10px;
+    }
+    .facility01 h4 {
+        font-size: 16px
+    }
+    .facility01 p a{
+        text-align: center;
+        line-height: 2.5;
+    }
+    
+    .facility01:hover figcaption {
+      top: 120px;
+    }
+    #content2 > .icon_l {
+        bottom: 170px;
+        left:120px
+    }
+    #content2 > .icon_l > ul > li{
+        width: 25%;
+        font-size: 16px;
+        padding: 5px;
+    }
+    /*cotnent2 끝*/
+    /*content3*/
+    #content3 .box_c {
+        left: 10%;
+    }
+    #content3 .more a{ 
+        right: -240px;
+    }
+    #content3 > .list_n {
+        left: 10%;  
+        height: 400px;
+    }
+    #content3 > .list_n > ul >li {
+        line-height: 3.5;
+        width: 370px;
+    }
+    #content3 > .campaing {
+        top: 34.5%;
+    }
+    #content3 > .campaing h3{font-size: 25px;padding-bottom: 10px}
+    #content3 > .campaing .rolling {width: 430px;}
+    #content3 > .campaing > .rolling > ul {width: 860px;}
+    #content3 > .campaing > .rolling > ul > li {width: 50%;}
+    #content3 > .campaing > .rolling > ul > li img {height: 210px}
+    #content3 > .campaing > .btn_l {width: 30px}
+    #content3 > .campaing > .btn_r{width: 30px}
+    /*content3끝*/
+    /*footer*/
+}
+@media all and (min-width:780px) and (max-width:959px){
+    h3{font-size: 30px;padding-bottom: 30px;}
+    /*header -끝-*/
+    /*visual*/    
+   
+    @keyframes ani{
+        0% {background: url(../main-img/pc-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center
+        }
+        50%{background: url(../main-img/bg2.png) no-repeat;
+            background-size: cover;
+            background-position:center
+        }
+        99.99% {background: url(../main-img/pc-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center
+        }
+    }
+    #visual p {
+        font-size: 30px;
+        width: 550px;
+        height: 300px;
+        padding: 55px 0 0 45px
+    }
+    /*visual 끝*/
+    /*content1*/
+    #content1 {
+        background: url(../main-img/content-bg.png) cover no-repeat;
+        background-position: center;
+    }
+    #content1 >.box1 {
+    position: absolute;
+        top: 150px;
+        left: 10vw;
+    }    
+    #content1 >.box1 > p {
+            padding-bottom: 50px;
+    }
+    .link_a{
+        display: inline; 
+    }  
+    #content1 >.box1 > ul.btn_list > li {
+        margin-top: -20px
+    }
+    #content1 >.box1 > ul.btn_list > li:first-child {
+        padding-right: 6%;
+    }
+     #content1 >.box1 > ul.btn_list > li img {
+    width: 30px
+    }
+    #content1 >.box2 {
+        width: 640px;
+        top: 45%;
+        left: 16vw;
+        overflow: hidden;
+        height:300px
+    }
+    #content1 >.box2 > ul.poster_box{
+         _width: 980px;
+    }
+    #content1 >.box2 > ul.poster_box > li{
+        float: left;
+        width: 230px;
+    }    
+    #content1 >.box2 > ul.poster_box > li img{
+        width: 190px;
+    }
+    /*content1 끝*/
+    /*content2*/
+    #content2 div.text{
+    top: 3%;
+    left: 10%;   
+    }
+    .facility01 {
+      margin: 5px;
+      width: 300px;
+      top: 15%;
+      left: 10%;
+      height: 250px;
+    }
+    .last_f{
+        width: 900px;
+        margin:30px 120px
+            
+    }
+    .facility01 figcaption {
+      top: calc(80%);
+      padding: 15px 25px 100px;
+    }    
+    .facility01 h4 {
+        font-size: 16px
+    }
+    .facility01 p {
+       font-size: 0.9em;
+        padding: 5px;
+        bottom: 50px;
+        right: 10px;
+    }
+    .facility01:hover figcaption {
+      top: 160px;
+    }    
+    #content2 > .icon_l {
+        bottom: 150px;
+        width:80%;
+        left:80px
+    }
+    #content2 > .icon_l > ul > li{
+        float: left;
+        width: 25%;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    #content2 > .icon_l > ul > li i{        
+        vertical-align: sub;
+        margin-right: 5px;
+    }
+    #content2 > .icon_l > ul > li:hover {
+        background: #92b0e0;
+        color: white;
+    }
+    /*cotnent2 끝*/
+    /*content3*/
+    #content3 .box_c {
+        top: 25%;
+        left: 25%;       
+    }
+    #content3 .more a{
+        right: -220px;
+        top: 0;
+    }
+    #content3 > .list_n {
+        top: 30%;
+        left: 25%;   
+        border: 1px solid #88ceec;
+        height: 330px;
+        width: 350px
+    }
+    #content3 > .list_n > ul >li {
+        line-height: 3.5;
+        width: 350px;
+    }
+    #content3 > .campaing {
+        left: 20%;
+        top: 68%
+    }
+    #content3 > .campaing h3{
+        font-size: 20px;
+    }
+    #content3 > .campaing .rolling {
+        width: 430px;
+        height: 210px;
+        overflow: hidden;
+    }
+    #content3 > .campaing > .rolling > ul {
+        width: 860px;
+        height: 210px;
+    }
+    #content3 > .campaing > .rolling > ul > li {
+        float: left;
+        width: 50%;
+    }
+    #content3 > .campaing > .btn_l {
+        top: 45%;
+    }
+    #content3 > .campaing > .btn_r{top: 45%;}
+    /*content3끝*/
+    /*footer*/
+}
+@media all and (min-width:610px) and (max-width:779px){
+     h3{font-size: 30px;padding-bottom: 30px;}
+/*    visual*/
+     #visual .bgimg{
+        height: 85.8vh;
+    }
+    @keyframes ani{
+        0% {background: url(../main-img/pc-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center
+        }
+        50%{background: url(../main-img/bg2.png) no-repeat;
+            background-size: cover;
+            background-position:center
+        }
+        99.99% {background: url(../main-img/pc-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center
+        }
+    }
+    #visual p {
+        font-size: 30px;
+        width: 550px;
+        height: 250px;
+        padding: 30px 0 0 45px
+    }
+    /*visual 끝*/
+    /*content1*/
+    #content1 {
+        background: url(../main-img/content-bg.png) cover no-repeat;
+        background-position: center;
+    }
+    #content1 >.box1 {
+        top: 100px;
+        left: 10vw;
+    }    
+    #content1 >.box1 > p {
+        padding-bottom: 50px;
+    }
+    .link_a{
+        display: inline; 
+    }  
+    #content1 >.box1 > ul.btn_list > li {
+        margin-top: -20px
+    }
+    #content1 >.box1 > ul.btn_list > li:first-child {
+        padding-right: 6%;
+    }
+    #content1 >.box1 > ul.btn_list > li > i {
+        display: block;
+    }
+    #content1 >.box2 {
+        width: 610px;
+        top: 45%;
+        left: 8vw;
+        overflow: hidden;
+        height: 270px;
+    }
+    #content1 >.box2 > ul.poster_box{
+         _width: 1270px;
+    }
+    #content1 >.box2 > ul.poster_box > li{
+        float: left;
+        width: 200px;
+    }    
+    #content1 >.box2 > ul.poster_box > li img{
+        width: 170px;
+    }
+    /*content1 끝*/
+    /*content2*/
+    #content2 div.text{
+    top: 3%;
+    left: 10%;   
+    }
+    .facility01 {
+      display: none;      
+    }
+    #content2 .m_ver {
+        display:block;
+        width: 80%;
+        margin: 0 auto;
+        height: 675px;
+        margin-top: 130px;
+        font-weight: bold;        
+    }
+    .m_ver .col{
+        width: 500px;
+        height: 205px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .m_ver .col img {
+        width: 100%;
+        height: 205px;
+    }
+    .m_ver .col > figcaption{
+        display: none;
+    }
+    .m_ver .col:hover figcaption{
+        display: block;
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 205px;
+        color: #fff;
+        text-align: center;
+        line-height: 5;
+    }
+    .m_ver .col figcaption h4{
+        font-size: 22px
+    }
+    .m_ver .col figcaption p a {
+        border: 1px solid;
+        padding: 7px 13px;
+    }
+    .m_ver .col figcaption p a:hover{
+        background: #fff;
+         color: #000
+    }
+    
+    #content2 > .icon_l {
+        bottom: 40px;
+        left:50px
+    }
+    #content2 > .icon_l > ul > li{
+        width: 50%;
+        font-size: 14px;
+        padding: 5px;
+    }
+    #content2 > .icon_l > ul >li:nth-child(1){
+        border-bottom: 1px solid #fff;
+    }
+    #content2 > .icon_l > ul >li:nth-child(2){
+        border-bottom: 1px solid #fff;
+    }
+    /*cotnent2 끝*/
+    /*content3*/
+    #content3 .text3{
+        top: 5%
+    }
+    #content3 .box_c {
+        top: 20%;
+        left: 17%;       
+    }
+    #content3 .more a{
+        right: -220px;
+        top: 0;
+    }
+    #content3 > .list_n {
+        top: 25%;
+        left: 17%;   
+        border: 1px solid #88ceec;
+        height: 330px;
+        width: 350px
+    }
+    #content3 > .list_n > ul >li {
+        line-height: 3.5;
+        width: 350px;
+    }
+    #content3 > .campaing {
+        left: 17%;
+        top: 65%
+    }
+    #content3 > .campaing h3{
+        font-size: 20px;
+    }
+    #content3 > .campaing .rolling {
+        width: 430px;
+        height: 210px;
+        overflow: hidden;
+    }
+    #content3 > .campaing > .rolling > ul {
+        width: 860px;
+        height: 210px;
+    }
+    #content3 > .campaing > .rolling > ul > li {
+        float: left;
+        width: 50%;
+    }
+    #content3 > .campaing > .btn_l {
+        top: 45%;
+    }
+    #content3 > .campaing > .btn_r{top: 45%;}
+    /*content3끝*/
+    /*footer*/
+}
+@media all and (min-width:500px) and (max-width:609px){
+    h3{font-size: 30px;padding-bottom: 30px;}
+
+/*    visual*/
+    #visual .bgimg{
+        height: 89vh;
+    }
+    #visual p {     
+        font-size: 30px;
+        width: 450px;
+        height: 250px;
+        padding: 30px 0 0 0px;
+        text-align: center
+    }
+    /*visual 끝*/
+    /*content1*/
+    #content1 {
+        background: url(../main-img/content-bg.png) cover no-repeat;
+        background-position: center;
+    }
+    #content1 >.box1 {
+        top: 100px;
+        left: 10vw;
+    }    
+    #content1 >.box1 > p {
+        padding-bottom: 50px;
+    }
+    .link_a{
+        display: inline; 
+    }  
+    #content1 >.box1 > ul.btn_list > li {
+        margin-top: -50px
+    }
+    #content1 >.box1 > ul.btn_list > li:first-child {
+        padding-right: 6%;
+    }
+    #content1 >.box1 > ul.btn_list > li img {
+        width: 30px
+    }
+    #content1 >.box2 {
+        width: 430px;
+        top: 45%;
+        left:5vw;
+        height: 300px;    
+        padding-top: 10px;
+    }
+    #content1 >.box2 > ul.poster_box{
+         width: 1200px;
+    }
+    #content1 >.box2 > ul.poster_box > li{
+        float: left;
+        width: 200px;
+    }    
+    #content1 >.box2 > ul.poster_box > li img{
+        width: 180px;
+    }
+    /*content1 끝*/
+    /*content2*/
+    #content2 div.text{
+    top: 3%;
+    left: 10%;   
+    }
+    .facility01 {
+      display: none;      
+    }
+    #content2 .m_ver {
+        display:block;
+        width: 80%;
+        margin: 0 auto;
+        height: 675px;
+        margin-top: 130px;
+        font-weight: bold;        
+    }
+    .m_ver .col{
+        width: 100%;
+        height: 205px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .m_ver .col img {
+        width: 100%;
+        height: 205px;
+    }
+    .m_ver .col > figcaption{
+        display: none;
+    }
+    .m_ver .col:hover figcaption{
+        display: block;
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 205px;
+        color: #fff;
+        text-align: center;
+        line-height: 5;
+    }
+    .m_ver .col figcaption h4{
+        font-size: 22px
+    }
+    .m_ver .col figcaption p a {
+        border: 1px solid;
+        padding: 7px 13px;
+    }
+    .m_ver .col figcaption p a:hover{
+        background: #fff;
+         color: #000
+    }
+    #content2 > .icon_l {
+        bottom: 40px;
+        left:50px
+    }
+    #content2 > .icon_l > ul > li{
+        width: 50%;
+        font-size: 14px;
+        padding: 5px;
+    }
+    #content2 > .icon_l > ul >li:nth-child(1){
+        border-bottom: 1px solid #fff;
+    }
+    #content2 > .icon_l > ul >li:nth-child(2){
+        border-bottom: 1px solid #fff;
+    }
+    /*cotnent2 끝*/
+    /*content3*/
+    #content3 .text3{
+        top: 5%
+    }
+    #content3 .box_c {
+        top: 20%;
+        left: 12%;       
+    }
+    #content3 .more a{
+        right: -220px;
+        top: 0;
+    }
+    #content3 > .list_n {
+        top: 25%;
+        left: 12%;   
+        border: 1px solid #88ceec;
+        height: 330px;
+        width: 350px
+    }
+    #content3 > .list_n > ul >li {
+        line-height: 3.5;
+        width: 350px;
+    }
+    #content3 > .campaing {
+        left: 12%;
+        top: 65%;
+        width: 380px
+    }
+    #content3 > .campaing h3{
+        font-size: 20px;
+    }
+    #content3 > .campaing .rolling {
+        width: 380px;
+        height: 210px;
+        overflow: hidden;
+    }
+    #content3 > .campaing > .rolling > ul {
+        width: 760px;
+        height: 210px;
+    }
+    #content3 > .campaing > .rolling > ul > li {
+        float: left;
+        width: 50%;
+    }
+    #content3 > .campaing > .btn_l {
+        top: 37%;
+    }
+    #content3 > .campaing > .btn_r{top: 37%;}
+    /*content3끝*/
+    /*footer*/
+}
+@media all and (max-width:499px){
+    h3{font-size: 25px;padding-bottom: 30px;}
+/*    visual*/
+    #visual p {
+        font-size: 20px;
+        width: 300px;
+        height: 180px;
+        padding: 30px 0 0 0px;
+        text-align: center
+    }
+    /*visual 끝*/
+    /*content1*/
+    #content1 {
+        background: url(../main-img/content-bg.png) cover no-repeat;
+        background-position: center;
+    }
+    #content1 >.box1 {
+        top: 50px;
+        left: 10vw;
+    }    
+    #content1 >.box1 > p {
+        padding-bottom: 40px;
+    }
+    #content1 >.box1 > ul.btn_list > li {
+        margin-top: -20px
+    }
+    #content1 >.box1 > ul.btn_list > li:first-child {
+        padding-right: 5%;
+    }
+     #content1 >.box1 > ul.btn_list > li img {
+    width: 25px
+    }
+    #content1 >.box2 {
+        width: 320px;
+        top: 45%;
+        left: 5%;
+        overflow: hidden;
+        height: 50vw;    
+    }
+    #content1 >.box2 > ul.poster_box{
+         width: 900px;
+    }
+    #content1 >.box2 > ul.poster_box > li{
+        float: left;
+        width: 150px;
+    }    
+    #content1 >.box2 > ul.poster_box > li img{
+        width: 125px;
+    }
+    /*content1 끝*/
+    /*content2*/
+    #content2 div.text{
+    top: 3%;
+    left: 5%;   
+    }
+    .facility01 {
+      display: none;      
+    }
+    #content2 .m_ver {
+        display:block;
+        width: 80%;
+        margin: 0 auto;
+        height: 675px;
+        margin-top: 115px;
+        font-weight: bold;        
+    }
+    .m_ver .col{
+        width: 100%;
+        height: 130px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    .m_ver .col img {
+        width: 100%;
+        height: 130px;
+    }
+    .m_ver .col > figcaption{
+        display: none;
+    }
+    .m_ver .col:hover figcaption{
+        display: block;
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 130px;
+        color: #fff;
+        text-align: center;
+        line-height: 3;
+    }
+    .m_ver .col figcaption h4{
+        font-size: 20px
+    }
+    .m_ver .col figcaption p a {
+        border: 1px solid;
+        padding: 5px 10px;
+        font-size: 14px
+    }
+    .m_ver .col figcaption p a:hover{
+        background: #fff;
+         color: #000
+    }
+    #content2 > .icon_l {
+        bottom: 30px;
+        left:20px;
+        width: 90%;
+    }
+    #content2 > .icon_l > ul > li{
+        width: 50%;
+        font-size: 14px;
+        padding: 5px;
+    }
+    #content2 > .icon_l > ul > li i {
+        font-size: 23px;
+        margin-right: 5px
+    }
+    #content2 > .icon_l > ul >li:nth-child(1){
+        border-bottom: 1px solid #fff;
+    }
+    #content2 > .icon_l > ul >li:nth-child(2){
+        border-bottom: 1px solid #fff;
+    }
+    /*cotnent2 끝*/
+    /*content3*/
+    #content3 .text3{
+        top: 5%;
+        left: 8%;
+    }
+    #content3 .box_c {
+        top: 20%;
+        left: 10%;
+        font-size: 16px
+    }
+    #content3 .more a{
+        right: -180px;
+        top: 0;
+    }
+    #content3 > .list_n {
+        top: 25%;
+        left: 10%;   
+        border: 1px solid #88ceec;
+        height: 220px;
+        width: 305px;       
+    }
+    #content3 > .list_n > ul >li {
+        line-height: 3;
+        width: 300px;
+         font-size: 14px
+    }
+    #content3 > .campaing {
+        left: 10%;
+        top: 63%;
+        width: 300px
+    }
+    #content3 > .campaing h3{
+        font-size: 20px;
+    }
+    #content3 > .campaing .rolling {
+        width: 300px;
+        height: 210px;
+        overflow: hidden;
+    }
+    #content3 > .campaing > .rolling > ul {
+        width: 600px;
+        height: 210px;
+    }
+    #content3 > .campaing > .rolling > ul > li {
+        float: left;
+        width: 50%;
+    }
+    #content3 > .campaing > .btn_l {
+        top: 35%;
+        width: 25px
+    }
+    #content3 > .campaing > .btn_r{
+        top: 35%;
+        width: 25px
+    }
+    /*content3끝*/
+    
+}
+
+    
+    </style>

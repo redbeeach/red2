@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+    <script src="js/jquery-3.4.1.min.js"></script>
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+-->
+<!--   <script src="js/jquery-3.5.0.min.js"></script>-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sub4-2.css">
+    <script>
+        $(document).ready(function(){
+           $("#hd").load("header.html");
+           $("#ft").load("footerbase.html");
+        });
+    </script>
+    <style>
+        strong {font-family: 'Anton', sans-serif;}
+    </style>
+    <script>
+        $(document).ready(function(){
+          $('.container > .tab > span').click(function(){
+            var i = $(this).index();
+              $('.container > .tab > span').removeClass();
+              $(this).addClass("tg");
+              //box
+              $('.container > .box > div').removeClass("show");
+              $('.container > .box > div').eq(i).addClass("show");
+              //
+              $('.container > .box > .show > ul > li').removeClass("list_on");
+              $('.container > .box > .show > ul > li').eq(0).addClass("list_on");
+              //
+              $('.container > .box > .show > div').removeClass("ctg");
+              $('.container > .box > .show > div').eq(0).addClass("ctg");
+              
+              //모바일 
+              $('.container > div.m_box').removeClass("m_show");
+              $('.container > div.m_box').eq(i).addClass("m_show");            
+              
+              return false;
+          });
+            $('.container > .box > div > ul > li').click(function(){
+               var ii = $(this).index();
+                
+                $('.container > .box > div > ul > li').removeClass();
+                $(this).addClass("list_on");
+                
+                $('.container > .box > .show > div').removeClass("ctg");
+                $('.container > .box > .show > div').eq(ii).addClass("ctg");
+                return false;
+            });
+            //모바일 회의실 슬라이드 
+            //모바일 회의실 슬라이드 
+            var $move= $(".container").find(".slider_move");
+            var $moveWidth =$move.children().outerWidth(),//이미지의 폭
+                $length= $move.children().length; //이미지의 길이
+            var rollingId;
+            
+            $(".next").click(function(){
+                    $move.stop().animate({left: -$moveWidth + "px"}, 10, function(){
+                       $(this).append("<div class='m_list s_slide'>" + $(this).find("div:first").html()+"</div>");
+                       $(this).find("div:first").remove();
+                       $(this).css("left",0);
+                   });
+                });
+                $(".prev").click(function(){    
+                       $move.prepend("<div class='m_list s_slide'>" + $move.find("div:last").html()+"</div>");
+                       $move.find("div:last").remove();
+                       $move.css("left", -$moveWidth);
+                       $move.stop().animate({left:0}, 1500);
+               });
+                
+        });
+    </script>
+</head>
+<body>
+    <div id="hd"></div>
+    <div id="bg"></div>
+    <div class="side_nav">
+        <h3>임대서비스</h3>        
+        <ul>
+            <li><a href="sub-page4-1.html">임대서식</a></li>
+            <li class="on"><a href="sub-page4-2.html">임대절차<i class="fas fa-chevron-right"></i></a></li>
+        </ul>
+    </div>
+    <div class="container">
+    <h3>임대 절차</h3>
+    <div class="tab">
+        <span class="tg">전시홀</span>
+        <span>회의실</span>
+    </div>
+    
+    <!--전시홀-->
+      <div class="box">
+        <div class="c_box show">
+           <ul class="list">
+            <li class="list_on">
+                <strong>STEP 01</strong>
+                <P>임대신청</P>
+            </li>
+            <li>
+                <strong>STEP 02</strong>
+                <P>계약체결</P>
+            </li>
+            <li>
+                <strong>STEP 03</strong>
+                <P>임대 개시 14일전</P>
+            </li>
+            <li>
+                <strong>STEP 04</strong>
+                <P>행사개최</P>
+            </li>
+            <li>
+                <strong>STEP 05</strong>
+                <P>행사종료</P>
+            </li>
+        </ul>        
+        <!--임대신청-->
+        <div class="cotent ctg">
+            <ul>
+                <li>각 행사 담당부서 담당자에게 임대문의</li>
+                <li>전시홀 배정신청서 제출(온라인 또는 방문 제출)</li>
+                <li>담장자와 배정협의</li>
+                <li>견적요청과 견적확인</li>
+                <li>임대신청서류 제출</li>
+            </ul>
+            <button>전시홀 배정신청서</button>
+            <button>임대신청서류</button>
+        </div>
+        <!--계약체결-->
+        <div class="cotent ">
+            <ul>
+                <li>임대차 계약체결 안내공문 발송</li>
+                <li>임대 개시 3개월 전 계약서 작성 및 계약금(임대료의 20%)납부</li>
+            </ul>            
+        </div>
+        <!--임대 개시 14일전-->
+        <div class="cotent ">
+            <ul>
+                <li>중도금(임대료의 30%)납부</li>
+                <li>임대료 잔금(임대료의 50%) 및 관리비(예치금)납부</li>
+                <li>홀매니저와 사전업무협의 및 각종 관련서류 제출</li>
+            </ul>            
+        </div>
+        <!--헹사개최-->
+        <div class="cotent ">
+            <ul>
+                <li>행사개최</li>
+                <li>보도자료 및 디렉토리 제출</li>
+            </ul>            
+        </div>
+        <!--행사종료-->
+        <div class="cotent ">
+            <ul>
+                <li>행사종료</li>
+                <li>관리비 정산</li>
+                <li>세금계산서 수령</li>
+            </ul>            
+        </div>
+       </div>
+       <!--회의실-->
+        <div class="c_box">
+           <ul class="list">
+            <li class="list_on">
+                <strong>STEP 01</strong>
+                <P>임대신청</P>
+            </li>
+            <li>
+                <strong>STEP 02</strong>
+                <P>계약체결</P>
+            </li>
+            <li>
+                <strong>STEP 03</strong>
+                <P>임대 10일전</P>
+            </li>
+            <li>
+                <strong>STEP 04</strong>
+                <P>행사개최</P>
+            </li>
+            <li>
+                <strong>STEP 05</strong>
+                <P>행사종료</P>
+            </li>
+        </ul>
+        <!--임대신청-->
+        <div class="cotent ctg">
+            <ul>
+                <li>회의/세미나/부대행사 임대문의</li>
+                <li>일정협의</li>
+                <li>온라인 견적요청 &amp; 견적확인</li>                
+                <li>임대신청서류 제출(사업자등록증사본)</li>
+            </ul>
+            <button>임대신청서류</button>
+        </div>
+        <!--계약체결-->
+        <div class="cotent">
+            <ul>
+                <li>계약체결 안내공문 발송</li>
+                <li>계약서 작성 및 계약금(임대료의 50%)납부</li>
+                <li>식/음료 서비스 문의 및 상담</li>
+            </ul>            
+        </div>
+        <!--임대 10일전-->
+        <div class="cotent">
+            <ul>
+                <li>임대료 잔금(임대료의 50%) 및 부대장비 사용료 납부</li>
+                <li>홀매니저와 사전업무협의 및 각종 관련서류 제출</li>
+            </ul>            
+        </div>
+        <!--헹사개최-->
+        <div class="cotent">
+            <ul>
+                <li>행사개최</li>
+            </ul>            
+        </div>
+        <!--행사종료-->
+        <div class="cotent">
+            <ul>
+                <li>행사종료</li>
+                <li>추가 회의실 사용 임대료 및 추가부대장비 사용료 정산</li>
+            </ul>            
+        </div>
+       </div>
+      </div>
+       
+       
+        <!--모바일 탭-->
+        <!--전시홀-->
+       <div class="m_box m_show swiper-container">
+         <div class="m_move swiper-wrapper">             
+          <div class="m_list swiper-slide">
+              <strong>STEP 01</strong>
+                <P>임대신청</P>
+                <ul>
+                    <li>각 행사 담당부서 담당자에게 임대문의</li>
+                    <li>전시홀 배정신청서 제출(온라인 또는 방문 제출)</li>
+                    <li>담장자와 배정협의</li>
+                    <li>견적요청과 견적확인</li>
+                    <li>임대신청서류 제출</li>
+                </ul>
+                <button>전시홀 배정신청서</button>
+                <button>임대신청서류</button>
+          </div>
+          <div class="m_list swiper-slide">
+               <strong>STEP 02</strong>
+                <P>계약체결</P>
+                <ul>
+                    <li>임대차 계약체결 안내공문 발송</li>
+                    <li>임대 개시 3개월 전 계약서 작성 및 계약금(임대료의 20%)납부</li>
+                </ul> 
+          </div>
+          <div class="m_list swiper-slide">
+              <strong>STEP 03</strong>
+                <P>임대 개시 14일전</P>
+                <ul>
+                    <li>중도금(임대료의 30%)납부</li>
+                    <li>임대료 잔금(임대료의 50%) 및 관리비(예치금)납부</li>
+                    <li>홀매니저와 사전업무협의 및 각종 관련서류 제출</li>
+                </ul>
+          </div>
+          <div class="m_list swiper-slide">
+              <strong>STEP 04</strong>
+                <P>행사개최</P>
+                <ul>
+                    <li>행사개최</li>
+                    <li>보도자료 및 디렉토리 제출</li>
+                </ul>
+          </div>
+          <div class="m_list swiper-slide">
+              <strong>STEP 05</strong>
+                <P>행사종료</P>
+                <ul>
+                    <li>행사종료</li>
+                    <li>관리비 정산</li>
+                    <li>세금계산서 수령</li>
+                </ul>
+          </div>             
+         </div>
+         <div class="swiper-pagination"></div> 
+       <!--m_btn-->
+       <div class="btn_box">
+           <p class="swiper-button-prev"></p>
+           <p class="swiper-button-next"></p>
+       </div>
+       </div>
+       <!--회의실-->
+       <div class="m_box slider_view ">
+         <div class="m_move slider_move">             
+             <div class="m_list s_slide">
+              <strong>STEP 01</strong>
+                <P>임대신청</P>
+                <ul>
+                    <li>회의/세미나/부대행사 임대문의</li>
+                    <li>일정협의</li>
+                    <li>온라인 견적요청 &amp; 견적확인</li>                
+                    <li>임대신청서류 제출(사업자등록증사본)</li>
+                </ul>
+                <button>임대신청서류</button>
+          </div>
+          <div class="m_list s_slide">
+             <strong>STEP 02</strong>
+                <P>계약체결</P>
+                <ul>
+                    <li>계약체결 안내공문 발송</li>
+                    <li>계약서 작성 및 계약금(임대료의 50%)납부</li>
+                    <li>식/음료 서비스 문의 및 상담</li>
+                </ul> 
+          </div>
+          <div class="m_list s_slide">
+             <strong>STEP 03</strong>
+                <P>임대 10일전</P>
+                <ul>
+                    <li>임대료 잔금(임대료의 50%) 및 부대장비 사용료 납부</li>
+                    <li>홀매니저와 사전업무협의 및 각종 관련서류 제출</li>
+                </ul>
+          </div>
+          <div class="m_list s_slide">
+              <strong>STEP 04</strong>
+                <P>행사개최</P>
+                <ul>
+                    <li>행사개최</li>
+                </ul>
+          </div>
+          <div class="m_list s_slide">
+              <strong>STEP 05</strong>
+                <P>행사종료</P>
+                <ul>
+                    <li>행사종료</li>
+                    <li>추가 회의실 사용 임대료 및 추가부대장비 사용료 정산</li>
+                </ul>
+          </div>  
+         </div>
+         <div class="btn_l">
+             <button class="prev"> ＜</button>
+             <button class="next"> ＞</button>
+         </div>
+       </div>
+       
+       <!--테이블-->
+       <table>
+           <tr>
+               <th>구분</th>
+               <th>담당부서</th>
+               <th>담당자</th>
+               <th>연락처</th>
+           </tr>
+           <tr>
+               <td>전시회 행사</td>
+               <td>전시마케팅팀</td>
+               <td>박아름 과장</td>
+               <td>010-1111-2222</td>
+           </tr>
+           <tr>
+               <td>컨벤션 행사</td>
+               <td>컨벤션마케팅팀</td>
+               <td>최소영 과장</td>
+               <td>010-1212-6666</td>
+           </tr>
+           <tr>
+               <td>이벤트 행사</td>
+               <td>문화사업팀</td>
+               <td>이지은 과장</td>
+               <td>010-5454-1234</td>
+           </tr>
+       </table>
+    </div>
+    <div id="ft"></div>
+    <script src="swiper-5.3.7/package/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            new Swiper('.swiper-container', {
+                pagination : { 
+                    el : '.swiper-pagination',
+                    type: 'fraction',
+                },
+                navigation : {
+                    nextEl : '.swiper-button-next', 
+                    prevEl : '.swiper-button-prev', 
+                },
+            });
+        });
+    </script>
+</body>
+</html>
